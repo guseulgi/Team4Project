@@ -1,0 +1,75 @@
+//TITLE FONT
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon:400');
+//font-family : 'Do+Hyeon' 
+//MAIN TEXT FONT
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+//font-family: 'Mynerve', cursive;
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang:400');
+//Reset
+@import "reset";
+
+body {
+  background-color: bisque;
+}
+header {
+  height: 100px;
+  background-color: orange;
+}
+
+.all_content {
+  .slide {
+    height: 300px;
+    display: flex;
+    position: relative;
+
+    .left {
+      width: 20%;
+
+      .jeju_view {
+        font-size: 30px;
+        line-height: 70px;
+      }
+    }
+    .right {
+      width: 80%;
+      margin-top: 110px;
+      font-size: 50px;
+      .prev {
+        position: absolute;
+        cursor: pointer;
+      }
+      .swiper-wrapper {
+        display:flex;
+        height:420px;
+        border:5px solid silver;
+        border-radius:7px;
+        box-shadow:0 0 20px #ccc inset;
+      }
+      .swiper-slide {
+        text-align:center;
+        display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+        align-items:center; /* 위아래 기준 중앙정렬 */
+        justify-content:center; /* 좌우 기준 중앙정렬 */
+      }
+      .next {
+        position: absolute;
+        cursor: pointer;
+        right: 60px;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    height: 400px;
+
+    .img {
+      width: 50%;
+      background-color: cadetblue;
+    }
+    .paragraph {
+      width: 50%;
+      background-color: rgb(214, 154, 166);
+    }
+  }
+}
