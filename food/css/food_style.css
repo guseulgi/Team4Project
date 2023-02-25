@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: bisque;
+}
+
+header {
+  height: 100px;
+  background-color: orange;
+}
+
+.all_content .slide {
+  height: 300px;
+  display: flex;
+  position: relative;
+}
+.all_content .slide .left {
+  width: 20%;
+}
+.all_content .slide .left .jeju_view {
+  font-size: 30px;
+  line-height: 70px;
+}
+.all_content .slide .right {
+  width: 80%;
+  margin-top: 110px;
+  font-size: 50px;
+}
+.all_content .slide .right .prev {
+  position: absolute;
+  cursor: pointer;
+}
+.all_content .slide .right .swiper-wrapper {
+  display: flex;
+  height: 420px;
+  border: 5px solid silver;
+  border-radius: 7px;
+  box-shadow: 0 0 20px #ccc inset;
+}
+.all_content .slide .right .swiper-slide {
+  text-align: center;
+  display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+  align-items: center; /* 위아래 기준 중앙정렬 */
+  justify-content: center; /* 좌우 기준 중앙정렬 */
+}
+.all_content .slide .right .next {
+  position: absolute;
+  cursor: pointer;
+  right: 60px;
+}
+.all_content .content {
+  display: flex;
+  height: 400px;
+}
+.all_content .content .img {
+  width: 50%;
+  background-color: cadetblue;
+}
+.all_content .content .paragraph {
+  width: 50%;
+  background-color: rgb(214, 154, 166);
+}/*# sourceMappingURL=food_style.css.map */
