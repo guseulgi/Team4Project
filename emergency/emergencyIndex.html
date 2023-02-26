@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주시 응급실</title>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4f251c55cf.js" crossorigin="anonymous"></script>
+
+  <!-- Emergency CSS JS -->
+  <link rel="stylesheet" href="./css/emergency.css"/>
+  <script src="./js/emergency.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <h1>팀4</h1>
+    </div>
+
+      <!-- Fixed Weather -->
+      <div class="weather">
+        <img src="" alt="날씨 아이콘">
+        <ul>
+          <li>
+            현재 제주도는
+          </li>
+          <li>
+            30도 맑음
+          </li>
+        </ul>
+      </div>
+  </header>
+
+  <!-- Emergency Situation -->
+  <section class="emgSituation">
+    <div class="title">
+      <h2>갑작스럽게 다치셨다면?</h2>
+      <hr/>
+      <p>응급상황 발생 시 초기의 대응은 매우 중요한 역할을 합니다.
+        <br/>최초 발견자는 증상확인 후 처리절차에 따라 조치를 취해야 합니다.
+      </p>
+    </div>
+    <div class="swiper-container">
+      <!-- Swiper 적용 -->
+    </div>
+  </section>
+
+  <!-- Jeju island Map -->
+  <section class="map">
+    <div class="map__image">
+      <img src="./source/image/jejudo.png" alt="제주도 섬"/>
+      <ul class="map__pin">
+        <li>
+          <a href="#jejuUniversity">
+            <i class="fa-solid fa-location-pin"></i>
+          <br/>
+          <span>제주대학교병원 응급의료센터</span>
+          </a>
+        </li>
+        <li>
+          <span>제주한라병원 응급실</span>
+          <i class="fa-solid fa-location-pin"></i>
+        </li>
+        <li>
+          <span>제주한국병원 응급실</span>
+          <br/>
+          <i class="fa-solid fa-location-pin"></i>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-pin"></i>
+          <span>한마음병원 응급실</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-pin"></i>
+          <br/>
+          <span>서귀포 의료원 응급의료센터</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Hospital First Content -->
+  <section class="hospital-1">
+    <img src="./source/image/jejuEmg1.jpg" alt="제주대학교병원"/>
+    <div class="images">
+      <img src="./source/image/jejuEmg3.jpeg" alt="제주대학교병원 이미지"/>
+      <img src="./source/image/jejuEmg4.jpeg" alt="제주대학교병원 이미지"/>
+    </div>
+    <div class="title" id="jejuUniversity">
+      <h2>제주대학교병원 응급의료센터</h2>
+      <ul>
+        <li class="item">
+          <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>
+          <span>064-717-1900</span>
+        </li>
+        <li class="item">
+          <a href="#"><i class="fa-solid fa-location-arrow"></i></a>
+          <div class="item__location">
+            <div class="location">
+              <!-- 지도 API 넣기 -->
+            </div>
+            <p>제주 제주시 아란13길 15</p>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="item">
+          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    
+  </section>
+</body>
+</html>
