@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  height: 18vh;
+}
+header .title {
+  font: 80px "Kirang Haerang";
+  margin-left: 40px;
+  height: 18vh;
+  line-height: 18vh;
+}
+
+.weather {
+  font-family: "Do Hyeon";
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  height: 80vh;
+}
+
+.subtitle {
+  width: 20vw;
+  font-size: 80px;
+  text-align: end;
+}
+.subtitle span {
+  vertical-align: bottom;
+}
+
+.swiper {
+  position: relative;
+  width: 80vw;
+  margin-left: 20px;
+}
+.swiper .swiper-slide .swiper-content {
+  border-radius: 30px;
+  height: 70%;
+  width: 100%;
+  cursor: pointer;
+}
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  position: absolute;
+  top: 500px;
+  width: 50px;
+  height: 50px;
+  color: black; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
+  border: 3px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  font-size: 30px;
+}
+.swiper .swiper-button-next {
+  left: 100px;
+}
+
+.description {
+  width: 100%;
+  height: 1000px;
+}
+.description .description-content1 {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border: 1px solid black;
+}
+.description .description-content1 img {
+  position: absolute;
+}
+.description .description-content1 img:nth-child(1) {
+  width: 450px;
+  height: 300px;
+  top: 150px;
+  left: 50px;
+}
+.description .description-content1 img:nth-child(2) {
+  width: 450px;
+  height: 300px;
+  left: 400px;
+  top: 50px;
+}
+.description .description-content2 {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border: 1px solid black;
+}
+.description .description-content2 img:nth-child(1) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  top: 150px;
+  left: 50px;
+}
+.description .description-content2 img:nth-child(2) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 400px;
+  top: 50px;
+}
+.description .description-content3 {
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.description .description-content3 img:nth-child(1) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  top: 150px;
+  left: 50px;
+}
+.description .description-content3 img:nth-child(2) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 400px;
+  top: 50px;
+}
+.description .description-content4 {
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.description .description-content4 img:nth-child(1) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  top: 150px;
+  left: 50px;
+}
+.description .description-content4 img:nth-child(2) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 400px;
+  top: 50px;
+}
+.description .description-content5 {
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.description .description-content5 img:nth-child(1) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  top: 150px;
+  left: 50px;
+}
+.description .description-content5 img:nth-child(2) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 400px;
+  top: 50px;
+}/*# sourceMappingURL=style.css.map */

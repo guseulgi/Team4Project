@@ -1,0 +1,197 @@
+//font
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+//Kirang Haerang
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+//font-family: 'Noto Sans KR', sans-serif;
+
+//reset
+@import "reset";
+body {
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-image: url("../image/jeju2.jpg");
+}
+header {
+  // background-color: yellow;
+  height: 18vh;
+  .title {
+    //background-color: bisque;
+    font: 80px "Kirang Haerang";
+    margin-left: 40px;
+    height: 18vh;
+    line-height: 18vh;
+  }
+}
+.weather {
+  font-family: "Do Hyeon";
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 2;
+}
+.content {
+  display: flex;
+  height: 80vh;
+}
+.subtitle {
+  width: 20vw;
+  // background-color: orange;
+  font-size: 80px;
+  text-align: end;
+  span {
+    vertical-align: bottom; //왜 안먹음..
+  }
+}
+.swiper {
+  position: relative;
+  width: 80vw;
+  margin-left: 20px;
+  // background-color: aqua;
+
+  .swiper-slide {
+    .swiper-content {
+      border-radius: 30px;
+      height: 70%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 500px;
+    width: 50px;
+    height: 50px;
+
+    color: black; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
+    border: 3px solid black;
+    //background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    &::after {
+      font-size: 30px;
+    }
+  }
+  .swiper-button-next {
+    left: 100px;
+  }
+}
+
+.description {
+  // position: relative;
+  // background-color: aqua;
+  width: 100%;
+  height: 1000px;
+  .description-content1 {
+    position: relative;
+    img {
+      position: absolute;
+      &:nth-child(1) {
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+  }
+  .description-content2 {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content3 {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content4 {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content5 {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+}
