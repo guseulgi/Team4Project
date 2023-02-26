@@ -1,24 +1,14 @@
 var mySwiper = new Swiper('.swiper-container', {
-  // 슬라이드를 버튼으로 움직일 수 있습니다.
+  // 슬라이드 버튼 작동
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-      
-  // 현재 페이지를 나타내는 점이 생깁니다. 클릭하면 이동합니다.
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
+    // 페이징 설정
+    pagination : { 
+      el : '.swiper-pagination',
     },
-  
-  // 현재 페이지를 나타내는 스크롤이 생깁니다. 클릭하면 이동합니다.
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-    },
-      
-  // 3초마다 자동으로 슬라이드가 넘어갑니다. 1초 = 1000
-    autoplay: {
-      delay: 3000,
-    },
-  })
+    loop : true,  //계속 반복 되게
+    slidesPerView: 3,  //한페이지에 보여줄 이미지의 개수
+    spaceBetween: 30,  //페이지와 페이지 사이의 간격
+  });
