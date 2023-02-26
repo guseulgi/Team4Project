@@ -26,10 +26,10 @@
         <img src="" alt="날씨 아이콘">
         <ul>
           <li>
-            현재 온도 : XX도
+            현재 제주도는
           </li>
           <li>
-            현재 날씨 : 맑음
+            30도 맑음
           </li>
         </ul>
       </div>
@@ -49,27 +49,71 @@
     </div>
   </section>
 
-  <!-- Hospital First Content -->
-  <section class="hospital-1">
-    <img src="./source/image/jejuEmg1.jpg" alt="제주대학교병원"/>
-    <div class="title">
-      <h2>제주대학교병원 응급의료센터</h2>
-      <ul>
-        <li class="item">
-          <i class="fa-solid fa-phone"></i>
-          <span>064-717-1900</span>
+  <!-- Jeju island Map -->
+  <section class="map">
+    <div class="map__image">
+      <img src="./source/image/jejudo.png" alt="제주도 섬"/>
+      <ul class="map__pin">
+        <li>
+          <a href="#jejuUniversity">
+            <i class="fa-solid fa-location-pin"></i>
+          <br/>
+          <span>제주대학교병원 응급의료센터</span>
+          </a>
         </li>
-        <li class="item">
-          <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+        <li>
+          <span>제주한라병원 응급실</span>
+          <i class="fa-solid fa-location-pin"></i>
         </li>
-        <li class="item">
-          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-paperclip"></i></a>
+        <li>
+          <span>제주한국병원 응급실</span>
+          <br/>
+          <i class="fa-solid fa-location-pin"></i>
         </li>
-        <li class="item">
-          <img src="./source/icon/around-the-world.png" alt="">
+        <li>
+          <i class="fa-solid fa-location-pin"></i>
+          <span>한마음병원 응급실</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-pin"></i>
+          <br/>
+          <span>서귀포 의료원 응급의료센터</span>
         </li>
       </ul>
     </div>
+  </section>
+
+  <!-- Hospital First Content -->
+  <section class="hospital-1">
+    <img src="./source/image/jejuEmg1.jpg" alt="제주대학교병원"/>
+    <div class="images">
+      <img src="./source/image/jejuEmg3.jpeg" alt="제주대학교병원 이미지"/>
+      <img src="./source/image/jejuEmg4.jpeg" alt="제주대학교병원 이미지"/>
+    </div>
+    <div class="title" id="jejuUniversity">
+      <h2>제주대학교병원 응급의료센터</h2>
+      <ul>
+        <li class="item">
+          <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>
+          <span>064-717-1900</span>
+        </li>
+        <li class="item">
+          <a href="#"><i class="fa-solid fa-location-arrow"></i></a>
+          <div class="item__location">
+            <div class="location">
+              <!-- 지도 API 넣기 -->
+            </div>
+            <p>제주 제주시 아란13길 15</p>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="item">
+          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    
   </section>
 </body>
 </html>

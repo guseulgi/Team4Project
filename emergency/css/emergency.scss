@@ -5,6 +5,20 @@
 //font-family: 'Do Hyeon';
 //font-family: 'Noto Sans KR', sans-serif;
 
+// Variable
+  // Color
+$yellow : #f6d860;
+$orange : #ff7f3f;
+$darkOrange : #ea5c2b;
+$green : #95cd41;
+
+  // Font
+$logo-txt : 'Kirang Haerang';
+$title-txt : 'Do Hyeon';
+$content-txt : 'Noto Sans KR', sans-serif;
+  // Layout
+$primary-border : 1px solid #ddd;
+
 // Common
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -16,43 +30,40 @@ body {
 header {
   width: 100vw;
   height: 15vh;
-  background-color: rgb(255, 241, 222);
-  border-bottom: 1px solid rbga(0, 0, 0, .3);
+  background-color: $yellow;
 
   // Logo
   .logo {
-
 
     h1 {
       position: absolute;
       top : 3vh;
       left: 5vw;
-      // margin: auto 5vw;
+
       width: 12vw;
       height: 7vh;
       font-size: 6vh;
-      // border: 1px solid #727272;
-
-      font-family: 'Kirang Haerang';
-
+      font-family: $logo-txt;
     }
   }
 
   // Fixed Weather
   .weather {
+    z-index: 2;
     position: fixed;
     bottom: 10px;
     right: 10px;
     padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: $yellow;
+    border-radius: 50%;
+    border: $primary-border;
 
     img {
       display: block;
       width: 50px;
-      height: 45px;
+      height: 40px;
       margin: 0 auto;
-      border: 1px solid #ddd;
+      background-color: white;
     }
 
     ul {
@@ -60,8 +71,9 @@ header {
       li {
         font-size: 14px;
         line-height: 18px;
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: $content-txt;
         margin-top: 5px;
+        text-align: center;
       }
     }
   }
@@ -77,27 +89,204 @@ header {
     width : 70vw;
     background-color: white;
     margin: 20px auto;
-    // border: 1px solid #ddd;
     padding: 5px;
 
     h2 {
       font-size: 2rem;
-      // font-family: 'Do Hyeon';
       font-weight: 700;
       text-align: center;
       margin-bottom: 10px;
     }
-
-    p {
-
-    }
+    p {}
   }
 
   .swiper-container {
     width : 80vw;
     height: 400px;
     margin: 0 auto;
-    border: 1px solid #ddd;
+    border: $primary-border;
   }
+}
+
+// Jeju island Map
+.map {
+  width: 100vw;
+
+  .map__image {
+    width: 600px;
+    position: relative;
+    margin: auto;
+    img {
+      width: 100%;
+      display: block;
+    }
+    .map__pin {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+
+      li {
+        position: absolute;
+        transition: .7s ease-in-out;
+        span {
+          font-size: 12px;
+        }
+        i {}
+
+        a{
+          text-decoration: none;
+          color: black;
+          transition: .5s;
+        }
+
+        &:first-child {
+          top : 33%;
+          left: 31%;
+          text-align: center;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        &:nth-child(2) {
+          top:29%;
+          left: 15%;
+        }
+        &:nth-child(3) {
+          top: 20%;
+          left: 31%;
+          text-align: center;
+        }
+        &:nth-child(4) {
+          top:25%;
+          left: 45%;
+        }
+        &:last-child {
+          bottom:21%;
+          left: 33%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+// Hospital First Content
+.hospital-1 {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ddd;
+  padding: 20px 0;
+
+  & > img {
+    margin: 0 5px;
+    width: 500px;
+  }
+
+  .title {
+    margin: 0 5px;
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    ul {
+      margin-top: 20px;
+      .item {
+        position: relative;
+        margin-bottom: 7px;
+        padding: 3px;
+        background-color: white;
+        border-radius: 3px;
+
+        a {
+          color: white;
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          background-color: $darkOrange;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 28px;
+        }
+
+        & > span {
+          display: inline-block;
+          transition: .6s;
+          transform: translateX(-10px);
+          opacity: 0;
+          margin-left: 5px;
+        }
+
+        &:first-child:hover span {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+
+        i {
+          font-size: 1.1rem;
+        }
+
+        .item__location {
+          transition: .6s;
+          width : 86%;
+          height: 0px;
+          margin: 0 auto;
+          
+          .location {
+            width: 100%;
+            height: 0;
+            background-color: #ddd;
+          }
+
+          & > p {
+            height: 0;
+            font-size: 0px;
+            text-align: center;
+          }
+        }
+        &:nth-child(2):hover {
+          .item__location {
+            height: 280px;
+            padding: 7px 0;
+
+            .location {
+              height: 90%;
+            }
+            & > p {
+              margin-top: 5px;
+              font-size: 14px;
+              height: 10%;
+            }
+          }
+        }
+
+        i.fa-chevron-down {
+          color: $darkOrange;
+          position: absolute;
+          top : 8px;
+          right: 8px;
+        }
+      }
+    }
+  }
+
+  .images {
+    width : 330px;
+    margin: 50px 5px 0 5px;
+    
+    img:first-child {
+      width : 100%;
+    }
+    img {
+      width : 100%;
+    }
+    
+  }
+
+
 }
 
