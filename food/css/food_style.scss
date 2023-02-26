@@ -9,11 +9,10 @@
 @import "reset";
 
 body {
-  background-color: bisque;
+  background-image: url("../jeju/bg1.png");
 }
 header {
   height: 100px;
-  background-color: orange;
 }
 
 .all_content {
@@ -21,7 +20,6 @@ header {
     height: 300px;
     display: flex;
     position: relative;
-
     .left {
       width: 20%;
 
@@ -32,44 +30,73 @@ header {
     }
     .right {
       width: 80%;
-      margin-top: 110px;
-      font-size: 50px;
-      .prev {
-        position: absolute;
-        cursor: pointer;
-      }
-      .swiper-wrapper {
-        display:flex;
-        height:420px;
-        border:5px solid silver;
-        border-radius:7px;
-        box-shadow:0 0 20px #ccc inset;
-      }
-      .swiper-slide {
-        text-align:center;
-        display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-        align-items:center; /* 위아래 기준 중앙정렬 */
-        justify-content:center; /* 좌우 기준 중앙정렬 */
-      }
-      .next {
-        position: absolute;
-        cursor: pointer;
-        right: 60px;
+      position: relative;
+      .swiper-container{
+        overflow: hidden;
+        .swiper-wrapper {
+          display:flex;
+          height: 300px;
+          img {
+            width: 250px;
+            height: 250px;
+          }
+          .swiper-slide {
+            text-align:center;
+            display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+            align-items:center; /* 위아래 기준 중앙정렬 */
+            justify-content:center; /* 좌우 기준 중앙정렬 */
+          }
+        }
       }
     }
   }
 
-  .content {
-    display: flex;
-    height: 400px;
-
-    .img {
-      width: 50%;
-      background-color: cadetblue;
-    }
-    .paragraph {
-      width: 50%;
-      background-color: rgb(214, 154, 166);
+  .post{
+    position: relative;
+    margin-top: 250px;
+    .content {
+      display: flex;
+      height: 400px;
+      margin-bottom: 300px;
+      .imgs {
+        position: absolute;
+        margin-bottom: 300px;
+        .back_img {
+          position: absolute;
+          background-color: #fff;
+          border: 1px solid black;
+          width :400px;
+          height: 400px;
+          left: 150px;
+        }
+        .content_img {
+          position: absolute;
+          width :330px;
+          height: 330px;
+          top: 35px;
+          left: 185px;
+        }
+      }
+      .paragraph {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        
+        .content_text {
+          position: absolute;
+          width :450px;
+          height: 450px;
+          top: -20px;
+          right: 200px;
+        }
+        .text {
+          position: absolute;
+          left: 240px;
+          top: 80px;
+          font-size: 20px;
+        }
+      }
     }
   }
+  
 }

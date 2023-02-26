@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 ul, ol {
@@ -17,12 +16,11 @@ a {
 }
 
 body {
-  background-color: bisque;
+  background-image: url("../jeju/bg1.png");
 }
 
 header {
   height: 100px;
-  background-color: orange;
 }
 
 .all_content .slide {
@@ -39,40 +37,68 @@ header {
 }
 .all_content .slide .right {
   width: 80%;
-  margin-top: 110px;
-  font-size: 50px;
+  position: relative;
 }
-.all_content .slide .right .prev {
-  position: absolute;
-  cursor: pointer;
+.all_content .slide .right .swiper-container {
+  overflow: hidden;
 }
-.all_content .slide .right .swiper-wrapper {
+.all_content .slide .right .swiper-container .swiper-wrapper {
   display: flex;
-  height: 420px;
-  border: 5px solid silver;
-  border-radius: 7px;
-  box-shadow: 0 0 20px #ccc inset;
+  height: 300px;
 }
-.all_content .slide .right .swiper-slide {
+.all_content .slide .right .swiper-container .swiper-wrapper img {
+  width: 250px;
+  height: 250px;
+}
+.all_content .slide .right .swiper-container .swiper-wrapper .swiper-slide {
   text-align: center;
   display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
   align-items: center; /* 위아래 기준 중앙정렬 */
   justify-content: center; /* 좌우 기준 중앙정렬 */
 }
-.all_content .slide .right .next {
-  position: absolute;
-  cursor: pointer;
-  right: 60px;
+.all_content .post {
+  position: relative;
+  margin-top: 250px;
 }
-.all_content .content {
+.all_content .post .content {
   display: flex;
   height: 400px;
+  margin-bottom: 300px;
 }
-.all_content .content .img {
-  width: 50%;
-  background-color: cadetblue;
+.all_content .post .content .imgs {
+  position: absolute;
+  margin-bottom: 300px;
 }
-.all_content .content .paragraph {
+.all_content .post .content .imgs .back_img {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  left: 150px;
+}
+.all_content .post .content .imgs .content_img {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  top: 35px;
+  left: 185px;
+}
+.all_content .post .content .paragraph {
+  position: absolute;
   width: 50%;
-  background-color: rgb(214, 154, 166);
+  right: 0;
+}
+.all_content .post .content .paragraph .content_text {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -20px;
+  right: 200px;
+}
+.all_content .post .content .paragraph .text {
+  position: absolute;
+  left: 240px;
+  top: 80px;
+  font-size: 20px;
 }/*# sourceMappingURL=food_style.css.map */
