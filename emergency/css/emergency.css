@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.4;
+}
+
+header {
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(255, 241, 222);
+  border-bottom: 1px solid rbga(0, 0, 0, 0.3);
+}
+header .logo h1 {
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  width: 12vw;
+  height: 7vh;
+  font-size: 6vh;
+  font-family: "Kirang Haerang";
+}
+header .weather {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+header .weather img {
+  display: block;
+  width: 50px;
+  height: 45px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+header .weather ul li {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 5px;
+}
+
+.emgSituation {
+  width: 100vw;
+  height: 550px;
+  margin-bottom: 30px;
+}
+.emgSituation .title {
+  width: 70vw;
+  background-color: white;
+  margin: 20px auto;
+  padding: 5px;
+}
+.emgSituation .title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.emgSituation .swiper-container {
+  width: 80vw;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}/*# sourceMappingURL=emergency.css.map */
