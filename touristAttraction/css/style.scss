@@ -7,13 +7,18 @@
 
 //reset
 @import "reset";
+body {
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-image: url("../image/jeju2.jpg");
+}
 header {
-  background-color: yellow;
+  // background-color: yellow;
   height: 18vh;
   .title {
-    background-color: bisque;
+    //background-color: bisque;
     font: 80px "Kirang Haerang";
-    margin-left: 20px;
+    margin-left: 40px;
     height: 18vh;
     line-height: 18vh;
   }
@@ -31,22 +36,23 @@ header {
 }
 .subtitle {
   width: 20vw;
-  background-color: orange;
+  // background-color: orange;
   font-size: 80px;
   text-align: end;
   span {
-    vertical-align: bottom; //안먹음..
+    vertical-align: bottom; //왜 안먹음..
   }
 }
 .swiper {
   position: relative;
   width: 80vw;
-  margin: 0;
-  background-color: aqua;
+  margin-left: 20px;
+  // background-color: aqua;
 
   .swiper-slide {
-    img {
-      height: 80%;
+    .swiper-content {
+      border-radius: 30px;
+      height: 70%;
       width: 100%;
       cursor: pointer;
     }
@@ -54,30 +60,138 @@ header {
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 550px;
+    top: 500px;
     width: 50px;
     height: 50px;
 
-    color: white; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
-    border: 3px solid white;
+    color: black; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
+    border: 3px solid black;
     //background-color: black;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
     &::after {
-      font-size: 36px;
+      font-size: 30px;
     }
+  }
+  .swiper-button-next {
+    left: 100px;
   }
 }
 
 .description {
-  background-color: aqua;
+  // position: relative;
+  // background-color: aqua;
   width: 100%;
   height: 1000px;
-  .description-content {
-    background-color: salmon;
+  .description-content1 {
+    position: relative;
+    img {
+      position: absolute;
+      &:nth-child(1) {
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+  }
+  .description-content2 {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content3 {
     border: 1px solid black;
     width: 100%;
     height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content4 {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
+  }
+  .description-content5 {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        top: 150px;
+        left: 50px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 400px;
+        top: 50px;
+      }
+    }
   }
 }
