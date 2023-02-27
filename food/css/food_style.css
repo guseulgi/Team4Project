@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
 @import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +12,12 @@ ul, ol {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 body {
-  background-image: url("../jeju/bg1.png");
+  background-color: #f6d860;
+  font-family: "Do Hyeon";
 }
 
 header {
@@ -24,7 +25,7 @@ header {
 }
 
 .all_content .slide {
-  height: 300px;
+  height: 50vh;
   display: flex;
   position: relative;
 }
@@ -44,7 +45,7 @@ header {
 }
 .all_content .slide .right .swiper-container .swiper-wrapper {
   display: flex;
-  height: 300px;
+  height: 30vh;
 }
 .all_content .slide .right .swiper-container .swiper-wrapper img {
   width: 250px;
@@ -61,7 +62,6 @@ header {
   margin-top: 250px;
 }
 .all_content .post .content {
-  display: flex;
   height: 400px;
   margin-bottom: 300px;
 }
@@ -71,8 +71,6 @@ header {
 }
 .all_content .post .content .imgs .back_img {
   position: absolute;
-  background-color: #fff;
-  border: 1px solid black;
   width: 400px;
   height: 400px;
   left: 150px;
@@ -82,23 +80,40 @@ header {
   width: 330px;
   height: 330px;
   top: 35px;
-  left: 185px;
+  left: 150px;
 }
 .all_content .post .content .paragraph {
   position: absolute;
   width: 50%;
   right: 0;
 }
-.all_content .post .content .paragraph .content_text {
+.all_content .post .content .paragraph .text_title {
   position: absolute;
-  width: 450px;
-  height: 450px;
-  top: -20px;
-  right: 200px;
+  font-size: 50px;
+  left: -200px;
+  top: 50px;
 }
-.all_content .post .content .paragraph .text {
+.all_content .post .content .paragraph .text_content {
   position: absolute;
-  left: 240px;
-  top: 80px;
-  font-size: 20px;
+  font-size: 25px;
+  left: 300px;
+  top: 20px;
+  left: 60px;
+}
+.all_content .post .content .paragraph .text_content .text_list {
+  display: flex;
+  line-height: 50px;
+}
+.all_content .post .content .paragraph .text_content .text_list p {
+  width: 150px;
+}
+.all_content .post .content .paragraph .text_content .text_list p:hover {
+  background-color: orange;
+  color: white;
+  width: 150px;
+  height: 50px;
+}
+.all_content .post .content .paragraph .text_content .text_list .time, .all_content .post .content .paragraph .text_content .text_list .menu, .all_content .post .content .paragraph .text_content .text_list .road {
+  display: none;
+  margin-left: 100px;
 }/*# sourceMappingURL=food_style.css.map */
