@@ -21,21 +21,55 @@ header h1 {
   position: absolute;
   color: green;
 }
-header .container {
+
+header .other-menu ul {
   display: flex;
   position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+header .other-menu ul li {
+  margin: 15px;
+  font-size: 20px;
+}
+header .other-menu ul li a {
+  color: black;
+}
+.weather {
+  position: fixed;
+  width: 210px;
+  height: 100px;
+  right: 20px;
+  bottom: 20px;
+  background-color: #808080;
+  border-radius: 30px;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.weather .container {
+  position: fixed;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
-  right: 50px;
-  color: #808080;
+  right: 20px;
+  bottom: 20px;
+  margin-right: 25px;
+  color: white;
+  z-index: 4;
 }
+
 .weatherInfo {
   font-size: 1em;
 }
+.weatherIcon {
+  width: 60px;
+  height: 60px;
+}
 
 .swipe {
+  height: 600px;
 }
 
 .swiper {
@@ -94,6 +128,7 @@ header .container {
 }
 
 .cafe .cafe-img {
+  width: 300px;
 }
 
 .cafe .cafe-img img {
