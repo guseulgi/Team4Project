@@ -74,7 +74,7 @@ header {
 
   .swiper-slide {
     .swiper-content {
-      margin-top: 5px;
+      margin-top: 10px;
       border-radius: 30px;
       height: 70%;
       width: 100%;
@@ -85,17 +85,33 @@ header {
         opacity: 0.5;
       }
     }
+    p {
+      opacity: 0;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:hover {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
   }
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 560px;
-    left: 20px;
+    top: 75vh;
+    left: 0vw;
     width: 40px;
     height: 40px;
 
     color: black;
-    border: 1px solid black;
+    // border: 1px solid black;
     //background-color: black;
     border-radius: 50%;
     cursor: pointer;
@@ -103,13 +119,9 @@ header {
     &::after {
       font-size: 25px;
     }
-    &:hover {
-      background-color: #373737;
-      transition: 0.5s;
-    }
   }
   .swiper-button-next {
-    left: 100px;
+    left: 3vw;
   }
 }
 
@@ -125,33 +137,42 @@ header {
     img {
       position: absolute;
       &:nth-child(1) {
-        width: 450px;
-        height: 300px;
-        top: 25%;
+        width: 35vw;
+        height: 40vh;
+        top: 12%;
         left: 10%;
       }
       &:nth-child(2) {
-        width: 450px;
-        height: 300px;
-        left: 35%;
+        width: 35vw;
+        height: 40vh;
+        left: 40%;
         top: 15%;
+      }
+      &:nth-child(3) {
+        width: 35vw;
+        height: 40vh;
+        left: 15%;
+        bottom: 8%;
       }
     }
     .place {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 5%;
+      top: 5%;
+      font-family: "Do Hyeon";
+      font-size: 4vh;
     }
     .place-content {
       position: absolute;
-      right: 20%;
-      top: 65%;
+      right: 10%;
+      top: 60%;
     }
 
     width: 100%;
     height: 100vh;
     border: 1px solid black;
   }
+  //색달해변
   .description-content2 {
     width: 100%;
     height: 100vh;
@@ -160,32 +181,41 @@ header {
     img {
       &:nth-child(1) {
         position: absolute;
-        width: 450px;
-        height: 300px;
-        top: 25%;
+        width: 35vw;
+        height: 45vh;
+        bottom: 15%;
         left: 10%;
       }
       &:nth-child(2) {
+        display: none;
         position: absolute;
-        width: 450px;
-        height: 300px;
+        width: 35vw;
+        height: 45vh;
         right: 10%;
         top: 25%;
       }
       &:nth-child(3) {
         position: absolute;
-        width: 450px;
-        height: 300px;
-        left: 30%;
-        bottom: 8%;
+        width: 35vw;
+        height: 45vh;
+        right: 15%;
+        bottom: 15%;
       }
+    }
+    .place {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      font-family: "Do Hyeon";
+      font-size: 4vh;
     }
     .place-content {
       position: absolute;
       left: 10%;
-      top: 8%;
+      top: 15%;
     }
   }
+  //성산일출봉
   .description-content3 {
     border: 1px solid black;
     width: 100%;
@@ -214,7 +244,20 @@ header {
         bottom: 8%;
       }
     }
+    .place {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      font-family: "Do Hyeon";
+      font-size: 4vh;
+    }
+    .place-content {
+      position: absolute;
+      left: 10%;
+      top: 8%;
+    }
   }
+  //카멜리아 힐
   .description-content4 {
     border: 1px solid black;
     width: 100%;
@@ -243,7 +286,20 @@ header {
         top: 50px;
       }
     }
+    .place {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      font-family: "Do Hyeon";
+      font-size: 4vh;
+    }
+    .place-content {
+      position: absolute;
+      left: 10%;
+      top: 8%;
+    }
   }
+  //쇠소깍
   .description-content5 {
     border: 1px solid black;
     width: 100%;
@@ -264,6 +320,18 @@ header {
         left: 400px;
         top: 50px;
       }
+    }
+    .place {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      font-family: "Do Hyeon";
+      font-size: 4vh;
+    }
+    .place-content {
+      position: absolute;
+      left: 10%;
+      top: 8%;
     }
   }
 }

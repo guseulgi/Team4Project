@@ -181,7 +181,7 @@ header .other-menu ul li a {
   width: 80vw;
 }
 .swiper .swiper-slide .swiper-content {
-  margin-top: 5px;
+  margin-top: 10px;
   border-radius: 30px;
   height: 70%;
   width: 100%;
@@ -192,15 +192,30 @@ header .other-menu ul li a {
   transition: 0.5s;
   opacity: 0.5;
 }
+.swiper .swiper-slide p {
+  opacity: 0;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.swiper .swiper-slide p:hover {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   position: absolute;
-  top: 560px;
-  left: 20px;
+  top: 75vh;
+  left: 0vw;
   width: 40px;
   height: 40px;
   color: black;
-  border: 1px solid black;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
@@ -209,13 +224,8 @@ header .other-menu ul li a {
 .swiper .swiper-button-next::after {
   font-size: 25px;
 }
-.swiper .swiper-button-prev:hover,
-.swiper .swiper-button-next:hover {
-  background-color: #373737;
-  transition: 0.5s;
-}
 .swiper .swiper-button-next {
-  left: 100px;
+  left: 3vw;
 }
 
 .description {
@@ -231,26 +241,34 @@ header .other-menu ul li a {
   position: absolute;
 }
 .description .description-content1 img:nth-child(1) {
-  width: 450px;
-  height: 300px;
-  top: 25%;
+  width: 35vw;
+  height: 40vh;
+  top: 12%;
   left: 10%;
 }
 .description .description-content1 img:nth-child(2) {
-  width: 450px;
-  height: 300px;
-  left: 35%;
+  width: 35vw;
+  height: 40vh;
+  left: 40%;
   top: 15%;
+}
+.description .description-content1 img:nth-child(3) {
+  width: 35vw;
+  height: 40vh;
+  left: 15%;
+  bottom: 8%;
 }
 .description .description-content1 .place {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5%;
+  top: 5%;
+  font-family: "Do Hyeon";
+  font-size: 4vh;
 }
 .description .description-content1 .place-content {
   position: absolute;
-  right: 20%;
-  top: 65%;
+  right: 10%;
+  top: 60%;
 }
 .description .description-content2 {
   width: 100%;
@@ -260,29 +278,37 @@ header .other-menu ul li a {
 }
 .description .description-content2 img:nth-child(1) {
   position: absolute;
-  width: 450px;
-  height: 300px;
-  top: 25%;
+  width: 35vw;
+  height: 45vh;
+  bottom: 15%;
   left: 10%;
 }
 .description .description-content2 img:nth-child(2) {
+  display: none;
   position: absolute;
-  width: 450px;
-  height: 300px;
+  width: 35vw;
+  height: 45vh;
   right: 10%;
   top: 25%;
 }
 .description .description-content2 img:nth-child(3) {
   position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 30%;
-  bottom: 8%;
+  width: 35vw;
+  height: 45vh;
+  right: 15%;
+  bottom: 15%;
+}
+.description .description-content2 .place {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-family: "Do Hyeon";
+  font-size: 4vh;
 }
 .description .description-content2 .place-content {
   position: absolute;
   left: 10%;
-  top: 8%;
+  top: 15%;
 }
 .description .description-content3 {
   border: 1px solid black;
@@ -311,6 +337,18 @@ header .other-menu ul li a {
   left: 30%;
   bottom: 8%;
 }
+.description .description-content3 .place {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-family: "Do Hyeon";
+  font-size: 4vh;
+}
+.description .description-content3 .place-content {
+  position: absolute;
+  left: 10%;
+  top: 8%;
+}
 .description .description-content4 {
   border: 1px solid black;
   width: 100%;
@@ -338,6 +376,18 @@ header .other-menu ul li a {
   left: 800px;
   top: 50px;
 }
+.description .description-content4 .place {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-family: "Do Hyeon";
+  font-size: 4vh;
+}
+.description .description-content4 .place-content {
+  position: absolute;
+  left: 10%;
+  top: 8%;
+}
 .description .description-content5 {
   border: 1px solid black;
   width: 100%;
@@ -357,4 +407,16 @@ header .other-menu ul li a {
   height: 300px;
   left: 400px;
   top: 50px;
+}
+.description .description-content5 .place {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-family: "Do Hyeon";
+  font-size: 4vh;
+}
+.description .description-content5 .place-content {
+  position: absolute;
+  left: 10%;
+  top: 8%;
 }/*# sourceMappingURL=style.css.map */
