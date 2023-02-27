@@ -7,8 +7,16 @@
 
     <title>coffee</title>
 
+    <!-- reset -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+      rel="stylesheet"
+    />
     <!-- fontawesome -->
-
+    <script
+      src="https://kit.fontawesome.com/2362a3556a.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -24,13 +32,40 @@
   </head>
 
   <body>
+    <div class="weather">
+      <div class="container">
+        <p>지금 제주도 날씨는</p>
+        <span class="weatherInfo"></span>
+        <img class="weatherIcon" />
+      </div>
+    </div>
     <header>
       <div>
         <h1>coffee</h1>
-        <div class="container">
-          <p>지금 제주도 날씨는</p>
-          <span class="weatherInfo"></span>
-          <img class="weatherIcon" />
+        <div class="other-menu">
+          <ul>
+            <li>
+              <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li>
+              <a href="#" title="cafe"
+                ><i class="fa-solid fa-mug-saucer"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" title="activity"
+                ><i class="fa-solid fa-person-running"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+            </li>
+            <li>
+              <a href="#" title="emergency"
+                ><i class="fa-regular fa-hospital"></i
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -64,15 +99,14 @@
             <p>안녕하세요</p>
           </div>
         </div>
-
         <div class="swiper-pagination"></div>
       </div>
     </section>
 
     <section class="cafe">
       <div class="cafe-img">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="a" />
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="a" />
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="cafe1" />
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="cafe2" />
       </div>
     </section>
     <section class="write"></section>
