@@ -2,76 +2,110 @@
 @import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
 //Kirang Haerang
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+//Do Hyeon
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 //font-family: 'Noto Sans KR', sans-serif;
 
 //reset
 @import "reset";
+
+//color
+$yellow: #f6d860;
+$orange: #ff7f3f;
+$darkOrange: #ea5c2b;
+$green: #95cd41;
+
 body {
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-image: url("../image/jeju2.jpg");
+  background-color: $yellow;
+  font-family: "Noto Sans KR";
+  line-height: 1.4;
 }
+
 header {
   // background-color: yellow;
-  height: 18vh;
+  position: relative;
+  height: 100px;
+
   .title {
     //background-color: bisque;
-    font: 80px "Kirang Haerang";
+    color: #ea5c2b;
+    font: 8vh "Kirang Haerang";
+
     margin-left: 40px;
-    height: 18vh;
-    line-height: 18vh;
+    height: 100px;
+    line-height: 13vh;
+  }
+  .other-menu {
+    ul {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      li {
+        margin: 15px;
+        font-size: 20px;
+        a {
+          color: black;
+        }
+      }
+    }
   }
 }
+
+//날씨
 .weather {
   font-family: "Do Hyeon";
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 2;
+  // background-color: $green;
 }
+
+//내용 시작
 .content {
   display: flex;
-  height: 80vh;
+  height: 92vh;
 }
-.subtitle {
-  width: 20vw;
-  // background-color: orange;
-  font-size: 80px;
-  text-align: end;
-  span {
-    vertical-align: bottom; //왜 안먹음..
-  }
-}
+
 .swiper {
   position: relative;
   width: 80vw;
-  margin-left: 20px;
-  // background-color: aqua;
 
   .swiper-slide {
     .swiper-content {
+      margin-top: 5px;
       border-radius: 30px;
       height: 70%;
       width: 100%;
       cursor: pointer;
+      box-shadow: 8px 4px 4px #888;
+      &:hover {
+        transition: 0.5s;
+        opacity: 0.5;
+      }
     }
   }
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 500px;
-    width: 50px;
-    height: 50px;
+    top: 560px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
 
-    color: black; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
-    border: 3px solid black;
+    color: black;
+    border: 1px solid black;
     //background-color: black;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
     &::after {
-      font-size: 30px;
+      font-size: 25px;
+    }
+    &:hover {
+      background-color: #373737;
+      transition: 0.5s;
     }
   }
   .swiper-button-next {
@@ -79,11 +113,13 @@ header {
   }
 }
 
+//관광지 설명
 .description {
+  // font-family: "Noto Sans KR";
   // position: relative;
   // background-color: aqua;
   width: 100%;
-  height: 1000px;
+  //제주 곶자왈 도립공원
   .description-content1 {
     position: relative;
     img {
@@ -91,24 +127,34 @@ header {
       &:nth-child(1) {
         width: 450px;
         height: 300px;
-        top: 150px;
-        left: 50px;
+        top: 25%;
+        left: 10%;
       }
       &:nth-child(2) {
         width: 450px;
         height: 300px;
-        left: 400px;
-        top: 50px;
+        left: 35%;
+        top: 15%;
       }
+    }
+    .place {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .place-content {
+      position: absolute;
+      right: 20%;
+      top: 65%;
     }
 
     width: 100%;
-    height: 500px;
+    height: 100vh;
     border: 1px solid black;
   }
   .description-content2 {
     width: 100%;
-    height: 500px;
+    height: 100vh;
     position: relative;
     border: 1px solid black;
     img {
@@ -116,30 +162,42 @@ header {
         position: absolute;
         width: 450px;
         height: 300px;
-        top: 150px;
-        left: 50px;
+        top: 25%;
+        left: 10%;
       }
       &:nth-child(2) {
         position: absolute;
         width: 450px;
         height: 300px;
-        left: 400px;
-        top: 50px;
+        right: 10%;
+        top: 25%;
       }
+      &:nth-child(3) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 30%;
+        bottom: 8%;
+      }
+    }
+    .place-content {
+      position: absolute;
+      left: 10%;
+      top: 8%;
     }
   }
   .description-content3 {
     border: 1px solid black;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     position: relative;
     img {
       &:nth-child(1) {
         position: absolute;
         width: 450px;
         height: 300px;
-        top: 150px;
-        left: 50px;
+        top: 25%;
+        left: 5%;
       }
       &:nth-child(2) {
         position: absolute;
@@ -147,27 +205,41 @@ header {
         height: 300px;
         left: 400px;
         top: 50px;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 30%;
+        bottom: 8%;
       }
     }
   }
   .description-content4 {
     border: 1px solid black;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     position: relative;
     img {
       &:nth-child(1) {
         position: absolute;
         width: 450px;
         height: 300px;
-        top: 150px;
-        left: 50px;
+        top: 25%;
+        left: 5%;
       }
       &:nth-child(2) {
         position: absolute;
         width: 450px;
         height: 300px;
         left: 400px;
+        top: 50px;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+        left: 800px;
         top: 50px;
       }
     }
@@ -175,7 +247,7 @@ header {
   .description-content5 {
     border: 1px solid black;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     position: relative;
     img {
       &:nth-child(1) {

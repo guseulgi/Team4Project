@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
@@ -133,14 +132,35 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #f6d860;
+  font-family: "Noto Sans KR";
+  line-height: 1.4;
+}
+
 header {
-  height: 18vh;
+  position: relative;
+  height: 100px;
 }
 header .title {
-  font: 80px "Kirang Haerang";
+  color: #ea5c2b;
+  font: 8vh "Kirang Haerang";
   margin-left: 40px;
-  height: 18vh;
-  line-height: 18vh;
+  height: 100px;
+  line-height: 13vh;
+}
+header .other-menu ul {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+header .other-menu ul li {
+  margin: 15px;
+  font-size: 20px;
+}
+header .other-menu ul li a {
+  color: black;
 }
 
 .weather {
@@ -153,44 +173,46 @@ header .title {
 
 .content {
   display: flex;
-  height: 80vh;
-}
-
-.subtitle {
-  width: 20vw;
-  font-size: 80px;
-  text-align: end;
-}
-.subtitle span {
-  vertical-align: bottom;
+  height: 92vh;
 }
 
 .swiper {
   position: relative;
   width: 80vw;
-  margin-left: 20px;
 }
 .swiper .swiper-slide .swiper-content {
+  margin-top: 5px;
   border-radius: 30px;
   height: 70%;
   width: 100%;
   cursor: pointer;
+  box-shadow: 8px 4px 4px #888;
+}
+.swiper .swiper-slide .swiper-content:hover {
+  transition: 0.5s;
+  opacity: 0.5;
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   position: absolute;
-  top: 500px;
-  width: 50px;
-  height: 50px;
-  color: black; /*가상 요소인 after요소로 들어갔기 때문에 글자 색으로 변경*/
-  border: 3px solid black;
+  top: 560px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  color: black;
+  border: 1px solid black;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
 }
 .swiper .swiper-button-prev::after,
 .swiper .swiper-button-next::after {
-  font-size: 30px;
+  font-size: 25px;
+}
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+  background-color: #373737;
+  transition: 0.5s;
 }
 .swiper .swiper-button-next {
   left: 100px;
@@ -198,12 +220,11 @@ header .title {
 
 .description {
   width: 100%;
-  height: 1000px;
 }
 .description .description-content1 {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   border: 1px solid black;
 }
 .description .description-content1 img {
@@ -212,18 +233,28 @@ header .title {
 .description .description-content1 img:nth-child(1) {
   width: 450px;
   height: 300px;
-  top: 150px;
-  left: 50px;
+  top: 25%;
+  left: 10%;
 }
 .description .description-content1 img:nth-child(2) {
   width: 450px;
   height: 300px;
-  left: 400px;
-  top: 50px;
+  left: 35%;
+  top: 15%;
+}
+.description .description-content1 .place {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.description .description-content1 .place-content {
+  position: absolute;
+  right: 20%;
+  top: 65%;
 }
 .description .description-content2 {
   width: 100%;
-  height: 500px;
+  height: 100vh;
   position: relative;
   border: 1px solid black;
 }
@@ -231,28 +262,40 @@ header .title {
   position: absolute;
   width: 450px;
   height: 300px;
-  top: 150px;
-  left: 50px;
+  top: 25%;
+  left: 10%;
 }
 .description .description-content2 img:nth-child(2) {
   position: absolute;
   width: 450px;
   height: 300px;
-  left: 400px;
-  top: 50px;
+  right: 10%;
+  top: 25%;
+}
+.description .description-content2 img:nth-child(3) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 30%;
+  bottom: 8%;
+}
+.description .description-content2 .place-content {
+  position: absolute;
+  left: 10%;
+  top: 8%;
 }
 .description .description-content3 {
   border: 1px solid black;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   position: relative;
 }
 .description .description-content3 img:nth-child(1) {
   position: absolute;
   width: 450px;
   height: 300px;
-  top: 150px;
-  left: 50px;
+  top: 25%;
+  left: 5%;
 }
 .description .description-content3 img:nth-child(2) {
   position: absolute;
@@ -261,18 +304,25 @@ header .title {
   left: 400px;
   top: 50px;
 }
+.description .description-content3 img:nth-child(3) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 30%;
+  bottom: 8%;
+}
 .description .description-content4 {
   border: 1px solid black;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   position: relative;
 }
 .description .description-content4 img:nth-child(1) {
   position: absolute;
   width: 450px;
   height: 300px;
-  top: 150px;
-  left: 50px;
+  top: 25%;
+  left: 5%;
 }
 .description .description-content4 img:nth-child(2) {
   position: absolute;
@@ -281,10 +331,17 @@ header .title {
   left: 400px;
   top: 50px;
 }
+.description .description-content4 img:nth-child(3) {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  left: 800px;
+  top: 50px;
+}
 .description .description-content5 {
   border: 1px solid black;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   position: relative;
 }
 .description .description-content5 img:nth-child(1) {
