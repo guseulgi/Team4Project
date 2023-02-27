@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+
+header {
+  display: flex;
+  position: relative;
+  height: 100px;
+  border-bottom: 1px solid #323232;
+  background-color: blanchedalmond;
+}
+header h1 {
+  font: bold 36px "arial";
+  display: flex;
+  top: 50px;
+  left: 50px;
+  position: absolute;
+  color: green;
+}
+header .container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  right: 50px;
+  color: #808080;
+}
+.weatherInfo {
+  font-size: 1em;
+}
+
+.swipe {
+}
+
+.swiper {
+  position: absolute;
+  width: 70%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  right: 10px;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 40%;
+  margin: 10px auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-slide img:hover {
+  width: 100%;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.swiper-slide p {
+  position: absolute;
+  padding: 5px 10px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.swiper-slide:hover p:hover {
+  position: absolute;
+  padding: 5px 10px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.swiper-slide img {
+  display: inline-block;
+  border-radius: 5%;
+  width: 100%;
+}
+
+.cafe {
+  position: relative;
+  display: flex;
+}
+
+.cafe .cafe-img {
+}
+
+.cafe .cafe-img img {
+}
