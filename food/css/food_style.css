@@ -12,10 +12,11 @@ ul, ol {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 body {
-  background-image: url("../jeju/bg1.png");
+  background-color: #f6d860;
   font-family: "Do Hyeon";
 }
 
@@ -24,7 +25,7 @@ header {
 }
 
 .all_content .slide {
-  height: 400px;
+  height: 50vh;
   display: flex;
   position: relative;
 }
@@ -44,7 +45,7 @@ header {
 }
 .all_content .slide .right .swiper-container .swiper-wrapper {
   display: flex;
-  height: 300px;
+  height: 30vh;
 }
 .all_content .slide .right .swiper-container .swiper-wrapper img {
   width: 250px;
@@ -96,23 +97,23 @@ header {
   position: absolute;
   font-size: 25px;
   left: 300px;
-  top: 30px;
+  top: 20px;
   left: 60px;
 }
 .all_content .post .content .paragraph .text_content .text_list {
-  line-height: 100px;
+  display: flex;
+  line-height: 50px;
 }
-.all_content .post .content .paragraph .text_content .text_list :nth-child(1):hover {
+.all_content .post .content .paragraph .text_content .text_list p {
+  width: 150px;
+}
+.all_content .post .content .paragraph .text_content .text_list p:hover {
   background-color: orange;
-  width: 300px;
   color: white;
+  width: 150px;
+  height: 50px;
 }
-.all_content .post .content .paragraph .text_content .time {
+.all_content .post .content .paragraph .text_content .text_list .time, .all_content .post .content .paragraph .text_content .text_list .menu, .all_content .post .content .paragraph .text_content .text_list .road {
   display: none;
-}
-.all_content .post .content .paragraph .text_content .best_menu {
-  display: none;
-}
-.all_content .post .content .paragraph .text_content .road {
-  display: none;
+  margin-left: 100px;
 }/*# sourceMappingURL=food_style.css.map */

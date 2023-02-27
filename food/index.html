@@ -58,26 +58,40 @@
           <div class="text">
           <div class="text_title">가람돌솥밥</div> <br />
           <div class="text_content">
-            <ol class="text_list">
-              <li>영업시간</li>
-              <!--연중무휴 08:00 - 22:00 <br />-->
-              <li>인기 메뉴</li>
-              <li>찾아오시는 길</li>
-            </ol>
-            <ol class="time">
-              <li>영업시간</li>
-              <li>연중무휴 08:00 - 22:00</li>
-            </ol>
-            <ol class="best_menu">
-              <li>인기 메뉴</li>
-              <li>전보돌솥밥</li>
-              <li>성게전복돌솥밥</li>
-              <li>한치해물돌솥밥</li>
-              <li>전복해물뚝배기</li>
-            </ol>
-            <ol class="road">
-              <li>찾아오시는 길</li>
-            </ol>
+            <ul class="tabmenu">
+              <!-- 영업시간 시작 -->
+              <li class="text_list">
+              <p class="click_li" onclick="toggleList(this);">영업시간</p>
+              <div class="time active" >
+                <ul>
+                  <li>영업시간</li>
+                  <li>연중무휴 08:00 - 22:00</li>
+                </ul>
+              </div>
+              </li>
+              <!-- 인기 메뉴 시작 -->
+              <li class="text_list">
+                <p class="click_li" onclick="toggleList(this);">인기 메뉴</p>
+                <div class="menu">
+                  <ul>
+                    <li>인기 메뉴</li>
+                    <li>전보돌솥밥</li>
+                    <li>성게전복돌솥밥</li>
+                    <li>한치해물돌솥밥</li>
+                    <li>전복해물뚝배기</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="text_list">
+                <p class="click_li" onclick="toggleList(this);">찾아오시는 길</p>
+                <div class="road">
+                  <ul>
+                    <li>찾아오시는 길</li>
+                    </ul>
+                </div>
+              </li>
+          </ul>
+
           </div>
           </div>
         </div>
