@@ -56,10 +56,34 @@ body {
   line-height: 1.4;
 }
 
+.bar {
+  width: 15vw;
+  height: 2px;
+  background-color: #5c3b16;
+  margin: auto;
+}
+
+.point {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  z-index: 0;
+  width: 20vw;
+  height: 10px;
+  background-color: #ffeda4;
+}
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   width: 100vw;
-  height: 15vh;
-  background-color: #f6d860;
+  height: 12vh;
+  background-color: transparent;
+}
+header .logo {
+  height: 100%;
 }
 header .logo h1 {
   position: absolute;
@@ -71,14 +95,14 @@ header .logo h1 {
   font-family: "Kirang Haerang";
 }
 header .weather {
-  z-index: 2;
   position: fixed;
   bottom: 10px;
   right: 10px;
   padding: 10px;
-  background-color: #f6d860;
+  background-color: #ced8d6;
   border-radius: 50%;
   border: 1px solid #ddd;
+  z-index: 3;
 }
 header .weather img {
   display: block;
@@ -94,33 +118,225 @@ header .weather ul li {
   margin-top: 5px;
   text-align: center;
 }
+header .returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 130px;
+}
+header .returnToTop a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #f6d860;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+header .returnToTop a i {
+  color: #626458;
+}
 
 .emgSituation {
   width: 100vw;
-  height: 550px;
-  margin-bottom: 30px;
+  height: 670px;
+  padding: 22vh 0 30px 0;
+  background-image: url("../source/image/pill.jpg");
+  background-size: cover;
+  position: relative;
 }
 .emgSituation .title {
+  position: relative;
   width: 70vw;
-  background-color: white;
   margin: 20px auto;
   padding: 5px;
 }
+.emgSituation .title .title__icon {
+  position: absolute;
+  z-index: 1;
+  width: 110px;
+  height: 95px;
+  top: 5px;
+  right: -13px;
+}
+.emgSituation .title .icon__ambulance {
+  background-image: url("../source/icon/ambulance.png");
+  background-size: cover;
+  transform: rotateY(180deg);
+  animation: ambulence 3s infinite;
+}
+.emgSituation .title .icon__siren {
+  background-image: url("../source/icon/siren.png");
+  background-size: cover;
+  width: 34px;
+  height: 34px;
+  top: -46px;
+  right: 41%;
+  animation: h2Animation 5s;
+}
+.emgSituation .title .icon__siren::before, .emgSituation .title .icon__siren::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -4px;
+  z-index: -1;
+  width: 20px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ea5c2b;
+  animation: siren 2.5s infinite;
+}
+.emgSituation .title .icon__siren::after {
+  width: 14px;
+  height: 9px;
+  top: -15px;
+  animation-delay: 0.3s;
+}
+.emgSituation .title .icon__plus {
+  background-image: url("../source/icon/plus.png");
+  background-size: cover;
+  width: 220px;
+  height: 220px;
+  top: -20px;
+  left: -30px;
+  z-index: 0;
+  transform: rotate(-10deg);
+  opacity: 0.4;
+}
+@keyframes ambulence {
+  0% {
+    transform: rotateY(180deg) scale(1.01, 1.01) translateY(0px);
+  }
+  50% {
+    transform: rotateY(180deg) scaleY(1.03) translateY(1px);
+  }
+  100% {
+    transform: rotateY(180deg) scale(1, 1) translateY(3px);
+  }
+}
+@keyframes siren {
+  0% {
+    border-radius: 40%;
+  }
+  25% {
+    transform: translate(36px, 0px) rotate(-3deg);
+  }
+  50% {
+    border-radius: 50%;
+    transform: translate(-12px, -3px) rotate(0deg) scale(0.6);
+  }
+}
 .emgSituation .title h2 {
+  position: absolute;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 10px;
+  box-sizing: content-box;
+  margin: -20px auto 3px auto;
+  width: 17vw;
+  background-color: white;
+  animation: h2Animation 2s;
+  transition: 0.4s;
+}
+.emgSituation .title h2:nth-child(3) {
+  top: -5px;
+  left: 23%;
+  transform: rotate(5deg);
+}
+.emgSituation .title h2:nth-child(5) {
+  top: 6px;
+  right: 24%;
+  animation: h2Animation 2s;
+  animation-delay: 0.1s;
+  animation-duration: 4s;
+}
+@keyframes h2Animation {
+  0% {
+    opacity: 0;
+    transform: rotate(2deg) translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(5deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(1deg) translate(0);
+  }
+}
+.emgSituation .title p {
+  margin-top: 45px;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+.emgSituation .title p::before, .emgSituation .title p::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 31%;
+  z-index: -1;
+  width: 31vw;
+  height: 14px;
+  background-color: #ffeda4;
+}
+.emgSituation .title p::after {
+  top: 32px;
+  left: 22%;
 }
 .emgSituation .swiper-container {
-  width: 80vw;
-  height: 400px;
+  position: relative;
+  right: 0;
+  width: 90vw;
+  height: 500px;
   margin: 0 auto;
+  overflow: hidden;
+}
+.emgSituation .swiper-container .swiper-wrapper {
   border: 1px solid #ddd;
+  width: 450px;
+}
+.emgSituation .swiper-container .swiper-wrapper .swiper-slide {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  margin: 15px auto;
+  transition: 0.6s;
+  opacity: 0.6;
+  left: 0;
+  right: 0;
+}
+.emgSituation .swiper-container .swiper-wrapper .swiper-slide span {
+  display: block;
+  position: absolute;
+  top: 10px;
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.emgSituation .swiper-container .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 83%;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.emgSituation .swiper-container .swiper-wrapper .swiper-slide p {
+  position: absolute;
+  bottom: 30px;
+  font-size: 16px;
+  margin: 0 16px 20px 25px;
+  line-height: 1.3;
+}
+.emgSituation .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 1;
 }
 
 .map {
   width: 100vw;
+  background: linear-gradient(30deg, #60bbec, #1e95e9);
 }
 .map .map__image {
   width: 600px;
@@ -130,6 +346,7 @@ header .weather ul li {
 .map .map__image img {
   width: 100%;
   display: block;
+  filter: grayscale(10%) drop-shadow(2px 2px 0px #626458);
 }
 .map .map__image .map__pin {
   width: 100%;
@@ -142,7 +359,11 @@ header .weather ul li {
   transition: 0.7s ease-in-out;
 }
 .map .map__image .map__pin li span {
-  font-size: 12px;
+  color: white;
+}
+.map .map__image .map__pin li i {
+  font-size: 20px;
+  color: #ea5c2b;
 }
 .map .map__image .map__pin li a {
   text-decoration: none;
@@ -151,19 +372,16 @@ header .weather ul li {
 }
 .map .map__image .map__pin li:first-child {
   top: 33%;
-  left: 31%;
+  left: 28%;
   text-align: center;
 }
-.map .map__image .map__pin li:first-child:hover {
-  transform: scale(1.2);
-}
 .map .map__image .map__pin li:nth-child(2) {
-  top: 29%;
-  left: 15%;
+  top: 28%;
+  left: 9%;
 }
 .map .map__image .map__pin li:nth-child(3) {
   top: 20%;
-  left: 31%;
+  left: 28%;
   text-align: center;
 }
 .map .map__image .map__pin li:nth-child(4) {
@@ -171,31 +389,113 @@ header .weather ul li {
   left: 45%;
 }
 .map .map__image .map__pin li:last-child {
-  bottom: 21%;
-  left: 33%;
+  bottom: 20%;
+  left: 29%;
   text-align: center;
+}
+.map .map__image .map__pin li:hover i {
+  color: #5c3b16;
+  transform: scale(1.2) translateY(-2px);
+}
+.map .map__image .map__pin li:hover span {
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #626458;
+}
+.map .map__icons {
+  position: relative;
+  top: -500px;
+  left: 0;
+  width: 100%;
+}
+.map .map__icons > div {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+}
+.map .map__icons .icon__mountain {
+  background-image: url("../source/icon/mountain.png");
+  right: 50%;
+  transform: translate(30%, 200px);
+}
+.map .map__icons .icon__surf {
+  background-image: url("../source/icon/surfing.png");
+  width: 40px;
+  height: 40px;
+  top: 50px;
+  right: 20%;
+  animation: slowly 4s infinite;
+}
+.map .map__icons .icon__shark {
+  background-image: url("../source/icon/shark.png");
+  top: 400px;
+  right: 25%;
+  animation: slowly 3s infinite;
+}
+.map .map__icons .icon__boat {
+  background-image: url("../source/icon/speed-boat.png");
+  top: 150px;
+  left: 11%;
+  animation: slowly 3s infinite;
+}
+@keyframes slowly {
+  0% {
+    transform: scale(0.97) rotate(3deg);
+  }
+  20% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.95) rotate(7deg);
+  }
+  75% {
+    transform: scale(0.98) rotate(9deg);
+  }
+  100% {
+    transform: scale(1.01) rotate(5deg);
+  }
 }
 
 .hospital-1 {
   display: flex;
   justify-content: space-evenly;
-  background-color: #ddd;
-  padding: 20px 0;
+  position: relative;
+  background-image: url("../source/image/hospitalBg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 70px 0;
 }
 .hospital-1 > img {
-  margin: 0 5px;
-  width: 500px;
+  margin: 0 15px;
+  width: 400px;
+  flex-grow: 1;
 }
 .hospital-1 .title {
-  margin: 0 5px;
+  margin: 0 15px;
 }
-.hospital-1 .title h2 {
-  font-size: 1.8rem;
+.hospital-1 .title .title__bg {
+  position: absolute;
+  width: 58vw;
+  height: 55px;
+  top: 45px;
+  right: 0;
+  box-shadow: 6px 6px 0 #cba55b;
+}
+.hospital-1 .title .title__bg h2 {
+  position: absolute;
+  color: white;
+  left: 0;
+  font-size: 2rem;
   line-height: 1;
   font-weight: 700;
+  padding: 7px 17px 7px 7px;
 }
 .hospital-1 .title ul {
-  margin-top: 20px;
+  width: 25vw;
+  margin-top: 60px;
 }
 .hospital-1 .title ul .item {
   position: relative;
@@ -209,10 +509,13 @@ header .weather ul li {
   display: inline-block;
   width: 28px;
   height: 28px;
-  background-color: #ea5c2b;
+  background-color: #cba55b;
   border-radius: 50%;
   text-align: center;
   line-height: 28px;
+}
+.hospital-1 .title ul .item:hover a {
+  background-color: #5c3b16;
 }
 .hospital-1 .title ul .item > span {
   display: inline-block;
@@ -245,7 +548,7 @@ header .weather ul li {
   text-align: center;
 }
 .hospital-1 .title ul .item:nth-child(2):hover .item__location {
-  height: 280px;
+  height: 250px;
   padding: 7px 0;
 }
 .hospital-1 .title ul .item:nth-child(2):hover .item__location .location {
@@ -257,7 +560,7 @@ header .weather ul li {
   height: 10%;
 }
 .hospital-1 .title ul .item i.fa-chevron-down {
-  color: #ea5c2b;
+  color: #5c3b16;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -265,6 +568,7 @@ header .weather ul li {
 .hospital-1 .images {
   width: 330px;
   margin: 50px 5px 0 5px;
+  flex-grow: 1;
 }
 .hospital-1 .images img:first-child {
   width: 100%;

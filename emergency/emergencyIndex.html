@@ -9,9 +9,14 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/4f251c55cf.js" crossorigin="anonymous"></script>
 
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
   <!-- Emergency CSS JS -->
   <link rel="stylesheet" href="./css/emergency.css"/>
-  <script src="./js/emergency.js"></script>
+  <script defer src="./js/emergency.js"></script>
+
 </head>
 <body>
   <!-- Header -->
@@ -33,19 +38,60 @@
           </li>
         </ul>
       </div>
+
+      <!-- Return to Top -->
+      <div class="returnToTop">
+        <a href="#">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
   </header>
 
   <!-- Emergency Situation -->
   <section class="emgSituation">
     <div class="title">
-      <h2>갑작스럽게 다치셨다면?</h2>
-      <hr/>
+      <div class="title__icon icon__ambulance"></div>
+      <div class="title__icon icon__plus"></div>
+      <h2>갑작스러운</h2>
+      <div class="title__icon icon__siren"></div>
+      <h2>응급상황 시</h2>
+      <div class="bar"></div>
       <p>응급상황 발생 시 초기의 대응은 매우 중요한 역할을 합니다.
-        <br/>최초 발견자는 증상확인 후 처리절차에 따라 조치를 취해야 합니다.
+        <br/>최초 발견자는 증상확인 후 절차에 따라 조치를 취해야 합니다.
       </p>
     </div>
     <div class="swiper-container">
       <!-- Swiper 적용 -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <span>1</span>
+          <img src="./source/image/emgSituation/emgSituation1.png" alt="응급대처1"/>
+          <p>가볍게 어깨를 두드리며 "괜찮으세요?"라고 말한 다음 반응을 살핀다.
+            <br/>반응이 없으면 심장마비의 가능성이 높다.</p>
+        </div>
+        <div class="swiper-slide">
+          <span>2</span>
+          <img src="./source/image/emgSituation/emgSituation2.png" alt="응급대처2"/>
+          <p>대상자가 아무런 반응이 없고 의식이 없으면 주변인에게 도움을 요청한다.</p>
+        </div>
+        <div class="swiper-slide">
+          <span>3</span>
+          <img src="./source/image/emgSituation/emgSituation3.png" alt="응급대처3"/>
+          <p>이마를 누르면서 턱을 들어 기도를 유지한 다음 환자의 입을 벌린다.
+            <br/>환자의 코를 막고 자신의 입을 환자의 입에 밀착시킨다.</p>
+        </div>
+        <div class="swiper-slide">
+          <span>4</span>
+          <img src="./source/image/emgSituation/emgSituation4.png" alt="응급대처4"/>
+          <p>인공호흡을 한 후에도 심장이 뛰지 않는다면 흉부를 압박한다.
+            <br/>압박할 위치에 한손을 올려놓고 그 위에 다른 손을 올려놓고 깍지를 낀다.</p>
+        </div>
+        <div class="swiper-slide">
+          <span>5</span>
+          <img src="./source/image/emgSituation/emgSituation5.png" alt="응급대처5"/>
+          <p>흉부가 압박되는 깊이는 가슴이 4~5cm정도 함몰되도록, 압박하는 속도는 1분에 100회 정도이다. (압박과 이완의 비율은 50:50)</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -62,36 +108,52 @@
           </a>
         </li>
         <li>
-          <span>제주한라병원 응급실</span>
+          <a href="#">
+            <span>제주한라병원 응급실</span>
           <i class="fa-solid fa-location-pin"></i>
+          </a>
         </li>
         <li>
-          <span>제주한국병원 응급실</span>
+          <a href="#">
+            <span>제주한국병원 응급실</span>
           <br/>
           <i class="fa-solid fa-location-pin"></i>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-location-pin"></i>
-          <span>한마음병원 응급실</span>
+          <a href="#">
+            <i class="fa-solid fa-location-pin"></i>
+            <span>한마음병원 응급실</span>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-location-pin"></i>
-          <br/>
-          <span>서귀포 의료원 응급의료센터</span>
+          <a href="#">
+            <i class="fa-solid fa-location-pin"></i>
+            <br/>
+            <span>서귀포 의료원 응급의료센터</span>
+          </a>
         </li>
       </ul>
+    </div>
+    <div class="map__icons">
+      <div class="icon__mountain"></div>
+      <div class="icon__surf"></div>
+      <div class="icon__shark"></div>
+      <div class="icon__boat"></div>
     </div>
   </section>
 
   <!-- Hospital First Content -->
   <section class="hospital-1">
-    <img src="./source/image/jejuEmg1.jpg" alt="제주대학교병원"/>
+    <img src="./source/image/jejuEmg2.jpg" alt="제주대학교병원"/>
     <div class="images">
       <img src="./source/image/jejuEmg3.jpeg" alt="제주대학교병원 이미지"/>
       <img src="./source/image/jejuEmg4.jpeg" alt="제주대학교병원 이미지"/>
     </div>
     <div class="title" id="jejuUniversity">
-      <h2>제주대학교병원 응급의료센터</h2>
+      <div class="title__bg">
+        <h2>제주대학교병원 응급의료센터</h2>
+      </div>
       <ul>
         <li class="item">
           <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>

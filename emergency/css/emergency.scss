@@ -12,6 +12,11 @@ $orange : #ff7f3f;
 $darkOrange : #ea5c2b;
 $green : #95cd41;
 
+$lightGray : #ced8d6;
+$gray : #626458;
+$darkYellow : #cba55b;
+$darkBrawn : #5c3b16;
+
   // Font
 $logo-txt : 'Kirang Haerang';
 $title-txt : 'Do Hyeon';
@@ -23,20 +28,41 @@ $primary-border : 1px solid #ddd;
 body {
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.4;
+}
 
+.bar {
+  width : 15vw;
+  height: 2px;
+  background-color: $darkBrawn;
+  margin: auto;
+}
+
+.point {
+  position: absolute;
+  top : 60px;
+  left : 50%;
+  z-index: 0;
+  width: 20vw;
+  height: 10px;
+  background-color: #ffeda4;
 }
 
 // Header
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   width: 100vw;
-  height: 15vh;
-  background-color: $yellow;
+  height: 12vh;
+  background-color: transparent;
 
   // Logo
   .logo {
-
+    height: 100%;
     h1 {
       position: absolute;
+
       top : 3vh;
       left: 5vw;
 
@@ -49,15 +75,14 @@ header {
 
   // Fixed Weather
   .weather {
-    z-index: 2;
     position: fixed;
     bottom: 10px;
     right: 10px;
     padding: 10px;
-    background-color: $yellow;
+    background-color: $lightGray;
     border-radius: 50%;
     border: $primary-border;
-
+    z-index: 3;
     img {
       display: block;
       width: 50px;
@@ -67,7 +92,6 @@ header {
     }
 
     ul {
-
       li {
         font-size: 14px;
         line-height: 18px;
@@ -77,40 +101,255 @@ header {
       }
     }
   }
+
+  .returnToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 130px;
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: $yellow;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.5rem;
+      
+      i {
+        color: $gray;
+      }
+    }
+  }
 }
 
 // Emergency Situation
 .emgSituation {
   width: 100vw;
-  height: 550px;
-  margin-bottom: 30px;
+  height: 670px;
+  padding: 22vh 0 30px 0;
+  background-image: url('../source/image/pill.jpg');
+  background-size: cover;
+  position: relative;
 
   .title {
+    position: relative;
     width : 70vw;
-    background-color: white;
+    // background-color: white;
     margin: 20px auto;
     padding: 5px;
 
+    .title__icon {
+      position: absolute;
+      z-index: 1;
+      width: 110px;
+      height: 95px;
+      
+      top: 5px;
+      right : -13px;
+    }
+    .icon__ambulance {
+      background-image: url('../source/icon/ambulance.png');
+      background-size: cover;
+      transform: rotateY(180deg);
+      animation: ambulence 3s infinite;
+    }
+    .icon__siren {
+      background-image: url('../source/icon/siren.png');
+      background-size: cover;
+      width: 34px;
+      height: 34px;
+      
+      top:-46px;
+      right: 41%;
+      animation: h2Animation 5s;
+
+      &::before, &::after {
+        content: "";
+        display: block;
+        position: relative;
+        top : -4px;
+        z-index: -1;
+        width: 20px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #ea5c2b;
+        animation: siren 2.5s infinite;
+      }
+      &::after {
+        width: 14px;
+        height: 9px;
+        top : -15px;
+        animation-delay: .3s;
+      }
+    }
+
+    .icon__plus {
+      background-image: url('../source/icon/plus.png');
+      background-size: cover;
+      width: 220px;
+      height: 220px;
+      top: -20px;
+      left : -30px;
+      z-index: 0;
+      transform: rotate(-10deg);
+      opacity: .4;
+    }
+
+    @keyframes ambulence {
+      0% {
+        transform: rotateY(180deg) scale(1.01, 1.01) translateY(0px);
+      }
+      50% {
+        transform: rotateY(180deg) scaleY(1.03) translateY(1px);
+      }
+      100% {
+        transform: rotateY(180deg) scale(1, 1) translateY(3px);
+      }
+    }
+
+    @keyframes siren {
+      0% {
+        border-radius: 40%;
+      }
+      25% {
+        transform: translate(36px, 0px) rotate(-3deg);
+      }
+      50% {
+        border-radius: 50%;
+        transform: translate(-12px, -3px) rotate(0deg) scale(.6);
+      }
+      100% {
+        
+      }
+    }
+
     h2 {
+      position: absolute;
       font-size: 2rem;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 10px;
+      box-sizing: content-box;
+      margin: -20px auto 3px auto;
+      width: 17vw;
+      background-color: white;
+      animation: h2Animation 2s;
+      transition: .4s;
+
+      &:nth-child(3) {
+        top : -5px;
+        left: 23%;
+        transform: rotate(5deg);
+      }
+      &:nth-child(5) {
+        top:6px;
+        right : 24%;
+        animation: h2Animation 2s; 
+        animation-delay: .1s;
+        animation-duration: 4s;
+      }
     }
-    p {}
+
+    @keyframes h2Animation {
+      0% {
+        opacity: 0;
+        transform: rotate(2deg) translateY(-200px);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(5deg) translateY(-2px);
+      }
+      100% {
+
+        transform: rotate(1deg) translate(0);
+      }
+    }
+
+    p {
+      margin-top: 45px;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left:31%;
+        z-index: -1;
+        width: 31vw;
+        height: 14px;
+        background-color: #ffeda4;
+      }
+      &::after {
+        top: 32px;
+        left:22%;
+      }
+    }
   }
 
   .swiper-container {
-    width : 80vw;
-    height: 400px;
+    position: relative;
+    right: 0;
+    width : 90vw;
+    height: 500px;
     margin: 0 auto;
-    border: $primary-border;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      border: $primary-border;
+      width: 450px;
+
+      .swiper-slide {
+        width: 350px;
+        height: 500px;
+        background-color: white;
+        margin: 15px auto;
+        transition: .6s;
+        opacity: 0.6;
+
+        left: 0;
+        right: 0;
+        span {
+          display: block;
+          position: absolute;
+          top : 10px;
+          margin-left: 15px;
+          font-weight: 700;
+          font-size: 1.2rem;
+          font-family: 'Noto Sans KR', sans-serif;
+        }
+        img {
+          display: block;
+          width:  83%;
+          // margin: 0 auto;
+          position: absolute;
+          top : 30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        p {
+          position: absolute;
+          bottom : 30px;
+          font-size: 16px;
+          margin: 0 16px 20px 25px;
+          line-height: 1.3;
+        }
+
+        &.swiper-slide-active {
+          transform: scale(1.05);
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
   }
 }
 
 // Jeju island Map
 .map {
   width: 100vw;
+  background: linear-gradient(30deg, #60bbec, #1e95e9);
 
   .map__image {
     width: 600px;
@@ -119,6 +358,7 @@ header {
     img {
       width: 100%;
       display: block;
+      filter :grayscale(10%) drop-shadow(2px 2px 0px $gray);
     }
     .map__pin {
       width: 100%;
@@ -129,10 +369,14 @@ header {
       li {
         position: absolute;
         transition: .7s ease-in-out;
+        
         span {
-          font-size: 12px;
+          color: white;
         }
-        i {}
+        i {
+          font-size: 20px;
+          color: $darkOrange;
+        }
 
         a{
           text-decoration: none;
@@ -142,20 +386,16 @@ header {
 
         &:first-child {
           top : 33%;
-          left: 31%;
+          left: 28%;
           text-align: center;
-
-          &:hover {
-            transform: scale(1.2);
-          }
         }
         &:nth-child(2) {
-          top:29%;
-          left: 15%;
+          top:28%;
+          left: 9%;
         }
         &:nth-child(3) {
           top: 20%;
-          left: 31%;
+          left: 28%;
           text-align: center;
         }
         &:nth-child(4) {
@@ -163,10 +403,81 @@ header {
           left: 45%;
         }
         &:last-child {
-          bottom:21%;
-          left: 33%;
+          bottom:20%;
+          left: 29%;
           text-align: center;
         }
+
+        &:hover {
+          i {
+            color: $darkBrawn;
+            transform: scale(1.2) translateY(-2px);
+          }
+
+          span {
+            font-weight: 700;
+            text-shadow: 1px 1px 1px $gray;
+          }
+        }
+      }
+    }
+  }
+
+  .map__icons {
+    position: relative;
+    top: -500px;
+    left: 0;
+    width: 100%;
+
+    & > div {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 60px;
+      height: 60px;
+    }
+
+    .icon__mountain {
+      background-image: url('../source/icon/mountain.png');
+      right: 50%;
+      transform: translate(30%, 200px);
+    }
+    .icon__surf {
+      background-image: url('../source/icon/surfing.png');
+      width: 40px;
+      height: 40px;
+      top: 50px;
+      right: 20%;
+      animation: slowly 4s infinite;
+    }
+    .icon__shark {
+      background-image: url('../source/icon/shark.png');
+      top: 400px;
+      right: 25%;
+      animation: slowly 3s infinite;
+    }
+    .icon__boat {
+      background-image: url('../source/icon/speed-boat.png');
+      top: 150px;
+      left: 11%;
+      animation: slowly 3s infinite;
+    }
+
+    @keyframes slowly {
+      0% {
+        transform: scale(0.97) rotate(3deg);
+      }
+      20% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(0.95) rotate(7deg);
+      }
+      75% {
+        transform: scale(0.98) rotate(9deg);
+      }
+      100% {
+        transform: scale(1.01) rotate(5deg);
       }
     }
   }
@@ -177,24 +488,46 @@ header {
 .hospital-1 {
   display: flex;
   justify-content: space-evenly;
-  background-color: #ddd;
-  padding: 20px 0;
+  position: relative;
+  // background-color: $gray;
+  background-image: url('../source/image/hospitalBg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  padding: 70px 0;
 
   & > img {
-    margin: 0 5px;
-    width: 500px;
+    margin: 0 15px;
+    width: 400px;
+    flex-grow: 1;
   }
 
   .title {
-    margin: 0 5px;
-    h2 {
-      font-size: 1.8rem;
-      line-height: 1;
-      font-weight: 700;
+    margin: 0 15px;
+    .title__bg {
+      position: absolute;
+      width: 58vw;
+      height: 55px;
+      top : 45px;
+      right: 0;
+      // background-color: $lightGray;
+      box-shadow: 6px 6px 0 $darkYellow;
+
+      h2 {
+        position: absolute;
+        color: white;
+        left: 0;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 700;
+  
+        padding: 7px 17px 7px 7px;
+      }
     }
 
     ul {
-      margin-top: 20px;
+      width: 25vw;
+      margin-top: 60px;
       .item {
         position: relative;
         margin-bottom: 7px;
@@ -207,10 +540,16 @@ header {
           display: inline-block;
           width: 28px;
           height: 28px;
-          background-color: $darkOrange;
+          background-color: $darkYellow;
           border-radius: 50%;
           text-align: center;
           line-height: 28px;
+        }
+
+        &:hover {
+          a {
+            background-color: $darkBrawn;
+          }
         }
 
         & > span {
@@ -250,7 +589,7 @@ header {
         }
         &:nth-child(2):hover {
           .item__location {
-            height: 280px;
+            height: 250px;
             padding: 7px 0;
 
             .location {
@@ -265,7 +604,7 @@ header {
         }
 
         i.fa-chevron-down {
-          color: $darkOrange;
+          color: $darkBrawn;
           position: absolute;
           top : 8px;
           right: 8px;
@@ -277,6 +616,7 @@ header {
   .images {
     width : 330px;
     margin: 50px 5px 0 5px;
+    flex-grow: 1;
     
     img:first-child {
       width : 100%;
