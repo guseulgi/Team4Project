@@ -5,8 +5,12 @@
   style.css -> 메인 페이지와 연결된 css 파일로, 기본적인 css 규칙을 포함한 내용으로
              상세 디자인 요소는 style.scss 파일 안에 @import 해주세요.
 
---- 만드시는 페이지의 html, scss, js 파일을 아래에 설명을 추가해주세요.
+--- 맡은 파트의 파일
 
+touristAttraction : 이유림 님
+food : 최인영 님
+cafe : 김정혁 님
+emergency : 구슬기 님
 
 ---
 일단 제가 떠올릴 수 있는 규칙을 적은 것이라, 
