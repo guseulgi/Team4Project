@@ -1,5 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
 @import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@supports ((-webkit-mask-image: url(#mask)) or (mask-image: url(#mask))) {
+  /* code that requires mask-image here. */
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,14 +25,132 @@ body {
 }
 
 header {
-  height: 10vh;
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
+}
+header .title {
+  color: #ea5c2b;
+  font: 8vh "Kirang Haerang";
+  text-shadow: 0px 3px 0 white;
+  padding-left: 40px;
+  height: 100px;
+  line-height: 18vh;
+}
+header .other-menu ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  height: 100%;
+}
+header .other-menu ul li {
+  position: relative;
+  margin: auto 15px;
+  font-size: 20px;
+  transition: 0.7s;
+}
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 70px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
+}
+header .other-menu ul li a {
+  color: #5c3b16;
+}
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
+}
+
+.weather {
+  position: fixed;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+}
+.weather i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 32px;
+  margin: auto 10px auto 5px;
+  color: white;
+  animation: weatherAnim 10s infinite;
+}
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 5px 0;
+}
+
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+}
+.returnToTop a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.returnToTop a i {
+  color: #626458;
 }
 
 .all_content {
   position: relative;
 }
 .all_content .first_page {
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 .all_content .first_page .left_text {
@@ -48,19 +171,44 @@ header {
 }
 .all_content .second_page {
   height: 100vh;
-  background-color: orange;
   position: relative;
   display: flex;
+  background-color: #fff;
 }
 .all_content .second_page :nth-child(1) {
   width: 33.333vw;
-  background-color: rgb(196, 165, 108);
+  background-image: url("../jeju/바다.jpg");
+  background-size: 50vw 50vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.all_content .second_page :nth-child(1):hover {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
+  mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
+  cursor: pointer;
 }
 .all_content .second_page :nth-child(2) {
   width: 33.333vw;
-  background-color: rgb(181, 135, 49);
+  background-image: url("../jeju/산.jpg");
+  background-size: 70vw 50vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.all_content .second_page :nth-child(2):hover {
+  -webkit-mask-image: linear-gradient(to top, transparent 50%, #972f0c 100%);
+  mask-image: linear-gradient(to top transparent 50%, #972f0c 100%);
+  cursor: pointer;
 }
 .all_content .second_page :nth-child(3) {
   width: 33.333vw;
   background-color: rgb(173, 117, 13);
+  background-image: url("../jeju/인기.jpg");
+  background-size: 60vw 50vw;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.all_content .second_page :nth-child(3):hover {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
+  mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
+  cursor: pointer;
 }/*# sourceMappingURL=food_style.css.map */
