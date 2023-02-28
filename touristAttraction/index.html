@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <!--JS-->
-    <script defer src="./js/main.js"></script>
+    <script defer src="./js/test.js"></script>
     <!--fontawesome-->
     <script
       src="https://kit.fontawesome.com/15a6f73da8.js"
@@ -25,24 +25,30 @@
   <body>
     <!--Header-->
     <header>
+      <!--logo-->
       <div class="title">JEJU</div>
       <div class="other-menu">
         <ul>
           <li>
+            <span>HOME</span>
             <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
           </li>
           <li>
+            <span>CAFE</span>
             <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
           </li>
           <li>
+            <span>ACTIVITY</span>
             <a href="#" title="activity"
               ><i class="fa-solid fa-person-running"></i
             ></a>
           </li>
           <li>
+            <span>FOOD</span>
             <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
           </li>
           <li>
+            <span>EMERGENCY</span>
             <a href="#" title="emergency"
               ><i class="fa-regular fa-hospital"></i
             ></a>
@@ -50,86 +56,84 @@
         </ul>
       </div>
     </header>
-    <!--Weather-->
-    <div class="weather"></div>
-    <!--Swiper-->
-    <div class="content">
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img
-              class="swiper-content"
-              src="./image/성산일출봉1.jpg"
-              alt="관광지1"
-            />
-            <p>성산일출봉</p>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="swiper-content"
-              src="./image/카멜리아힐1.jpg"
-              alt="관광지2"
-            />
-            <p>카멜리아 힐</p>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="swiper-content"
-              src="./image/쇠소깍3.jpg"
-              alt="관광지3"
-            />
-            <p>쇠소깍</p>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="swiper-content"
-              src="./image/제주곶자왈도립공원1.jpg"
-              alt="관광지4"
-            />
-            <p>제주 곶자왈 도립공원</p>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="swiper-content"
-              src="./image/색달해변3.jpg"
-              alt="관광지5"
-            />
-            <p>중문 색달 해변</p>
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <!-- If we need scrollbar -->
-        <!--<div class="swiper-scrollbar"></div>-->
-      </div>
+    <!--Weather-->
+    <div class="weather">
+      <ul>
+        <li>현재 제주도는</li>
+      </ul>
     </div>
+
+    <!--section-->
+
+    <!--Swiper-->
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="swiper-img" src="./image/성산일출봉3.jpg" alt="관광지1" />
+          <p>성산일출봉</p>
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-img" src="./image/카멜리아힐5.jpg" alt="관광지2" />
+          <p>카멜리아 힐</p>
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-img" src="./image/쇠소깍3.jpg" alt="관광지3" />
+          <p>쇠소깍</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="swiper-img"
+            src="./image/제주곶자왈도립공원11.jpg"
+            alt="관광지4"
+          />
+          <p>제주 곶자왈 도립공원</p>
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-img" src="./image/색달해변4.jpg" alt="관광지5" />
+          <p>중문 색달 해변</p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+      <!-- If we need scrollbar -->
+      <!--<div class="swiper-scrollbar"></div>-->
+    </div>
+
     <!--관광지 설명-->
     <div class="description">
       <div class="description-content1">
         <img src="./image/곶자왈겨울.jpg" alt="" />
         <img src="./image/제주곶자왈도립공원2.jpg" alt="" />
         <img src="./image/곶자왈지도.jpg" alt="" />
-        <div class="place">제주 곶자왈 도립공원</div>
+        <div class="place"></div>
         <div class="place-content">
-          <p>
-            곶자왈이란?<br />
-            <i class="fa-solid fa-location-dot"></i> 제주특별자치도 서귀포시
-            대정읍 보성리 63<br />
+          <div class="content-box">제주 곶자왈 도립공원</div>
+          <ul>
+            <li>
+              <p>
+                곶자왈이란?<br />
+                <i class="fa-solid fa-location-dot"></i> 제주특별자치도 서귀포시
+                대정읍 보성리 63<br />
 
-            곶자왈은 화산활동 중 분출한 용암류가 만들어낸 불규칙한 암괴지대로
-            <br />
-            숲과 덤불 등 다양한 식생을 이루는 곳을 말하며,‘곶’과 ‘자왈’의
-            합성어인 제주어이다. <br />즉 곶자왈이란 암괴들이 불규칙하게
-            널려있는 지대에 형성된 숲으로,<br />
-            다양한 동·식물이 공존하며 독특한 생태계가 유지되고 있는 지역을
-            말한다.
-          </p>
+                곶자왈은 화산활동 중 분출한 용암류가 만들어낸 불규칙한
+                암괴지대로
+                <br />
+                숲과 덤불 등 다양한 식생을 이루는 곳을 말하며,‘곶’과 ‘자왈’의
+                합성어인 제주어이다. <br />즉 곶자왈이란 암괴들이 불규칙하게
+                널려있는 지대에 형성된 숲으로,<br />
+                다양한 동·식물이 공존하며 독특한 생태계가 유지되고 있는 지역을
+                말한다.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="description-content2">

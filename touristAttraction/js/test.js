@@ -1,69 +1,33 @@
-//swiper
-let test = true;
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  // direction: "vertical",
+  // slidesPerView: 2,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  // touchRatio: 0,
 
-if (test) {
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    // direction: "vertical",
-    // slidesPerView: 2,
-    centeredSlides: true,
-    spaceBetween: 20,
-    loop: true,
-    touchRatio: 0,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+  //If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-    //If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-    },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
-} else {
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    // direction: "vertical",
-    slidesPerView: 2,
-    centeredSlides: true,
-    spaceBetween: 20,
-    loop: true,
-    touchRatio: 0,
-
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-
-    //If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
-}
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
 
 //scroll
 const imgBtn = document.querySelectorAll(".swiper-img");
@@ -88,47 +52,41 @@ console.log(imgBtn[4]);
 console.log(imgBtn[5]);
 console.log(imgBtn[6]);
 
-if (test) {
-  for (let i = 0; i <= 6; i++) {
-    imgBtn[i].onclick = function () {
-      window.scroll({ top: firstTop, behavior: "smooth" });
-    };
-  }
-} else {
-  for (let i = 0; i <= 8; i++) {
-    imgBtn[i].onclick = function () {
-      window.scroll({ top: firstTop, behavior: "smooth" });
-    };
-  }
-}
+// if (test) {
+//   for (let i = 0; i <= 6; i++) {
+//     imgBtn[i].onclick = function () {
+//       window.scroll({ top: firstTop, behavior: "smooth" });
+//     };
+//   }
+// } else {
+//   for (let i = 0; i <= 8; i++) {
+//     imgBtn[i].onclick = function () {
+//       window.scroll({ top: firstTop, behavior: "smooth" });
+//     };
+//   }
+// }
 
-// imgBtn[0].onclick = function () {
-//   window.scroll({ top: firstTop, behavior: "smooth" });
-// };
-// imgBtn[5].onclick = function () {
-//   window.scroll({ top: firstTop, behavior: "smooth" });
-// };
-// imgBtn[1].onclick = function () {
-//   window.scroll({ top: secondTop, behavior: "smooth" });
-// };
-// imgBtn[6].onclick = function () {
-//   window.scroll({ top: secondTop, behavior: "smooth" });
-// };
-// imgBtn[2].onclick = function () {
-//   window.scroll({ top: thirdTop, behavior: "smooth" });
-// };
-// imgBtn[7].onclick = function () {
-//   window.scroll({ top: fifthTop, behavior: "smooth" });
-// };
-// imgBtn[3].onclick = function () {
-//   window.scroll({ top: fourthTop, behavior: "smooth" });
-// };
-// imgBtn[8].onclick = function () {
-//   window.scroll({ top: fourthTop, behavior: "smooth" });
-// };
-// imgBtn[4].onclick = function () {
-//   window.scroll({ top: fifthTop, behavior: "smooth" });
-// };
+imgBtn[0].onclick = function () {
+  window.scroll({ top: secondTop, behavior: "smooth" });
+};
+imgBtn[1].onclick = function () {
+  window.scroll({ top: thirdTop, behavior: "smooth" });
+};
+imgBtn[2].onclick = function () {
+  window.scroll({ top: fourthTop, behavior: "smooth" });
+};
+imgBtn[3].onclick = function () {
+  window.scroll({ top: fifthTop, behavior: "smooth" });
+};
+imgBtn[4].onclick = function () {
+  window.scroll({ top: firstTop, behavior: "smooth" });
+};
+imgBtn[5].onclick = function () {
+  window.scroll({ top: secondTop, behavior: "smooth" });
+};
+imgBtn[6].onclick = function () {
+  window.scroll({ top: thirdTop, behavior: "smooth" });
+};
 
 // Weather API
 const weatherIconRef = {
