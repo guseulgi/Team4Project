@@ -37,7 +37,7 @@ function getWeather() {
 let swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   centeredSlides: true,
-  spaceBetween: 30,
+  // spaceBetween: 30,
   slidesPerView: "auto",
   loop: true,
 
@@ -52,11 +52,11 @@ let swiper = new Swiper(".mySwiper", {
     modifier: 1,
     slideShadows: true,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 3,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  slidesPerView: 1,
 });
 
 let slides = document.querySelectorAll(".swiper-slide");
