@@ -123,13 +123,32 @@ header .other-menu ul li a {
 }
 
 .cafe {
-  position: relative;
-  display: flex;
 }
 
 .cafe .cafe-img {
-  width: 300px;
 }
 
-.cafe .cafe-img img {
+.cafe-img .muroi {
+  height: 100vh;
+  background: url("../cafe/images/서귀포시_무로이.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.cafe-img .muroi::before {
+  content: " ";
+  background: linear-gradient(to left, black, transparent);
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 80%;
+}
+
+.cafe-img .muroi h1 {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  left: 1000px;
+
+  font-family: sans-serif;
 }
