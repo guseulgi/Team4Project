@@ -1,52 +1,55 @@
-var mySwiper = new Swiper('.swiper-container', {
-  // 슬라이드 버튼 작동
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // 페이징 설정
-    pagination : { 
-      el : '.swiper-pagination',
-    },
-    loop : true,  //계속 반복 되게
-    slidesPerView: 3,  //한페이지에 보여줄 이미지의 개수
-    spaceBetween: 30,  //페이지와 페이지 사이의 간격
-  });
+const weatherIconRef = {
+  '01' : 'fas fa-sun',
+  '02' : 'fas fa-cloud-sun',
+  '03' : 'fas fa-cloud',
+  '04' : 'fas fa-cloud-meatball',
+  '09' : 'fas fa-cloud-sun-rain',
+  '10' : 'fas fa-cloud-showers-heavy',
+  '11' : 'fas fa-poo-storm',
+  '13' : 'far fa-snowflake',
+  '50' : 'fas fa-smog'
+}
 
-  let time = document.querySelector(".time");
-  const click_li = document.querySelectorAll(".click_li");
-  // function openClick(){
-  //   time.style.display = "block"; // display 속성을 block 으로 바꾼다
-  // }
-  // click_li.addEventListener("click",function(e){
-  //   let dv = e.currentTarget;
+const weatherEngToKR = {
+  'Thunderstorm' : '낙뢰',
+  'Drizzle' : '이슬비',
+  'Rain' : '비',
+  'Snow' : '눈',
+  'Mist' : '옅은 안개',
+  'Smoke' : '짙은 안개',
+  'Haze' : '실안개',
+  'Dust' : '황사',
+  'Fog' : '안개',
+  'Sand' : '짙은 황사',
+  'Ash' : '재',
+  'Squall' : '돌풍',
+  'Tornado' : '회오리',
+  'Clear' : '맑음',
+  'Clouds' : '구름 많음',
+}
 
+const weather = document.querySelector('.weather');
+const weatherIcon = weather.querySelector('.icon__weather');
+const weatherUl = weather.querySelector('.weather > ul');
 
-  // })
+const API_KEY = 'bd8db1f879b1c4ae727fd2582620614c';
+//제주도 경도/위도
+const lat = 33.431441;
+const lon = 126.874237;
 
-  let before;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+fetch(weatherUrl).then(response => response.json())
+.then(data => {
+  const newIcon = document.createElement('i');
+  const newLi = document.createElement('li');
 
-  function toggleList(t) {
-    const parent = t.parentNode;
-    const childDiv = parent.querySelector("div");
-    
-    //다른 거 눌렀을 때 안보이게
-    if (t != before) {
-      for(let i = 0; i < click_li.length; i++) {
-        click_li[i].parentNode.querySelector("div").style.display = "none"; 
-      }
-    }
+  const iconInfo = (data.weather[0].icon).substr(0,2);
+  newIcon.classList.add(weatherIconRef[iconInfo].substr(0,2));
+  newIcon.classList.add(weatherIconRef[iconInfo].substr(4));
+  newLi.textContent = `${Math.round(data.main.temp)}℃  ${weatherEngToKR[data.weather[0].main]}`;
 
-    //열려있을 때 다시 누르면 닫힘
-    if(childDiv.style.display === "block") {
-      childDiv.style.display = "none";
-    } else {
-      childDiv.style.display = "block";
-    }
-    before = t;
-  }
-
-
-
- 
-  
+  weather.prepend(newIcon);
+  weatherUl.appendChild(newLi);
+}).cathch(error => {
+  console.log('Weather API Error : ',error);
+});

@@ -4,24 +4,187 @@
 //MAIN TEXT FONT
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 //font-family: 'Mynerve', cursive;
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang:400');
+//font-family: 'Kirang Haerang';
 
-
+@supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
+  /* code that requires mask-image here. */
+}
 
 //Reset
 @import "reset";
+
+// Variable
+  // Color
+  $yellow : #f6d860;
+  $orange : #ff7f3f;
+  $darkOrange : #ea5c2b;
+  $green : #95cd41;
+  
+  $lightGray : #ced8d6;
+  $gray : #626458;
+  $darkYellow : #cba55b;
+  $darkBrawn : #5c3b16;
+  
+    // Font
+  $logo-txt : 'Kirang Haerang';
+  $title-txt : 'Do Hyeon';
+  $content-txt : 'Noto Sans KR', sans-serif;
+    // Layout
+  $primary-border : 1px solid #ddd;
 
 body {
   background-color: #fff;
   font-family:'Do Hyeon' ;
 }
 header {
-  height: 10vh;
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
+
+  .title {
+    color: #ea5c2b;
+    font: 8vh $logo-txt;
+    text-shadow: 0px 3px 0 white;
+    padding-left: 40px;
+    height: 100px;
+    line-height: 18vh;
+  }
+  .other-menu {
+    ul {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 10%;
+      height: 100%;
+
+      li {
+        position: relative;
+        margin: auto 15px;
+        font-size: 20px;
+        transition: .7s;
+
+        span {
+          display: none;
+          box-sizing: border-box;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 2px 7px;
+
+          width: 70px;
+          height: 25px;
+          background-color: $orange;
+          position: absolute;
+          top : -28px;
+          left: -24px;
+          border-radius: 4px;
+          text-align: center;
+        }
+
+        a {
+          color : $darkBrawn;
+        }
+
+        &:hover {
+          span {
+            display: block;
+            color : white;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            top : -8px;
+            left: 6px;
+            background-color: $orange;
+          }
+        }
+        
+      }
+    }
+  }
 }
+
+  // Fixed Weather
+  .weather {
+    position: fixed;
+    display: flex;
+    width: 150px;
+    bottom: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    background-color: #ff9a1f;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: .7;
+
+    i {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 32px;
+      margin: auto 10px auto 5px;
+      color :white;
+      animation: weatherAnim 10s infinite;
+    }
+
+    @keyframes weatherAnim {
+      0% {
+        opacity: 0;
+        transform: rotate(90deg) translateY(-40%) scale(.8);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+      }
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+        line-height: 14px;
+        font-family: $content-txt;
+        margin: 5px 0;
+
+      }
+    }
+  }
+
+  // Return to Top Button 
+  .returnToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 190px;
+
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      
+      font-size: 1.2rem;
+      
+      i {
+        color: $gray;
+      }
+    }
+  }
 
 .all_content {
   position: relative;
   .first_page {
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     .left_text {
       position: absolute;
@@ -43,20 +206,49 @@ header {
 
   .second_page {
     height: 100vh;
-    background-color: orange;
     position: relative;
     display: flex;
+    background-color:#fff;
     :nth-child(1){
       width: 33.333vw;
-      background-color: rgb(196, 165, 108);
+      background-image: url("../jeju/바다.jpg");
+      background-size: 50vw 50vw ;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:hover {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
+        mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
+
+        cursor: pointer;
+      }
     }
     :nth-child(2){
       width: 33.333vw;
-      background-color: rgb(181, 135, 49);
+      background-image: url("../jeju/산.jpg");
+      background-size: 70vw 50vw ;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:hover {
+        -webkit-mask-image: linear-gradient(to top, transparent 50%, #972f0c 100%);
+        mask-image: linear-gradient(to top transparent 50%, #972f0c 100%);
+
+        cursor: pointer;
+      }
     }
     :nth-child(3){
       width: 33.333vw;
       background-color: rgb(173, 117, 13);
+      background-image: url("../jeju/인기.jpg");
+      background-size: 60vw 50vw ;
+      background-position: left;
+      background-repeat: no-repeat;
+      
+      &:hover {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
+        mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
+
+        cursor: pointer;
+      }
     }
   }
 }
