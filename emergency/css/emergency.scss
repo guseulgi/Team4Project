@@ -50,78 +50,147 @@ body {
 // Header
 header {
   position: fixed;
+  height: 100px;
   top: 0;
   left: 0;
   z-index: 2;
   width: 100vw;
-  height: 12vh;
   background-color: transparent;
 
-  // Logo
-  .logo {
-    height: 100%;
-    h1 {
+  .title {
+    color: #ea5c2b;
+    font: 8vh $logo-txt;
+    text-shadow: 0px 3px 0 white;
+    padding-left: 40px;
+    height: 100px;
+    line-height: 18vh;
+  }
+  .other-menu {
+    ul {
+      display: flex;
       position: absolute;
+      top: 0;
+      right: 10%;
+      height: 100%;
 
-      top : 3vh;
-      left: 5vw;
+      li {
+        position: relative;
+        margin: auto 15px;
+        font-size: 20px;
+        transition: .7s;
 
-      width: 12vw;
-      height: 7vh;
-      font-size: 6vh;
-      font-family: $logo-txt;
+        span {
+          display: none;
+          box-sizing: border-box;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 2px 7px;
+
+          width: 70px;
+          height: 25px;
+          background-color: $orange;
+          position: absolute;
+          top : -28px;
+          left: -24px;
+          border-radius: 4px;
+          text-align: center;
+        }
+
+        a {
+          color : $darkBrawn;
+        }
+
+        &:hover {
+          span {
+            display: block;
+            color : white;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            top : -8px;
+            left: 6px;
+            background-color: $orange;
+          }
+        }
+        
+      }
     }
   }
+}
 
   // Fixed Weather
   .weather {
     position: fixed;
+    display: flex;
+    width: 150px;
     bottom: 10px;
     right: 10px;
-    padding: 10px;
-    background-color: $lightGray;
-    border-radius: 50%;
-    border: $primary-border;
+    padding: 7px 10px;
+    background-color: #ff9a1f;
+    border-radius: 10px;
     z-index: 3;
-    img {
-      display: block;
-      width: 50px;
-      height: 40px;
-      margin: 0 auto;
-      background-color: white;
+    opacity: .7;
+
+    i {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 32px;
+      margin: auto 10px auto 5px;
+      color :white;
+      animation: weatherAnim 10s infinite;
+    }
+
+    @keyframes weatherAnim {
+      0% {
+        opacity: 0;
+        transform: rotate(90deg) translateY(-40%) scale(.8);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+      }
     }
 
     ul {
       li {
         font-size: 14px;
-        line-height: 18px;
+        line-height: 14px;
         font-family: $content-txt;
-        margin-top: 5px;
-        text-align: center;
+        margin: 5px 0;
+
       }
     }
   }
 
+  // Return to Top Button 
   .returnToTop {
     position: fixed;
     bottom: 10px;
-    right: 130px;
+    right: 190px;
 
     a {
       display: block;
-      width: 40px;
-      height: 40px;
-      background-color: $yellow;
+      width: 30px;
+      height: 30px;
+      background-color: white;
       border-radius: 50%;
       text-align: center;
-      font-size: 1.5rem;
+      
+      font-size: 1.2rem;
       
       i {
         color: $gray;
       }
     }
   }
-}
 
 // Emergency Situation
 .emgSituation {
@@ -135,7 +204,6 @@ header {
   .title {
     position: relative;
     width : 70vw;
-    // background-color: white;
     margin: 20px auto;
     padding: 5px;
 
@@ -219,9 +287,7 @@ header {
         border-radius: 50%;
         transform: translate(-12px, -3px) rotate(0deg) scale(.6);
       }
-      100% {
-        
-      }
+      100% {}
     }
 
     h2 {
@@ -322,7 +388,6 @@ header {
         img {
           display: block;
           width:  83%;
-          // margin: 0 auto;
           position: absolute;
           top : 30px;
           left: 50%;
@@ -348,8 +413,59 @@ header {
 
 // Jeju island Map
 .map {
+  position: relative;
   width: 100vw;
+  height: 570px;
   background: linear-gradient(30deg, #60bbec, #1e95e9);
+
+  .map__bg {
+    position: relative;
+
+    .bubble {
+      position: absolute;
+      border-radius: 45%;
+      background: rgba(45, 188, 255, 0.8);
+      animation: move 3s infinite linear;
+    }
+    
+    .bubble__bg-1 {
+      width: 78px;
+      height: 82px;
+      top : 125px;
+      left: 90px;  
+    }
+
+    .bubble__bg-2 {
+      width: 297px;
+      height: 301px;
+      top : 168px;
+      right: 200px;
+      border-radius: 43%;
+      animation: move 5s infinite linear;
+    }
+
+    .bubble__bg-3 {
+      width: 160px;
+      height: 168px;
+      top : 126px;
+      left: 108px;
+      background: rgba(6, 135, 195, 0.8);
+    }
+
+    .bubble__bg-4 {
+      width: 173px;
+      height: 179px;
+      top : 30px;
+      right: 215px;
+      background: rgba(6, 135, 195, 0.8);
+    }
+  }
+  
+  @keyframes move {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
   .map__image {
     width: 600px;
@@ -358,7 +474,7 @@ header {
     img {
       width: 100%;
       display: block;
-      filter :grayscale(10%) drop-shadow(2px 2px 0px $gray);
+      filter :grayscale(15%) drop-shadow(2px 2px 0px $gray);
     }
     .map__pin {
       width: 100%;
@@ -372,6 +488,7 @@ header {
         
         span {
           color: white;
+          font-weight: 500;
         }
         i {
           font-size: 20px;
@@ -465,19 +582,19 @@ header {
 
     @keyframes slowly {
       0% {
-        transform: scale(0.97) rotate(3deg);
+        transform: scale(0.97) rotate(1deg);
       }
       20% {
-        transform: scale(1) rotate(0deg);
+        // transform: scale(1) rotate(0deg);
       }
       50% {
-        transform: scale(0.95) rotate(7deg);
+        transform: scale(0.95) rotate(3deg);
       }
       75% {
-        transform: scale(0.98) rotate(9deg);
+        // transform: scale(0.98) rotate(9deg);
       }
       100% {
-        transform: scale(1.01) rotate(5deg);
+        transform: scale(1.01) rotate(-2deg);
       }
     }
   }
@@ -489,45 +606,92 @@ header {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  // background-color: $gray;
-  background-image: url('../source/image/hospitalBg1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(10px);
-  padding: 70px 0;
+  padding: 90px 0;
+  height: 460px;
 
-  & > img {
-    margin: 0 15px;
-    width: 400px;
-    flex-grow: 1;
+  .hospital__bg {
+    width: 100vw;
+    height: 720px;
+    position: absolute;
+    top : -70px;
+    z-index: -1;
+    background-image: url('../source/image/shotBg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    opacity: .7;
   }
 
+  img {
+    border: 9px solid white;
+    border-bottom: 40px solid white;
+    box-shadow: 9px 10px 12px rgba(0, 0, 0, .2);
+  }
+
+  .hospital__image {
+    position: relative;
+    transform: scale(.9);
+    filter: blur(.5px) grayscale(100%) contrast(105%);
+    transition: .6s;
+  }
+  .hospital__image::before {
+    position : absolute;
+    top : 0;
+    left : -75%;
+    z-index : 2;
+    display : block;
+    content : '';
+    width : 50%;
+    height : 100%;
+    background : linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255, 0.3) 100%);
+    transform : skewX(-25deg);
+  }
+
+  .hospital__image:hover {
+    transform: scale(1);
+    filter: grayscale(10%);
+
+    &::before {
+      animation : shine 0.75s;
+  
+      @keyframes shine {
+        100% {
+          // left : 125%;
+        }
+      }
+    }
+  }
+
+  
+
   .title {
-    margin: 0 15px;
+    margin-right:15px;
     .title__bg {
       position: absolute;
       width: 58vw;
-      height: 55px;
-      top : 45px;
+      height: 20px;
+      top : 125px;
       right: 0;
-      // background-color: $lightGray;
-      box-shadow: 6px 6px 0 $darkYellow;
+      background-color: $gray;
 
       h2 {
         position: absolute;
         color: white;
         left: 0;
+        top:-30px;
         font-size: 2rem;
         line-height: 1;
         font-weight: 700;
   
         padding: 7px 17px 7px 7px;
+        text-shadow: -2px 0 $gray, 0 2px $gray, 2px 0 $gray, 0 -2px $gray;
       }
     }
 
     ul {
       width: 25vw;
-      margin-top: 60px;
+      margin-top: 90px;
       .item {
         position: relative;
         margin-bottom: 7px;
@@ -540,7 +704,7 @@ header {
           display: inline-block;
           width: 28px;
           height: 28px;
-          background-color: $darkYellow;
+          background-color: $gray;
           border-radius: 50%;
           text-align: center;
           line-height: 28px;
@@ -613,20 +777,159 @@ header {
     }
   }
 
-  .images {
-    width : 330px;
-    margin: 50px 5px 0 5px;
-    flex-grow: 1;
-    
-    img:first-child {
-      width : 100%;
-    }
-    img {
-      width : 100%;
-    }
-    
+  
+}
+
+
+// Hospital Second Content
+.hospital-2 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 70px 0;
+  height: 460px;
+  top : 10px;
+
+  .hospital__bg {
+    width: 100vw;
+    height: 600px;
+    position: absolute;
+    top : 0px;
+    z-index: -1;
+    background-image: url('../source/image/ambulanceBg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    // background-attachment: fixed;
+    transform: rotateY(180deg);
+    background-color: $gray;
+    opacity: .9;
   }
 
+  img {
+    border: 9px solid white;
+    border-bottom: 40px solid white;
+    box-shadow: 9px 10px 12px rgba(0, 0, 0, .2);
+  }
 
+  .hospital__image {
+    filter: blur(.5px) grayscale(10%) contrast(105%);
+  }
+
+  .title {
+    margin-right:15px;
+    .title__bg {
+      position: absolute;
+      z-index: 1;
+      width: 58vw;
+      height: 20px;
+      top : 125px;
+      left: 0;
+      background-color: $darkBrawn;
+
+      h2 {
+        position: absolute;
+        color: white;
+        right: 0;
+        top:-30px;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 700;
+  
+        padding: 7px 17px 7px 7px;
+        text-shadow: -2px 0 $darkBrawn, 0 2px $darkBrawn, 2px 0 $darkBrawn, 0 -2px $darkBrawn;
+      }
+    }
+
+    ul {
+      width: 25vw;
+      margin-top: 110px;
+      .item {
+        position: relative;
+        margin-bottom: 7px;
+        padding: 3px;
+        background-color: white;
+        border-radius: 3px;
+
+        a {
+          color: white;
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          background-color: $darkBrawn;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 28px;
+        }
+
+        &:hover {
+          a {
+            background-color: white;
+            color: $darkBrawn;
+          }
+        }
+
+        & > span {
+          display: inline-block;
+          transition: .6s;
+          transform: translateX(-10px);
+          opacity: 0;
+          margin-left: 5px;
+        }
+
+        &:first-child:hover span {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+
+        i {
+          font-size: 1.1rem;
+        }
+
+        .item__location {
+          transition: .6s;
+          width : 86%;
+          height: 0px;
+          margin: 0 auto;
+          
+          .location {
+            width: 100%;
+            height: 0;
+            background-color: #ddd;
+          }
+
+          & > p {
+            height: 0;
+            font-size: 0px;
+            text-align: center;
+          }
+        }
+        &:nth-child(2):hover {
+          .item__location {
+            height: 250px;
+            padding: 7px 0;
+
+            .location {
+              height: 90%;
+            }
+            & > p {
+              margin-top: 5px;
+              font-size: 14px;
+              height: 10%;
+            }
+          }
+        }
+
+        i.fa-chevron-down {
+          color: $darkBrawn;
+          position: absolute;
+          top : 8px;
+          right: 8px;
+        }
+      }
+    }
+  }
+
+  
 }
 

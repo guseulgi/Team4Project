@@ -22,19 +22,41 @@
   <!-- Header -->
   <header>
     <!-- Logo -->
-    <div class="logo">
-      <h1>팀4</h1>
-    </div>
+    <div class="title">JEJU</div>
+      <div class="other-menu">
+        <ul>
+          <li>
+            <span>HOME</span>
+            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <span>CAFE</span>
+            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+          </li>
+          <li>
+            <span>ACTIVITY</span>
+            <a href="#" title="activity"
+              ><i class="fa-solid fa-person-running"></i
+            ></a>
+          </li>
+          <li>
+            <span>FOOD</span>
+            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+          </li>
+          <li>
+            <span>TOURIST</span>
+            <a href="#" title="tourist">
+              <i class="fa-solid fa-star"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Fixed Weather -->
       <div class="weather">
-        <img src="" alt="날씨 아이콘">
         <ul>
           <li>
             현재 제주도는
-          </li>
-          <li>
-            30도 맑음
           </li>
         </ul>
       </div>
@@ -97,6 +119,13 @@
 
   <!-- Jeju island Map -->
   <section class="map">
+    <div class="map__bg">
+      <div class="bubble bubble__bg-1"></div>
+      <div class="bubble bubble__bg-2"></div>
+      <div class="bubble bubble__bg-3"></div>
+      <div class="bubble bubble__bg-4"></div>
+    </div>
+
     <div class="map__image">
       <img src="./source/image/jejudo.png" alt="제주도 섬"/>
       <ul class="map__pin">
@@ -108,7 +137,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#jejuHanla">
             <span>제주한라병원 응급실</span>
           <i class="fa-solid fa-location-pin"></i>
           </a>
@@ -144,13 +173,10 @@
   </section>
 
   <!-- Hospital First Content -->
-  <section class="hospital-1">
-    <img src="./source/image/jejuEmg2.jpg" alt="제주대학교병원"/>
-    <div class="images">
-      <img src="./source/image/jejuEmg3.jpeg" alt="제주대학교병원 이미지"/>
-      <img src="./source/image/jejuEmg4.jpeg" alt="제주대학교병원 이미지"/>
-    </div>
-    <div class="title" id="jejuUniversity">
+  <section class="hospital-1" id="jejuUniversity">
+    <div class="hospital__bg"></div>
+    <img src="./source/image/jejuEmg2.jpg" alt="제주대학교병원" class="hospital__image"/>
+    <div class="title">
       <div class="title__bg">
         <h2>제주대학교병원 응급의료센터</h2>
       </div>
@@ -174,8 +200,37 @@
         </li>
       </ul>
     </div>
+  </section>
 
-    
+
+  <!-- Hospital Second Content -->
+  <section class="hospital-2" id="jejuHanla">
+    <div class="hospital__bg"></div>
+    <div class="title">
+      <div class="title__bg">
+        <h2>제주한라병원 응급실</h2>
+      </div>
+      <ul>
+        <li class="item">
+          <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>
+          <span>064-740-5158</span>
+        </li>
+        <li class="item">
+          <a href="#"><i class="fa-solid fa-location-arrow"></i></a>
+          <div class="item__location">
+            <div class="location">
+              <!-- 지도 API 넣기 -->
+            </div>
+            <p>제주 제주시 도령로 65 한라병원</p>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="item">
+          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        </li>
+      </ul>
+    </div>
+    <img src="./source/image/hanlaEmg3.jpeg" alt="제주한라병원" class="hospital__image"/>
   </section>
 </body>
 </html>

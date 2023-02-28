@@ -75,64 +75,123 @@ body {
 
 header {
   position: fixed;
+  height: 100px;
   top: 0;
   left: 0;
   z-index: 2;
   width: 100vw;
-  height: 12vh;
   background-color: transparent;
 }
-header .logo {
+header .title {
+  color: #ea5c2b;
+  font: 8vh "Kirang Haerang";
+  text-shadow: 0px 3px 0 white;
+  padding-left: 40px;
+  height: 100px;
+  line-height: 18vh;
+}
+header .other-menu ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 10%;
   height: 100%;
 }
-header .logo h1 {
-  position: absolute;
-  top: 3vh;
-  left: 5vw;
-  width: 12vw;
-  height: 7vh;
-  font-size: 6vh;
-  font-family: "Kirang Haerang";
+header .other-menu ul li {
+  position: relative;
+  margin: auto 15px;
+  font-size: 20px;
+  transition: 0.7s;
 }
-header .weather {
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 70px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
+}
+header .other-menu ul li a {
+  color: #5c3b16;
+}
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
+}
+
+.weather {
   position: fixed;
+  display: flex;
+  width: 150px;
   bottom: 10px;
   right: 10px;
-  padding: 10px;
-  background-color: #ced8d6;
-  border-radius: 50%;
-  border: 1px solid #ddd;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
   z-index: 3;
+  opacity: 0.7;
 }
-header .weather img {
-  display: block;
-  width: 50px;
-  height: 40px;
-  margin: 0 auto;
-  background-color: white;
-}
-header .weather ul li {
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "Noto Sans KR", sans-serif;
-  margin-top: 5px;
+.weather i {
+  font-size: 2rem;
   text-align: center;
+  line-height: 32px;
+  margin: auto 10px auto 5px;
+  color: white;
+  animation: weatherAnim 10s infinite;
 }
-header .returnToTop {
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 5px 0;
+}
+
+.returnToTop {
   position: fixed;
   bottom: 10px;
-  right: 130px;
+  right: 190px;
 }
-header .returnToTop a {
+.returnToTop a {
   display: block;
-  width: 40px;
-  height: 40px;
-  background-color: #f6d860;
+  width: 30px;
+  height: 30px;
+  background-color: white;
   border-radius: 50%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
-header .returnToTop a i {
+.returnToTop a i {
   color: #626458;
 }
 
@@ -335,8 +394,52 @@ header .returnToTop a i {
 }
 
 .map {
+  position: relative;
   width: 100vw;
+  height: 570px;
   background: linear-gradient(30deg, #60bbec, #1e95e9);
+}
+.map .map__bg {
+  position: relative;
+}
+.map .map__bg .bubble {
+  position: absolute;
+  border-radius: 45%;
+  background: rgba(45, 188, 255, 0.8);
+  animation: move 3s infinite linear;
+}
+.map .map__bg .bubble__bg-1 {
+  width: 78px;
+  height: 82px;
+  top: 125px;
+  left: 90px;
+}
+.map .map__bg .bubble__bg-2 {
+  width: 297px;
+  height: 301px;
+  top: 168px;
+  right: 200px;
+  border-radius: 43%;
+  animation: move 5s infinite linear;
+}
+.map .map__bg .bubble__bg-3 {
+  width: 160px;
+  height: 168px;
+  top: 126px;
+  left: 108px;
+  background: rgba(6, 135, 195, 0.8);
+}
+.map .map__bg .bubble__bg-4 {
+  width: 173px;
+  height: 179px;
+  top: 30px;
+  right: 215px;
+  background: rgba(6, 135, 195, 0.8);
+}
+@keyframes move {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .map .map__image {
   width: 600px;
@@ -346,7 +449,7 @@ header .returnToTop a i {
 .map .map__image img {
   width: 100%;
   display: block;
-  filter: grayscale(10%) drop-shadow(2px 2px 0px #626458);
+  filter: grayscale(15%) drop-shadow(2px 2px 0px #626458);
 }
 .map .map__image .map__pin {
   width: 100%;
@@ -360,6 +463,7 @@ header .returnToTop a i {
 }
 .map .map__image .map__pin li span {
   color: white;
+  font-weight: 500;
 }
 .map .map__image .map__pin li i {
   font-size: 20px;
@@ -441,19 +545,13 @@ header .returnToTop a i {
 }
 @keyframes slowly {
   0% {
-    transform: scale(0.97) rotate(3deg);
-  }
-  20% {
-    transform: scale(1) rotate(0deg);
+    transform: scale(0.97) rotate(1deg);
   }
   50% {
-    transform: scale(0.95) rotate(7deg);
-  }
-  75% {
-    transform: scale(0.98) rotate(9deg);
+    transform: scale(0.95) rotate(3deg);
   }
   100% {
-    transform: scale(1.01) rotate(5deg);
+    transform: scale(1.01) rotate(-2deg);
   }
 }
 
@@ -461,41 +559,78 @@ header .returnToTop a i {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  background-image: url("../source/image/hospitalBg1.jpg");
+  padding: 90px 0;
+  height: 460px;
+}
+.hospital-1 .hospital__bg {
+  width: 100vw;
+  height: 720px;
+  position: absolute;
+  top: -70px;
+  z-index: -1;
+  background-image: url("../source/image/shotBg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 70px 0;
+  background-position: left;
+  background-attachment: fixed;
+  opacity: 0.7;
 }
-.hospital-1 > img {
-  margin: 0 15px;
-  width: 400px;
-  flex-grow: 1;
+.hospital-1 img {
+  border: 9px solid white;
+  border-bottom: 40px solid white;
+  box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
 }
+.hospital-1 .hospital__image {
+  position: relative;
+  transform: scale(0.9);
+  filter: blur(0.5px) grayscale(100%) contrast(105%);
+  transition: 0.6s;
+}
+.hospital-1 .hospital__image::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+}
+.hospital-1 .hospital__image:hover {
+  transform: scale(1);
+  filter: grayscale(10%);
+}
+.hospital-1 .hospital__image:hover::before {
+  animation: shine 0.75s;
+}
+@keyframes shine {}
 .hospital-1 .title {
-  margin: 0 15px;
+  margin-right: 15px;
 }
 .hospital-1 .title .title__bg {
   position: absolute;
   width: 58vw;
-  height: 55px;
-  top: 45px;
+  height: 20px;
+  top: 125px;
   right: 0;
-  box-shadow: 6px 6px 0 #cba55b;
+  background-color: #626458;
 }
 .hospital-1 .title .title__bg h2 {
   position: absolute;
   color: white;
   left: 0;
+  top: -30px;
   font-size: 2rem;
   line-height: 1;
   font-weight: 700;
   padding: 7px 17px 7px 7px;
+  text-shadow: -2px 0 #626458, 0 2px #626458, 2px 0 #626458, 0 -2px #626458;
 }
 .hospital-1 .title ul {
   width: 25vw;
-  margin-top: 60px;
+  margin-top: 90px;
 }
 .hospital-1 .title ul .item {
   position: relative;
@@ -509,7 +644,7 @@ header .returnToTop a i {
   display: inline-block;
   width: 28px;
   height: 28px;
-  background-color: #cba55b;
+  background-color: #626458;
   border-radius: 50%;
   text-align: center;
   line-height: 28px;
@@ -565,14 +700,130 @@ header .returnToTop a i {
   top: 8px;
   right: 8px;
 }
-.hospital-1 .images {
-  width: 330px;
-  margin: 50px 5px 0 5px;
-  flex-grow: 1;
+
+.hospital-2 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 70px 0;
+  height: 460px;
+  top: 10px;
 }
-.hospital-1 .images img:first-child {
-  width: 100%;
+.hospital-2 .hospital__bg {
+  width: 100vw;
+  height: 600px;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  background-image: url("../source/image/ambulanceBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  transform: rotateY(180deg);
+  background-color: #626458;
+  opacity: 0.9;
 }
-.hospital-1 .images img {
+.hospital-2 img {
+  border: 9px solid white;
+  border-bottom: 40px solid white;
+  box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
+}
+.hospital-2 .hospital__image {
+  filter: blur(0.5px) grayscale(10%) contrast(105%);
+}
+.hospital-2 .title {
+  margin-right: 15px;
+}
+.hospital-2 .title .title__bg {
+  position: absolute;
+  z-index: 1;
+  width: 58vw;
+  height: 20px;
+  top: 125px;
+  left: 0;
+  background-color: #5c3b16;
+}
+.hospital-2 .title .title__bg h2 {
+  position: absolute;
+  color: white;
+  right: 0;
+  top: -30px;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 7px 17px 7px 7px;
+  text-shadow: -2px 0 #5c3b16, 0 2px #5c3b16, 2px 0 #5c3b16, 0 -2px #5c3b16;
+}
+.hospital-2 .title ul {
+  width: 25vw;
+  margin-top: 110px;
+}
+.hospital-2 .title ul .item {
+  position: relative;
+  margin-bottom: 7px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+.hospital-2 .title ul .item a {
+  color: white;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-color: #5c3b16;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+}
+.hospital-2 .title ul .item:hover a {
+  background-color: white;
+  color: #5c3b16;
+}
+.hospital-2 .title ul .item > span {
+  display: inline-block;
+  transition: 0.6s;
+  transform: translateX(-10px);
+  opacity: 0;
+  margin-left: 5px;
+}
+.hospital-2 .title ul .item:first-child:hover span {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.hospital-2 .title ul .item i {
+  font-size: 1.1rem;
+}
+.hospital-2 .title ul .item .item__location {
+  transition: 0.6s;
+  width: 86%;
+  height: 0px;
+  margin: 0 auto;
+}
+.hospital-2 .title ul .item .item__location .location {
   width: 100%;
+  height: 0;
+  background-color: #ddd;
+}
+.hospital-2 .title ul .item .item__location > p {
+  height: 0;
+  font-size: 0px;
+  text-align: center;
+}
+.hospital-2 .title ul .item:nth-child(2):hover .item__location {
+  height: 250px;
+  padding: 7px 0;
+}
+.hospital-2 .title ul .item:nth-child(2):hover .item__location .location {
+  height: 90%;
+}
+.hospital-2 .title ul .item:nth-child(2):hover .item__location > p {
+  margin-top: 5px;
+  font-size: 14px;
+  height: 10%;
+}
+.hospital-2 .title ul .item i.fa-chevron-down {
+  color: #5c3b16;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }/*# sourceMappingURL=emergency.css.map */
