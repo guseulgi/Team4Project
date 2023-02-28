@@ -2,6 +2,513 @@
 @import 'reset';
 
 // Font
-@import 'font';
+@import './font/font';
+//font-family: 'Kirang Haerang';
+//font-family: 'Do Hyeon';
+//font-family: 'Noto Sans KR', sans-serif;
 
-// Main CSS
+// Variable
+  // Color
+$yellow : #f6d860;
+$orange : #ff7f3f;
+$darkOrange : #ea5c2b;
+$green : #95cd41;
+
+$lightGray : #ced8d6;
+$gray : #626458;
+$darkYellow : #cba55b;
+$darkBrawn : #5c3b16;
+  
+  // Font
+$logo-txt : 'Kirang Haerang';
+$title-txt : 'Do Hyeon';
+$content-txt : 'Noto Sans KR', sans-serif;
+  // Layout
+$primary-border : 1px solid #ddd;
+  
+// Common
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.4;
+}
+
+.bar {
+  width : 15vw;
+  height: 2px;
+  background-color: $darkBrawn;
+  margin: auto;
+}
+
+.point {
+  position: absolute;
+  top : 60px;
+  left : 50%;
+  z-index: 0;
+  width: 20vw;
+  height: 10px;
+  background-color: #ffeda4;
+}
+
+// Header
+header {
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
+
+  .title {
+    color: $darkBrawn;
+    font-size: 36px;
+    font-family: 'OKDDUNG';
+    text-shadow: 0px 3px 0 white;
+    padding-left: 40px;
+    height: 100px;
+    line-height: 18vh;
+
+    .title__logo {
+      & > i:first-child {
+        position: absolute;
+        top : 0px;
+        left : 147px;
+        line-height: 18vh;
+      }
+      & > i:last-child {
+        position: absolute;
+        top : 14px;
+        left : 148px;
+        transform: rotate(-90deg) scale(.4);
+        line-height: 18vh;
+      }
+    }
+  }
+  .other-menu {
+    ul {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      height: 100%;
+
+      li {
+        position: relative;
+        margin: auto 15px;
+        font-size: 20px;
+        transition: .7s;
+
+        span {
+          display: none;
+          box-sizing: border-box;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 2px 7px;
+
+          width: 70px;
+          height: 25px;
+          background-color: $orange;
+          position: absolute;
+          top : -28px;
+          left: -24px;
+          border-radius: 4px;
+          text-align: center;
+        }
+
+        a {
+          color : white;
+        }
+
+        &:hover {
+          span {
+            display: block;
+            color : white;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            top : -8px;
+            left: 6px;
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+  // Fixed Weather
+  .weather {
+    position: fixed;
+    display: flex;
+    width: 150px;
+    bottom: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    background-color: #ff9a1f;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: .7;
+
+    i {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 32px;
+      margin: auto 12px auto 9px;
+      color :white;
+      animation: weatherAnim 10s infinite;
+    }
+
+    @keyframes weatherAnim {
+      0% {
+        opacity: 0;
+        transform: rotate(90deg) translateY(-40%) scale(.8);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+      }
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+        line-height: 14px;
+        font-family: $content-txt;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  // Return to Top Button 
+  .returnToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 190px;
+
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      
+      font-size: 1.2rem;
+
+      span {
+        width: 18px;
+        height: 1.8px;
+        display: block;
+        border-radius: 4px;
+        background-color: $gray;
+        position: absolute;
+        top : 6px;
+        left: 6px;
+      }
+      
+      i {
+        position: absolute;
+        top:8px;
+        left: 8px;
+        color: $gray;
+      }
+    }
+  }
+
+
+// Main Section
+.main {
+  position: relative;
+
+  figure {
+    .bg {
+      width: 100vw;
+      object-position: bottom;
+      object-fit: bottom;
+      filter: sepia(70%);
+    }
+  }
+
+  .main__contents {
+    position: absolute;
+    top : 27vh;
+    left: 0;
+    width: 100vw;
+    height: 500px;
+
+    .contents__title {
+      width: 25.5rem;
+      margin: 0 auto;
+      h2 {
+        display: none;
+        width : 4rem;
+
+        font-family: 'LOTTERIACHAB';
+        font-size: 4.5rem;
+        color: $orange;
+  
+        text-shadow: 3px 3px 0 white;
+        display: inline-block;
+        margin-bottom: 20px;
+  
+        $interval : .5s;
+        @for $h from 1 through 6 {
+          &:nth-child(#{$h}) {
+            display: inline-block;
+            animation: titleAnim .5s #{$interval * ($h - 1)} ease-out;
+          }
+        }
+
+        &:first-child {
+          color: $darkOrange;
+          font-size: 5.5rem;
+          transform:scale(1.05) rotate(-13deg);
+          margin-right: 5px;
+        }
+
+        &:nth-child(2) {
+          animation-delay: .2s;
+        }
+
+        &:nth-child(3) {
+          transform: scale(1.05) rotate(-5deg) translateY(1px);
+        }
+
+        &:nth-child(4) {}
+
+        &:nth-child(5) {
+          transform:scale(1) rotate(-16deg);
+        }
+        &:nth-child(6) {
+          color: $darkOrange;
+          animation-name: titleAnim_exclamation;
+          animation-delay: 2.2s;
+          transform: scale(1.4) rotate(15deg) translateX(5px);
+        }
+  
+        @keyframes titleAnim {
+          0% {
+            opacity: 0;
+            transform: scale(3);
+          }
+          50% {
+            opacity: 1;
+          }
+          90% {
+            transform: scale(1) rotate(-10deg);
+          }
+          100% {
+            transform: scale(1.05) rotate(-13deg);
+          }
+        }
+        @keyframes titleAnim_exclamation {
+          0% {
+            opacity: 0;
+            display: block;
+            transform: scale(3);
+          }
+          50% {
+            opacity: 1;
+          }
+          90% {
+            transform: scale(1) rotate(10deg);
+          }
+          100% {
+            transform: scale(1.2) rotate(13deg);
+          }
+        }
+      }
+
+      h6 {
+        position: absolute;
+        font-size: 1.5rem;
+        font-family: 'OKDDUNG';
+        color: $yellow;
+        text-shadow: 4px 4px 0 $darkBrawn;
+      }
+      h6.subtitle1 {
+        top : -28px;
+        right: 50vw;
+        color: white;
+
+        &::first-letter {
+          color: $green;
+        }
+      }
+      h6.subtitle2 {
+        top : -19px;
+        left: 50vw;
+        color: white;
+        
+        &::first-letter {
+          color: $yellow;
+        }
+      }
+    }
+
+    .main__hash {
+      width: 45vw;
+      margin: 15px auto;
+      p {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        font-size: 13px;
+        line-height: 1.7;
+        padding: 3px 9px;
+        margin-top: 10px;
+        background-color: #e4ffb9;
+        border-radius: 16px;
+        border: 2px solid #95cd41;
+      }
+    }
+  }
+}
+
+
+// Nav Section
+.nav {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  top : -100px;
+  left: 0;
+
+  .nav__container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    .title {
+      position: absolute;
+      z-index: 1;
+      top : 60px;
+      left: 44%;
+
+      h3 {
+        font-size: 4rem;
+        font-weight: 100;
+        font-family: 'Josefin Slab', serif;
+        font-style: italic;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.238);
+        position: absolute;
+        top : 82%;
+      }
+
+      p {
+        position: absolute;
+        right: 0;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 100;
+      }
+    }
+
+    .nav__bg {
+      background-image: url('../source/image/jejuMain.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      
+      width: 70vw;
+      height: 680px;
+
+      position : absolute;
+      left: calc(70vw - 50%);
+      transform: translateX(-8%);
+    }
+
+    .parts {
+      width: 99vw;
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      top : 550px;
+      li {
+        position: relative;
+        background-color: white;
+        width :18vw;
+        transition: .7s;
+        overflow: hidden;
+        border-radius: 7px;
+        box-shadow: 3px 4px 9px #0000002f;
+
+        a {
+          text-decoration: none;
+        }
+
+        .parts__image {
+          background-image: url('../source/jejulogo.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 170px;
+          // border: 1px solid black;
+          opacity: .8;
+          transition: .5s;
+        }
+
+        p {
+          width: 165px;
+          height: 35px;
+          border-radius: 20px;
+          background-color: #f6d86099;
+          font-family: 'Josefin Slab', serif;
+          font-size: 1.5rem;
+          text-align: center;
+          // line-height: 2rem;
+          color: rgb(34, 34, 34);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+
+          display: none;
+          transition: .7s;
+        }
+
+        &:hover {
+
+          .parts__image {
+            opacity: .3;
+            transform: scale(1.1);
+          }
+          p {
+            display: block;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 40px;
+  background-color: #626458;
+
+  p {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-weight: 100;
+    font-style: italic;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+}
