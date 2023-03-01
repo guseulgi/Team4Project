@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서귀포시 관광지</title>
+    <title>Tourist Attractions</title>
     <!--SWIPER-->
     <link
       rel="stylesheet"
@@ -13,9 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <!--JS-->
-    <script defer src="./js/test.js"></script>
+    <script defer src="./js/main.js"></script>
     <!--fontawesome-->
     <script
       src="https://kit.fontawesome.com/15a6f73da8.js"
@@ -27,6 +30,7 @@
     <header>
       <!--logo-->
       <div class="title">JEJU</div>
+      <!--menu-->
       <div class="other-menu">
         <ul>
           <li>
@@ -64,186 +68,85 @@
       </ul>
     </div>
 
+    <!-- Return to Top -->
+    <div class="returnToTop">
+      <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+
     <!--section-->
-
-    <!--Swiper-->
-
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img class="swiper-img" src="./image/성산일출봉3.jpg" alt="관광지1" />
-          <p>성산일출봉</p>
-        </div>
-        <div class="swiper-slide">
-          <img class="swiper-img" src="./image/카멜리아힐5.jpg" alt="관광지2" />
-          <p>카멜리아 힐</p>
-        </div>
-        <div class="swiper-slide">
-          <img class="swiper-img" src="./image/쇠소깍3.jpg" alt="관광지3" />
-          <p>쇠소깍</p>
-        </div>
-        <div class="swiper-slide">
-          <img
-            class="swiper-img"
-            src="./image/제주곶자왈도립공원11.jpg"
-            alt="관광지4"
-          />
-          <p>제주 곶자왈 도립공원</p>
-        </div>
-        <div class="swiper-slide">
-          <img class="swiper-img" src="./image/색달해변4.jpg" alt="관광지5" />
-          <p>중문 색달 해변</p>
+    <section class="intro">
+      <div>
+        <img class="mountain" src="./image/mountain.jpg" alt="mountain" />
+        <p>MOUNTAIN</p>
+      </div>
+      <div>
+        <img src="./image/sea.jpg" alt="sea" />
+        <p>SEA</p>
+      </div>
+      <div>
+        <img src="./image/park2.jpg" alt="park" />
+        <p>PARK <br />·<br />BOTANIC GARDEN</p>
+      </div>
+    </section>
+    <section class="contents">
+      <div class="mountainContent">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./image/성산일출봉2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/산방산.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/백록담.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <!-- If we need pagination -->
-      <!-- <div class="swiper-pagination"></div> -->
-
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
-      <!-- If we need scrollbar -->
-      <!--<div class="swiper-scrollbar"></div>-->
-    </div>
-
-    <!--관광지 설명-->
-    <div class="description">
-      <div class="description-content1">
-        <img src="./image/곶자왈겨울.jpg" alt="" />
-        <img src="./image/제주곶자왈도립공원2.jpg" alt="" />
-        <img src="./image/곶자왈지도.jpg" alt="" />
-        <div class="place"></div>
-        <div class="place-content">
-          <div class="content-box">제주 곶자왈 도립공원</div>
-          <ul>
-            <li>
-              <p>
-                곶자왈이란?<br />
-                <i class="fa-solid fa-location-dot"></i> 제주특별자치도 서귀포시
-                대정읍 보성리 63<br />
-
-                곶자왈은 화산활동 중 분출한 용암류가 만들어낸 불규칙한
-                암괴지대로
-                <br />
-                숲과 덤불 등 다양한 식생을 이루는 곳을 말하며,‘곶’과 ‘자왈’의
-                합성어인 제주어이다. <br />즉 곶자왈이란 암괴들이 불규칙하게
-                널려있는 지대에 형성된 숲으로,<br />
-                다양한 동·식물이 공존하며 독특한 생태계가 유지되고 있는 지역을
-                말한다.
-              </p>
-            </li>
-          </ul>
+      <div class="seaContent">
+        <div class="text off">
+          설명1
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명2
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명3
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명4
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명5
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="slide" src="./image/색달해변3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/협재해수욕장.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/곽지해수욕장.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/쇠소깍3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/정방폭포.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="description-content2">
-        <img src="./image/색달해변1.jpg" alt="" />
-        <img src="./image/색달해변4.jpg" alt="" />
-        <img src="./image/색달해변-서핑.jpg" alt="" />
-        <div class="place">중문색달해변</div>
-        <div class="place-content">
-          <ul>
-            <li>
-              <i class="fa-solid fa-location-dot"></i> 제주특별자치도 서귀포시
-              중문관광로72번길 29-51
-            </li>
-            <li><i class="fa-regular fa-credit-card"></i>무료</li>
-            <li>
-              <p>
-                <br />
-                중문색달해수욕장은 아름다운 해안 풍경과 야자수의 이국적인
-                모습으로 중문관광단지에서 시작해 천제연폭포와 대포주상절리와
-                이어지는 곳에 위치하고 있다. <br />
-                이곳의 모래는 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가
-                비추는 방향에 따라 모래 해변의 색깔이 달라 보인다.<br />
-                다른 해수욕장보다 파도가 잦고, 높은 편이라 서퍼들에게 인기가
-                많고, 국내의 가장 큰 규모의 국제 서핑 대회가 개최가 매년 6월에
-                개최된다.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="description-content3">
-        <img src="./image/성산일출봉2.jpg" alt="" />
-        <img src="./image/성산일출봉3.jpg" alt="" />
-        <img src="./image/성산일출봉4.jpg" alt="" />
-        <div class="place">성산일출봉</div>
-        <div class="place-content">
-          <ul>
-            <li>
-              <i class="fa-solid fa-location-dot"></i> 제주특별자치도 서귀포시
-              성산읍 일출로 284-12
-            </li>
-            <li>
-              <i class="fa-regular fa-clock"></i> 매일 07:00 - 20:00
-              (18:50분매표마감) 3~9월 / 매월 첫째 월요일 휴관 (단, 등하산교차로,
-              우뭇개 전망대, 우뭇개 해안은 무료개방) 매일 07:30 - 19:00
-              (17:50분매표마감) 10~2월 / 매월 첫째 월요일 휴관 이용 시간 평일 :
-              07:30 ~ 20:00 , 주말 : 07:30 ~ 20:00
-            </li>
-            <li>
-              <i class="fa-regular fa-credit-card"></i>개인 (성인 5,000원 /
-              청소년, 군인 2,500원 / 어린이 2,500원), 단체 (성인 4,000원 /
-              청소년, 군인 2,000원 / 어린이 2,000원)
-            </li>
-            <li>
-              <i class="fa-solid fa-hourglass"></i>평균 소요 시간 : 1시간 미만
-            </li>
-          </ul>
-          <p>
-            <br />
-            성산일출봉은 제주도의 다른 오름들과는 달리 마그마가 물속에서
-            분출하면서 만들어진 수성화산체다. <br />
-            화산활동시 분출된 뜨거운 마그마가 차가운 바닷물과 만나면서 화산재가
-            습기를 많이 머금어 끈끈한 성질을 띄게 되었고, 이것이 층을 이루면서
-            쌓인 것이 성산일출봉이다.
-          </p>
-        </div>
-      </div>
-      <div class="description-content4">
-        <img src="./image/카멜리아힐2.jpg" alt="" />
-        <img src="./image/카멜리아힐3.jpg" alt="" />
-        <img src="./image/카멜리아힐4.jpg" alt="" />
-        <div class="place">카멜리아 힐</div>
-        <div class="place-content">
-          <ul>
-            <li>
-              <i class="fa-solid fa-location-dot"></i>제주 서귀포시 안덕면
-              병악로 166
-            </li>
-            <li>
-              <i class="fa-regular fa-clock"></i> 매일 07:00 - 20:00
-              (18:50분매표마감) 3~9월 / 매월 첫째 월요일 휴관 (단, 등하산교차로,
-              우뭇개 전망대, 우뭇개 해안은 무료개방) 매일 07:30 - 19:00
-              (17:50분매표마감) 10~2월 / 매월 첫째 월요일 휴관 이용 시간 평일 :
-              07:30 ~ 20:00 , 주말 : 07:30 ~ 20:00
-            </li>
-            <li>
-              <i class="fa-regular fa-credit-card"></i>개인 (성인 5,000원 /
-              청소년, 군인 2,500원 / 어린이 2,500원), 단체 (성인 4,000원 /
-              청소년, 군인 2,000원 / 어린이 2,000원)
-            </li>
-            <li>
-              <i class="fa-solid fa-hourglass"></i>평균 소요 시간 : 1시간 미만
-            </li>
-          </ul>
-          <p>
-            <br />
-            성산일출봉은 제주도의 다른 오름들과는 달리 마그마가 물속에서
-            분출하면서 만들어진 수성화산체다. <br />
-            화산활동시 분출된 뜨거운 마그마가 차가운 바닷물과 만나면서 화산재가
-            습기를 많이 머금어 끈끈한 성질을 띄게 되었고, 이것이 층을 이루면서
-            쌓인 것이 성산일출봉이다.
-          </p>
-        </div>
-      </div>
-      <div class="description-content5">
-        <img src="./image/쇠소깍2.jpg" alt="" />
-        <img src="./image/쇠소깍1.jpg" alt="" />
-        <div class="place">쇠소깍</div>
-        <div class="place-content">장소5 설명</div>
-      </div>
-    </div>
+    </section>
   </body>
 </html>

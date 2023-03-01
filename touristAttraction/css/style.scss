@@ -29,6 +29,8 @@ body {
   // background-color: $yellow;
   font-family: "Noto Sans KR";
   line-height: 1.4;
+  height: 3000px;
+  width: 100vw;
 }
 
 //header
@@ -38,9 +40,9 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
-  background-color: white;
+  background-color: transparent;
 
   .title {
     color: #ea5c2b;
@@ -150,287 +152,137 @@ header {
   }
 }
 
-//section
+// Return to Top Button
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
 
-.swiper {
-  position: relative;
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    i {
+      color: $gray;
+    }
+  }
+}
+
+//section
+.intro {
   width: 100vw;
   height: 100vh;
-
-  .swiper-slide {
-    // &:hover {
-    //   transition: 0.5s;
-    //   opacity: 0.5;
-    //   & p {
-    //     color: white;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     opacity: 1;
-    //     transition: 0.5s;
-    //   }
-    // }
-    .swiper-img {
-      padding-top: 100px;
-      height: 100%;
-      width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  div {
+    position: relative;
+    &:hover {
+      opacity: 0.6;
       cursor: pointer;
-      box-shadow: 8px 4px 4px #888;
+      scale: 1.05;
+      transition: 0.5s;
+
+      & p {
+        color: $darkOrange;
+      }
+    }
+
+    img {
+      width: calc(100vw / 3);
+      height: 100vh;
     }
     p {
-      opacity: 0;
-      color: white;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-size: 3vh;
+      font-weight: 500;
     }
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-    top: 75vh;
-    left: 0vw;
-    width: 40px;
-    height: 40px;
-
-    color: black;
-    // border: 1px solid black;
-    //background-color: black;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
-    &::after {
-      font-size: 25px;
-    }
-  }
-  .swiper-button-next {
-    left: 3vw;
   }
 }
 
-//description
-.description {
-  //제주 곶자왈 도립공원
-  .description-content1 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    img {
-      position: absolute;
-      &:nth-child(1) {
-        width: 50vw;
-        height: 50vh;
-
-        left: 0;
-      }
-      &:nth-child(2) {
-        width: 50vw;
-        height: 50vh;
-        left: 0;
-        top: 50vh;
-      }
-      &:nth-child(3) {
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 50vw;
-      }
-    }
-    // .place {
-    //   position: relative;
-    //   margin-top: 100px;
-    //   text-align: center;
-
-    //   font-family: "Do Hyeon";
-    //   font-size: 4vh;
-    // }
-    @keyframes contentAnim {
-      0% {
-        opacity: 0;
-        transform: translateY(-40%) scale(0.8);
-      }
-      50% {
-        opacity: 1;
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: translateY(0px) scale(1);
-      }
-    }
-    .place-content {
-      // opacity: 0;
-      // transition: 0.5s;
-      position: absolute;
-      right: 10%;
-      bottom: 25%;
-      .content-box {
-        background-color: $green;
-        font-family: $doHyeon;
-
-        font-size: 4vh;
-        // animation: contentAnim 5s infinite;
+.contents.hide {
+  display: none;
+}
+.contents {
+  .mountainContent {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          height: 70vh;
+          overflow: hidden;
+          img {
+            width: 50vw;
+            height: 70vh;
+            &:hover {
+              scale: 1.05;
+              opacity: 0.6;
+              transition: 0.5s;
+            }
+          }
+        }
       }
     }
   }
-  //색달해변
-  .description-content2 {
-    width: 100vw;
-    height: 100vh;
+  .seaContent {
     position: relative;
 
-    img {
-      &:nth-child(1) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 0;
-      }
-      &:nth-child(2) {
-        display: none;
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        left: 0;
-        top: 50vh;
-      }
-      &:nth-child(3) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        left: 0;
-        top: 50vh;
-      }
-    }
-    .place {
+    .text {
+      width: 90vw;
+      margin-left: 5vw;
+      height: 70vh;
+      background-color: $gray;
+
+      border: 1px solid black;
       position: absolute;
-      left: 5%;
-      top: 5%;
-      font-family: "Do Hyeon";
-      font-size: 4vh;
-    }
-    .place-content {
-      position: absolute;
-      left: 10%;
-      top: 15%;
-    }
-  }
-  //성산일출봉
-  .description-content3 {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    img {
-      &:nth-child(1) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 0;
-      }
-      &:nth-child(2) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        left: 0;
-        top: 50vh;
-      }
-      &:nth-child(3) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        left: 0;
-        top: 50vh;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      .close {
+        margin: 10px;
+        float: right;
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+        i {
+          font-size: 30px;
+        }
       }
     }
-    .place {
-      position: absolute;
-      left: 5%;
-      top: 5%;
-      font-family: "Do Hyeon";
-      font-size: 4vh;
+    .text.off {
+      display: none;
     }
-    .place-content {
-      position: absolute;
-      left: 10%;
-      top: 8%;
-    }
-  }
-  //카멜리아 힐
-  .description-content4 {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    img {
-      &:nth-child(1) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 0;
+
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          height: 70vh;
+          overflow: hidden;
+          img {
+            width: 50vw;
+            height: 70vh;
+            &:hover {
+              scale: 1.05;
+              opacity: 0.6;
+              transition: 0.5s;
+              cursor: pointer;
+            }
+          }
+        }
       }
-      &:nth-child(2) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 50vh;
-        left: 0;
-      }
-      &:nth-child(3) {
-        position: absolute;
-        width: 450px;
-        height: 300px;
-        left: 800px;
-        top: 50px;
-      }
-    }
-    .place {
-      position: absolute;
-      left: 5%;
-      top: 5%;
-      font-family: "Do Hyeon";
-      font-size: 4vh;
-    }
-    .place-content {
-      position: absolute;
-      left: 10%;
-      top: 8%;
-    }
-  }
-  //쇠소깍
-  .description-content5 {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    img {
-      &:nth-child(1) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 0;
-      }
-      &:nth-child(2) {
-        position: absolute;
-        width: 50vw;
-        height: 50vh;
-        top: 50vh;
-        left: 0;
-      }
-    }
-    .place {
-      position: absolute;
-      left: 5%;
-      top: 5%;
-      font-family: "Do Hyeon";
-      font-size: 4vh;
-    }
-    .place-content {
-      position: absolute;
-      left: 10%;
-      top: 8%;
     }
   }
 }

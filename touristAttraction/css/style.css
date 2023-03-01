@@ -135,6 +135,8 @@ table {
 body {
   font-family: "Noto Sans KR";
   line-height: 1.4;
+  height: 3000px;
+  width: 100vw;
 }
 
 header {
@@ -142,9 +144,9 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
-  background-color: white;
+  background-color: transparent;
 }
 header .title {
   color: #ea5c2b;
@@ -241,237 +243,114 @@ header .other-menu ul li:hover::after {
   margin: 5px 0;
 }
 
-.swiper {
-  position: relative;
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+}
+.returnToTop a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.returnToTop a i {
+  color: #626458;
+}
+
+.intro {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
 }
-.swiper .swiper-slide .swiper-img {
-  padding-top: 100px;
-  height: 100%;
-  width: 100%;
+.intro div {
+  position: relative;
+}
+.intro div:hover {
+  opacity: 0.6;
   cursor: pointer;
-  box-shadow: 8px 4px 4px #888;
+  scale: 1.05;
+  transition: 0.5s;
 }
-.swiper .swiper-slide p {
-  opacity: 0;
-  color: white;
+.intro div:hover p {
+  color: #ea5c2b;
+}
+.intro div img {
+  width: 33.3333333333vw;
+  height: 100vh;
+}
+.intro div p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-  position: absolute;
-  top: 75vh;
-  left: 0vw;
-  width: 40px;
-  height: 40px;
-  color: black;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1;
-}
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-  font-size: 25px;
-}
-.swiper .swiper-button-next {
-  left: 3vw;
+  text-align: center;
+  color: white;
+  font-size: 3vh;
+  font-weight: 500;
 }
 
-.description .description-content1 {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-.description .description-content1 img {
-  position: absolute;
-}
-.description .description-content1 img:nth-child(1) {
-  width: 50vw;
-  height: 50vh;
-  left: 0;
-}
-.description .description-content1 img:nth-child(2) {
-  width: 50vw;
-  height: 50vh;
-  left: 0;
-  top: 50vh;
-}
-.description .description-content1 img:nth-child(3) {
-  width: 50vw;
-  height: 50vh;
-  top: 0;
-  left: 50vw;
-}
-@keyframes contentAnim {
-  0% {
-    opacity: 0;
-    transform: translateY(-40%) scale(0.8);
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(0px) scale(1);
-  }
-}
-.description .description-content1 .place-content {
-  position: absolute;
-  right: 10%;
-  bottom: 25%;
-}
-.description .description-content1 .place-content .content-box {
-  background-color: #95cd41;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content2 {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content2 img:nth-child(1) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  top: 0;
-  left: 0;
-}
-.description .description-content2 img:nth-child(2) {
+.contents.hide {
   display: none;
-  position: absolute;
+}
+
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide {
+  height: 70vh;
+  overflow: hidden;
+}
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide img {
   width: 50vw;
-  height: 50vh;
-  left: 0;
-  top: 50vh;
+  height: 70vh;
 }
-.description .description-content2 img:nth-child(3) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  left: 0;
-  top: 50vh;
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide img:hover {
+  scale: 1.05;
+  opacity: 0.6;
+  transition: 0.5s;
 }
-.description .description-content2 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content2 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-}
-.description .description-content3 {
-  width: 100vw;
-  height: 100vh;
+.contents .seaContent {
   position: relative;
 }
-.description .description-content3 img:nth-child(1) {
+.contents .seaContent .text {
+  width: 90vw;
+  margin-left: 5vw;
+  height: 70vh;
+  background-color: #626458;
+  border: 1px solid black;
   position: absolute;
-  width: 50vw;
-  height: 50vh;
+  left: 0;
   top: 0;
-  left: 0;
+  z-index: 2;
 }
-.description .description-content3 img:nth-child(2) {
-  position: absolute;
+.contents .seaContent .text .close {
+  margin: 10px;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.contents .seaContent .text .close i {
+  font-size: 30px;
+}
+.contents .seaContent .text.off {
+  display: none;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide {
+  height: 70vh;
+  overflow: hidden;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img {
   width: 50vw;
-  height: 50vh;
-  left: 0;
-  top: 50vh;
+  height: 70vh;
 }
-.description .description-content3 img:nth-child(3) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  left: 0;
-  top: 50vh;
-}
-.description .description-content3 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content3 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
-}
-.description .description-content4 {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content4 img:nth-child(1) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  top: 0;
-  left: 0;
-}
-.description .description-content4 img:nth-child(2) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  top: 50vh;
-  left: 0;
-}
-.description .description-content4 img:nth-child(3) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 800px;
-  top: 50px;
-}
-.description .description-content4 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content4 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
-}
-.description .description-content5 {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content5 img:nth-child(1) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  top: 0;
-  left: 0;
-}
-.description .description-content5 img:nth-child(2) {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  top: 50vh;
-  left: 0;
-}
-.description .description-content5 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content5 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img:hover {
+  scale: 1.05;
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
