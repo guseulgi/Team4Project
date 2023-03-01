@@ -198,13 +198,14 @@ header .other-menu ul li:hover::after {
 }
 .all_content .second_page .box1:hover .hoverbox span{
   animation: box_an1 1s linear 1; height: 150px;
+  cursor: pointer;
 }
 .all_content .second_page .box1:hover .hoverbox span p {
   animation: box_an2 1s linear 1; opacity: 1;
-  position: absolute; left: 100px; top: 30px;
+  position: absolute; left: 100px; top: 10px;
 }
 .all_content .second_page .box1:hover .imgBox{
-  opacity: 0.85;
+  opacity: 0.8;
   transition: 3s;
 }
 .all_content .second_page .box2 {
@@ -226,13 +227,14 @@ header .other-menu ul li:hover::after {
 }
 .all_content .second_page .box2:hover .hoverbox span{
   animation: box_an1 1s linear 1; height: 150px;
+  cursor: pointer;
 }
 .all_content .second_page .box2:hover .hoverbox span p {
   animation: box_an2 1s linear 1; opacity: 1;
   position: absolute; left: 50px; top: 40px;
 }
 .all_content .second_page .box2:hover .imgBox{
-  opacity: 0.85;
+  opacity: 0.8;
   transition: 3s;
 }
 /**/
@@ -255,13 +257,14 @@ header .other-menu ul li:hover::after {
 }
 .all_content .second_page .box3:hover .hoverbox span{
   animation: box_an1 1s linear 1; height: 150px;
+  cursor: pointer;
 }
 .all_content .second_page .box3:hover .hoverbox span p {
   animation: box_an2 1s linear 1; opacity: 1;
   position: absolute; left: 50px; top: 40px;
 }
 .all_content .second_page .box3:hover .imgBox{
-  opacity: 0.85;
+  opacity: 0.8;
   transition: 3s;
 }
 @keyframes box_an1{
@@ -274,5 +277,60 @@ header .other-menu ul li:hover::after {
   80%{opacity: 0;}
   100%{opacity: 1;}
 }
+
+.all_content .third_page .sea_page{
+  height: 100vh;
+  position: relative;
+}
+.all_content .third_page .sea_page .sea1{
+  position: absolute;
+  opacity: 1;
+  z-index: 2;
+}
+.all_content .third_page .sea_page .sea_bg {
+ position: absolute;
+ opacity: 0.5;
+ height: 100vh;
+ width: 210vh;
+ z-index: -2;
+}
+.all_content .third_page .sea_page .sea1 .sea_content1{
+  position: absolute;
+  height: 50vh;
+  left: 20vw;
+  top: 4vh;
+}
+.all_content .third_page .sea_page .sea1 .sea1_text{
+  position: absolute;
+  width: 500vw;
+  font-size: 4vh;
+  line-height: 12vh;
+  top: 11vh;
+  left: 60vw;
+}
+.all_content .third_page .sea_page .sea1 .sea1_text span {
+  position: absolute;
+  font-size: 6vh;
+  left: -5vw;
+  top: 3vh;
+  color: #ea5c2b;
+}
+.all_content .third_page .sea_page .sea1 .sea1_text .two {
+  position: absolute;
+  top: 15vh;
+}
+.all_content .third_page .sea_page .sea1 .sea1_text .three {
+  position: absolute;
+  top: 27vh;
+}
+.all_content .third_page .mountain_page{
+  height: 100vh;
+  background-color: rgb(55, 84, 31);
+}
+.all_content .third_page .popular_page{
+  height: 100vh;
+  background-color: rgb(24, 206, 176);
+}
+
 
 /*# sourceMappingURL=food_style.css.map */
