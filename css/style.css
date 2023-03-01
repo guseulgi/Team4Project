@@ -68,6 +68,7 @@ table {
 body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
+  cursor: none;
 }
 
 .bar {
@@ -77,14 +78,15 @@ body {
   margin: auto;
 }
 
-.point {
+.cursor {
+  background-image: url("../source/cursor.png");
+  background-size: contain;
+  width: 45px;
+  height: 45px;
   position: absolute;
-  top: 60px;
-  left: 50%;
-  z-index: 0;
-  width: 20vw;
-  height: 10px;
-  background-color: #ffeda4;
+  top: 0;
+  left: 2px;
+  z-index: 3;
 }
 
 header {
@@ -148,6 +150,15 @@ header .other-menu ul li span {
 }
 header .other-menu ul li a {
   color: white;
+}
+header .other-menu ul li a.changeColor {
+  color: #5c3b16;
+}
+header .other-menu ul li a.changeColor:hover {
+  color: #ea5c2b;
+}
+header .other-menu ul li a:hover {
+  color: #f6d860;
 }
 header .other-menu ul li:hover span {
   display: block;
@@ -219,6 +230,15 @@ header .other-menu ul li:hover::after {
   text-align: center;
   font-size: 1.2rem;
 }
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
+}
+.returnToTop a.changeColor i {
+  color: white;
+}
+.returnToTop a.changeColor span {
+  background-color: white;
+}
 .returnToTop a span {
   width: 18px;
   height: 1.8px;
@@ -252,7 +272,7 @@ header .other-menu ul li:hover::after {
   top: 27vh;
   left: 0;
   width: 100vw;
-  height: 500px;
+  height: 420px;
 }
 .main .main__contents .contents__title {
   width: 25.5rem;
@@ -368,7 +388,7 @@ header .other-menu ul li:hover::after {
   color: #f6d860;
 }
 .main .main__contents .main__hash {
-  width: 45vw;
+  width: 587px;
   margin: 15px auto;
 }
 .main .main__contents .main__hash p {
@@ -383,6 +403,29 @@ header .other-menu ul li:hover::after {
   background-color: #e4ffb9;
   border-radius: 16px;
   border: 2px solid #95cd41;
+}
+.main .main__contents .bottomButton {
+  position: absolute;
+  width: 45px;
+  height: 65px;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 3;
+}
+.main .main__contents .bottomButton a {
+  color: rgba(98, 100, 88, 0.4823529412);
+  font-size: 2rem;
+  text-decoration: none;
+}
+.main .main__contents .bottomButton i {
+  display: block;
+  transform: scaleX(1.6);
+  position: absolute;
+}
+.main .main__contents .bottomButton i:first-child {
+  top: 13px;
 }
 
 .nav {
@@ -453,12 +496,28 @@ header .other-menu ul li:hover::after {
   text-decoration: none;
 }
 .nav .nav__container .parts li .parts__image {
-  background-image: url("../source/jejulogo.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 170px;
   opacity: 0.8;
   transition: 0.5s;
+}
+.nav .nav__container .parts li:nth-child(1) .parts__image {
+  background-image: url("../source/activityMain.jpeg");
+  background-position: 0 -40px;
+}
+.nav .nav__container .parts li:nth-child(2) .parts__image {
+  background-image: url("../source/cafeMain.jpeg");
+  background-position: 0 -60px;
+}
+.nav .nav__container .parts li:nth-child(3) .parts__image {
+  background-image: url("../source/foodMain.jpeg");
+}
+.nav .nav__container .parts li:nth-child(4) .parts__image {
+  background-image: url("../source/touristMain.jpeg");
+}
+.nav .nav__container .parts li:nth-child(5) .parts__image {
+  background-image: url("../source/emergencyMain.jpeg");
 }
 .nav .nav__container .parts li p {
   width: 165px;
@@ -489,7 +548,7 @@ header .other-menu ul li:hover::after {
 footer {
   width: 100vw;
   height: 40px;
-  background-color: #626458;
+  background-color: #363730;
 }
 footer p {
   text-align: center;
