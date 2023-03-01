@@ -19,10 +19,16 @@
 
 </head>
 <body>
+  <div class="cursor"></div>
   <!-- Header -->
   <header>
     <!-- Logo -->
-    <div class="title">JEJU</div>
+    <div class="title">Jeju
+      <div class="title__logo">
+        <i class="fa-solid fa-quote-left"></i>
+        <i class="fa-solid fa-pause"></i>
+      </div>
+    </div>
       <div class="other-menu">
         <ul>
           <li>
@@ -64,6 +70,7 @@
       <!-- Return to Top -->
       <div class="returnToTop">
         <a href="#">
+          <span></span>
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </div>
@@ -114,6 +121,13 @@
           <p>흉부가 압박되는 깊이는 가슴이 4~5cm정도 함몰되도록, 압박하는 속도는 1분에 100회 정도이다. (압박과 이완의 비율은 50:50)</p>
         </div>
       </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev">
+      <i class="fa-solid fa-circle-left"></i>
+    </div>
+    <div class="swiper-button-next">
+      <i class="fa-solid fa-circle-right"></i>
     </div>
   </section>
 
@@ -230,7 +244,10 @@
         </li>
       </ul>
     </div>
-    <img src="./source/image/hanlaEmg3.jpeg" alt="제주한라병원" class="hospital__image"/>
+    <div class="hospital__image">
+      <span class="shine"></span>
+    </div>
+    <!-- <img src="./source/image/hanlaEmg3.jpeg" alt="제주한라병원" class="hospital__image"/> -->
   </section>
 </body>
 </html>
