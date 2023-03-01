@@ -87,6 +87,17 @@ body {
   background-color: #ffeda4;
 }
 
+.cursor {
+  background-image: url("../source/cursor.png");
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 3;
+}
+
 header {
   position: fixed;
   height: 100px;
@@ -97,18 +108,32 @@ header {
   background-color: transparent;
 }
 header .title {
-  color: #ea5c2b;
-  font: 8vh "Kirang Haerang";
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
   text-shadow: 0px 3px 0 white;
   padding-left: 40px;
   height: 100px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
   line-height: 18vh;
 }
 header .other-menu ul {
   display: flex;
   position: absolute;
   top: 0;
-  right: 10%;
+  right: 40px;
   height: 100%;
 }
 header .other-menu ul li {
@@ -133,7 +158,16 @@ header .other-menu ul li span {
   text-align: center;
 }
 header .other-menu ul li a {
+  color: white;
+}
+header .other-menu ul li a.changeColor {
   color: #5c3b16;
+}
+header .other-menu ul li a.changeColor:hover {
+  color: #ea5c2b;
+}
+header .other-menu ul li a:hover {
+  color: #f6d860;
 }
 header .other-menu ul li:hover span {
   display: block;
@@ -167,7 +201,7 @@ header .other-menu ul li:hover::after {
   font-size: 2rem;
   text-align: center;
   line-height: 32px;
-  margin: auto 10px auto 5px;
+  margin: auto 12px auto 9px;
   color: white;
   animation: weatherAnim 10s infinite;
 }
@@ -205,7 +239,29 @@ header .other-menu ul li:hover::after {
   text-align: center;
   font-size: 1.2rem;
 }
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
+}
+.returnToTop a.changeColor i {
+  color: white;
+}
+.returnToTop a.changeColor span {
+  background-color: white;
+}
+.returnToTop a span {
+  width: 18px;
+  height: 1.8px;
+  display: block;
+  border-radius: 4px;
+  background-color: #626458;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
 .returnToTop a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
   color: #626458;
 }
 

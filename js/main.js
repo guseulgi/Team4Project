@@ -1,4 +1,79 @@
 // Main JS
+
+// Mouse Cursor
+document.body.requestPointerLock();
+const cursor = document.querySelector('.cursor');
+// 커서를 지정한 아이콘으로 변경하는 함수
+let cursorMove = function(e) {
+  const cursorX = e.pageX;
+  const cursorY = e.pageY;
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+}
+window.addEventListener('mousemove', cursorMove);
+
+// 마우스가 a태그에 올라가면 지정해준 커서를 안보이게 하고 싶음(아직 작동 안함)
+window.addEventListener('mouseenter', function(e) {
+  console.log(e.target.tagName);
+  if( e.target.getElementTagName('A') !== '')
+  {
+    cursor.style.display = none;
+  } else {
+    cursor.style.display = block;
+    }
+});
+
+// Scroll Event
+// Menu 가 일정 크기 이상 이동하면 메뉴바의 아이콘의 색이 변하는 함수
+const changeColorYpx = 574;
+const otherMenu = document.querySelectorAll('.other-menu ul li a');
+const topBtnChangeYpx = 298;
+const returnToTop = document.querySelector('.returnToTop a');
+
+let scrollPage = function() {
+  let curScrollY = window.scrollY;
+
+  if(curScrollY < topBtnChangeYpx) {
+    if(returnToTop.classList.contains('changeColor') === true) {
+      returnToTop.classList.remove('changeColor');
+    }
+  }
+  if(curScrollY > topBtnChangeYpx) {
+    if(returnToTop.classList.contains('changeColor') === false) {
+      returnToTop.classList.add('changeColor');
+    }
+  }
+
+  if(curScrollY < changeColorYpx) {
+    otherMenu.forEach(value => {
+      if(value.classList.contains('changeColor') === true) {
+        value.classList.remove('changeColor');
+      }
+    });
+  }
+
+  if(curScrollY > changeColorYpx) {
+    for(let i = 0; i < otherMenu.length; i++) {
+      if(otherMenu[i].classList.contains('changeColor') === false) {
+        otherMenu[i].classList.add('changeColor');
+      }
+    }
+  }
+}
+window.addEventListener('scroll', scrollPage);
+
+const arrowButton = document.querySelector('.bottomButton a');
+const helloJejuY = 684;
+// 버튼 클릭 시 다음 섹션으로 스크롤을 이동하는 함수
+let moveToNextSection = function() {
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    top:helloJejuY,
+});
+}
+// arrowButton.addEventListener('click', moveToNextSection); a태그에 직접 넣어줌
+
+
 // Weather API
 const weatherIconRef = {
   '01' : 'fas fa-sun',

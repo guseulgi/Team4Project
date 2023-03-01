@@ -30,6 +30,7 @@ $primary-border : 1px solid #ddd;
 body {
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.4;
+  cursor: none;
 }
 
 .bar {
@@ -39,14 +40,16 @@ body {
   margin: auto;
 }
 
-.point {
+.cursor {
+  background-image: url('../source/cursor.png');
+  background-size: contain;
+  
+  width : 45px;
+  height: 45px;
   position: absolute;
-  top : 60px;
-  left : 50%;
-  z-index: 0;
-  width: 20vw;
-  height: 10px;
-  background-color: #ffeda4;
+  top:0;
+  left: 2px;
+  z-index: 3;
 }
 
 // Header
@@ -117,6 +120,17 @@ header {
 
         a {
           color : white;
+
+          //메뉴가 일정 이상 내려가면 색이 바뀌는 클래스 추가
+          &.changeColor {
+            color : $darkBrawn;
+            &:hover {
+              color : $darkOrange;
+            }
+          }
+          &:hover {
+            color : $yellow;
+          }
         }
 
         &:hover {
@@ -203,6 +217,17 @@ header {
       
       font-size: 1.2rem;
 
+      &.changeColor {
+        background-color: $darkOrange;
+
+        i {
+          color :white;
+        }
+        span {
+          background-color: white;
+        }
+      }
+
       span {
         width: 18px;
         height: 1.8px;
@@ -242,7 +267,7 @@ header {
     top : 27vh;
     left: 0;
     width: 100vw;
-    height: 500px;
+    height: 420px;
 
     .contents__title {
       width: 25.5rem;
@@ -355,7 +380,7 @@ header {
     }
 
     .main__hash {
-      width: 45vw;
+      width: 587px;
       margin: 15px auto;
       p {
         display: inline-block;
@@ -369,6 +394,30 @@ header {
         background-color: #e4ffb9;
         border-radius: 16px;
         border: 2px solid #95cd41;
+      }
+    }
+
+    .bottomButton {
+      position: absolute;
+      width: 45px;
+      height: 65px;
+      bottom : 5vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 3;
+      a {
+        color: #6264587b;
+        font-size: 2rem;
+        text-decoration: none;
+      }
+      i {
+        display: block;
+        transform: scaleX(1.6);
+        position: absolute;
+        &:first-child {
+          top : 13px;
+        }
       }
     }
   }
@@ -451,14 +500,29 @@ header {
         }
 
         .parts__image {
-          background-image: url('../source/jejulogo.png');
+          // background-image: url('../source/');s
           background-size: cover;
           background-repeat: no-repeat;
           height: 170px;
-          // border: 1px solid black;
           opacity: .8;
           transition: .5s;
+
+          
         }
+        $mainImgName : 'activity' 'cafe' 'food' 'tourist' 'emergency';
+          @each $el in $mainImgName {
+            $idx : index($mainImgName, $el);
+            &:nth-child(#{$idx}) .parts__image {
+              $path : '../source/' + $el + 'Main.jpeg';
+              background-image: url($path);
+
+              @if ($idx == 1) {
+                background-position: 0 -40px;
+              } @else if ($idx == 2) {
+                background-position: 0 -60px;
+              }
+            }
+          }
 
         p {
           width: 165px;
@@ -468,7 +532,6 @@ header {
           font-family: 'Josefin Slab', serif;
           font-size: 1.5rem;
           text-align: center;
-          // line-height: 2rem;
           color: rgb(34, 34, 34);
           position: absolute;
           top: 0;
@@ -500,7 +563,7 @@ header {
 footer {
   width: 100vw;
   height: 40px;
-  background-color: #626458;
+  background-color: #363730;
 
   p {
     text-align: center;
