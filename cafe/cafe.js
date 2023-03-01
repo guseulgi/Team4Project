@@ -56,9 +56,18 @@ fetch(weatherUrl)
     weatherUl.appendChild(newLi);
   });
 
-// let sea = document.querySelector(".cafe_theme_sea");
-// let mountain = document.querySelector(".cafe_theme_mountain");
-// let interesting = document.querySelector(".cafe_theme_interesting");
+let sea = document.querySelector(".cafe_theme_sea");
+let cafe_sea = document.querySelector(".cafe_sea");
+let mountain = document.querySelector(".cafe_theme_mountain");
+let interesting = document.querySelector(".cafe_theme_interesting");
+
+sea.addEventListener("click", function () {
+  window.scrollBy({
+    top: cafe_sea.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
 // function seaZoomIn(e) {
 //   e.target.style.transform = "scale(1)";
 //   e.target.style.filter = "brightness(60%)";
@@ -86,5 +95,31 @@ window.addEventListener("scroll", () => {
   } else {
     header.setAttribute("style", "background: transparent;");
     header.style.transition = "all .4s ease-in-out";
+  }
+});
+window.addEventListener("load", function () {
+  let aElSection = document.querySelectorAll("section");
+  let curSIdx = 0;
+
+  let wheelTimer;
+  window.addEventListener("wheel", function (e) {
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(function () {
+      if (e.deltaY < 0) doScroll(++curSIdx);
+      else doScroll(--curSIdx);
+    }, 50);
+  });
+
+  function doScroll(sidx) {
+    sidx = sidx < 0 ? 0 : sidx;
+    sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
+
+    curSIdx = sidx;
+
+    aElSection[curSIdx].scrollIntoView({
+      block: "start",
+      inline: "start",
+      behavior: "smooth",
+    });
   }
 });
