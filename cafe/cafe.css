@@ -1,154 +1,277 @@
+/**$yellow: #f6d860;
+$orange: #ff7f3f;
+$darkOrange: #ea5c2b;
+$green: #95cd41; */
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+/* font-family : 'Do Hyeon'  */
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+/* font-family: 'Mynerve', cursive; */
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: white;
 }
 
 header {
-  display: flex;
-  position: relative;
+  position: fixed;
   height: 100px;
-  border-bottom: 1px solid #323232;
-  background-color: blanchedalmond;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
 }
-header h1 {
-  font: bold 36px "arial";
+header .title {
   display: flex;
-  top: 50px;
-  left: 50px;
-  position: absolute;
-  color: green;
-}
+  align-items: center;
+  color: #ea5c2b;
+  font: 8vh "Kirang Haerang";
+  text-shadow: 0px 3px 0 white;
+  padding-left: 40px;
 
+  height: 100px;
+  line-height: 18vh;
+}
 header .other-menu ul {
   display: flex;
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 10%;
+  height: 100%;
 }
 header .other-menu ul li {
-  margin: 15px;
+  position: relative;
+  margin: auto 15px;
   font-size: 20px;
+  transition: 0.7s;
+}
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 70px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
 }
 header .other-menu ul li a {
-  color: black;
+  color: #5c3b16;
 }
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
+}
+
 .weather {
   position: fixed;
-  width: 210px;
-  height: 100px;
-  right: 20px;
-  bottom: 20px;
-  background-color: #808080;
-  border-radius: 30px;
-  opacity: 0.5;
-  z-index: 3;
-}
-
-.weather .container {
-  position: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  right: 20px;
-  bottom: 20px;
-  margin-right: 25px;
-  color: white;
-  z-index: 4;
-}
-
-.weatherInfo {
-  font-size: 1em;
-}
-.weatherIcon {
-  width: 60px;
-  height: 60px;
-}
-
-.swipe {
-  height: 600px;
-}
-
-.swiper {
-  position: absolute;
-  width: 70%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 150px;
+  bottom: 10px;
   right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
 }
-
-.swiper-slide {
-  position: relative;
-  width: 40%;
-  margin: 10px auto;
+.weather i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 32px;
+  margin: auto 10px auto 5px;
+  color: white;
+  animation: weatherAnim 10s infinite;
+}
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 5px 0;
 }
 
 .swiper-slide img {
-  width: 100%;
-  vertical-align: middle;
-}
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0;
+  width: 100vw;
 
-.swiper-slide img:hover {
-  width: 100%;
-  vertical-align: middle;
-  opacity: 0.5;
-}
-
-.swiper-slide p {
-  position: absolute;
-  padding: 5px 10px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  /* filter: brightness(0%); */
   z-index: -1;
 }
 
-.swiper-slide:hover p:hover {
+.swiper-slide h1 {
+  font-family: "Mynerve";
+  color: #ff7f3f;
   position: absolute;
-  padding: 5px 10px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-.swiper-slide img {
-  display: inline-block;
-  border-radius: 5%;
-  width: 100%;
+  font-size: 80px;
+  top: 200px;
+  right: 200px;
 }
 
-.cafe {
-}
-
-.cafe .cafe-img {
-}
-
-.cafe-img .muroi {
+.theme .cafe_theme {
+  width: 100vw;
   height: 100vh;
-  background: url("../cafe/images/서귀포시_무로이.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: grid;
+  position: relative;
+  bottom: 10px;
   overflow: hidden;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
-.cafe-img .muroi::before {
-  content: " ";
-  background: linear-gradient(to left, black, transparent);
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 80%;
+.theme .cafe_theme .cafe_theme_sea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  background-image: url("../coffeePage/images/jejuocean.jpeg");
+  background-size: cover;
+  background-position-x: -130px;
+  transition: all 0.6s ease-in-out;
+  background-repeat: no-repeat;
 }
 
-.cafe-img .muroi h1 {
+.theme .cafe_theme .cafe_theme_sea:hover {
+  filter: brightness(60%);
+  transition: all 0.6s ease-in-out;
+}
+
+.theme .cafe_theme .cafe_theme_sea p {
   position: absolute;
+  font-size: 60px;
+  margin: 70% 30%;
   color: white;
-  font-size: 100px;
-  left: 1000px;
+  opacity: 0;
+  transition: all 1s;
+  z-index: 6;
+}
 
-  font-family: sans-serif;
+.theme .cafe_theme .cafe_theme_sea:hover p {
+  opacity: 1;
+  color: white;
+}
+
+.theme .cafe_theme .cafe_theme_mountain {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  background-image: url("../coffeePage/images/jejumountain.jpeg");
+  background-position-x: -170px;
+  transition: all 0.6s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.theme .cafe_theme .cafe_theme_mountain:hover {
+  filter: brightness(60%);
+  transition: all 0.6s ease-in-out;
+}
+
+.theme .cafe_theme .cafe_theme_mountain p {
+  position: absolute;
+  font-size: 60px;
+  margin: 70% 26%;
+  color: white;
+  opacity: 0;
+  transition: all 1s;
+  z-index: 6;
+}
+
+.theme .cafe_theme .cafe_theme_mountain:hover p {
+  opacity: 1;
+  color: white;
+}
+.theme .cafe_theme .cafe_theme_interesting {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  background-image: url("../coffeePage/images/jejucolacafe.jpeg");
+  background-size: cover;
+  transition: all 0.6s ease-in-out;
+  background-repeat: no-repeat;
+  background-position-x: -400px;
+}
+
+.theme .cafe_theme .cafe_theme_interesting:hover {
+  filter: brightness(60%);
+  transition: all 0.6s ease-in-out;
+}
+
+.theme .cafe_theme .cafe_theme_interesting p {
+  position: absolute;
+  font-size: 60px;
+  margin: 70% 22%;
+  color: white;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.theme .cafe_theme .cafe_theme_interesting:hover p {
+  opacity: 1;
+  color: white;
+}
+
+.cafe_sea {
+}
+.cafe_sea .cafe_sea_1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cafe_sea .cafe_sea_1_text {
+  height: 100vh;
+  flex-grow: 1;
+  background-color: #ea5c2b;
+}
+.cafe_sea .cafe_sea_1_img {
+  height: 100vh;
+  flex-grow: 1;
+  background-color: aqua;
+}
+.cafe_sea .cafe_sea_2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cafe_sea .cafe_sea_2_text {
+  height: 100vh;
+  flex-grow: 1;
+  background-color: bisque;
+}
+.cafe_sea .cafe_sea_2_img {
+  height: 100vh;
+  flex-grow: 1;
+  background-color: cadetblue;
 }
