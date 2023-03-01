@@ -46,6 +46,17 @@ body {
   height: 10px;
   background-color: #ffeda4;
 }
+.cursor {
+  background-image: url('../source/cursor.png');
+  background-size: contain;
+  
+  width : 45px;
+  height: 45px;
+  position: absolute;
+  top:0;
+  left: 2px;
+  z-index: 3;
+}
 
 // Header
 header {
@@ -58,19 +69,36 @@ header {
   background-color: transparent;
 
   .title {
-    color: #ea5c2b;
-    font: 8vh $logo-txt;
+    color: $darkBrawn;
+    font-size: 36px;
+    font-family: 'OKDDUNG';
     text-shadow: 0px 3px 0 white;
     padding-left: 40px;
     height: 100px;
     line-height: 18vh;
+
+    .title__logo {
+      & > i:first-child {
+        position: absolute;
+        top : 0px;
+        left : 147px;
+        line-height: 18vh;
+      }
+      & > i:last-child {
+        position: absolute;
+        top : 14px;
+        left : 148px;
+        transform: rotate(-90deg) scale(.4);
+        line-height: 18vh;
+      }
+    }
   }
   .other-menu {
     ul {
       display: flex;
       position: absolute;
       top: 0;
-      right: 10%;
+      right: 40px;
       height: 100%;
 
       li {
@@ -97,7 +125,18 @@ header {
         }
 
         a {
-          color : $darkBrawn;
+          color : white;
+
+          //메뉴가 일정 이상 내려가면 색이 바뀌는 클래스 추가
+          &.changeColor {
+            color : $darkBrawn;
+            &:hover {
+              color : $darkOrange;
+            }
+          }
+          &:hover {
+            color : $yellow;
+          }
         }
 
         &:hover {
@@ -117,7 +156,6 @@ header {
             background-color: $orange;
           }
         }
-        
       }
     }
   }
@@ -140,7 +178,7 @@ header {
       font-size: 2rem;
       text-align: center;
       line-height: 32px;
-      margin: auto 10px auto 5px;
+      margin: auto 12px auto 9px;
       color :white;
       animation: weatherAnim 10s infinite;
     }
@@ -165,7 +203,6 @@ header {
         line-height: 14px;
         font-family: $content-txt;
         margin: 5px 0;
-
       }
     }
   }
@@ -185,12 +222,38 @@ header {
       text-align: center;
       
       font-size: 1.2rem;
+
+      &.changeColor {
+        background-color: $darkOrange;
+
+        i {
+          color :white;
+        }
+        span {
+          background-color: white;
+        }
+      }
+
+      span {
+        width: 18px;
+        height: 1.8px;
+        display: block;
+        border-radius: 4px;
+        background-color: $gray;
+        position: absolute;
+        top : 6px;
+        left: 6px;
+      }
       
       i {
+        position: absolute;
+        top:8px;
+        left: 8px;
         color: $gray;
       }
     }
   }
+
 
 // Emergency Situation
 .emgSituation {
