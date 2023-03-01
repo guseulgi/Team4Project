@@ -209,46 +209,40 @@ header {
     position: relative;
     display: flex;
     background-color:#fff;
-    :nth-child(1){
-      width: 33.333vw;
-      background-image: url("../jeju/바다.jpg");
-      background-size: 50vw 50vw ;
-      background-position: center;
-      background-repeat: no-repeat;
-      &:hover {
-        -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
-        mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
-
+    img {
+      height: 100vh;
+      position: absolute;
+    }
+    .box1{
+      width: 33.333%;  
+      background-color: #626458;
+    }
+    .box2{
+      width: 33.333%;
+      :hover {
         cursor: pointer;
+        opacity: 1;
+      }
+      .hoverbox {
+        .p1{
+          position: absolute;
+          width: 50vh;
+          opacity: 0;
+        }
       }
     }
-    :nth-child(2){
-      width: 33.333vw;
-      background-image: url("../jeju/산.jpg");
-      background-size: 70vw 50vw ;
-      background-position: center;
-      background-repeat: no-repeat;
-      &:hover {
-        -webkit-mask-image: linear-gradient(to top, transparent 50%, #972f0c 100%);
-        mask-image: linear-gradient(to top transparent 50%, #972f0c 100%);
-
+    .box3{
+      width: 33.333%;
+      :hover{
         cursor: pointer;
       }
-    }
-    :nth-child(3){
-      width: 33.333vw;
-      background-color: rgb(173, 117, 13);
-      background-image: url("../jeju/인기.jpg");
-      background-size: 60vw 50vw ;
-      background-position: left;
-      background-repeat: no-repeat;
-      
-      &:hover {
-        -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #972f0c 100%);
-        mask-image: linear-gradient(to bottom transparent 50%, #972f0c 100%);
-
-        cursor: pointer;
+      .hoverbox {
+        .p1{
+          position: absolute;
+          width: 50vh;
+          opacity: 0;
       }
     }
   }
+}
 }
