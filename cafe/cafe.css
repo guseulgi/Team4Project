@@ -8,19 +8,21 @@ $green: #95cd41; */
 /* font-family: 'Mynerve', cursive; */
 
 * {
+  /* transition-duration: 0.2s; */
   margin: 0;
   padding: 0;
 }
 body {
+  width: 100vw;
 }
 
 header {
   position: fixed;
+  width: 100%;
   height: 100px;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100vw;
   background-color: transparent;
 }
 header .title {
@@ -120,13 +122,15 @@ header .other-menu ul li:hover::after {
   font-family: "Noto Sans KR", sans-serif;
   margin: 5px 0;
 }
+section {
+  min-height: 100vh;
+}
 
 .swiper-slide img {
   background-size: cover;
   position: relative;
   margin-bottom: 0;
   width: 100vw;
-
   opacity: 0.6;
   /* filter: brightness(0%); */
   z-index: -1;
@@ -146,7 +150,7 @@ header .other-menu ul li:hover::after {
   height: 100vh;
   display: grid;
   position: relative;
-  bottom: 10px;
+  bottom: 5px;
   overflow: hidden;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -156,7 +160,7 @@ header .other-menu ul li:hover::after {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 8;
-  background-image: url("../coffeePage/images/jejuocean.jpeg");
+  background-image: url("../cafe/images/jejuocean.jpeg");
   background-size: cover;
   background-position-x: -130px;
   transition: all 0.6s ease-in-out;
@@ -188,7 +192,7 @@ header .other-menu ul li:hover::after {
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 8;
-  background-image: url("../coffeePage/images/jejumountain.jpeg");
+  background-image: url("../cafe/images/jejumountain.jpeg");
   background-position-x: -170px;
   transition: all 0.6s ease-in-out;
   background-size: cover;
@@ -219,7 +223,7 @@ header .other-menu ul li:hover::after {
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 8;
-  background-image: url("../coffeePage/images/jejucolacafe.jpeg");
+  background-image: url("../cafe/images/jejucolacafe.jpeg");
   background-size: cover;
   transition: all 0.6s ease-in-out;
   background-repeat: no-repeat;
@@ -246,6 +250,8 @@ header .other-menu ul li:hover::after {
 }
 
 .cafe_sea {
+  position: relative;
+  top: -5px;
 }
 .cafe_sea .cafe_sea_1 {
   display: flex;
