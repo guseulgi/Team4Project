@@ -133,290 +133,224 @@ table {
 }
 
 body {
-  background-color: #f6d860;
   font-family: "Noto Sans KR";
   line-height: 1.4;
+  height: 3000px;
+  width: 100vw;
 }
 
 header {
-  position: relative;
+  position: fixed;
   height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  background-color: transparent;
 }
 header .title {
   color: #ea5c2b;
   font: 8vh "Kirang Haerang";
+  text-shadow: 0px 3px 0 white;
   margin-left: 40px;
   height: 100px;
-  line-height: 13vh;
+  line-height: 14vh;
 }
 header .other-menu ul {
   display: flex;
   position: absolute;
-  bottom: 0;
+  top: 0;
+  height: 100%;
   right: 10%;
 }
 header .other-menu ul li {
-  margin: 15px;
+  margin: auto 15px;
   font-size: 20px;
+  position: relative;
+  transition: 0.7s;
+}
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 90px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
 }
 header .other-menu ul li a {
-  color: black;
+  color: #5c3b16;
+}
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
 }
 
 .weather {
-  font-family: "Do Hyeon";
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+}
+.weather i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 32px;
+  margin: auto 10px auto 5px;
+  color: white;
+  animation: weatherAnim 10s infinite;
+}
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR";
+  margin: 5px 0;
+}
+
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+}
+.returnToTop a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.returnToTop a i {
+  color: #626458;
+}
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.intro div {
+  position: relative;
+}
+.intro div:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  scale: 1.05;
+  transition: 0.5s;
+}
+.intro div:hover p {
+  color: #ea5c2b;
+}
+.intro div img {
+  width: 33.3333333333vw;
+  height: 100vh;
+}
+.intro div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 3vh;
+  font-weight: 500;
+}
+
+.contents.hide {
+  display: none;
+}
+
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide {
+  height: 70vh;
+  overflow: hidden;
+}
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide img {
+  width: 50vw;
+  height: 70vh;
+}
+.contents .mountainContent .swiper .swiper-wrapper .swiper-slide img:hover {
+  scale: 1.05;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.contents .seaContent {
+  position: relative;
+}
+.contents .seaContent .text {
+  width: 90vw;
+  margin-left: 5vw;
+  height: 70vh;
+  background-color: #626458;
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  top: 0;
   z-index: 2;
 }
-
-.content {
-  display: flex;
-  height: 92vh;
-}
-
-.swiper {
-  position: relative;
-  width: 80vw;
-}
-.swiper .swiper-slide .swiper-content {
-  margin-top: 10px;
-  border-radius: 30px;
-  height: 70%;
-  width: 100%;
-  cursor: pointer;
-  box-shadow: 8px 4px 4px #888;
-}
-.swiper .swiper-slide .swiper-content:hover {
-  transition: 0.5s;
-  opacity: 0.5;
-}
-.swiper .swiper-slide p {
-  opacity: 0;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.swiper .swiper-slide p:hover {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-  position: absolute;
-  top: 75vh;
-  left: 0vw;
-  width: 40px;
-  height: 40px;
-  color: black;
+.contents .seaContent .text .close {
+  margin: 10px;
+  float: right;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1;
 }
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-  font-size: 25px;
+.contents .seaContent .text .close i {
+  font-size: 30px;
 }
-.swiper .swiper-button-next {
-  left: 3vw;
-}
-
-.description {
-  width: 100%;
-}
-.description .description-content1 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  border: 1px solid black;
-}
-.description .description-content1 img {
-  position: absolute;
-}
-.description .description-content1 img:nth-child(1) {
-  width: 35vw;
-  height: 40vh;
-  top: 12%;
-  left: 10%;
-}
-.description .description-content1 img:nth-child(2) {
-  width: 35vw;
-  height: 40vh;
-  left: 40%;
-  top: 15%;
-}
-.description .description-content1 img:nth-child(3) {
-  width: 35vw;
-  height: 40vh;
-  left: 15%;
-  bottom: 8%;
-}
-.description .description-content1 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content1 .place-content {
-  position: absolute;
-  right: 10%;
-  top: 60%;
-}
-.description .description-content2 {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  border: 1px solid black;
-}
-.description .description-content2 img:nth-child(1) {
-  position: absolute;
-  width: 35vw;
-  height: 45vh;
-  bottom: 15%;
-  left: 10%;
-}
-.description .description-content2 img:nth-child(2) {
+.contents .seaContent .text.off {
   display: none;
-  position: absolute;
-  width: 35vw;
-  height: 45vh;
-  right: 10%;
-  top: 25%;
 }
-.description .description-content2 img:nth-child(3) {
-  position: absolute;
-  width: 35vw;
-  height: 45vh;
-  right: 15%;
-  bottom: 15%;
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide {
+  height: 70vh;
+  overflow: hidden;
 }
-.description .description-content2 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img {
+  width: 50vw;
+  height: 70vh;
 }
-.description .description-content2 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-}
-.description .description-content3 {
-  border: 1px solid black;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content3 img:nth-child(1) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  top: 25%;
-  left: 5%;
-}
-.description .description-content3 img:nth-child(2) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 400px;
-  top: 50px;
-}
-.description .description-content3 img:nth-child(3) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 30%;
-  bottom: 8%;
-}
-.description .description-content3 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content3 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
-}
-.description .description-content4 {
-  border: 1px solid black;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content4 img:nth-child(1) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  top: 25%;
-  left: 5%;
-}
-.description .description-content4 img:nth-child(2) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 400px;
-  top: 50px;
-}
-.description .description-content4 img:nth-child(3) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 800px;
-  top: 50px;
-}
-.description .description-content4 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content4 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
-}
-.description .description-content5 {
-  border: 1px solid black;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.description .description-content5 img:nth-child(1) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  top: 150px;
-  left: 50px;
-}
-.description .description-content5 img:nth-child(2) {
-  position: absolute;
-  width: 450px;
-  height: 300px;
-  left: 400px;
-  top: 50px;
-}
-.description .description-content5 .place {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-family: "Do Hyeon";
-  font-size: 4vh;
-}
-.description .description-content5 .place-content {
-  position: absolute;
-  left: 10%;
-  top: 8%;
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img:hover {
+  scale: 1.05;
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

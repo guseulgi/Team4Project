@@ -1,104 +1,139 @@
-//스와이퍼
-const swiper = new Swiper(".swiper", {
+// Weather API
+const weatherIconRef = {
+  "01": "fas fa-sun",
+  "02": "fas fa-cloud-sun",
+  "03": "fas fa-cloud",
+  "04": "fas fa-cloud-meatball",
+  "09": "fas fa-cloud-sun-rain",
+  10: "fas fa-cloud-showers-heavy",
+  11: "fas fa-poo-storm",
+  13: "far fa-snowflake",
+  50: "fas fa-smog",
+};
+
+const weatherEngToKR = {
+  Thunderstorm: "낙뢰",
+  Drizzle: "이슬비",
+  Rain: "비",
+  Snow: "눈",
+  Mist: "옅은 안개",
+  Smoke: "짙은 안개",
+  Haze: "실안개",
+  Dust: "황사",
+  Fog: "안개",
+  Sand: "짙은 황사",
+  Ash: "재",
+  Squall: "돌풍",
+  Tornado: "회오리",
+  Clear: "맑음",
+  Clouds: "구름 많음",
+};
+
+const weather = document.querySelector(".weather");
+const weatherIcon = weather.querySelector(".icon__weather");
+const weatherUl = weather.querySelector(".weather > ul");
+
+const API_KEY = "bd8db1f879b1c4ae727fd2582620614c";
+//제주도 경도/위도
+const lat = 33.431441;
+const lon = 126.874237;
+
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+fetch(weatherUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    const newIcon = document.createElement("i");
+    const newLi = document.createElement("li");
+
+    const iconInfo = data.weather[0].icon.substr(0, 2);
+    newIcon.classList.add(weatherIconRef[iconInfo].substr(0, 2));
+    newIcon.classList.add(weatherIconRef[iconInfo].substr(4));
+    newLi.textContent = `${Math.round(data.main.temp)}℃  ${
+      weatherEngToKR[data.weather[0].main]
+    }`;
+
+    weather.prepend(newIcon);
+    weatherUl.appendChild(newLi);
+  })
+  .catch((error) => {
+    console.log("Weather API Error : ", error);
+  });
+
+//swiper
+const swiper = new Swiper(".contents .mountainContent .swiper", {
   // Optional parameters
   // direction: "vertical",
   slidesPerView: 2,
   centeredSlides: true,
-  spaceBetween: 20,
+  spaceBetween: 10,
   loop: true,
-  touchRatio: 0,
+  // touchRatio: 0,
 
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
 
   //If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  // pagination: {
+  //   el: ".contents .swiper-pagination",
+  // },
 
   // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // navigation: {
+  //   nextEl: ".contents .swiper-button-next",
+  //   prevEl: ".contents .swiper-button-prev",
+  // },
 
   // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  // scrollbar: {
+  //   el: "contents .swiper-scrollbar",
+  // },
+});
+const swiper2 = new Swiper(".contents .seaContent .swiper", {
+  // Optional parameters
+  // direction: "vertical",
+  slidesPerView: 2,
+  centeredSlides: true,
+  spaceBetween: 10,
+  // loop: true,
 });
 
-//스크롤 이동
-const imgBtn = document.querySelectorAll(".swiper-content");
-const descriptContent1 = document.querySelector(".description-content1");
-const descriptContent2 = document.querySelector(".description-content2");
-const descriptContent3 = document.querySelector(".description-content3");
-const descriptContent4 = document.querySelector(".description-content4");
-const descriptContent5 = document.querySelector(".description-content5");
+const swiperImg = document.querySelectorAll(".slide");
+const textDiv = document.querySelectorAll(".text");
+const closeDiv = document.querySelectorAll(".close");
+console.log(textDiv);
+for (let i = 0; i < swiperImg.length; i += 1) {
+  swiperImg[i].addEventListener("click", function () {
+    if (textDiv[i].classList.contains("off")) {
+      textDiv[i].classList.remove("off");
+      textDiv[i].classList.add("on");
 
-const firstTop = descriptContent1.offsetTop;
-const secondTop = descriptContent2.offsetTop;
-const thirdTop = descriptContent3.offsetTop;
-const fourthTop = descriptContent4.offsetTop;
-const fifthTop = descriptContent5.offsetTop;
-
-imgBtn[0].onclick = function () {
-  window.scroll({ top: firstTop, behavior: "smooth" });
-};
-imgBtn[5].onclick = function () {
-  window.scroll({ top: firstTop, behavior: "smooth" });
-};
-imgBtn[1].onclick = function () {
-  window.scroll({ top: secondTop, behavior: "smooth" });
-};
-imgBtn[6].onclick = function () {
-  window.scroll({ top: secondTop, behavior: "smooth" });
-};
-imgBtn[2].onclick = function () {
-  window.scroll({ top: thirdTop, behavior: "smooth" });
-};
-imgBtn[7].onclick = function () {
-  window.scroll({ top: fifthTop, behavior: "smooth" });
-};
-imgBtn[3].onclick = function () {
-  window.scroll({ top: fourthTop, behavior: "smooth" });
-};
-imgBtn[8].onclick = function () {
-  window.scroll({ top: fourthTop, behavior: "smooth" });
-};
-imgBtn[4].onclick = function () {
-  window.scroll({ top: fifthTop, behavior: "smooth" });
-};
-
-//weather api
-let currentWeather = document.querySelector(".weather");
-const getJSON = function (url, callback) {
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
-  xhr.responseType = "json";
-  xhr.onload = function () {
-    const status = xhr.status;
-    if (status === 200) {
-      callback(null, xhr.response);
+      closeDiv[i].addEventListener("click", function () {
+        if (textDiv[i].classList.contains("on")) {
+          textDiv[i].classList.remove("on");
+          textDiv[i].classList.add("off");
+        }
+      });
     } else {
-      callback(status, xhr.response);
+      textDiv[i].classList.remove("on");
+      textDiv[i].classList.add("on");
     }
-  };
-  xhr.send();
-};
-
-getJSON(
-  "http://api.openweathermap.org/data/2.5/weather?q=Jeju&appid=a73ad0577a5fca00fc7189846a3d11bd&units=metric",
-  function (err, data) {
-    if (err !== null) {
-      currentWeather.innerHTML = `예상치 못한 오류 발생. ${err}`;
-    } else {
-      currentWeather.innerHTML = `현재
-      온도 ${data.main.temp}° <br />
-      풍속 ${data.wind.speed}m/s
-      습도 ${data.main.humidity}%`;
-    }
+    console.log(swiperImg[0]);
+    console.log(textDiv);
+  });
+}
+//toggle
+const imgBox = document.querySelector(".mountain");
+const testContent = document.querySelector(".contents");
+console.log(imgBox);
+console.log(testContent);
+imgBox.addEventListener("click", function () {
+  if (testContent.classList.contains("hide")) {
+    testContent.classList.remove("hide");
+    imgBox.classList.add("show");
+  } else {
+    imgBox.classList.remove("show");
+    testContent.classList.add("hide");
   }
-);
+});
