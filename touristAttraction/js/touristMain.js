@@ -96,7 +96,7 @@ const swiper2 = new Swiper(".contents .seaContent .swiper", {
   slidesPerView: 2,
   centeredSlides: true,
   spaceBetween: 30,
-  loop: true,
+  // loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -31,6 +31,7 @@ $backgray2: rgba(20, 20, 20, 0.19);
 $doHyeon: "Do Hyeon";
 $kirangHaerang: "Kirang Haerang";
 $notoSans: "Noto Sans KR";
+$rubik: "Rubik Mono One", sans-serif;
 
 body {
   // background-color: $yellow;
@@ -43,7 +44,6 @@ body {
 //header
 header {
   position: fixed;
-  // opacity: 0.5;
   height: 100px;
   top: 0;
   left: 0;
@@ -338,11 +338,11 @@ header {
 
     .swiper {
       position: relative;
-      background-color: #ea5c2b;
+      // background-color: #ea5c2b;
       width: 100vw;
       // width: calc(690px * 3 + 60px);
-      left: 50%;
-      transform: translateX(-60%);
+      // left: 50%;
+      // transform: translateX(-60%);
       .swiper-wrapper {
         .swiper-slide.swiper-slide-active {
           transition: 0.5s;
@@ -398,31 +398,32 @@ header {
     }
   }
   .museumContent {
+    height: 80vh;
     position: relative;
 
     .museumTitle {
       text-align: center;
-      padding-top: 100px;
+      padding-top: 200px;
       margin-left: 50vw;
       width: 50vw;
-      height: 100vh;
+      height: 65vh;
       background-color: #cba55b;
       color: white;
       font-size: 40px;
-      font-family: "Rubik Mono One", sans-serif;
+      font-family: $rubik;
     }
 
     .flip-box {
       position: absolute;
-
       border-radius: 50%;
       width: 220px;
       height: 220px;
       perspective: 1000px;
-      background-color: orange;
+      // background-color: $orange;
       &:hover {
         .flip {
           transform: rotateY(-180deg);
+          cursor: pointer;
         }
       }
 
@@ -432,7 +433,7 @@ header {
         position: relative;
         color: white;
         text-align: center;
-        line-height: 400px;
+        // line-height: 400px;/
         transform-style: preserve-3d;
         transform: rotateY(0deg);
         transition: 0.5s;
@@ -446,29 +447,111 @@ header {
         }
         .teddyImg {
           border-radius: 50%;
-          background-color: yellow;
         }
         .teddyBack {
           border-radius: 50%;
-          background-color: skyblue;
+          background-color: $orange;
           transform: rotateY(180deg);
+          p {
+            color: black;
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            padding-top: 95px;
+            margin: auto;
+
+            line-height: 1.5;
+          }
+          h1 {
+            color: black;
+            font-size: 4vh;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            line-height: 1.8;
+          }
         }
       }
     }
-    & .flip-box:nth-child(2) {
+    & .flip-box:nth-child(4) {
       position: absolute;
-      top: 23%;
-      right: 10%;
+      top: 40%;
+      right: 20%;
     }
     & .flip-box:nth-child(3) {
       position: absolute;
-      top: 23%;
-      right: 50%;
+      top: 40%;
+      right: calc(50vw - 110px);
     }
-    & .flip-box:nth-child(4) {
+    & .flip-box:nth-child(2) {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 40%;
+      left: 20%;
+    }
+    .teddyMore {
+      text-align: center;
+      font-size: 1vw;
+
+      width: 100vw;
+      height: 10vh;
+
+      background-color: $gray;
+      ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin-left: 20px;
+          line-height: 10vh;
+          .teddyLink {
+            a {
+              color: white;
+              text-decoration: none;
+              margin-left: 30px;
+              padding: 5px 30px;
+              border: 3px solid white;
+              border-radius: 5px;
+              &:hover {
+                background-color: white;
+                color: $gray;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //museum2
+  .museumContent2 {
+    height: 100vh;
+    .museumTitle2 {
+      margin-top: 200px;
+      text-align: center;
+      font-family: $rubik;
+      font-size: 40px;
+    }
+    .arte {
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+
+      .arteImg1 {
+        width: calc(100vw / 3);
+        background-size: cover;
+        background-image: url("../image/arte.png");
+      }
+      .arteImg2 {
+        width: calc(100vw / 3);
+        background-size: cover;
+        background-image: url("../image/arte3.jpg");
+      }
+      .arteImg3 {
+        background-size: cover;
+        width: calc(100vw / 3);
+        background-image: url("../image/arte2.png");
+      }
     }
   }
 }
