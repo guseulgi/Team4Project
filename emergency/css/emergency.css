@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,6 +66,12 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "NeoDunggeunmoPro-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
@@ -85,6 +92,34 @@ body {
   width: 20vw;
   height: 10px;
   background-color: #ffeda4;
+}
+
+.redChar {
+  color: #ff6c65;
+}
+
+.d-On {
+  display: block;
+}
+
+.d-Off {
+  display: none;
+}
+
+.opacity-On {
+  opacity: 1;
+}
+
+.opacity-Off {
+  opacity: 0;
+}
+
+.height-0 {
+  height: 0;
+}
+
+.height-100 {
+  height: 100%;
 }
 
 .cursor {
@@ -158,7 +193,7 @@ header .other-menu ul li span {
   text-align: center;
 }
 header .other-menu ul li a {
-  color: white;
+  color: #5c3b16;
 }
 header .other-menu ul li a.changeColor {
   color: #5c3b16;
@@ -414,9 +449,7 @@ header .other-menu ul li:hover::after {
 .emgSituation .swiper-container {
   position: relative;
   right: 0;
-  width: 90vw;
-  height: 535px;
-  margin: 0 auto;
+  width: 100vw;
   overflow: hidden;
 }
 .emgSituation .swiper-container .swiper-wrapper {
@@ -451,7 +484,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide img {
   display: block;
-  width: 83%;
+  width: 60%;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -469,7 +502,7 @@ header .other-menu ul li:hover::after {
   line-height: 1.3;
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: 1;
   z-index: 1;
 }
@@ -513,13 +546,15 @@ header .other-menu ul li:hover::after {
 }
 
 .map {
+  margin-top: 50px;
   position: relative;
   width: 100vw;
-  height: 570px;
+  height: 690px;
   background: linear-gradient(30deg, #60bbec, #1e95e9);
 }
 .map .map__bg {
   position: relative;
+  left: 0;
 }
 .map .map__bg .bubble {
   position: absolute;
@@ -530,29 +565,29 @@ header .other-menu ul li:hover::after {
 .map .map__bg .bubble__bg-1 {
   width: 78px;
   height: 82px;
-  top: 125px;
-  left: 90px;
+  top: 315px;
+  left: 47px;
 }
 .map .map__bg .bubble__bg-2 {
   width: 297px;
   height: 301px;
   top: 168px;
-  right: 200px;
+  right: 31%;
   border-radius: 43%;
   animation: move 5s infinite linear;
 }
 .map .map__bg .bubble__bg-3 {
   width: 160px;
   height: 168px;
-  top: 126px;
-  left: 108px;
+  top: 358px;
+  left: 53px;
   background: rgba(6, 135, 195, 0.8);
 }
 .map .map__bg .bubble__bg-4 {
   width: 173px;
   height: 179px;
-  top: 30px;
-  right: 215px;
+  top: 63px;
+  right: 44%;
   background: rgba(6, 135, 195, 0.8);
 }
 @keyframes move {
@@ -560,21 +595,59 @@ header .other-menu ul li:hover::after {
     transform: rotate(360deg);
   }
 }
+.map .title__container {
+  position: absolute;
+  z-index: 1;
+  top: 77px;
+  left: 20%;
+  background-color: #f6d860;
+  width: 535px;
+  height: 47px;
+  transform: skewY(-4deg);
+}
+.map .title__container::after {
+  content: "";
+  display: block;
+  background-image: url("../source/icon/sosIcon.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 45px;
+  left: 145px;
+  z-index: -1;
+}
+.map .title__container h2.title {
+  margin-left: 15px;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "OKDDUNG";
+  position: absolute;
+  bottom: 0px;
+  left: -26px;
+  color: white;
+  text-shadow: 7px 7px 0 #5c3b16;
+}
+.map .title__container h2.title::first-letter {
+  color: #95cd41;
+}
 .map .map__image {
-  width: 600px;
+  width: 750px;
   position: relative;
-  margin: auto;
+  top: 60px;
+  left: 77px;
 }
 .map .map__image img {
   width: 100%;
   display: block;
-  filter: grayscale(15%) drop-shadow(2px 2px 0px #626458);
+  filter: grayscale(15%) drop-shadow(3px 3px 3px #4d7429);
 }
 .map .map__image .map__pin {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
+  left: 47px;
 }
 .map .map__image .map__pin li {
   position: absolute;
@@ -585,8 +658,9 @@ header .other-menu ul li:hover::after {
   font-weight: 500;
 }
 .map .map__image .map__pin li i {
-  font-size: 20px;
+  font-size: 32px;
   color: #ea5c2b;
+  margin-bottom: 10px;
 }
 .map .map__image .map__pin li a {
   text-decoration: none;
@@ -594,26 +668,35 @@ header .other-menu ul li:hover::after {
   transition: 0.5s;
 }
 .map .map__image .map__pin li:first-child {
-  top: 33%;
-  left: 28%;
+  top: 32%;
+  left: 31%;
   text-align: center;
 }
 .map .map__image .map__pin li:nth-child(2) {
-  top: 28%;
-  left: 9%;
+  top: 27%;
+  left: 12%;
+}
+.map .map__image .map__pin li:nth-child(2) i {
+  margin-left: 5px;
 }
 .map .map__image .map__pin li:nth-child(3) {
-  top: 20%;
-  left: 28%;
+  top: 18%;
+  left: 27%;
   text-align: center;
+}
+.map .map__image .map__pin li:nth-child(3) i {
+  margin-top: 10px;
 }
 .map .map__image .map__pin li:nth-child(4) {
   top: 25%;
-  left: 45%;
+  left: 38%;
+}
+.map .map__image .map__pin li:nth-child(4) i {
+  margin-right: 5px;
 }
 .map .map__image .map__pin li:last-child {
   bottom: 20%;
-  left: 29%;
+  left: 32%;
   text-align: center;
 }
 .map .map__image .map__pin li:hover i {
@@ -626,8 +709,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons {
   position: relative;
-  top: -500px;
-  left: 0;
+  bottom: 500px;
+  left: -150px;
   width: 100%;
 }
 .map .map__icons > div {
@@ -639,27 +722,27 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__mountain {
   background-image: url("../source/icon/mountain.png");
-  right: 50%;
-  transform: translate(30%, 200px);
+  top: 200px;
+  left: 40%;
 }
 .map .map__icons .icon__surf {
   background-image: url("../source/icon/surfing.png");
   width: 40px;
   height: 40px;
-  top: 50px;
-  right: 20%;
+  top: 0px;
+  right: 28%;
   animation: slowly 4s infinite;
 }
 .map .map__icons .icon__shark {
   background-image: url("../source/icon/shark.png");
   top: 400px;
-  right: 25%;
+  right: 33%;
   animation: slowly 3s infinite;
 }
 .map .map__icons .icon__boat {
   background-image: url("../source/icon/speed-boat.png");
-  top: 150px;
-  left: 11%;
+  top: 89px;
+  left: 14%;
   animation: slowly 3s infinite;
 }
 @keyframes slowly {
@@ -674,290 +757,184 @@ header .other-menu ul li:hover::after {
   }
 }
 
-.hospital-1 {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 90px 0;
-  height: 460px;
-}
-.hospital-1 .hospital__bg {
-  width: 100vw;
-  height: 720px;
+article.hospital-details {
+  width: 45vw;
   position: absolute;
-  top: -70px;
-  z-index: -1;
-  background-image: url("../source/image/shotBg1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-attachment: fixed;
-  opacity: 0.7;
+  top: 143px;
+  right: 70px;
+  z-index: 1;
 }
-.hospital-1 img {
-  border: 9px solid white;
-  border-bottom: 40px solid white;
-  box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-}
-.hospital-1 .hospital__image {
-  position: relative;
-  display: block;
-  transform: scale(0.9);
-  filter: blur(0.5px) grayscale(100%) contrast(105%);
-  transition: 0.6s;
-}
-.hospital-1 .hospital__image:hover {
-  transform: scale(1);
-  filter: grayscale(10%);
-}
-.hospital-1 .title {
-  margin-right: 15px;
-}
-.hospital-1 .title .title__bg {
-  position: absolute;
-  width: 58vw;
-  height: 20px;
-  top: 125px;
-  right: 0;
-  background-color: #626458;
-}
-.hospital-1 .title .title__bg h2 {
-  position: absolute;
-  color: white;
-  left: 0;
-  top: -30px;
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 700;
-  padding: 7px 17px 7px 7px;
-  text-shadow: -2px 0 #626458, 0 2px #626458, 2px 0 #626458, 0 -2px #626458;
-}
-.hospital-1 .title ul {
-  width: 25vw;
-  margin-top: 90px;
-}
-.hospital-1 .title ul .item {
-  position: relative;
-  margin-bottom: 7px;
-  padding: 3px;
-  background-color: white;
-  border-radius: 3px;
-}
-.hospital-1 .title ul .item a {
-  color: white;
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background-color: #626458;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 28px;
-}
-.hospital-1 .title ul .item:hover a {
-  background-color: #5c3b16;
-}
-.hospital-1 .title ul .item > span {
-  display: inline-block;
-  transition: 0.6s;
-  transform: translateX(-10px);
-  opacity: 0;
-  margin-left: 5px;
-}
-.hospital-1 .title ul .item:first-child:hover span {
-  opacity: 1;
-  transform: translateX(0px);
-}
-.hospital-1 .title ul .item i {
-  font-size: 1.1rem;
-}
-.hospital-1 .title ul .item .item__location {
-  transition: 0.6s;
-  width: 86%;
-  height: 0px;
-  margin: 0 auto;
-}
-.hospital-1 .title ul .item .item__location .location {
+article.hospital-details .nav-bar {
   width: 100%;
-  height: 0;
-  background-color: #ddd;
+  height: 42px;
+  background-color: rgba(72, 72, 72, 0.9215686275);
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
-.hospital-1 .title ul .item .item__location > p {
-  height: 0;
-  font-size: 0px;
-  text-align: center;
-}
-.hospital-1 .title ul .item:nth-child(2):hover .item__location {
-  height: 250px;
-  padding: 7px 0;
-}
-.hospital-1 .title ul .item:nth-child(2):hover .item__location .location {
-  height: 90%;
-}
-.hospital-1 .title ul .item:nth-child(2):hover .item__location > p {
-  margin-top: 5px;
-  font-size: 14px;
-  height: 10%;
-}
-.hospital-1 .title ul .item i.fa-chevron-down {
-  color: #5c3b16;
+article.hospital-details .nav-bar li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff6c65;
   position: absolute;
+  top: 13px;
+  cursor: pointer;
+}
+article.hospital-details .nav-bar li:first-child {
+  left: 10px;
+}
+article.hospital-details .nav-bar li:nth-child(2) {
+  background-color: #f6d860;
+  left: 30px;
+}
+article.hospital-details .nav-bar li:nth-child(3) {
+  left: 52px;
+  background-color: #95cd41;
+}
+article.hospital-details .nav-bar li:nth-child(4) {
+  background-color: transparent;
   top: 8px;
   right: 8px;
+}
+article.hospital-details .nav-bar li:nth-child(4) i {
+  font-size: 14px;
+  text-align: center;
+  line-height: 10px;
+  color: white;
+  transition: 0.3s;
+}
+article.hospital-details .detail-bar {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.852);
+  padding-bottom: 70px;
+}
+article.hospital-details .detail-bar li {
+  margin: 0 0 0 25px;
+  padding: 25px 0 0 5%;
+  font-size: 1.2rem;
+  width: 35vw;
+  display: flex;
+  cursor: pointer;
+}
+article.hospital-details .detail-bar li .image-container {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.7s;
+  position: relative;
+}
+article.hospital-details .detail-bar li .image-container img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  padding-top: 5px;
+  position: absolute;
+  right: 3px;
+}
+article.hospital-details .detail-bar li p {
+  line-height: 2.4rem;
+  margin-left: 30px;
+  width: 80%;
+  transform: translateX(-8%);
+  opacity: 0;
+  transition: 0.7s;
+}
+article.hospital-details .detail-bar li p a {
+  color: black;
+  text-decoration: none;
+}
+article.hospital-details .detail-bar li:nth-child(3) img {
+  width: 33px;
+  height: 33px;
+  padding-top: 2px;
+}
+article.hospital-details .detail-bar li:nth-child(4) img {
+  padding-left: 2px;
+}
+article.hospital-details .detail-bar li:hover .image-container {
+  width: 20%;
+}
+article.hospital-details .detail-bar li:hover .image-container img {
+  right: 3px;
+}
+article.hospital-details .detail-bar li:hover p {
+  transform: translateX(0);
+  opacity: 1;
+}
+article.hospital-details .detail-bar li:hover p a {
+  color: black;
+  text-decoration: none;
+}
+article.hospital-details .detail-bar li:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 35px;
+  padding-top: 15px;
 }
 
-.hospital-2 {
+.total {
+  width: 80vw;
+  height: 660px;
+  margin: 70px auto;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.total .total__row {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+.total .total__row .col {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 33%;
+  height: 330px;
   position: relative;
-  padding: 70px 0;
-  height: 460px;
-  top: 10px;
-}
-.hospital-2 .hospital__bg {
-  width: 100vw;
-  height: 600px;
-  position: absolute;
-  top: 0px;
-  z-index: -1;
-  background-image: url("../source/image/ambulanceBg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  transform: rotateY(180deg);
-  background-color: #626458;
-  opacity: 0.9;
-}
-.hospital-2 .hospital__image {
-  background-image: url("../source/image/hanlaEmg3.jpeg");
-  background-size: cover;
-  width: 450px;
-  border: 9px solid white;
-  border-bottom: 40px solid white;
-  box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-  border-top-left-radius: 8%;
-  border-bottom-right-radius: 18%;
-  filter: blur(0.5px) grayscale(100%) contrast(100%);
+  box-sizing: border-box;
   overflow: hidden;
 }
-.hospital-2 .hospital__image .shine {
+.total .total__row .col img {
+  width: 27px;
+  margin-right: 8px;
+}
+.total .total__row .col h4 {
   position: absolute;
-  top: 0;
-  left: -100%;
-  z-index: 2;
-  display: block;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  transform: skewX(-25deg);
-}
-.hospital-2 .hospital__image:hover {
-  transform: scale(1);
-  filter: grayscale(10%);
-}
-.hospital-2 .hospital__image:hover .shine {
-  animation: shine 3s;
-}
-@keyframes shine {
-  50% {
-    left: 125%;
-  }
-  100% {
-    left: -125%;
-  }
-}
-.hospital-2 .title {
-  margin-right: 15px;
-}
-.hospital-2 .title .title__bg {
-  position: absolute;
-  z-index: 1;
-  width: 58vw;
-  height: 20px;
-  top: 125px;
-  left: 0;
-  background-color: #5c3b16;
-}
-.hospital-2 .title .title__bg h2 {
-  position: absolute;
-  color: white;
-  right: 0;
-  top: -30px;
   font-size: 2rem;
-  line-height: 1;
-  font-weight: 700;
-  padding: 7px 17px 7px 7px;
-  text-shadow: -2px 0 #5c3b16, 0 2px #5c3b16, 2px 0 #5c3b16, 0 -2px #5c3b16;
-}
-.hospital-2 .title ul {
-  width: 25vw;
-  margin-top: 110px;
-}
-.hospital-2 .title ul .item {
-  position: relative;
-  margin-bottom: 7px;
-  padding: 3px;
-  background-color: white;
-  border-radius: 3px;
-}
-.hospital-2 .title ul .item a {
-  color: white;
+  font-family: "NeoDunggeunmoPro-Regular";
   display: inline-block;
-  width: 28px;
-  height: 28px;
-  background-color: #5c3b16;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 28px;
 }
-.hospital-2 .title ul .item:hover a {
-  background-color: white;
-  color: #5c3b16;
+.total .total__row .title {
+  background-image: url("../source/image/pixelBg.jpg");
+  background-size: cover;
 }
-.hospital-2 .title ul .item > span {
-  display: inline-block;
-  transition: 0.6s;
-  transform: translateX(-10px);
-  opacity: 0;
-  margin-left: 5px;
-}
-.hospital-2 .title ul .item:first-child:hover span {
-  opacity: 1;
-  transform: translateX(0px);
-}
-.hospital-2 .title ul .item i {
-  font-size: 1.1rem;
-}
-.hospital-2 .title ul .item .item__location {
-  transition: 0.6s;
-  width: 86%;
-  height: 0px;
-  margin: 0 auto;
-}
-.hospital-2 .title ul .item .item__location .location {
-  width: 100%;
-  height: 0;
-  background-color: #ddd;
-}
-.hospital-2 .title ul .item .item__location > p {
-  height: 0;
-  font-size: 0px;
-  text-align: center;
-}
-.hospital-2 .title ul .item:nth-child(2):hover .item__location {
-  height: 250px;
-  padding: 7px 0;
-}
-.hospital-2 .title ul .item:nth-child(2):hover .item__location .location {
-  height: 90%;
-}
-.hospital-2 .title ul .item:nth-child(2):hover .item__location > p {
-  margin-top: 5px;
-  font-size: 14px;
-  height: 10%;
-}
-.hospital-2 .title ul .item i.fa-chevron-down {
-  color: #5c3b16;
+.total .total__row .title h3 {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  font-size: 2.7rem;
+  font-family: "NeoDunggeunmoPro-Regular";
+  transform: translate(15px, 10%);
+}
+.total .total__row .jejuUniversity {
+  background-image: url("../source/image/jejuEmg2.jpg");
+  background-size: cover;
+  background-position: -95px 0;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+}
+.total .total__row .jejuUniversity .icons {
+  position: relative;
+  height: 27px;
+  right: 15px;
+  bottom: -285px;
+  display: flex;
+  justify-content: flex-end;
+}
+.total .total__row .jejuHanla {
+  background-image: url("../source/image/hanlaEmg3.jpeg");
+  background-size: cover;
+  background-position: -50px 0;
+  border: 1px solid white;
 }/*# sourceMappingURL=emergency.css.map */

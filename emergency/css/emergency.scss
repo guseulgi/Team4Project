@@ -46,6 +46,30 @@ body {
   height: 10px;
   background-color: #ffeda4;
 }
+
+.redChar {
+  color: #ff6c65;
+}
+
+.d-On {
+  display: block;
+}
+.d-Off {
+  display: none;
+}
+.opacity-On {
+  opacity: 1;
+}
+.opacity-Off {
+  opacity: 0;
+}
+.height-0 {
+  height: 0;
+}
+.height-100 {
+  height: 100%;
+}
+
 .cursor {
   background-image: url("../source/cursor.png");
   background-size: contain;
@@ -259,8 +283,6 @@ header {
   width: 100vw;
   height: 670px;
   padding: 22vh 0 30px 0;
-  // background-image: url('../source/image/pill.jpg');
-  // background-size: cover;
   position: relative;
 
   .title {
@@ -480,7 +502,7 @@ header {
         }
 
         &.swiper-slide-active {
-          transform: scale(1.05);
+          transform: scale(1.02);
           opacity: 1;
           z-index: 1;
         }
@@ -534,13 +556,15 @@ header {
 
 // Jeju island Map
 .map {
+  margin-top: 50px;
   position: relative;
   width: 100vw;
-  height: 570px;
+  height: 690px;
   background: linear-gradient(30deg, #60bbec, #1e95e9);
 
   .map__bg {
     position: relative;
+    left: 0;
 
     .bubble {
       position: absolute;
@@ -588,10 +612,60 @@ header {
     }
   }
 
+  .title__container {
+    position: absolute;
+    z-index: 1;
+    top : 77px;
+    left: 20%;
+    background-color: #f6d860;
+    width: 535px;
+    height: 47px;
+      
+    transform: skewY(-4deg);
+
+    &::after {
+      content: "";
+      display: block;
+      background-image: url('../source/icon/sosIcon.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom : 45px;
+      left: 145px;
+      z-index: -1;
+    }
+
+    h2.title {
+      margin-left: 15px;
+      text-align: center;
+      font-size: 3.5rem;
+      font-family: 'OKDDUNG';
+  
+      position: absolute;
+      bottom : 0px;
+      left: -26px;
+
+      color : white;
+      text-shadow: 7px 7px 0 $darkBrawn;
+  
+      &::first-letter {
+        color : $green;
+      }
+    }
+  
+    & h2:nth-child(1) {
+
+    }
+  }
+  
+
   .map__image {
-    width: 600px;
+    width: 750px;
     position: relative;
-    margin: auto;
+    top : 60px;
+    left: 77px;
+
     img {
       width: 100%;
       display: block;
@@ -612,8 +686,9 @@ header {
           font-weight: 500;
         }
         i {
-          font-size: 20px;
+          font-size: 32px;
           color: $darkOrange;
+          margin-bottom: 10px;
         }
 
         a {
@@ -632,9 +707,13 @@ header {
           left: 9%;
         }
         &:nth-child(3) {
-          top: 20%;
-          left: 28%;
+          top: 18%;
+          left: 27%;
           text-align: center;
+
+          i {
+            margin-top: 10px;
+          }
         }
         &:nth-child(4) {
           top: 25%;
@@ -663,8 +742,8 @@ header {
 
   .map__icons {
     position: relative;
-    top: -500px;
-    left: 0;
+    bottom: 500px;
+    left: -150px;
     width: 100%;
 
     & > div {
@@ -684,14 +763,14 @@ header {
       background-image: url("../source/icon/surfing.png");
       width: 40px;
       height: 40px;
-      top: 50px;
-      right: 20%;
+      top: 0px;
+      right: 28%;
       animation: slowly 4s infinite;
     }
     .icon__shark {
       background-image: url("../source/icon/shark.png");
       top: 400px;
-      right: 25%;
+      right: 33%;
       animation: slowly 3s infinite;
     }
     .icon__boat {
@@ -786,30 +865,105 @@ header {
       }
     }
 
-    ul {
-      width: 25vw;
-      margin-top: 90px;
-      .item {
-        position: relative;
-        margin-bottom: 7px;
-        padding: 3px;
-        background-color: white;
-        border-radius: 3px;
+    & li:first-child {
 
-        a {
-          color: white;
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          background-color: $gray;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 28px;
+      left: 10px;
+    }
+
+    & li:nth-child(2) {
+      background-color: $yellow;
+      left: 30px;
+    }
+
+    & li:nth-child(3) {
+      left: 52px;
+      background-color: $green;
+    }
+
+    & li:nth-child(4) {
+      background-color: transparent;
+
+      top : 8px;
+      right: 8px;
+
+
+      i {
+        font-size: 14px;
+        text-align: center;
+        line-height: 10px;
+        color: white;
+        // transform: rotate(180deg);
+        transition: .3s;
+      }
+    }
+  }
+
+  .detail-bar {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.852);
+    padding-bottom: 70px;
+
+    li {
+      margin: 0 0 0 25px;
+      padding: 25px 0 0 5%;
+      font-size: 1.2rem;
+      width: 35vw;
+      display: flex;
+
+      cursor: pointer;
+
+      .image-container {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 5px;
+        transition: .7s;
+        position: relative;
+
+        img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: auto;
+          padding-top: 5px;
+          position: absolute;
+          right : 3px;
         }
 
-        &:hover {
-          a {
-            background-color: $darkBrawn;
+      }
+      p {
+        line-height: 2.4rem;
+        margin-left: 30px;
+        width: 80%;
+        transform: translateX(-8%);
+        opacity: 0;
+        transition: .7s;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+
+      &:nth-child(3) img {
+        width: 33px;
+        height: 33px;
+        padding-top: 2px;
+      }
+
+      &:nth-child(4) img {
+        padding-left: 2px;
+      }
+
+      &:hover {
+
+        .image-container {
+          width: 20%;
+
+          img {
+            right: 3px;
+
           }
         }
 
@@ -823,8 +977,6 @@ header {
 
         &:first-child:hover span {
           opacity: 1;
-          transform: translateX(0px);
-        }
 
         i {
           font-size: 1.1rem;
@@ -975,33 +1127,33 @@ header {
       }
     }
 
-    ul {
-      width: 25vw;
-      margin-top: 110px;
-      .item {
-        position: relative;
-        margin-bottom: 7px;
-        padding: 3px;
-        background-color: white;
-        border-radius: 3px;
+//     ul {
+//       width: 25vw;
+//       margin-top: 110px;
+//       .item {
+//         position: relative;
+//         margin-bottom: 7px;
+//         padding: 3px;
+//         background-color: white;
+//         border-radius: 3px;
 
-        a {
-          color: white;
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          background-color: $darkBrawn;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 28px;
-        }
+//         a {
+//           color: white;
+//           display: inline-block;
+//           width: 28px;
+//           height: 28px;
+//           background-color: $darkBrawn;
+//           border-radius: 50%;
+//           text-align: center;
+//           line-height: 28px;
+//         }
 
-        &:hover {
-          a {
-            background-color: white;
-            color: $darkBrawn;
-          }
-        }
+//         &:hover {
+//           a {
+//             background-color: white;
+//             color: $darkBrawn;
+//           }
+//         }
 
         & > span {
           display: inline-block;
@@ -1011,14 +1163,14 @@ header {
           margin-left: 5px;
         }
 
-        &:first-child:hover span {
-          opacity: 1;
-          transform: translateX(0px);
-        }
+//         &:first-child:hover span {
+//           opacity: 1;
+//           transform: translateX(0px);
+//         }
 
-        i {
-          font-size: 1.1rem;
-        }
+//         i {
+//           font-size: 1.1rem;
+//         }
 
         .item__location {
           transition: 0.6s;
@@ -1032,27 +1184,105 @@ header {
             background-color: #ddd;
           }
 
-          & > p {
-            height: 0;
-            font-size: 0px;
-            text-align: center;
-          }
-        }
-        &:nth-child(2):hover {
-          .item__location {
-            height: 250px;
-            padding: 7px 0;
+//           & > p {
+//             height: 0;
+//             font-size: 0px;
+//             text-align: center;
+//           }
+//         }
+//         &:nth-child(2):hover {
+//           .item__location {
+//             height: 250px;
+//             padding: 7px 0;
 
-            .location {
-              height: 90%;
-            }
-            & > p {
-              margin-top: 5px;
-              font-size: 14px;
-              height: 10%;
-            }
-          }
-        }
+//             .location {
+//               height: 90%;
+//             }
+//             & > p {
+//               margin-top: 5px;
+//               font-size: 14px;
+//               height: 10%;
+//             }
+//           }
+//         }
+
+//         i.fa-chevron-down {
+//           color: $darkBrawn;
+//           position: absolute;
+//           top : 8px;
+//           right: 8px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// Hospital Total Section
+.total {
+  width: 80vw;
+  height: 660px;
+  margin: 70px auto;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+
+  .total__row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+
+    .col {
+      box-sizing: border-box;
+
+      flex-grow: 1;
+      width : 33%;
+      height: 330px;
+
+      position: relative;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      img {
+        width: 27px;
+        margin-right: 8px;
+      }
+
+      h4 {
+        position: absolute;
+        font-size: 2rem;
+        font-family: 'NeoDunggeunmoPro-Regular';
+        display: inline-block;
+      }
+    }
+
+    .title {
+      background-image: url('../source/image/pixelBg.jpg');
+      background-size: cover;
+
+      h3 {
+        position: absolute;
+        font-size: 2.7rem;
+        font-family: 'NeoDunggeunmoPro-Regular';
+        transform: translate(15px, 10%);
+      }
+    }
+
+    .jejuUniversity {
+      background-image: url('../source/image/jejuEmg2.jpg');
+      background-size: cover;
+      background-position: -95px 0;
+      background-repeat: no-repeat;
+      border: 1px solid white;
+
+      .icons {
+        position: relative;
+        height: 27px;
+        right : 15px;
+        bottom : -285px;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
 
         i.fa-chevron-down {
           color: $darkBrawn;
@@ -1062,5 +1292,15 @@ header {
         }
       }
     }
+    .jejuHanla {
+      background-image: url('../source/image/hanlaEmg3.jpeg');
+      background-size: cover;
+      background-position: -50px 0;
+      border: 1px solid white;
+    }
+    .jejuHanguk {}
+    .hanmaeum {}
+    .seoguipo {}
   }
+}
 }

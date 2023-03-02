@@ -1,3 +1,8 @@
+// window.onload
+window.onload = function() {
+  
+}
+
 // Emergency Situation Swiper
 const emgSithationSwiper = new Swiper('.emgSituation .swiper-container', {
   direction : 'horizontal',
@@ -22,20 +27,54 @@ const emgSithationSwiper = new Swiper('.emgSituation .swiper-container', {
   parallax:true,
 });
 
+// 병원 정보를 담은 객체
+let hospitalObj = {
 
-// // Other Menu Hover
-// const otherMenuName = [
-//   'HOME', 'CAFE', 'ACTIVITY',
-//   'FOOD', 'TOURIST',
-// ];
-// const otherMenuLi = document.querySelectorAll('.other-menu li');
+}
 
-// console.log(otherMenuLi);
+let jejuHospital = {
+  '제주대학병원' : {},
+  '제주한라병원' : {},
+  '제주한국병원' : {},
+  '한마음병원' : {},
+  '서귀포 의료원' : {},
+}
 
-// for(let i = 0; i < otherMenuLi.length; i++) {
-//   otherMenuLi[i].setAttribute('content', otherMenuName[i]);
-// }
+// 브라우저 창
+const detailBrower = document.querySelector('.hospital-details');
+const navBar = detailBrower.querySelector('.nav-bar');
+const deleteBtn = navBar.querySelector('.nav-bar > li:first-child');
 
+let deleteBrower = function() {
+  if(detailBrower.classList.contains('d-On') === true) {
+    detailBrower.classList.remove('d-On');
+    detailBrower.classList.add('d-Off');
+  } else {
+    detailBrower.classList.add('d-On');
+    detailBrower.classList.remove('d-Off');
+  }
+}
+deleteBtn.addEventListener('click', deleteBrower);
+
+// modalBtn
+const modalBtn = navBar.querySelector('.modalBtn');
+const detail = detailBrower.querySelector('.detail-bar');
+
+//브라우저 창 모달 효과
+let modalClick = function(e) {
+  if(detail.classList.contains('height-100') === true) {
+    detail.classList.remove('height-100');
+    detail.classList.add('height-0');
+    modalBtn.querySelector('i').style.transform = 'rotate(180deg)';
+  } else {
+    detail.classList.add('height-100');
+    detail.classList.remove('height-0');
+    //없으면 로테이트
+    modalBtn.querySelector('i').style.transform = 'rotate(0deg)';
+  }
+}
+
+modalBtn.addEventListener('click', modalClick);
 
 // Weather API
 const weatherIconRef = {

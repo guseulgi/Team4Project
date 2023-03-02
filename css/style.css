@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,6 +63,12 @@ table {
 @font-face {
   font-family: "OKDDUNG";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeoDunggeunmoPro-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -277,6 +284,7 @@ header .other-menu ul li:hover::after {
 .main .main__contents .contents__title {
   width: 25.5rem;
   margin: 0 auto;
+  padding-left: 5px;
 }
 .main .main__contents .contents__title h2 {
   display: none;
@@ -322,16 +330,19 @@ header .other-menu ul li:hover::after {
   animation-delay: 0.2s;
 }
 .main .main__contents .contents__title h2:nth-child(3) {
-  transform: scale(1.05) rotate(-5deg) translateY(1px);
+  transform: scale(1.05) rotate(-5deg) translate(1px, 2px);
+}
+.main .main__contents .contents__title h2:nth-child(4) {
+  transform: translateX(3px);
 }
 .main .main__contents .contents__title h2:nth-child(5) {
-  transform: scale(1) rotate(-16deg);
+  transform: scale(1) rotate(-16deg) translateX(5px);
 }
 .main .main__contents .contents__title h2:nth-child(6) {
   color: #ea5c2b;
   animation-name: titleAnim_exclamation;
   animation-delay: 2.2s;
-  transform: scale(1.4) rotate(15deg) translateX(5px);
+  transform: scale(1.4) rotate(15deg) translateX(13px);
 }
 @keyframes titleAnim {
   0% {
@@ -421,18 +432,27 @@ header .other-menu ul li:hover::after {
 }
 .main .main__contents .bottomButton i {
   display: block;
-  transform: scaleX(1.6);
   position: absolute;
+  animation: arrowDown 3s infinite;
 }
 .main .main__contents .bottomButton i:first-child {
   top: 13px;
+  animation: arrowDown 3s 0.5s infinite;
+}
+@keyframes arrowDown {
+  0% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(7px);
+  }
 }
 
 .nav {
   width: 100vw;
-  height: 700px;
+  height: 900px;
   position: relative;
-  top: -100px;
+  top: -5px;
   left: 0;
 }
 .nav .nav__container {
@@ -448,8 +468,8 @@ header .other-menu ul li:hover::after {
 }
 .nav .nav__container .title h3 {
   font-size: 4rem;
-  font-weight: 100;
-  font-family: "Josefin Slab", serif;
+  font-family: "Rubik Mono One", sans-serif;
+  letter-spacing: -8px;
   font-style: italic;
 }
 .nav .nav__container .title span {
@@ -468,7 +488,7 @@ header .other-menu ul li:hover::after {
 }
 .nav .nav__container .nav__bg {
   background-image: url("../source/image/jejuMain.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 70vw;
   height: 680px;
@@ -481,7 +501,7 @@ header .other-menu ul li:hover::after {
   display: flex;
   justify-content: space-evenly;
   position: absolute;
-  top: 550px;
+  bottom: 0;
 }
 .nav .nav__container .parts li {
   position: relative;
@@ -524,7 +544,8 @@ header .other-menu ul li:hover::after {
   height: 35px;
   border-radius: 20px;
   background-color: rgba(246, 216, 96, 0.6);
-  font-family: "Josefin Slab", serif;
+  font-family: "Rubik Mono One", sans-serif;
+  letter-spacing: -2px;
   font-size: 1.5rem;
   text-align: center;
   color: rgb(34, 34, 34);
@@ -547,14 +568,23 @@ header .other-menu ul li:hover::after {
 
 footer {
   width: 100vw;
-  height: 40px;
   background-color: #363730;
+  margin-top: 50px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-footer p {
-  text-align: center;
+footer img {
+  height: 40px;
+  background-size: cover;
+  background-color: white;
+  margin-right: 30px;
+}
+footer ul li {
   color: white;
-  padding-top: 10px;
   font-weight: 100;
+  font-size: 12px;
   font-style: italic;
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 1px;

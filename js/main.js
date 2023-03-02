@@ -12,15 +12,15 @@ let cursorMove = function(e) {
 window.addEventListener('mousemove', cursorMove);
 
 // 마우스가 a태그에 올라가면 지정해준 커서를 안보이게 하고 싶음(아직 작동 안함)
-window.addEventListener('mouseenter', function(e) {
-  console.log(e.target.tagName);
-  if( e.target.getElementTagName('A') !== '')
-  {
-    cursor.style.display = none;
-  } else {
-    cursor.style.display = block;
-    }
-});
+// window.addEventListener('mouseenter', function(e) {
+//   console.log(e.target.tagName);
+//   if( e.target.getElementTagName('A') !== '')
+//   {
+//     cursor.style.display = none;
+//   } else {
+//     cursor.style.display = block;
+//     }
+// });
 
 // Scroll Event
 // Menu 가 일정 크기 이상 이동하면 메뉴바의 아이콘의 색이 변하는 함수
@@ -62,7 +62,7 @@ let scrollPage = function() {
 window.addEventListener('scroll', scrollPage);
 
 const arrowButton = document.querySelector('.bottomButton a');
-const helloJejuY = 684;
+const helloJejuY = 813;
 // 버튼 클릭 시 다음 섹션으로 스크롤을 이동하는 함수
 let moveToNextSection = function() {
   window.scroll({
