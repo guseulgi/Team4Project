@@ -6,6 +6,15 @@ $green: #95cd41; */
 /* font-family : 'Do Hyeon'  */
 @import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
 /* font-family: 'Mynerve', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&display=swap");
+/* font-family: 'Black Han Sans', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Mynerve', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
+/* font-family: 'Black Han Sans', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Mynerve', cursive;
+font-family: 'Rubik Mono One', sans-serif; */
 
 * {
   /* transition-duration: 0.2s; */
@@ -137,7 +146,7 @@ section {
 }
 
 .swiper-slide h1 {
-  font-family: "Mynerve";
+  font-family: "Rubik Mono One", sans-serif;
   color: #ff7f3f;
   position: absolute;
   font-size: 80px;
@@ -255,29 +264,202 @@ section {
 }
 .cafe_sea .cafe_sea_1 {
   display: flex;
-  flex-wrap: wrap;
 }
 .cafe_sea .cafe_sea_1_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
   height: 100vh;
-  flex-grow: 1;
-  background-color: #ea5c2b;
+  background-color: #ff9a1f;
+}
+.cafe_sea .cafe_sea_1_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: black;
 }
 .cafe_sea .cafe_sea_1_img {
+  background-image: url("../cafe/images/donut.jpeg");
   height: 100vh;
-  flex-grow: 1;
-  background-color: aqua;
+  width: 50vw;
+  background-position-x: -300px;
+  background-size: cover;
 }
 .cafe_sea .cafe_sea_2 {
   display: flex;
-  flex-wrap: wrap;
 }
-.cafe_sea .cafe_sea_2_text {
-  height: 100vh;
-  flex-grow: 1;
-  background-color: bisque;
-}
+
 .cafe_sea .cafe_sea_2_img {
   height: 100vh;
-  flex-grow: 1;
-  background-color: cadetblue;
+  width: 50vw;
+  background-image: url("../cafe/images/scatch.jpeg");
+  background-size: cover;
+}
+.cafe_sea .cafe_sea_2_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  background-color: rgb(134, 144, 196);
+}
+
+.cafe_sea .cafe_sea_2_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: black;
+}
+
+.cafe_mountain {
+  position: relative;
+  top: -5px;
+}
+.cafe_mountain .cafe_mountain_1 {
+  display: flex;
+}
+
+.cafe_mountain .cafe_mountain_1_img {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.35) 35%,
+      rgba(20, 20, 20, 0.4) 40%,
+      rgba(20, 20, 20, 0.6) 60%,
+      rgba(20, 20, 20, 0.8) 80%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("../cafe/images/oneandonly.jpeg");
+  background-size: cover;
+  background-position-y: -550px;
+}
+.cafe_mountain .cafe_mountain_1_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 250px;
+}
+
+.cafe_mountain .cafe_mountain_1_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+}
+.cafe_mountain .cafe_mountain_2 {
+  display: flex;
+  position: relative;
+}
+.cafe_mountain .cafe_mountain_2_img {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to left,
+      rgba(20, 20, 20, 0.35) 35%,
+      rgba(20, 20, 20, 0.4) 40%,
+      rgba(20, 20, 20, 0.6) 60%,
+      rgba(20, 20, 20, 0.8) 80%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("../cafe/images/blossomtea.jpeg");
+  background-size: cover;
+  background-position-y: -300px;
+}
+
+.cafe_mountain .cafe_mountain_2_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 250px;
+}
+
+.cafe_mountain .cafe_mountain_2_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+}
+
+.cafe_interesting {
+  position: relative;
+  top: -5px;
+}
+.cafe_interesting .cafe_interesting_1 {
+  display: flex;
+}
+.cafe_interesting .cafe_interesting_1_img {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(138, 141, 92);
+}
+.cafe_interesting .cafe_interesting_1_img .cafe_interesting_1_img_1 {
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  width: 30vw;
+  border-radius: 5%;
+}
+.cafe_interesting .cafe_interesting_1_img .cafe_interesting_1_img_2 {
+  position: absolute;
+  left: 600px;
+  top: 350px;
+  width: 20vw;
+}
+.cafe_interesting .cafe_interesting_1_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 250px;
+}
+.cafe_interesting .cafe_interesting_1_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+}
+.cafe_interesting .cafe_interesting_2 {
+  display: flex;
+  position: relative;
+}
+.cafe_interesting .cafe_interesting_2_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 250px;
+}
+.cafe_interesting .cafe_interesting_2_text h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+}
+.cafe_interesting .cafe_interesting_2_img {
+  height: 100vh;
+  width: 100vw;
+  background-color: sandybrown;
+}
+.cafe_interesting .cafe_interesting_2_img .cafe_interesting_2_img_1 {
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  width: 30vw;
+  border-radius: 5%;
+}
+.cafe_interesting .cafe_interesting_2_img .cafe_interesting_2_img_2 {
+  position: absolute;
+  left: 600px;
+  top: 350px;
+  width: 20vw;
 }
