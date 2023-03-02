@@ -66,8 +66,39 @@ const detailCall = detailBrower.querySelector('.detail-bar .callNumber');
 const detailAddr = detailBrower.querySelector('.detail-bar .address');
 const detailLink = detailBrower.querySelector('.detail-bar .link');
 
-console.log(pinJeju.children[0].children[0].textContent);
+// 맵에서 클릭한 내용을 클래스 객체에서 가져와서 동적으로 내용 변경
+let mapPinClick = function(e) {
+  const mapTarget = e.target;
+  let targetObj;
+  let targetName;
 
+  const tmp = mapTarget.classList[0];
+  switch(tmp) {
+    case 'pin__jeju' :
+      targetName = '제주대학병원';
+      break;
+    case 'pin__hanla' : 
+      targetName = '제주한라병원';
+      break;
+    case 'pin__hanguk' :
+      targetName = '제주한국병원';
+      break;
+    case 'pin__hanmaeum' :
+      targetName = '한마음병원';
+      break;
+    case 'pin__seoguipo' :
+      targetName = '서귀포 의료원';
+      break;
+  }
+  targetObj = jejuHospital[targetName];
+
+  detailTitle.textContent = targetName;
+  detailCall.textContent = targetObj['call'];
+  detailAddr.textContent = targetObj['addr'];
+  detailLink.setAttribute('href', `${targetObj['link']}`);
+}
+
+window.addEventListener('click', mapPinClick);
 
 let pinClick = function() {
   if(detailBrower.classList.contains('d-On') === true) {
