@@ -83,6 +83,156 @@ interesting.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+var swiper = new Swiper(".mySwiper", {
+  // spaceBetween: 30,
+  centeredSlides: true,
+  speed: 1000,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+});
+const body = document.querySelector("body");
+const cafe_sea_1_text_2_modal_ = document.querySelector(
+  ".cafe_sea_1_text_2_modal"
+);
+const cafe_sea_1_text_2_ = document.querySelector(".cafe_sea_1_text_2");
+
+cafe_sea_1_text_2_.addEventListener("click", () => {
+  cafe_sea_1_text_2_modal_.classList.toggle("show");
+  if (cafe_sea_1_text_2_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_1_text_2_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_1_text_2_modal_) {
+    cafe_sea_1_text_2_modal_.classList.toggle("show");
+    if (!cafe_sea_1_text_2_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+
+const cafe_sea_1_text_3_modal_ = document.querySelector(
+  ".cafe_sea_1_text_3_modal"
+);
+const cafe_sea_1_text_3_ = document.querySelector(".cafe_sea_1_text_3");
+
+cafe_sea_1_text_3_.addEventListener("click", () => {
+  cafe_sea_1_text_3_modal_.classList.toggle("show");
+  if (cafe_sea_1_text_3_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_1_text_3_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_1_text_3_modal_) {
+    cafe_sea_1_text_3_modal_.classList.toggle("show");
+    if (!cafe_sea_1_text_3_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+
+const cafe_sea_1_text_4_modal_ = document.querySelector(
+  ".cafe_sea_1_text_4_modal"
+);
+const cafe_sea_1_text_4_ = document.querySelector(".cafe_sea_1_text_4");
+
+cafe_sea_1_text_4_.addEventListener("click", () => {
+  cafe_sea_1_text_4_modal_.classList.toggle("show");
+  if (cafe_sea_1_text_4_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_1_text_4_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_1_text_4_modal_) {
+    cafe_sea_1_text_4_modal_.classList.toggle("show");
+    if (!cafe_sea_1_text_4_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+
+const cafe_sea_2_text_2_modal_ = document.querySelector(
+  ".cafe_sea_2_text_2_modal"
+);
+const cafe_sea_2_text_2_ = document.querySelector(".cafe_sea_2_text_2");
+
+cafe_sea_2_text_2_.addEventListener("click", () => {
+  cafe_sea_2_text_2_modal_.classList.toggle("show");
+  if (cafe_sea_2_text_2_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_2_text_2_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_2_text_2_modal_) {
+    cafe_sea_2_text_2_modal_.classList.toggle("show");
+    if (!cafe_sea_2_text_2_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+
+const cafe_sea_2_text_3_modal_ = document.querySelector(
+  ".cafe_sea_2_text_3_modal"
+);
+const cafe_sea_2_text_3_ = document.querySelector(".cafe_sea_2_text_3");
+
+cafe_sea_2_text_3_.addEventListener("click", () => {
+  cafe_sea_2_text_3_modal_.classList.toggle("show");
+  if (cafe_sea_2_text_3_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_2_text_3_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_2_text_3_modal_) {
+    cafe_sea_2_text_3_modal_.classList.toggle("show");
+    if (!cafe_sea_2_text_3_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+
+const cafe_sea_2_text_4_modal_ = document.querySelector(
+  ".cafe_sea_2_text_4_modal"
+);
+const cafe_sea_2_text_4_ = document.querySelector(".cafe_sea_2_text_4");
+
+cafe_sea_2_text_4_.addEventListener("click", () => {
+  cafe_sea_2_text_4_modal_.classList.toggle("show");
+  if (cafe_sea_2_text_4_modal_.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  }
+});
+
+cafe_sea_2_text_4_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_sea_2_text_4_modal_) {
+    cafe_sea_2_text_4_modal_.classList.toggle("show");
+    if (!cafe_sea_2_text_4_modal_.classList.contains("show")) {
+      body.style.overflow = "auto";
+    }
+  }
+});
+// if (modal.style.display === "block") {
+//   modal.style.display = "none";
+// }
+
+let seaText2 = document.querySelector(".cafe_sea_1_text_2");
+seaText2.addEventListener("click", function () {});
+
 // function seaZoomIn(e) {
 //   e.target.style.transform = "scale(1)";
 //   e.target.style.filter = "brightness(60%)";
