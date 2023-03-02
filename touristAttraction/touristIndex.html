@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tourist Attractions</title>
+
     <!--SWIPER-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <!--CSS-->
     <link rel="stylesheet" href="./css/touristStyle.css" />
-    <!--aos library-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!--JS-->
     <script defer src="./js/touristMain.js"></script>
+
+    <!--aos library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!--fontawesome-->
     <script
       src="https://kit.fontawesome.com/15a6f73da8.js"
@@ -100,7 +106,7 @@
       <div class="introDiv">
         <ul>
           <li>
-            <img src="./image/mountain.jpg" alt="" />
+            <img src="./image/museum.jpg" alt="" />
             <p>MUSEUM</p>
           </li>
         </ul>
@@ -111,7 +117,7 @@
         <ul>
           <li>
             <img src="./image/성산일출봉3.jpg" alt="" />
-            <p class="mountainText">
+            <div class="mountainText" data-aos="zoom-in-right">
               성산일출봉<br /><i class="fa-solid fa-location-dot"></i>
               제주특별자치도 서귀포시 성산읍 일출로 284-12 <br /><i
                 class="fa-regular fa-clock"
@@ -124,7 +130,7 @@
               (성인 5,000원 / 청소년, 군인 2,500원 / 어린이 2,500원)<br />
               단체 (성인 4,000원 / 청소년, 군인 2,000원 / 어린이 2,000원) <br />
               <i class="fa-solid fa-hourglass"></i> 평균 소요 시간 : 1시간 미만
-            </p>
+            </div>
           </li>
           <li>
             <img src="./image/한라.jpg" alt="" />
@@ -165,51 +171,77 @@
     <section class="contents hide">
       <div class="seaContent">
         <div class="text off">
-          설명1
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <h1>중문 색달 해수욕장</h1>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+            <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
+          </ul>
+          <p>위치<br />운영시간</p>
         </div>
         <div class="text off">
-          설명2
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-        </div>
-        <div cl.teass="text off">
-          설명3
-          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-        </div>
-        <div class="text off">
-          설명4
-          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <h1>협재 해수욕장</h1>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+          </ul>
         </div>
         <div class="text off">
-          설명5
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <h1>곽지 해수욕장</h1>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+          </ul>
+        </div>
+        <div class="text off">
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <h1>쇠소깍</h1>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+            <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
+          </ul>
+        </div>
+        <div class="text off">
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <h1>정방폭포</h1>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+            <li><img src="./image/색달해변4.jpg" alt="" /></li>
+          </ul>
         </div>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img class="slide" src="./image/색달해변3.jpg" alt="" />
-              <div class="slide-content"></div>
+              <p>click <i class="fa-regular fa-hand-point-up"></i></p>
             </div>
             <div class="swiper-slide">
               <img class="slide" src="./image/협재해수욕장.jpg" alt="" />
-              <div class="slide-content"></div>
+              <p>click <i class="fa-regular fa-hand-point-up"></i></p>
             </div>
             <div class="swiper-slide">
               <img class="slide" src="./image/곽지해수욕장.jpg" alt="" />
-              <div class="slide-content"></div>
+              <p>click <i class="fa-regular fa-hand-point-up"></i></p>
             </div>
             <div class="swiper-slide">
               <img class="slide" src="./image/쇠소깍3.jpg" alt="" />
-              <div class="slide-content"></div>
+              <p>click <i class="fa-regular fa-hand-point-up"></i></p>
             </div>
             <div class="swiper-slide">
               <img class="slide" src="./image/정방폭포.jpg" alt="" />
-              <div class="slide-content"></div>
+              <p>click <i class="fa-regular fa-hand-point-up"></i></p>
             </div>
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </section>
     <section class="contents hide">
@@ -220,7 +252,15 @@
             <div class="teddyImg">
               <img src="./image/teddybear1.png" alt="" />
             </div>
-            <div class="teddyBack">뒷면</div>
+            <div class="teddyBack">
+              <h1>
+                <i class="fa-solid fa-location-dot"></i>
+              </h1>
+              <p>
+                제주특별자치도 서귀포시<br />
+                색달동 2889번지 <br />중문관광단지 입구
+              </p>
+            </div>
           </div>
         </div>
         <div class="flip-box">
@@ -228,7 +268,12 @@
             <div class="teddyImg">
               <img src="./image/teddybear2.png" alt="" />
             </div>
-            <div class="teddyBack">뒷면</div>
+            <div class="teddyBack">
+              <h1>
+                <i class="fa-solid fa-clock"></i>
+              </h1>
+              <p>매일<br />09:00~18:00 <br />(입장마감 17:30)</p>
+            </div>
           </div>
         </div>
         <div class="flip-box">
@@ -236,11 +281,43 @@
             <div class="teddyImg">
               <img src="./image/teddybear3.png" alt="" />
             </div>
-            <div class="teddyBack">뒷면</div>
+            <div class="teddyBack">
+              <h1>
+                <i class="fa-solid fa-won-sign"></i>
+              </h1>
+              <p>
+                성인 12000원<br />
+                청소년 11000원 <br />어린이 10000원
+              </p>
+            </div>
           </div>
         </div>
-
-        <div class="teddyMore"></div>
+        <div class="teddyMore">
+          <ul>
+            <li>More Details?</li>
+            <li><i class="fa-solid fa-circle-arrow-right"></i></li>
+            <li>
+              <a
+                href="http://www.teddybearmuseum.com/site/museums/jeju/guide.php"
+                >click!</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="museumContent2">
+          <div class="museumTitle2">Arte Museum Jeju</div>
+          <div class="arte">
+            <div class="arteImg1" data-aos="fade-right">></div>
+            <div class="arteImg2"></div>
+            <div
+              class="arteImg3"
+              data-aos="fade-left"
+              data-aos-offset="400"
+              data-aos-easing="ease-in-sine"
+            ></div>
+          </div>
+          <div class="detailFlow">정보가 흘러가유</div>
+        </div>
       </div>
     </section>
   </body>

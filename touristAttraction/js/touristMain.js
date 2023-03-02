@@ -1,3 +1,7 @@
+//import AOS
+
+AOS.init();
+
 // Weather API
 const weatherIconRef = {
   "01": "fas fa-sun",
@@ -60,62 +64,17 @@ fetch(weatherUrl)
   });
 
 //swiper
-//const swiper = new Swiper(".contents .mountainContent .swiper", {
-// Optional parameters
-// direction: "vertical",
-// slidesPerView: 2,
-// centeredSlides: true,
-// spaceBetween: 10,
-// loop: true,
-// touchRatio: 0,
-
-// autoplay: {
-//   delay: 2000,
-//   disableOnInteraction: false,
-// },
-
-//If we need pagination
-// pagination: {
-//   el: ".contents .swiper-pagination",
-// },
-
-// Navigation arrows
-// navigation: {
-//   nextEl: ".contents .swiper-button-next",
-//   prevEl: ".contents .swiper-button-prev",
-// },
-
-// And if we need scrollbar
-// scrollbar: {
-//   el: "contents .swiper-scrollbar",
-// },
-// });
-const swiper2 = new Swiper(".contents .seaContent .swiper", {
-  // Optional parameters
-  // direction: "vertical",
+const swiper = new Swiper(".contents .seaContent .swiper", {
   slidesPerView: 2,
   centeredSlides: true,
   spaceBetween: 30,
-  loop: true,
+  touchRatio: 0,
+  // loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
-
-//scroll
-// window.onload = function () {
-//   const visualMount = document.querySelector(".mountainContent");
-//   visualMount.classList.add("animate");
-// };
-
-// window.addEventListener("scroll", function () {
-//   console.log(window.scrollY);
-//   if (window.scrollY > 300) {
-//     const mountainAni = document.querySelector(".mountainText");
-//     mountainAni.classList.add("animate");
-//   }
-// });
 
 //contents toggle
 const imgBox = document.querySelectorAll(".introDiv");

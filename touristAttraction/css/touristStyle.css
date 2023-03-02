@@ -80,6 +80,7 @@ body {
   font-family: "Noto Sans KR";
   line-height: 1.4;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -310,17 +311,47 @@ header .other-menu ul li:hover::after {
   animation-fill-mode: forwards;
 }
 .contents .seaContent .text {
-  margin-top: 40px;
+  margin-top: 80px;
   width: 90vw;
   margin-left: 5vw;
-  height: 85vh;
-  background-color: rgba(20, 20, 20, 0.19);
+  height: 70vh;
+  background-color: white;
   transition: 0.5s;
   border: 1px solid black;
+  border-radius: 30px;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 2;
+}
+.contents .seaContent .text h1 {
+  text-align: center;
+  margin-top: 6vh;
+  font-size: 3vh;
+  font-weight: 700;
+}
+.contents .seaContent .text ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contents .seaContent .text ul li img {
+  margin-top: 20px;
+  width: 25vw;
+  height: 30vh;
+}
+.contents .seaContent .text p {
+  text-align: center;
+}
+.contents .seaContent .text::after {
+  position: absolute;
+  top: 2.5vh;
+  left: 2vw;
+  content: "";
+  border: 2px solid black;
+  border-radius: 20px;
+  border-style: dashed;
+  width: 86vw;
+  height: 65vh;
 }
 .contents .seaContent .text .close {
   margin: 10px;
@@ -337,17 +368,14 @@ header .other-menu ul li:hover::after {
   display: none;
 }
 .contents .seaContent .swiper {
-  position: relative;
-  background-color: #ea5c2b;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-60%);
+  background-color: #ced8d6;
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
   transition: 0.5s;
   opacity: 1;
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide {
+  box-sizing: border-box;
   opacity: 0.5;
   position: relative;
   border: 30px solid white;
@@ -356,23 +384,29 @@ header .other-menu ul li:hover::after {
   height: 80vh;
   overflow: hidden;
 }
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide:hover {
+  scale: 1.03;
+  filter: grayscale(70%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide:hover p {
+  opacity: 1;
+  transition: 0.5s;
+}
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide img {
   width: 50vw;
   height: 80vh;
 }
-.contents .seaContent .swiper .swiper-wrapper .swiper-slide img:hover {
-  scale: 1.05;
-  opacity: 0.6;
-  transition: 0.5s;
-  cursor: pointer;
-}
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide p {
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  z-index: 4;
+  font-size: 3vh;
+  font-weight: 500;
 }
 .contents .seaContent .swiper-button-prev,
 .contents .seaContent .swiper-button-next {
@@ -391,14 +425,15 @@ header .other-menu ul li:hover::after {
   font-size: 6vh;
 }
 .contents .museumContent {
+  height: 80vh;
   position: relative;
 }
 .contents .museumContent .museumTitle {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 200px;
   margin-left: 50vw;
   width: 50vw;
-  height: 100vh;
+  height: 65vh;
   background-color: #cba55b;
   color: white;
   font-size: 40px;
@@ -410,10 +445,10 @@ header .other-menu ul li:hover::after {
   width: 220px;
   height: 220px;
   perspective: 1000px;
-  background-color: orange;
 }
 .contents .museumContent .flip-box:hover .flip {
   transform: rotateY(-180deg);
+  cursor: pointer;
 }
 .contents .museumContent .flip-box .flip {
   width: 100%;
@@ -421,7 +456,6 @@ header .other-menu ul li:hover::after {
   position: relative;
   color: white;
   text-align: center;
-  line-height: 400px;
   transform-style: preserve-3d;
   transform: rotateY(0deg);
   transition: 0.5s;
@@ -436,27 +470,107 @@ header .other-menu ul li:hover::after {
 }
 .contents .museumContent .flip-box .flip .teddyImg {
   border-radius: 50%;
-  background-color: yellow;
 }
 .contents .museumContent .flip-box .flip .teddyBack {
   border-radius: 50%;
-  background-color: skyblue;
+  background-color: #ff7f3f;
   transform: rotateY(180deg);
 }
-.contents .museumContent .flip-box:nth-child(2) {
+.contents .museumContent .flip-box .flip .teddyBack p {
+  color: black;
   position: absolute;
-  top: 23%;
-  right: 10%;
+  width: 220px;
+  height: 220px;
+  padding-top: 95px;
+  margin: auto;
+  line-height: 1.5;
 }
-.contents .museumContent .flip-box:nth-child(3) {
+.contents .museumContent .flip-box .flip .teddyBack h1 {
+  color: black;
+  font-size: 4vh;
   position: absolute;
-  top: 23%;
-  right: 50%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 1.8;
 }
 .contents .museumContent .flip-box:nth-child(4) {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40%;
+  right: 20%;
+}
+.contents .museumContent .flip-box:nth-child(3) {
+  position: absolute;
+  top: 40%;
+  right: calc(50vw - 110px);
+}
+.contents .museumContent .flip-box:nth-child(2) {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.contents .museumContent .teddyMore {
+  text-align: center;
+  font-size: 1vw;
+  width: 100vw;
+  height: 10vh;
+  background-color: #626458;
+}
+.contents .museumContent .teddyMore ul {
+  display: flex;
+  justify-content: center;
+}
+.contents .museumContent .teddyMore ul li {
+  margin-left: 20px;
+  line-height: 10vh;
+}
+.contents .museumContent .teddyMore ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  padding: 5px 30px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+.contents .museumContent .teddyMore ul li a:hover {
+  background-color: white;
+  color: #626458;
+  transition: 0.5s;
+}
+.contents .museumContent2 .museumTitle2 {
+  margin-top: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 40px;
+}
+.contents .museumContent2 .arte {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+}
+.contents .museumContent2 .arte .arteImg1 {
+  width: 33.3333333333vw;
+  background-size: cover;
+  background-image: url("../image/arte.png");
+}
+.contents .museumContent2 .arte .arteImg2 {
+  width: 33.3333333333vw;
+  background-size: cover;
+  background-image: url("../image/arte3.jpg");
+}
+.contents .museumContent2 .arte .arteImg3 {
+  background-size: cover;
+  width: 33.3333333333vw;
+  background-image: url("../image/arte2.png");
+}
+.contents .museumContent2 .detailFlow {
+  text-align: center;
+  font-size: 1vw;
+  background-color: #f6d860;
+  width: 100vw;
+  height: 10vh;
+  line-height: 10vh;
 }
 
 @keyframes appear {
