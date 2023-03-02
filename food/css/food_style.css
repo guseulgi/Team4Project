@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
-/*font-family: 'Rubik Mono One', sans-serif; */
-
+@supports ((-webkit-mask-image: url(#mask)) or (mask-image: url(#mask))) {
+  /* code that requires mask-image here. */
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ a {
 
 body {
   background-color: #fff;
-  font-family: "Noto Sans KR";
+  font-family: "Do Hyeon";
 }
 
 header {
@@ -144,12 +144,7 @@ header .other-menu ul li:hover::after {
 .returnToTop a i {
   color: #626458;
 }
-.on {
-  display: block;
-}
-.off {
-  display: none;
-}
+
 .all_content {
   position: relative;
 }
@@ -174,18 +169,14 @@ header .other-menu ul li:hover::after {
   color: rgba(201, 113, 30, 0.753);
 }
 .all_content .second_page {
-  height: 105vh;
+  height: 100vh;
   position: relative;
   display: flex;
   background-color: #fff;
-  overflow: hidden;
-  cursor: pointer;
 }
 .all_content .second_page img {
-  height: 55vw;
-  /*width: 33.333%;*/
+  height: 100vh;
   position: absolute;
-  background-size: cover;
 }
 .all_content .second_page .box1 {
   width: 33.333%;

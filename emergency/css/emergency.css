@@ -193,7 +193,7 @@ header .other-menu ul li span {
   text-align: center;
 }
 header .other-menu ul li a {
-  color: #5c3b16;
+  color: white;
 }
 header .other-menu ul li a.changeColor {
   color: #5c3b16;
@@ -449,7 +449,9 @@ header .other-menu ul li:hover::after {
 .emgSituation .swiper-container {
   position: relative;
   right: 0;
-  width: 100vw;
+  width: 90vw;
+  height: 535px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .emgSituation .swiper-container .swiper-wrapper {
@@ -484,7 +486,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide img {
   display: block;
-  width: 60%;
+  width: 83%;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -565,29 +567,29 @@ header .other-menu ul li:hover::after {
 .map .map__bg .bubble__bg-1 {
   width: 78px;
   height: 82px;
-  top: 315px;
-  left: 47px;
+  top: 125px;
+  left: 90px;
 }
 .map .map__bg .bubble__bg-2 {
   width: 297px;
   height: 301px;
   top: 168px;
-  right: 31%;
+  right: 200px;
   border-radius: 43%;
   animation: move 5s infinite linear;
 }
 .map .map__bg .bubble__bg-3 {
   width: 160px;
   height: 168px;
-  top: 358px;
-  left: 53px;
+  top: 126px;
+  left: 108px;
   background: rgba(6, 135, 195, 0.8);
 }
 .map .map__bg .bubble__bg-4 {
   width: 173px;
   height: 179px;
-  top: 63px;
-  right: 44%;
+  top: 30px;
+  right: 215px;
   background: rgba(6, 135, 195, 0.8);
 }
 @keyframes move {
@@ -640,14 +642,13 @@ header .other-menu ul li:hover::after {
 .map .map__image img {
   width: 100%;
   display: block;
-  filter: grayscale(15%) drop-shadow(3px 3px 3px #4d7429);
+  filter: grayscale(15%) drop-shadow(2px 2px 0px #626458);
 }
 .map .map__image .map__pin {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 47px;
 }
 .map .map__image .map__pin li {
   position: absolute;
@@ -668,16 +669,13 @@ header .other-menu ul li:hover::after {
   transition: 0.5s;
 }
 .map .map__image .map__pin li:first-child {
-  top: 32%;
-  left: 31%;
+  top: 33%;
+  left: 28%;
   text-align: center;
 }
 .map .map__image .map__pin li:nth-child(2) {
-  top: 27%;
-  left: 12%;
-}
-.map .map__image .map__pin li:nth-child(2) i {
-  margin-left: 5px;
+  top: 28%;
+  left: 9%;
 }
 .map .map__image .map__pin li:nth-child(3) {
   top: 18%;
@@ -689,14 +687,11 @@ header .other-menu ul li:hover::after {
 }
 .map .map__image .map__pin li:nth-child(4) {
   top: 25%;
-  left: 38%;
-}
-.map .map__image .map__pin li:nth-child(4) i {
-  margin-right: 5px;
+  left: 45%;
 }
 .map .map__image .map__pin li:last-child {
   bottom: 20%;
-  left: 32%;
+  left: 29%;
   text-align: center;
 }
 .map .map__image .map__pin li:hover i {
@@ -722,8 +717,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__mountain {
   background-image: url("../source/icon/mountain.png");
-  top: 200px;
-  left: 40%;
+  right: 50%;
+  transform: translate(30%, 200px);
 }
 .map .map__icons .icon__surf {
   background-image: url("../source/icon/surfing.png");
@@ -741,8 +736,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__boat {
   background-image: url("../source/icon/speed-boat.png");
-  top: 89px;
-  left: 14%;
+  top: 150px;
+  left: 11%;
   animation: slowly 3s infinite;
 }
 @keyframes slowly {
@@ -874,67 +869,4 @@ article.hospital-details .detail-bar li:first-child {
   font-weight: 700;
   margin-left: 35px;
   padding-top: 15px;
-}
-
-.total {
-  width: 80vw;
-  height: 660px;
-  margin: 70px auto;
-  border: 1px solid rgba(0, 0, 0, 0.11);
-}
-.total .total__row {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
-}
-.total .total__row .col {
-  box-sizing: border-box;
-  flex-grow: 1;
-  width: 33%;
-  height: 330px;
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.total .total__row .col img {
-  width: 27px;
-  margin-right: 8px;
-}
-.total .total__row .col h4 {
-  position: absolute;
-  font-size: 2rem;
-  font-family: "NeoDunggeunmoPro-Regular";
-  display: inline-block;
-}
-.total .total__row .title {
-  background-image: url("../source/image/pixelBg.jpg");
-  background-size: cover;
-}
-.total .total__row .title h3 {
-  position: absolute;
-  font-size: 2.7rem;
-  font-family: "NeoDunggeunmoPro-Regular";
-  transform: translate(15px, 10%);
-}
-.total .total__row .jejuUniversity {
-  background-image: url("../source/image/jejuEmg2.jpg");
-  background-size: cover;
-  background-position: -95px 0;
-  background-repeat: no-repeat;
-  border: 1px solid white;
-}
-.total .total__row .jejuUniversity .icons {
-  position: relative;
-  height: 27px;
-  right: 15px;
-  bottom: -285px;
-  display: flex;
-  justify-content: flex-end;
-}
-.total .total__row .jejuHanla {
-  background-image: url("../source/image/hanlaEmg3.jpeg");
-  background-size: cover;
-  background-position: -50px 0;
-  border: 1px solid white;
 }/*# sourceMappingURL=emergency.css.map */

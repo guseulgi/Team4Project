@@ -800,100 +800,55 @@ header {
   }
 }
 
-// Hospital First Content
-.hospital-1 {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 90px 0;
-  height: 460px;
+article.hospital-details {
+  width: 45vw;
+  position: absolute;
+  top: 143px;
+  right: 70px;
+  z-index: 1;
 
-  .hospital__bg {
-    width: 100vw;
-    height: 720px;
-    position: absolute;
-    top: -70px;
-    z-index: -1;
-    background-image: url("../source/image/shotBg1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-attachment: fixed;
-    opacity: 0.7;
-  }
-
-  img {
-    border: 9px solid white;
-    border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .hospital__image {
+  .nav-bar {
+    width: 100%;
+    height: 42px;
+    background-color: rgba(72, 72, 72, 0.9215686275);
     position: relative;
-    display: block;
-    transform: scale(0.9);
-    filter: blur(0.5px) grayscale(100%) contrast(105%);
-    transition: 0.6s;
-  }
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
-  .hospital__image:hover {
-    transform: scale(1);
-    filter: grayscale(10%);
-  }
-
-  .title {
-    margin-right: 15px;
-    .title__bg {
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #ff6c65;
       position: absolute;
-      width: 58vw;
-      height: 20px;
-      top: 125px;
-      right: 0;
-      background-color: $gray;
-
-      h2 {
-        position: absolute;
-        color: white;
-        left: 0;
-        top: -30px;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 700;
-
-        padding: 7px 17px 7px 7px;
-        text-shadow: -2px 0 $gray, 0 2px $gray, 2px 0 $gray, 0 -2px $gray;
-      }
+      top: 13px;
+      cursor: pointer;
     }
-
-    & li:first-child {
-
+    li:first-child {
       left: 10px;
     }
 
-    & li:nth-child(2) {
-      background-color: $yellow;
+    li:nth-child(2) {
+      background-color: #f6d860;
       left: 30px;
     }
 
-    & li:nth-child(3) {
+    li:nth-child(3) {
       left: 52px;
-      background-color: $green;
+      background-color: #95cd41;
     }
 
-    & li:nth-child(4) {
+    li:nth-child(4) {
       background-color: transparent;
-
-      top : 8px;
+      top: 8px;
       right: 8px;
-
 
       i {
         font-size: 14px;
         text-align: center;
         line-height: 10px;
         color: white;
-        // transform: rotate(180deg);
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
@@ -910,15 +865,15 @@ header {
       font-size: 1.2rem;
       width: 35vw;
       display: flex;
-
       cursor: pointer;
+
 
       .image-container {
         width: 40px;
         height: 40px;
         background-color: white;
         border-radius: 5px;
-        transition: .7s;
+        transition: 0.7s;
         position: relative;
 
         img {
@@ -928,379 +883,146 @@ header {
           margin: auto;
           padding-top: 5px;
           position: absolute;
-          right : 3px;
+          right: 3px;
         }
-
       }
+
       p {
         line-height: 2.4rem;
         margin-left: 30px;
         width: 80%;
         transform: translateX(-8%);
         opacity: 0;
-        transition: .7s;
+        transition: 0.7s;
 
         a {
           color: black;
           text-decoration: none;
         }
       }
+    }
 
-      &:nth-child(3) img {
-        width: 33px;
-        height: 33px;
-        padding-top: 2px;
+    li:nth-child(3) img {
+      width: 33px;
+      height: 33px;
+      padding-top: 2px;
+    }
+
+    li:nth-child(4) img {
+      padding-left: 2px;
+    }
+
+    li:hover .image-container {
+      width: 20%;
+    }
+
+    li:hover .image-container img {
+      right: 3px;
+    }
+
+    li:hover p {
+      transform: translateX(0);
+      opacity: 1;
+
+      a {
+        color: black;
+        text-decoration: none;
       }
+    }
 
-      &:nth-child(4) img {
-        padding-left: 2px;
-      }
-
-      &:hover {
-
-        .image-container {
-          width: 20%;
-
-          img {
-            right: 3px;
-
-          }
-        }
-
-        & > span {
-          display: inline-block;
-          transition: 0.6s;
-          transform: translateX(-10px);
-          opacity: 0;
-          margin-left: 5px;
-        }
-
-        &:first-child:hover span {
-          opacity: 1;
-
-        i {
-          font-size: 1.1rem;
-        }
-
-        .item__location {
-          transition: 0.6s;
-          width: 86%;
-          height: 0px;
-          margin: 0 auto;
-
-          .location {
-            width: 100%;
-            height: 0;
-            background-color: #ddd;
-          }
-
-          & > p {
-            height: 0;
-            font-size: 0px;
-            text-align: center;
-          }
-        }
-        &:nth-child(2):hover {
-          .item__location {
-            height: 250px;
-            padding: 7px 0;
-
-            .location {
-              height: 90%;
-            }
-            & > p {
-              margin-top: 5px;
-              font-size: 14px;
-              height: 10%;
-            }
-          }
-        }
-
-        i.fa-chevron-down {
-          color: $darkBrawn;
-          position: absolute;
-          top: 8px;
-          right: 8px;
-        }
-      }
+    li:first-child {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-left: 35px;
+      padding-top: 15px;
     }
   }
-}
+} 
 
-// Hospital Second Content
-.hospital-2 {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 70px 0;
-  height: 460px;
-  top: 10px;
 
-  .hospital__bg {
-    width: 100vw;
-    height: 600px;
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-    background-image: url("../source/image/ambulanceBg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    // background-attachment: fixed;
-    transform: rotateY(180deg);
-    background-color: $gray;
-    opacity: 0.9;
-  }
+// Hospital Total Section
+// .total {
+//   width: 80vw;
+//   height: 660px;
+//   margin: 70px auto;
+//   border: 1px solid rgba(0, 0, 0, 0.11);
 
-  .hospital__image {
-    background-image: url("../source/image/hanlaEmg3.jpeg");
-    background-size: cover;
-    width: 450px;
-    border: 9px solid white;
-    border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-    border-top-left-radius: 8%;
-    border-bottom-right-radius: 18%;
+//   .total__row {
+//     display: flex;
+//     width: 100%;
+//     justify-content: center;
+//     border-bottom: 1px solid rgba(0, 0, 0, 0.11);
 
-    filter: blur(0.5px) grayscale(100%) contrast(100%);
-    overflow: hidden;
+//     .col {
+//       box-sizing: border-box;
 
-    .shine {
-      position: absolute;
-      top: 0;
-      left: -100%;
-      z-index: 2;
-      display: block;
+//       flex-grow: 1;
+//       width : 33%;
+//       height: 330px;
 
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
-      transform: skewX(-25deg);
-    }
+//       position: relative;
+//       box-sizing: border-box;
+//       overflow: hidden;
 
-    &:hover {
-      transform: scale(1);
-      filter: grayscale(10%);
+//       img {
+//         width: 27px;
+//         margin-right: 8px;
+//       }
 
-      .shine {
-        animation: shine 3s;
+//       h4 {
+//         position: absolute;
+//         font-size: 2rem;
+//         font-family: 'NeoDunggeunmoPro-Regular';
+//         display: inline-block;
+//       }
+//     }
 
-        @keyframes shine {
-          50% {
-            left: 125%;
-          }
-          100% {
-            left: -125%;
-          }
-        }
-      }
-    }
-  }
+//     .title {
+//       background-image: url('../source/image/pixelBg.jpg');
+//       background-size: cover;
 
-  .title {
-    margin-right: 15px;
-    .title__bg {
-      position: absolute;
-      z-index: 1;
-      width: 58vw;
-      height: 20px;
-      top: 125px;
-      left: 0;
-      background-color: $darkBrawn;
+//       h3 {
+//         position: absolute;
+//         font-size: 2.7rem;
+//         font-family: 'NeoDunggeunmoPro-Regular';
+//         transform: translate(15px, 10%);
+//       }
+//     }
 
-      h2 {
-        position: absolute;
-        color: white;
-        right: 0;
-        top: -30px;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 700;
+//     .jejuUniversity {
+//       background-image: url('../source/image/jejuEmg2.jpg');
+//       background-size: cover;
+//       background-position: -95px 0;
+//       background-repeat: no-repeat;
+//       border: 1px solid white;
 
-        padding: 7px 17px 7px 7px;
-        text-shadow: -2px 0 $darkBrawn, 0 2px $darkBrawn, 2px 0 $darkBrawn,
-          0 -2px $darkBrawn;
-      }
-    }
-
-//     ul {
-//       width: 25vw;
-//       margin-top: 110px;
-//       .item {
+//       .icons {
 //         position: relative;
-//         margin-bottom: 7px;
-//         padding: 3px;
-//         background-color: white;
-//         border-radius: 3px;
+//         height: 27px;
+//         right : 15px;
+//         bottom : -285px;
+//         display: flex;
+//         justify-content: flex-end;
 
-//         a {
-//           color: white;
-//           display: inline-block;
-//           width: 28px;
-//           height: 28px;
-//           background-color: $darkBrawn;
-//           border-radius: 50%;
-//           text-align: center;
-//           line-height: 28px;
-//         }
-
-//         &:hover {
-//           a {
-//             background-color: white;
-//             color: $darkBrawn;
-//           }
-//         }
-
-        & > span {
-          display: inline-block;
-          transition: 0.6s;
-          transform: translateX(-10px);
-          opacity: 0;
-          margin-left: 5px;
-        }
-
-//         &:first-child:hover span {
-//           opacity: 1;
-//           transform: translateX(0px);
-//         }
-
-//         i {
-//           font-size: 1.1rem;
-//         }
-
-        .item__location {
-          transition: 0.6s;
-          width: 86%;
-          height: 0px;
-          margin: 0 auto;
-
-          .location {
-            width: 100%;
-            height: 0;
-            background-color: #ddd;
-          }
-
-//           & > p {
-//             height: 0;
-//             font-size: 0px;
-//             text-align: center;
-//           }
-//         }
-//         &:nth-child(2):hover {
-//           .item__location {
-//             height: 250px;
-//             padding: 7px 0;
-
-//             .location {
-//               height: 90%;
-//             }
-//             & > p {
-//               margin-top: 5px;
-//               font-size: 14px;
-//               height: 10%;
-//             }
-//           }
-//         }
+//         img {
 
 //         i.fa-chevron-down {
 //           color: $darkBrawn;
 //           position: absolute;
-//           top : 8px;
+//           top: 8px;
 //           right: 8px;
 //         }
 //       }
 //     }
+//     .jejuHanla {
+//       background-image: url('../source/image/hanlaEmg3.jpeg');
+//       background-size: cover;
+//       background-position: -50px 0;
+//       border: 1px solid white;
+//     }
+//     .jejuHanguk {}
+//     .hanmaeum {}
+//     .seoguipo {}
 //   }
 // }
-
-
-// Hospital Total Section
-.total {
-  width: 80vw;
-  height: 660px;
-  margin: 70px auto;
-  border: 1px solid rgba(0, 0, 0, 0.11);
-
-  .total__row {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
-
-    .col {
-      box-sizing: border-box;
-
-      flex-grow: 1;
-      width : 33%;
-      height: 330px;
-
-      position: relative;
-      box-sizing: border-box;
-      overflow: hidden;
-
-      img {
-        width: 27px;
-        margin-right: 8px;
-      }
-
-      h4 {
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'NeoDunggeunmoPro-Regular';
-        display: inline-block;
-      }
-    }
-
-    .title {
-      background-image: url('../source/image/pixelBg.jpg');
-      background-size: cover;
-
-      h3 {
-        position: absolute;
-        font-size: 2.7rem;
-        font-family: 'NeoDunggeunmoPro-Regular';
-        transform: translate(15px, 10%);
-      }
-    }
-
-    .jejuUniversity {
-      background-image: url('../source/image/jejuEmg2.jpg');
-      background-size: cover;
-      background-position: -95px 0;
-      background-repeat: no-repeat;
-      border: 1px solid white;
-
-      .icons {
-        position: relative;
-        height: 27px;
-        right : 15px;
-        bottom : -285px;
-        display: flex;
-        justify-content: flex-end;
-
-        img {
-
-        i.fa-chevron-down {
-          color: $darkBrawn;
-          position: absolute;
-          top: 8px;
-          right: 8px;
-        }
-      }
-    }
-    .jejuHanla {
-      background-image: url('../source/image/hanlaEmg3.jpeg');
-      background-size: cover;
-      background-position: -50px 0;
-      border: 1px solid white;
-    }
-    .jejuHanguk {}
-    .hanmaeum {}
-    .seoguipo {}
-  }
-}
-}
+// }
