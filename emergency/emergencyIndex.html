@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQYiBBmCyetqiyn-eA9A_Fbf5FFj0FwWU&callback=initMap"async defer></script>
+
   <!-- Emergency CSS JS -->
   <link rel="stylesheet" href="./css/emergency.css"/>
   <script defer src="./js/emergency.js"></script>
@@ -33,25 +36,25 @@
         <ul>
           <li>
             <span>HOME</span>
-            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+            <a href="../index.html" title="home"><i class="fa-solid fa-house"></i></a>
           </li>
           <li>
             <span>CAFE</span>
-            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+            <a href="../cafe/cafeIndex.html" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
           </li>
           <li>
             <span>ACTIVITY</span>
-            <a href="#" title="activity"
+            <a href="../activity/index.html" title="activity"
               ><i class="fa-solid fa-person-running"></i
             ></a>
           </li>
           <li>
             <span>FOOD</span>
-            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+            <a href="../food/index.html" title="food"><i class="fa-solid fa-bowl-food"></i></a>
           </li>
           <li>
             <span>TOURIST</span>
-            <a href="#" title="tourist">
+            <a href="../touristAttraction/touristIndex.html" title="tourist">
               <i class="fa-solid fa-star"></i>
             </a>
           </li>
@@ -69,7 +72,7 @@
 
       <!-- Return to Top -->
       <div class="returnToTop">
-        <a href="#">
+        <a href="javascript:void(0);">
           <span></span>
           <i class="fa-solid fa-arrow-up"></i>
         </a>
@@ -149,37 +152,34 @@
     <div class="map__image">
       <img src="./source/image/jejudo.png" alt="제주도 섬"/>
       <ul class="map__pin">
-        <li>
-          <a href="#jejuUniversity">
-            <i class="fa-solid fa-location-pin"></i>
-          <br/>
-          <span>제주대학교병원</span>
+        <li class="pin__jeju">
+          <a href="javascript:void(0);">
+            <span class="pin__jeju">제주대학병원</span>
+            <i class="pin__jeju fa-solid fa-location-pin"></i>
           </a>
         </li>
-        <li>
-          <a href="#jejuHanla">
-            <span>제주한라병원</span>
-          <i class="fa-solid fa-location-pin"></i>
+        <li class="pin__hanla">
+          <a href="javascript:void(0);">
+            <span class="pin__hanla">제주한라병원</span>
+            <i class="pin__hanla fa-solid fa-location-pin"></i>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <span>제주한국병원</span>
-          <br/>
-          <i class="fa-solid fa-location-pin"></i>
+        <li class="pin__hanguk">
+          <a href="javascript:void(0);">
+            <span class="pin__hanguk">제주한국병원</span>
+            <i class="pin__hanguk fa-solid fa-location-pin"></i>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="fa-solid fa-location-pin"></i>
-            <span>한마음병원</span>
+        <li class="pin__hanmaeum">
+          <a href="javascript:void(0);">
+            <span class="pin__hanmaeum">한마음병원</span>
+            <i class="pin__hanmaeum fa-solid fa-location-pin"></i>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="fa-solid fa-location-pin"></i>
-            <br/>
-            <span>서귀포 의료원</span>
+        <li class="pin__seoguipo">
+          <a href="javascript:void(0);">
+            <span class="pin__seoguipo">서귀포 의료원</span>
+            <i class="pin__seoguipo fa-solid fa-location-pin"></i>
           </a>
         </li>
       </ul>
@@ -191,7 +191,7 @@
       <div class="icon__boat"></div>
     </div>
 
-    <article class="hospital-details d-On">
+    <article class="hospital-details d-Off">
       <ul class="nav-bar">
         <li></li>
         <li></li>
@@ -201,115 +201,28 @@
         </li>
       </ul>
       <ul class="detail-bar height-100">
-        <li>제주대학병원 응급센터</li>
+        <li class="title"></li>
         <li class="datail-call">
           <div class="image-container">
             <img src="./source/icon/emergency-callIcon.png" alt="전화 아이콘">
           </div>
-          <p>064-717-1900</p>
-        </li>
-        <li class="datail-map">
-          <div class="image-container">
-            <img src="./source/icon/hospitalIcon.png" alt="지도 아이콘">
-          </div>
-          <p>제주 제주시 아란13길 15</p>
+          <p><a href="" class="callNumber"></a></p>
         </li>
         <li class="datail-link">
           <div class="image-container">
             <img src="./source/icon/linkIcon.png" alt="링크 아이콘">
           </div>
-          <p><a href="https://er.jejunuh.co.kr/index.do">바로가기</a></p>
+          <p><a href="" class="link">홈페이지 바로가기</a></p>
         </li>
+        <li class="datail-map">
+          <div class="image-container">
+            <img src="./source/icon/hospitalIcon.png" alt="지도 아이콘">
+          </div>
+          <p class="address"></p>
+        </li>
+        <li id="map"></li>
       </ul>
     </article>
-  </section>
-
-  <!-- Hospital First Content -->
-  <!-- <section class="hospital-1" id="jejuUniversity">
-    <div class="hospital__bg"></div>
-    <img src="./source/image/jejuEmg2.jpg" alt="제주대학교병원" class="hospital__image"/>
-    <div class="title">
-      <div class="title__bg">
-        <h2>제주대학교병원 응급의료센터</h2>
-      </div>
-      <ul>
-        <li class="item">
-          <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>
-          <span>064-717-1900</span>
-        </li>
-        <li class="item">
-          <a href="#"><i class="fa-solid fa-location-arrow"></i></a>
-          <div class="item__location">
-            <div class="location">
-              지도 API 넣기
-            </div>
-            <p>제주 제주시 아란13길 15</p>
-          </div>
-          <i class="fa-solid fa-chevron-down"></i>
-        </li>
-        <li class="item">
-          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-globe"></i></a>
-        </li>
-      </ul>
-    </div>
-  </section> -->
-
-
-  <!-- Hospital Second Content -->
-  <!-- <section class="hospital-2" id="jejuHanla">
-    <div class="hospital__bg"></div>
-    <div class="title">
-      <div class="title__bg">
-        <h2>제주한라병원 응급실</h2>
-      </div>
-      <ul>
-        <li class="item">
-          <a href="javascript:alert('전화연결');"><i class="fa-solid fa-phone"></i></a>
-          <span>064-740-5158</span>
-        </li>
-        <li class="item">
-          <a href="#"><i class="fa-solid fa-location-arrow"></i></a>
-          <div class="item__location">
-            <div class="location">
-              지도 API 넣기
-            </div>
-            <p>제주 제주시 도령로 65 한라병원</p>
-          </div>
-          <i class="fa-solid fa-chevron-down"></i>
-        </li>
-        <li class="item">
-          <a href="https://er.jejunuh.co.kr/index.do" target="_blank"><i class="fa-solid fa-globe"></i></a>
-        </li>
-      </ul>
-    </div>
-    <div class="hospital__image">
-      <span class="shine"></span>
-    </div>
-  </section> -->
-
-  <!-- Hospital Total Section -->
-  <section class="total">
-    <ul class="total__row">
-      <li class="col title">
-        <h3>응급센터 안내</h3>
-      </li>
-      <li class="col jejuUniversity">
-        <div class="icons">
-          <img src="./source/icon/phoneIcon2.png" alt="전화 아이콘" />
-          <img src="./source/icon/homeIcon.png" alt="홈페이지 아이콘" />
-          <img src="./source/icon/mapIcon.png" alt="지도 아이콘" />
-        </div>
-        <div class="texts">
-          <h4>제주대학교병원</h4>
-        </div>
-      </li>
-      <li class="col jejuHanla"></li>
-    </ul>
-    <ul class="total__row">
-      <li class="col jejuHanguk"></li>
-      <li class="col hanmaeum"></li>
-      <li class="col seoguipo"></li>
-    </ul>
   </section>
 </body>
 </html>

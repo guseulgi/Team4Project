@@ -269,7 +269,7 @@ header .other-menu ul li:hover::after {
   display: block;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: #5c3b16;
   border-radius: 50%;
   text-align: center;
   font-size: 1.2rem;
@@ -288,7 +288,7 @@ header .other-menu ul li:hover::after {
   height: 1.8px;
   display: block;
   border-radius: 4px;
-  background-color: #626458;
+  background-color: white;
   position: absolute;
   top: 6px;
   left: 6px;
@@ -297,7 +297,7 @@ header .other-menu ul li:hover::after {
   position: absolute;
   top: 8px;
   left: 8px;
-  color: #626458;
+  color: white;
 }
 
 .emgSituation {
@@ -305,6 +305,7 @@ header .other-menu ul li:hover::after {
   height: 670px;
   padding: 22vh 0 30px 0;
   position: relative;
+  overflow: hidden;
 }
 .emgSituation .title {
   position: relative;
@@ -366,14 +367,14 @@ header .other-menu ul li:hover::after {
 }
 @keyframes ambulence {
   0% {
-    transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%) translateY(0px);
+    transform: rotateY(180deg) scale(1.01, 1.01) translateX(-600%) translateY(0px);
   }
   50% {
     transform: rotateY(180deg) scaleY(1.03) translateX(0) translateY(1px);
   }
   100% {
     z-index: 0;
-    transform: rotateY(180deg) scale(1, 1) translateX(1000%) translateY(3px);
+    transform: rotateY(180deg) scale(1, 1) translateX(1400%) translateY(3px);
   }
 }
 @keyframes siren {
@@ -450,6 +451,8 @@ header .other-menu ul li:hover::after {
   position: relative;
   right: 0;
   width: 100vw;
+  height: 535px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .emgSituation .swiper-container .swiper-wrapper {
@@ -484,7 +487,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide img {
   display: block;
-  width: 60%;
+  width: 66%;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -508,7 +511,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-pagination {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   right: 0;
 }
 .emgSituation .swiper-pagination-bullet {
@@ -565,29 +568,29 @@ header .other-menu ul li:hover::after {
 .map .map__bg .bubble__bg-1 {
   width: 78px;
   height: 82px;
-  top: 315px;
-  left: 47px;
+  top: 125px;
+  left: 90px;
 }
 .map .map__bg .bubble__bg-2 {
   width: 297px;
-  height: 301px;
-  top: 168px;
-  right: 31%;
+  height: 299px;
+  top: 308px;
+  right: 348px;
   border-radius: 43%;
   animation: move 5s infinite linear;
 }
 .map .map__bg .bubble__bg-3 {
   width: 160px;
   height: 168px;
-  top: 358px;
-  left: 53px;
+  top: 126px;
+  left: 108px;
   background: rgba(6, 135, 195, 0.8);
 }
 .map .map__bg .bubble__bg-4 {
-  width: 173px;
-  height: 179px;
-  top: 63px;
-  right: 44%;
+  width: 186px;
+  height: 192px;
+  top: 424px;
+  right: 579px;
   background: rgba(6, 135, 195, 0.8);
 }
 @keyframes move {
@@ -632,22 +635,21 @@ header .other-menu ul li:hover::after {
   color: #95cd41;
 }
 .map .map__image {
-  width: 750px;
+  width: 730px;
   position: relative;
-  top: 60px;
-  left: 77px;
+  top: 76px;
+  left: 76px;
 }
 .map .map__image img {
   width: 100%;
   display: block;
-  filter: grayscale(15%) drop-shadow(3px 3px 3px #4d7429);
+  filter: grayscale(15%) drop-shadow(2px 2px 4px #626458);
 }
 .map .map__image .map__pin {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 47px;
 }
 .map .map__image .map__pin li {
   position: absolute;
@@ -656,6 +658,9 @@ header .other-menu ul li:hover::after {
 .map .map__image .map__pin li span {
   color: white;
   font-weight: 500;
+  display: block;
+  position: absolute;
+  width: 100px;
 }
 .map .map__image .map__pin li i {
   font-size: 32px;
@@ -669,35 +674,46 @@ header .other-menu ul li:hover::after {
 }
 .map .map__image .map__pin li:first-child {
   top: 32%;
-  left: 31%;
-  text-align: center;
+  left: 43%;
+}
+.map .map__image .map__pin li:first-child span {
+  top: 18px;
+  left: 24px;
 }
 .map .map__image .map__pin li:nth-child(2) {
   top: 27%;
-  left: 12%;
+  left: 32%;
 }
-.map .map__image .map__pin li:nth-child(2) i {
-  margin-left: 5px;
+.map .map__image .map__pin li:nth-child(2) span {
+  top: 6px;
+  left: -95px;
 }
 .map .map__image .map__pin li:nth-child(3) {
-  top: 18%;
-  left: 27%;
-  text-align: center;
+  top: 22%;
+  left: 38%;
+}
+.map .map__image .map__pin li:nth-child(3) span {
+  top: -15px;
+  left: -3px;
 }
 .map .map__image .map__pin li:nth-child(3) i {
   margin-top: 10px;
 }
 .map .map__image .map__pin li:nth-child(4) {
-  top: 25%;
-  left: 38%;
+  top: 24%;
+  left: 44%;
 }
-.map .map__image .map__pin li:nth-child(4) i {
-  margin-right: 5px;
+.map .map__image .map__pin li:nth-child(4) span {
+  top: 12px;
+  left: 25px;
 }
 .map .map__image .map__pin li:last-child {
-  bottom: 20%;
-  left: 32%;
-  text-align: center;
+  bottom: 24%;
+  left: 43%;
+}
+.map .map__image .map__pin li:last-child span {
+  top: 4px;
+  left: -99px;
 }
 .map .map__image .map__pin li:hover i {
   color: #5c3b16;
@@ -709,8 +725,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons {
   position: relative;
-  bottom: 500px;
-  left: -150px;
+  bottom: 481px;
+  left: -259px;
   width: 100%;
 }
 .map .map__icons > div {
@@ -722,8 +738,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__mountain {
   background-image: url("../source/icon/mountain.png");
-  top: 200px;
-  left: 40%;
+  right: 50%;
+  transform: translate(30%, 200px);
 }
 .map .map__icons .icon__surf {
   background-image: url("../source/icon/surfing.png");
@@ -741,8 +757,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__boat {
   background-image: url("../source/icon/speed-boat.png");
-  top: 89px;
-  left: 14%;
+  top: 112px;
+  left: 24%;
   animation: slowly 3s infinite;
 }
 @keyframes slowly {
@@ -808,15 +824,29 @@ article.hospital-details .detail-bar {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: rgba(255, 255, 255, 0.852);
-  padding-bottom: 70px;
+  padding-bottom: 19px;
 }
 article.hospital-details .detail-bar li {
   margin: 0 0 0 25px;
-  padding: 25px 0 0 5%;
+  padding: 14px 0 0 5%;
   font-size: 1.2rem;
   width: 35vw;
   display: flex;
   cursor: pointer;
+}
+article.hospital-details .detail-bar li.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.3px;
+  box-shadow: 0 0.3px 0 #626458;
+  position: absolute;
+  top: 98px;
+}
+article.hospital-details .detail-bar li#map {
+  width: 60%;
+  height: 200px;
+  margin: 10px auto 0 auto;
 }
 article.hospital-details .detail-bar li .image-container {
   width: 40px;
@@ -839,20 +869,28 @@ article.hospital-details .detail-bar li p {
   line-height: 2.4rem;
   margin-left: 30px;
   width: 80%;
-  transform: translateX(-8%);
-  opacity: 0;
+  transform: translateX(0);
   transition: 0.7s;
 }
 article.hospital-details .detail-bar li p a {
   color: black;
   text-decoration: none;
 }
+article.hospital-details .detail-bar li:nth-child(3):hover {
+  text-decoration: underline;
+}
+article.hospital-details .detail-bar li:nth-child(3):hover .image-container {
+  background-color: #95cd41;
+}
 article.hospital-details .detail-bar li:nth-child(3) img {
   width: 33px;
   height: 33px;
   padding-top: 2px;
 }
-article.hospital-details .detail-bar li:nth-child(4) img {
+article.hospital-details .detail-bar li:nth-child(4):hover .image-container {
+  background-color: #ea5c2b;
+}
+article.hospital-details .detail-bar li:nth-child(4):hover .image-container img {
   padding-left: 2px;
 }
 article.hospital-details .detail-bar li:hover .image-container {
@@ -862,79 +900,14 @@ article.hospital-details .detail-bar li:hover .image-container img {
   right: 3px;
 }
 article.hospital-details .detail-bar li:hover p {
-  transform: translateX(0);
-  opacity: 1;
+  transform: translateX(-7%);
 }
 article.hospital-details .detail-bar li:hover p a {
   color: black;
-  text-decoration: none;
 }
 article.hospital-details .detail-bar li:first-child {
   font-size: 1.8rem;
   font-weight: 700;
   margin-left: 35px;
   padding-top: 15px;
-}
-
-.total {
-  width: 80vw;
-  height: 660px;
-  margin: 70px auto;
-  border: 1px solid rgba(0, 0, 0, 0.11);
-}
-.total .total__row {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
-}
-.total .total__row .col {
-  box-sizing: border-box;
-  flex-grow: 1;
-  width: 33%;
-  height: 330px;
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.total .total__row .col img {
-  width: 27px;
-  margin-right: 8px;
-}
-.total .total__row .col h4 {
-  position: absolute;
-  font-size: 2rem;
-  font-family: "NeoDunggeunmoPro-Regular";
-  display: inline-block;
-}
-.total .total__row .title {
-  background-image: url("../source/image/pixelBg.jpg");
-  background-size: cover;
-}
-.total .total__row .title h3 {
-  position: absolute;
-  font-size: 2.7rem;
-  font-family: "NeoDunggeunmoPro-Regular";
-  transform: translate(15px, 10%);
-}
-.total .total__row .jejuUniversity {
-  background-image: url("../source/image/jejuEmg2.jpg");
-  background-size: cover;
-  background-position: -95px 0;
-  background-repeat: no-repeat;
-  border: 1px solid white;
-}
-.total .total__row .jejuUniversity .icons {
-  position: relative;
-  height: 27px;
-  right: 15px;
-  bottom: -285px;
-  display: flex;
-  justify-content: flex-end;
-}
-.total .total__row .jejuHanla {
-  background-image: url("../source/image/hanlaEmg3.jpeg");
-  background-size: cover;
-  background-position: -50px 0;
-  border: 1px solid white;
 }/*# sourceMappingURL=emergency.css.map */

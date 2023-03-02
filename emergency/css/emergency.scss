@@ -149,7 +149,7 @@ header {
         }
 
         a {
-          color: white;
+          color: $darkBrawn;
 
           //메뉴가 일정 이상 내려가면 색이 바뀌는 클래스 추가
           &.changeColor {
@@ -241,7 +241,7 @@ header {
     display: block;
     width: 30px;
     height: 30px;
-    background-color: white;
+    background-color: $darkBrawn;
     border-radius: 50%;
     text-align: center;
 
@@ -263,7 +263,7 @@ header {
       height: 1.8px;
       display: block;
       border-radius: 4px;
-      background-color: $gray;
+      background-color: white;
       position: absolute;
       top: 6px;
       left: 6px;
@@ -273,7 +273,7 @@ header {
       position: absolute;
       top: 8px;
       left: 8px;
-      color: $gray;
+      color: white;
     }
   }
 }
@@ -284,6 +284,7 @@ header {
   height: 670px;
   padding: 22vh 0 30px 0;
   position: relative;
+  overflow: hidden;
 
   .title {
     position: relative;
@@ -351,7 +352,7 @@ header {
 
     @keyframes ambulence {
       0% {
-        transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%)
+        transform: rotateY(180deg) scale(1.01, 1.01) translateX(-600%)
           translateY(0px);
       }
       50% {
@@ -359,7 +360,7 @@ header {
       }
       100% {
         z-index: 0;
-        transform: rotateY(180deg) scale(1, 1) translateX(1000%) translateY(3px);
+        transform: rotateY(180deg) scale(1, 1) translateX(1400%) translateY(3px);
       }
     }
 
@@ -446,7 +447,7 @@ header {
   .swiper-container {
     position: relative;
     right: 0;
-    width: 90vw;
+    width: 100vw;
     height: 535px;
     margin: 0 auto;
     overflow: hidden;
@@ -483,7 +484,7 @@ header {
         }
         img {
           display: block;
-          width: 83%;
+          width: 66%;
           position: absolute;
           top: 30px;
           left: 50%;
@@ -511,7 +512,7 @@ header {
   }
   .swiper-pagination {
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     right: 0;
   }
 
@@ -582,9 +583,9 @@ header {
 
     .bubble__bg-2 {
       width: 297px;
-      height: 301px;
-      top: 168px;
-      right: 200px;
+      height: 299px;
+      top: 308px;
+      right: 348px;
       border-radius: 43%;
       animation: move 5s infinite linear;
     }
@@ -598,10 +599,10 @@ header {
     }
 
     .bubble__bg-4 {
-      width: 173px;
-      height: 179px;
-      top: 30px;
-      right: 215px;
+      width: 186px;
+      height: 192px;
+      top: 424px;
+      right: 579px;
       background: rgba(6, 135, 195, 0.8);
     }
   }
@@ -653,23 +654,19 @@ header {
         color : $green;
       }
     }
-  
-    & h2:nth-child(1) {
-
-    }
   }
   
 
   .map__image {
-    width: 750px;
+    width: 730px;
     position: relative;
-    top : 60px;
-    left: 77px;
+    top : 76px;
+    left: 76px;
 
     img {
       width: 100%;
       display: block;
-      filter: grayscale(15%) drop-shadow(2px 2px 0px $gray);
+      filter: grayscale(15%) drop-shadow(2px 2px 4px $gray);
     }
     .map__pin {
       width: 100%;
@@ -684,6 +681,9 @@ header {
         span {
           color: white;
           font-weight: 500;
+          display: block;
+          position: absolute;
+          width: 100px;
         }
         i {
           font-size: 32px;
@@ -698,31 +698,53 @@ header {
         }
 
         &:first-child {
-          top: 33%;
-          left: 28%;
-          text-align: center;
+          top: 32%;
+          left: 43%;
+        
+          span {
+            top :18px;
+            left: 24px;
+          }
         }
         &:nth-child(2) {
-          top: 28%;
-          left: 9%;
+          top: 27%;
+          left: 32%;
+
+          span {
+            top: 6px;
+            left: -95px;
+          }
         }
         &:nth-child(3) {
-          top: 18%;
-          left: 27%;
-          text-align: center;
+          top: 22%;
+          left: 38%;
+
+          span {
+            top : -15px;
+            left: -3px;
+          }
 
           i {
             margin-top: 10px;
           }
         }
         &:nth-child(4) {
-          top: 25%;
-          left: 45%;
+          top: 24%;
+          left: 44%;
+
+          span {
+            top : 12px;
+            left: 25px;
+          }
         }
         &:last-child {
-          bottom: 20%;
-          left: 29%;
-          text-align: center;
+          bottom: 24%;
+          left: 43%;
+        
+          span {
+            top : 4px;
+            left: -99px;
+          }
         }
 
         &:hover {
@@ -742,8 +764,8 @@ header {
 
   .map__icons {
     position: relative;
-    bottom: 500px;
-    left: -150px;
+    bottom: 481px;
+    left: -259px;
     width: 100%;
 
     & > div {
@@ -775,8 +797,8 @@ header {
     }
     .icon__boat {
       background-image: url("../source/icon/speed-boat.png");
-      top: 150px;
-      left: 11%;
+      top: 112px;
+      left: 24%;
       animation: slowly 3s infinite;
     }
 
@@ -800,100 +822,55 @@ header {
   }
 }
 
-// Hospital First Content
-.hospital-1 {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 90px 0;
-  height: 460px;
+article.hospital-details {
+  width: 45vw;
+  position: absolute;
+  top: 143px;
+  right: 70px;
+  z-index: 1;
 
-  .hospital__bg {
-    width: 100vw;
-    height: 720px;
-    position: absolute;
-    top: -70px;
-    z-index: -1;
-    background-image: url("../source/image/shotBg1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-attachment: fixed;
-    opacity: 0.7;
-  }
-
-  img {
-    border: 9px solid white;
-    border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .hospital__image {
+  .nav-bar {
+    width: 100%;
+    height: 42px;
+    background-color: rgba(72, 72, 72, 0.9215686275);
     position: relative;
-    display: block;
-    transform: scale(0.9);
-    filter: blur(0.5px) grayscale(100%) contrast(105%);
-    transition: 0.6s;
-  }
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
-  .hospital__image:hover {
-    transform: scale(1);
-    filter: grayscale(10%);
-  }
-
-  .title {
-    margin-right: 15px;
-    .title__bg {
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #ff6c65;
       position: absolute;
-      width: 58vw;
-      height: 20px;
-      top: 125px;
-      right: 0;
-      background-color: $gray;
-
-      h2 {
-        position: absolute;
-        color: white;
-        left: 0;
-        top: -30px;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 700;
-
-        padding: 7px 17px 7px 7px;
-        text-shadow: -2px 0 $gray, 0 2px $gray, 2px 0 $gray, 0 -2px $gray;
-      }
+      top: 13px;
+      cursor: pointer;
     }
-
-    & li:first-child {
-
+    li:first-child {
       left: 10px;
     }
 
-    & li:nth-child(2) {
-      background-color: $yellow;
+    li:nth-child(2) {
+      background-color: #f6d860;
       left: 30px;
     }
 
-    & li:nth-child(3) {
+    li:nth-child(3) {
       left: 52px;
-      background-color: $green;
+      background-color: #95cd41;
     }
 
-    & li:nth-child(4) {
+    li:nth-child(4) {
       background-color: transparent;
-
-      top : 8px;
+      top: 8px;
       right: 8px;
-
 
       i {
         font-size: 14px;
         text-align: center;
         line-height: 10px;
         color: white;
-        // transform: rotate(180deg);
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
@@ -902,23 +879,38 @@ header {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: rgba(255, 255, 255, 0.852);
-    padding-bottom: 70px;
+    padding-bottom: 19px;
 
     li {
       margin: 0 0 0 25px;
-      padding: 25px 0 0 5%;
+      padding: 14px 0 0 5%;
       font-size: 1.2rem;
       width: 35vw;
       display: flex;
-
       cursor: pointer;
+
+      &.title::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: .3px;
+        box-shadow: 0 .3px 0 $gray;
+        position: absolute;
+        top : 98px;
+      }
+
+      &#map {
+        width: 60%;
+        height: 200px;
+        margin: 10px auto 0 auto;
+      }
 
       .image-container {
         width: 40px;
         height: 40px;
         background-color: white;
         border-radius: 5px;
-        transition: .7s;
+        transition: 0.7s;
         position: relative;
 
         img {
@@ -928,379 +920,72 @@ header {
           margin: auto;
           padding-top: 5px;
           position: absolute;
-          right : 3px;
+          right: 3px;
         }
-
       }
+
       p {
         line-height: 2.4rem;
         margin-left: 30px;
         width: 80%;
-        transform: translateX(-8%);
-        opacity: 0;
-        transition: .7s;
+        transform: translateX(0);
+        transition: 0.7s;
 
         a {
           color: black;
           text-decoration: none;
         }
       }
+    }
 
-      &:nth-child(3) img {
+    li:nth-child(3)  {
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:hover .image-container {
+        background-color: #95cd41;
+      }
+
+      img {
         width: 33px;
         height: 33px;
         padding-top: 2px;
       }
-
-      &:nth-child(4) img {
-        padding-left: 2px;
-      }
-
-      &:hover {
-
-        .image-container {
-          width: 20%;
-
-          img {
-            right: 3px;
-
-          }
-        }
-
-        & > span {
-          display: inline-block;
-          transition: 0.6s;
-          transform: translateX(-10px);
-          opacity: 0;
-          margin-left: 5px;
-        }
-
-        &:first-child:hover span {
-          opacity: 1;
-
-        i {
-          font-size: 1.1rem;
-        }
-
-        .item__location {
-          transition: 0.6s;
-          width: 86%;
-          height: 0px;
-          margin: 0 auto;
-
-          .location {
-            width: 100%;
-            height: 0;
-            background-color: #ddd;
-          }
-
-          & > p {
-            height: 0;
-            font-size: 0px;
-            text-align: center;
-          }
-        }
-        &:nth-child(2):hover {
-          .item__location {
-            height: 250px;
-            padding: 7px 0;
-
-            .location {
-              height: 90%;
-            }
-            & > p {
-              margin-top: 5px;
-              font-size: 14px;
-              height: 10%;
-            }
-          }
-        }
-
-        i.fa-chevron-down {
-          color: $darkBrawn;
-          position: absolute;
-          top: 8px;
-          right: 8px;
-        }
-      }
-    }
-  }
-}
-
-// Hospital Second Content
-.hospital-2 {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 70px 0;
-  height: 460px;
-  top: 10px;
-
-  .hospital__bg {
-    width: 100vw;
-    height: 600px;
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-    background-image: url("../source/image/ambulanceBg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    // background-attachment: fixed;
-    transform: rotateY(180deg);
-    background-color: $gray;
-    opacity: 0.9;
-  }
-
-  .hospital__image {
-    background-image: url("../source/image/hanlaEmg3.jpeg");
-    background-size: cover;
-    width: 450px;
-    border: 9px solid white;
-    border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-    border-top-left-radius: 8%;
-    border-bottom-right-radius: 18%;
-
-    filter: blur(0.5px) grayscale(100%) contrast(100%);
-    overflow: hidden;
-
-    .shine {
-      position: absolute;
-      top: 0;
-      left: -100%;
-      z-index: 2;
-      display: block;
-
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
-      transform: skewX(-25deg);
     }
 
-    &:hover {
-      transform: scale(1);
-      filter: grayscale(10%);
-
-      .shine {
-        animation: shine 3s;
-
-        @keyframes shine {
-          50% {
-            left: 125%;
-          }
-          100% {
-            left: -125%;
-          }
-        }
-      }
-    }
-  }
-
-  .title {
-    margin-right: 15px;
-    .title__bg {
-      position: absolute;
-      z-index: 1;
-      width: 58vw;
-      height: 20px;
-      top: 125px;
-      left: 0;
-      background-color: $darkBrawn;
-
-      h2 {
-        position: absolute;
-        color: white;
-        right: 0;
-        top: -30px;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 700;
-
-        padding: 7px 17px 7px 7px;
-        text-shadow: -2px 0 $darkBrawn, 0 2px $darkBrawn, 2px 0 $darkBrawn,
-          0 -2px $darkBrawn;
-      }
-    }
-
-//     ul {
-//       width: 25vw;
-//       margin-top: 110px;
-//       .item {
-//         position: relative;
-//         margin-bottom: 7px;
-//         padding: 3px;
-//         background-color: white;
-//         border-radius: 3px;
-
-//         a {
-//           color: white;
-//           display: inline-block;
-//           width: 28px;
-//           height: 28px;
-//           background-color: $darkBrawn;
-//           border-radius: 50%;
-//           text-align: center;
-//           line-height: 28px;
-//         }
-
-//         &:hover {
-//           a {
-//             background-color: white;
-//             color: $darkBrawn;
-//           }
-//         }
-
-        & > span {
-          display: inline-block;
-          transition: 0.6s;
-          transform: translateX(-10px);
-          opacity: 0;
-          margin-left: 5px;
-        }
-
-//         &:first-child:hover span {
-//           opacity: 1;
-//           transform: translateX(0px);
-//         }
-
-//         i {
-//           font-size: 1.1rem;
-//         }
-
-        .item__location {
-          transition: 0.6s;
-          width: 86%;
-          height: 0px;
-          margin: 0 auto;
-
-          .location {
-            width: 100%;
-            height: 0;
-            background-color: #ddd;
-          }
-
-//           & > p {
-//             height: 0;
-//             font-size: 0px;
-//             text-align: center;
-//           }
-//         }
-//         &:nth-child(2):hover {
-//           .item__location {
-//             height: 250px;
-//             padding: 7px 0;
-
-//             .location {
-//               height: 90%;
-//             }
-//             & > p {
-//               margin-top: 5px;
-//               font-size: 14px;
-//               height: 10%;
-//             }
-//           }
-//         }
-
-//         i.fa-chevron-down {
-//           color: $darkBrawn;
-//           position: absolute;
-//           top : 8px;
-//           right: 8px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-// Hospital Total Section
-.total {
-  width: 80vw;
-  height: 660px;
-  margin: 70px auto;
-  border: 1px solid rgba(0, 0, 0, 0.11);
-
-  .total__row {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
-
-    .col {
-      box-sizing: border-box;
-
-      flex-grow: 1;
-      width : 33%;
-      height: 330px;
-
-      position: relative;
-      box-sizing: border-box;
-      overflow: hidden;
-
-      img {
-        width: 27px;
-        margin-right: 8px;
-      }
-
-      h4 {
-        position: absolute;
-        font-size: 2rem;
-        font-family: 'NeoDunggeunmoPro-Regular';
-        display: inline-block;
-      }
-    }
-
-    .title {
-      background-image: url('../source/image/pixelBg.jpg');
-      background-size: cover;
-
-      h3 {
-        position: absolute;
-        font-size: 2.7rem;
-        font-family: 'NeoDunggeunmoPro-Regular';
-        transform: translate(15px, 10%);
-      }
-    }
-
-    .jejuUniversity {
-      background-image: url('../source/image/jejuEmg2.jpg');
-      background-size: cover;
-      background-position: -95px 0;
-      background-repeat: no-repeat;
-      border: 1px solid white;
-
-      .icons {
-        position: relative;
-        height: 27px;
-        right : 15px;
-        bottom : -285px;
-        display: flex;
-        justify-content: flex-end;
-
+    li:nth-child(4) {
+      &:hover .image-container {
+        background-color: #ea5c2b;
         img {
-
-        i.fa-chevron-down {
-          color: $darkBrawn;
-          position: absolute;
-          top: 8px;
-          right: 8px;
+          padding-left: 2px;
         }
       }
+
+    } 
+
+    li:hover .image-container {
+      width: 20%;
     }
-    .jejuHanla {
-      background-image: url('../source/image/hanlaEmg3.jpeg');
-      background-size: cover;
-      background-position: -50px 0;
-      border: 1px solid white;
+
+    li:hover .image-container img {
+      right: 3px;
     }
-    .jejuHanguk {}
-    .hanmaeum {}
-    .seoguipo {}
+
+    li:hover p {
+      transform: translateX(-7%);
+
+      a {
+        color: black;
+
+      }
+    }
+
+    li:first-child {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-left: 35px;
+      padding-top: 15px;
+    }
   }
-}
-}
+} 
