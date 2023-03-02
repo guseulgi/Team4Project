@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "LOTTERIACHAB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OKDDUNG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Noto Sans KR";
+  line-height: 1.4;
+  width: 100vw;
+}
+
+header {
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  background-color: transparent;
+}
+header .title {
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
+  text-shadow: 0px 3px 0 white;
+  padding-left: 40px;
+  height: 100px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
+  line-height: 18vh;
+}
+header .other-menu ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 10%;
+}
+header .other-menu ul li {
+  margin: auto 15px;
+  font-size: 20px;
+  position: relative;
+  transition: 0.7s;
+}
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 90px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
+}
+header .other-menu ul li a {
+  color: #5c3b16;
+}
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
+}
+
+.weather {
+  position: fixed;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+}
+.weather i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 32px;
+  margin: auto 10px auto 5px;
+  color: white;
+  animation: weatherAnim 10s infinite;
+}
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR";
+  margin: 5px 0;
+}
+
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+}
+.returnToTop a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.returnToTop a i {
+  color: #626458;
+}
+
+.intro {
+  display: flex;
+}
+.intro .introDiv ul {
+  height: 100vh;
+  overflow: hidden;
+}
+.intro .introDiv ul li {
+  position: relative;
+  overflow: hidden;
+}
+.intro .introDiv ul li:hover {
+  scale: 1.05;
+  transition: 0.5s;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.intro .introDiv ul li:hover p {
+  color: #ea5c2b;
+}
+.intro .introDiv ul li img {
+  width: 33.3333333333vw;
+  height: 100vh;
+}
+.intro .introDiv ul li p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 5vh;
+  font-weight: 500;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.contents.hide {
+  display: none;
+}
+
+.contents .mountainContent ul li {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.contents .mountainContent ul li img {
+  width: 100vw;
+  height: 100vh;
+}
+.contents .mountainContent ul li .mountainText {
+  position: absolute;
+  top: 18%;
+  left: 6%;
+  font-size: 18px;
+  background-color: rgba(20, 20, 20, 0.19);
+  color: black;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 35px;
+}
+.contents .mountainContent ul li .mountainText2 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 18px;
+  background-color: rgba(20, 20, 20, 0.19);
+  color: black;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 35px;
+}
+.contents .mountainContent ul li .mountainText3 {
+  position: absolute;
+  bottom: 8%;
+  right: 12%;
+  font-size: 18px;
+  background-color: rgba(210, 227, 245, 0.188);
+  color: white;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 35px;
+}
+.contents .seaContent {
+  position: relative;
+  overflow: hidden;
+}
+.contents .seaContent .text.on {
+  display: block;
+  animation: appear 1s;
+  animation-fill-mode: forwards;
+}
+.contents .seaContent .text {
+  margin-top: 40px;
+  width: 90vw;
+  margin-left: 5vw;
+  height: 85vh;
+  background-color: rgba(20, 20, 20, 0.19);
+  transition: 0.5s;
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.contents .seaContent .text .close {
+  margin: 10px;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.contents .seaContent .text .close i {
+  font-size: 30px;
+}
+.contents .seaContent .text.off {
+  display: none;
+}
+.contents .seaContent .swiper {
+  position: relative;
+  background-color: #ea5c2b;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-60%);
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+  transition: 0.5s;
+  opacity: 1;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  position: relative;
+  border: 30px solid white;
+  border-bottom: 80px solid white;
+  box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
+  height: 80vh;
+  overflow: hidden;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img {
+  width: 50vw;
+  height: 80vh;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide img:hover {
+  scale: 1.05;
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contents .seaContent .swiper .swiper-wrapper .swiper-slide p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  z-index: 4;
+}
+.contents .seaContent .swiper-button-prev,
+.contents .seaContent .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  color: black;
+}
+.contents .seaContent .swiper-button-next {
+  right: 50px;
+}
+.contents .seaContent .swiper-button-prev {
+  left: 50px;
+}
+.contents .seaContent .swiper-button-next::after,
+.contents .seaContent .swiper-button-prev::after {
+  font-size: 6vh;
+}
+.contents .museumContent {
+  position: relative;
+}
+.contents .museumContent .museumTitle {
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  background-color: #cba55b;
+  color: white;
+  font-size: 40px;
+  font-family: "Rubik Mono One", sans-serif;
+}
+.contents .museumContent .flip-box {
+  position: absolute;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  perspective: 1000px;
+  background-color: orange;
+}
+.contents .museumContent .flip-box:hover .flip {
+  transform: rotateY(-180deg);
+}
+.contents .museumContent .flip-box .flip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+  line-height: 400px;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 0.5s;
+}
+.contents .museumContent .flip-box .flip .teddyImg,
+.contents .museumContent .flip-box .flip .teddyBack {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+.contents .museumContent .flip-box .flip .teddyImg {
+  border-radius: 50%;
+  background-color: yellow;
+}
+.contents .museumContent .flip-box .flip .teddyBack {
+  border-radius: 50%;
+  background-color: skyblue;
+  transform: rotateY(180deg);
+}
+.contents .museumContent .flip-box:nth-child(2) {
+  position: absolute;
+  top: 23%;
+  right: 10%;
+}
+.contents .museumContent .flip-box:nth-child(3) {
+  position: absolute;
+  top: 23%;
+  right: 50%;
+}
+.contents .museumContent .flip-box:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=touristStyle.css.map */
