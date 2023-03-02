@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
-@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
-@supports ((-webkit-mask-image: url(#mask)) or (mask-image: url(#mask))) {
-  /* code that requires mask-image here. */
-}
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
+/*font-family: 'Rubik Mono One', sans-serif; */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ a {
 
 body {
   background-color: #fff;
-  font-family: "Do Hyeon";
+  font-family: "Noto Sans KR";
 }
 
 header {
@@ -144,7 +144,12 @@ header .other-menu ul li:hover::after {
 .returnToTop a i {
   color: #626458;
 }
-
+.on {
+  display: block;
+}
+.off {
+  display: none;
+}
 .all_content {
   position: relative;
 }
@@ -169,39 +174,281 @@ header .other-menu ul li:hover::after {
   color: rgba(201, 113, 30, 0.753);
 }
 .all_content .second_page {
-  height: 100vh;
+  height: 105vh;
   position: relative;
   display: flex;
   background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
 }
 .all_content .second_page img {
-  height: 100vh;
+  height: 55vw;
+  /*width: 33.333%;*/
   position: absolute;
+  background-size: cover;
 }
 .all_content .second_page .box1 {
   width: 33.333%;
-  background-color: #626458;
+  color: #fff;
+}
+.all_content .second_page .box1 .imgBox {
+  width: 100%;
+  height: 100%;
+  filter : grayscale(70%);
+}
+.all_content .second_page .box1 .hoverbox{
+  opacity: 0;
+}
+.all_content .second_page .box1 .hoverbox p{
+  color: #fff;
+  text-align: center;
+  font-size: 7vh;
+  left: 0;
+}
+.all_content .second_page .box1 .hoverbox span{
+  display: block; border: 2px solid #ccc;
+  position: absolute; top: 50%; transform: translateY(-50%); height: 30px; 
+  width: 30vh; left: 10vw;transition: 0.5s;
+} 
+.all_content .second_page .box1:hover .hoverbox {
+  position: absolute;
+  top: 85vh;
+  opacity: 1;
+  z-index: 2;
+  left: 5vw;
+}
+.all_content .second_page .box1:hover .hoverbox span{
+  animation: box_an1 1s linear 1; height: 150px;
+  cursor: pointer; 
+}
+.all_content .second_page .box1:hover .hoverbox span p {
+  animation: box_an2 1s linear 1;
+  position: absolute; left: 100px; top: 10px;
+}
+.all_content .second_page .box1:hover .imgBox{
+  filter : grayscale(0);
+  transform: translateX(-200px);
+  transition: 3s;
 }
 .all_content .second_page .box2 {
   width: 33.333%;
+  color: #fff;
+}
+
+.all_content .second_page .box2 .imgBox {
+  width: 100%;
+  height: 100%;
+  filter : grayscale(70%);
+}
+.all_content .second_page .box2 .hoverbox{
+  opacity: 0;
+}
+.all_content .second_page .box2 .hoverbox p{
+  color: #fff;
+  text-align: center;
+  font-size: 7vh;
+}
+.all_content .second_page .box2 .hoverbox span{
+  display: block; border: 2px solid #ccc;
+  position: absolute; top: 50%; transform: translateY(-50%); height: 30px; 
+  width: 30vh; left: 42vw; transition: 0.5s;
+} 
+.all_content .second_page .box2:hover .hoverbox {
+  position: absolute;
+  top: 85vh;
+  opacity: 1;
+  z-index: 2;
+  left: 5vw;
 }
 .all_content .second_page .box2 :hover {
   cursor: pointer;
   opacity: 1;
 }
-.all_content .second_page .box2 .hoverbox .p1 {
-  position: absolute;
-  width: 50vh;
-  opacity: 0;
+.all_content .second_page .box2:hover .hoverbox span p {
+  animation: box_an2 1s linear 1;
+  position: absolute; left: 50px; top: 40px;
+}
+.all_content .second_page .box2:hover .imgBox{
+  filter : grayscale(0);
+  transform: translateX(-200px);
+  transition: 3s;
 }
 .all_content .second_page .box3 {
   width: 33.333%;
+  color: #fff;
+}
+.all_content .second_page .box3 .imgBox {
+  width: 100%;
+  height: 100%;
+  filter : grayscale(70%);
+}
+.all_content .second_page .box3 .hoverbox{
+  opacity: 0;
+}
+.all_content .second_page .box3 .hoverbox p{
+  color: #fff;
+  text-align: center;
+  font-size: 7vh;
+}
+.all_content .second_page .box3 .hoverbox span{
+  display: block; border: 2px solid #ccc;
+  position: absolute; top: 50%; transform: translateY(-50%); height: 30px; 
+  width: 30vh; left: 75vw; transition: 0.5s;
+} 
+.all_content .second_page .box3:hover .hoverbox {
+  position: absolute;
+  top: 85vh;
+  opacity: 1;
+  z-index: 2;
+  left: 3vw;
 }
 .all_content .second_page .box3 :hover {
   cursor: pointer;
 }
-.all_content .second_page .box3 .hoverbox .p1 {
+.all_content .second_page .box3:hover .hoverbox span p {
+  animation: box_an2 1s linear 1; opacity: 1;
+  position: absolute; left: 50px; top: 40px;
+}
+.all_content .second_page .box3:hover .imgBox{
+  filter : grayscale(0);
+  transform: translateX(-200px);
+  transition: 3s;
+}
+@keyframes box_an1{
+  0%{height: 30px;}
+  80%{height: 150px;}
+  100%{height: 150px;;}
+}
+@keyframes box_an2{
+  0%{opacity: 0;}
+  80%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.all_content .third_page {
+  display: flex;
+}
+.all_content .third_page .korea_content {
+  height: 110vh;
+  position: relative;
+}
+.all_content .third_page .korea_content .korea_img1 {
   position: absolute;
-  width: 50vh;
-  opacity: 0;
-}/*# sourceMappingURL=food_style.css.map */
+  top: 20vh;
+  left: 10vw;
+  margin-left: 60px;
+}
+.all_content .third_page .korea_content .korea_img1 img {
+  display: block;
+  width: 23vw;
+  height: 45vh;
+  border-radius: 10%;
+}
+.all_content .third_page .korea_content .korea_text1{
+  position: absolute;
+  top: 62vh;
+  border-radius: 10%;
+  background-color: #ff7f3f32;
+  left: 25vw;
+  width: 23vw;
+  height: 45vh;
+  cursor: pointer;
+}
+.all_content .third_page .korea_content .korea_text1 ul.food_list1{
+  position: absolute;
+  font-size: 3vh;
+  color: #ea5c2b;
+  font-weight: bold;
+  top: 7vh;
+  left: 6.5vw;
+}
+.all_content .third_page .korea_content .korea_text1 ul.food_list1 li {
+  margin-bottom: 5vh;
+}
+.all_content .third_page .korea_content .korea_text1 ul.food_list1 span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4vw;
+}
+.all_content .third_page .korea_content .korea_text1 .swiper-contaier {
+  position: absolute;
+  font-size: 2.3vh;
+  width: 100vw;
+  height: 4vh;
+  color: #626458;
+  top:38vh;
+  left: 2vw;
+  overflow: hidden;
+}
+
+.all_content .third_page .korea_content .korea_text1 .swiper-contaier .swiper-slide {
+  line-height: 4vh;
+}
+
+/*# sourceMappingURL=food_style.css.map */
+
+.all_content .third_page .korea_content .korea_img2 {
+  position: absolute;
+  top: 60vh;
+  left: 57vw;
+  margin-left: 60px;
+}
+.all_content .third_page .korea_content .korea_img2 img {
+  display: block;
+  width: 23vw;
+  height: 45vh;
+  border-radius: 10%;
+}
+.all_content .third_page .korea_content .korea_text2{
+  position: absolute;
+  top: 20vh;
+  border-radius: 10%;
+  background-color: #ff7f3f32;
+  left: 50vw;
+  width: 23vw;
+  height: 45vh;
+  cursor: pointer;
+}
+.all_content .third_page .korea_content .korea_text2 ul.food_list2{
+  position: absolute;
+  font-size: 3vh;
+  color: #ea5c2b;
+  font-weight: bold;
+  top: 6vh;
+  left: 6vw;
+}
+.all_content .third_page .korea_content .korea_text2 ul.food_list2 li {
+  margin-bottom: 5vh;
+}
+.all_content .third_page .korea_content .korea_text2 ul.food_list2 span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4vw;
+}
+.all_content .third_page .korea_content .korea_text2 .swiper-contaier {
+  position: absolute;
+  font-size: 2.3vh;
+  width: 100vw;
+  height: 4vh;
+  color: #626458;
+  top:39vh;
+  left: 2vw;
+  overflow: hidden;
+}
+
+.all_content .third_page .korea_content .korea_text2 .swiper-contaier .swiper-slide {
+  line-height: 3vh;
+}
+.all_content .third_page .korea_content .korea_menu1 {
+  display:none;
+  position: absolute;
+  width: 40vh;
+  font-size: 3vh;
+  line-height: 5.5vh;
+  top: 65vh;
+  left: 27vw;
+  color: #ea5c2b;
+  font-weight: bold;
+}
+.all_content .third_page .korea_content .korea_menu1 ul.km:nth-child(1){
+  text-align: center;
+}
