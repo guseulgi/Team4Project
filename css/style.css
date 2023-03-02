@@ -96,6 +96,10 @@ body {
   z-index: 3;
 }
 
+.strong {
+  font-weight: 700;
+}
+
 header {
   position: fixed;
   height: 100px;
@@ -471,6 +475,7 @@ header .other-menu ul li:last-child span {
   z-index: 1;
   top: 60px;
   left: 44%;
+  width: 45vw;
 }
 .nav .nav__container .title h3 {
   font-size: 4rem;
@@ -546,10 +551,10 @@ header .other-menu ul li:last-child span {
   background-image: url("../source/emergencyMain.jpeg");
 }
 .nav .nav__container .parts li p {
-  width: 165px;
+  width: 185px;
   height: 35px;
   border-radius: 20px;
-  background-color: rgba(246, 216, 96, 0.6);
+  background-color: rgba(246, 216, 96, 0.8039215686);
   font-family: "Rubik Mono One", sans-serif;
   letter-spacing: -2px;
   font-size: 1.5rem;
@@ -561,15 +566,15 @@ header .other-menu ul li:last-child span {
   left: 0;
   right: 0;
   margin: auto;
-  display: none;
-  transition: 0.7s;
+  opacity: 0;
+  transition: 0.5s;
 }
 .nav .nav__container .parts li:hover .parts__image {
-  opacity: 0.3;
+  opacity: 0.4;
   transform: scale(1.1);
 }
 .nav .nav__container .parts li:hover p {
-  display: block;
+  opacity: 1;
 }
 
 footer {

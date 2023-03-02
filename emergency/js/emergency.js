@@ -1,7 +1,5 @@
-// window.onload
-window.onload = function() {
-  
-}
+// AOS API
+AOS.init();
 
 // Emergency Situation Swiper
 const emgSithationSwiper = new Swiper('.emgSituation .swiper-container', {
@@ -237,7 +235,6 @@ fetch(weatherUrl).then(response => response.json())
 
 // Scroll
 const mapSection = document.querySelector('.map');
-console.log(mapSection.offsetTop);
 window.addEventListener('scroll', function() {
   // if(window.scrollY >= 366 && window.scrollY <= 420) {
   //   window.scroll({

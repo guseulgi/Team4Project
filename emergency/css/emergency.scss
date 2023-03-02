@@ -25,6 +25,9 @@ $content-txt: "Noto Sans KR", sans-serif;
 $primary-border: 1px solid #ddd;
 
 // Common
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
@@ -70,6 +73,10 @@ body {
   height: 100%;
 }
 
+.strong {
+  font-weight: 700;
+}
+
 .cursor {
   background-image: url("../source/cursor.png");
   background-size: contain;
@@ -81,6 +88,8 @@ body {
   left: 2px;
   z-index: 3;
 }
+
+// AOS API
 
 // Header
 header {
@@ -989,3 +998,34 @@ article.hospital-details {
     }
   }
 } 
+
+
+// Footer
+footer {
+  width: 100vw;
+
+  background-color: #363730;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+
+    height: 40px;
+    background-size: cover;
+    background-color: white;
+    margin-right: 30px;
+  }
+
+  ul {
+    li {
+      color: white;
+      font-weight: 100;
+      font-size: 12px;
+      font-style: italic;
+      font-family: 'Noto Sans', sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+}

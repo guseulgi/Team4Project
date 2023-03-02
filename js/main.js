@@ -1,4 +1,23 @@
 // Main JS
+// TypeIt API
+window.onload = function() {
+  new TypeIt('.title h3', {
+    strings : ['HALO'],
+    speed : 200,
+    lifeLike: true,
+    cursor: false,
+  }).pause(100).move(-2).delete(1).type('EL').move(2).type(', JEJU').flush().go();
+
+
+  new TypeIt('.title p', {
+    startDelay : 4700,
+    speed : 100,
+    lifeLike: true,
+    cursor: false,
+    waitUntilVisible : true,
+  }).type('Jeju Local & Seasonal Theme traval').delete(2).type('el Archive').go();
+}
+
 
 // Mouse Cursor
 document.body.requestPointerLock();
