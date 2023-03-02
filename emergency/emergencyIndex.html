@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제주시 응급실</title>
+  <title>[ 안내 ] 제주도 응급센터</title>
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/4f251c55cf.js" crossorigin="anonymous"></script>
@@ -16,10 +16,13 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQYiBBmCyetqiyn-eA9A_Fbf5FFj0FwWU&callback=initMap"async defer></script>
 
+  <!-- AOS API -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  
   <!-- Emergency CSS JS -->
   <link rel="stylesheet" href="./css/emergency.css"/>
   <script defer src="./js/emergency.js"></script>
-
 </head>
 <body>
   <div class="cursor"></div>
@@ -88,7 +91,11 @@
       <div class="title__icon icon__siren"></div>
       <h2>응급상황 시</h2>
       <div class="bar"></div>
-      <p>응급상황 발생 시 초기의 대응은 매우 중요한 역할을 합니다.
+      <p data-aos="slide-right"
+        data-aos-once="false"
+        data-aos-easing="ease-out-quad"
+        data-aos-duration="2200"
+      >응급상황 발생 시 초기의 대응은 매우 중요한 역할을 합니다.
         <br/>최초 발견자는 증상확인 후 절차에 따라 조치를 취해야 합니다.
       </p>
     </div>
@@ -144,7 +151,11 @@
     </div>
 
     <div class="title__container">
-      <h2 class="title">제주도 <span class="redChar">응급</span>센터 안내</h2>
+      <h2 data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="400" 
+        data-aos-anchor-placement="top-center"
+      class="title">제주도 <span class="redChar">응급</span>센터 안내</h2>
       <!-- <h2 class="title">위치 한눈에 보기!</h2> -->
     </div>
 
@@ -224,5 +235,16 @@
       </ul>
     </article>
   </section>
+
+    <!-- Footer -->
+    <footer>
+      <img src="../source/jejulogo.png" alt="제주도" />
+      <img src="../source/jejuTour.png" alt="제주관광공사" />
+      <ul>
+        <li>[포스코 x 코딩온] KDT 5th / Production by Team4</li>
+        <li>This page made by <span class="strong">SeulgiGu</span></li>
+        <li>Contact ✧ <span class="strong"> guseul9405@gmail.com</span></li>
+      </ul>
+    </footer>
 </body>
 </html>
