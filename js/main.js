@@ -27,19 +27,19 @@ window.addEventListener('mousemove', cursorMove);
 const changeColorYpx = 574;
 const otherMenu = document.querySelectorAll('.other-menu ul li a');
 const topBtnChangeYpx = 298;
-const returnToTop = document.querySelector('.returnToTop a');
+const returnToTopA = document.querySelector('.returnToTop a');
 
 let scrollPage = function() {
   let curScrollY = window.scrollY;
 
   if(curScrollY < topBtnChangeYpx) {
-    if(returnToTop.classList.contains('changeColor') === true) {
-      returnToTop.classList.remove('changeColor');
+    if(returnToTopA.classList.contains('changeColor') === true) {
+      returnToTopA.classList.remove('changeColor');
     }
   }
   if(curScrollY > topBtnChangeYpx) {
-    if(returnToTop.classList.contains('changeColor') === false) {
-      returnToTop.classList.add('changeColor');
+    if(returnToTopA.classList.contains('changeColor') === false) {
+      returnToTopA.classList.add('changeColor');
     }
   }
 
@@ -61,14 +61,14 @@ let scrollPage = function() {
 }
 window.addEventListener('scroll', scrollPage);
 
+const navSection = document.querySelector('.nav');
 const arrowButton = document.querySelector('.bottomButton a');
-const helloJejuY = 813;
 // 버튼 클릭 시 다음 섹션으로 스크롤을 이동하는 함수
 let moveToNextSection = function() {
   window.scroll({
     behavior: 'smooth',
     left: 0,
-    top:helloJejuY,
+    top: navSection.offsetTop,
 });
 }
 // arrowButton.addEventListener('click', moveToNextSection); a태그에 직접 넣어줌
@@ -129,4 +129,14 @@ fetch(weatherUrl).then(response => response.json())
   weatherUl.appendChild(newLi);
 }).catch(error => {
   console.log('Weather API Error : ',error);
+});
+
+// Return to Top
+const returnToTop = document.querySelector('.returnToTop');
+returnToTop.addEventListener('click', function() {
+  window.scroll({
+    behavior : 'smooth',
+    left : 0,
+    top : document.body.offsetTop,
+  });
 });

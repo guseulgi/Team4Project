@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQYiBBmCyetqiyn-eA9A_Fbf5FFj0FwWU&callback=initMap"async defer></script>
+
   <!-- Emergency CSS JS -->
   <link rel="stylesheet" href="./css/emergency.css"/>
   <script defer src="./js/emergency.js"></script>
@@ -33,25 +36,25 @@
         <ul>
           <li>
             <span>HOME</span>
-            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+            <a href="../index.html" title="home"><i class="fa-solid fa-house"></i></a>
           </li>
           <li>
             <span>CAFE</span>
-            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+            <a href="../cafe/cafeIndex.html" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
           </li>
           <li>
             <span>ACTIVITY</span>
-            <a href="#" title="activity"
+            <a href="../activity/index.html" title="activity"
               ><i class="fa-solid fa-person-running"></i
             ></a>
           </li>
           <li>
             <span>FOOD</span>
-            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+            <a href="../food/index.html" title="food"><i class="fa-solid fa-bowl-food"></i></a>
           </li>
           <li>
             <span>TOURIST</span>
-            <a href="#" title="tourist">
+            <a href="../touristAttraction/touristIndex.html" title="tourist">
               <i class="fa-solid fa-star"></i>
             </a>
           </li>
@@ -69,7 +72,7 @@
 
       <!-- Return to Top -->
       <div class="returnToTop">
-        <a href="#">
+        <a href="javascript:void(0);">
           <span></span>
           <i class="fa-solid fa-arrow-up"></i>
         </a>
@@ -203,7 +206,13 @@
           <div class="image-container">
             <img src="./source/icon/emergency-callIcon.png" alt="전화 아이콘">
           </div>
-          <p class="callNumber"></p>
+          <p><a href="" class="callNumber"></a></p>
+        </li>
+        <li class="datail-link">
+          <div class="image-container">
+            <img src="./source/icon/linkIcon.png" alt="링크 아이콘">
+          </div>
+          <p><a href="" class="link">홈페이지 바로가기</a></p>
         </li>
         <li class="datail-map">
           <div class="image-container">
@@ -211,40 +220,9 @@
           </div>
           <p class="address"></p>
         </li>
-        <li class="datail-link">
-          <div class="image-container">
-            <img src="./source/icon/linkIcon.png" alt="링크 아이콘">
-          </div>
-          <p><a href="" class="link">바로가기</a></p>
-        </li>
+        <li id="map"></li>
       </ul>
     </article>
   </section>
-
-  
-  <!-- Hospital Total Section -->
-  <!-- <section class="total">
-    <ul class="total__row">
-      <li class="col title">
-        <h3>응급센터 안내</h3>
-      </li>
-      <li class="col jejuUniversity">
-        <div class="icons">
-          <img src="./source/icon/phoneIcon2.png" alt="전화 아이콘" />
-          <img src="./source/icon/homeIcon.png" alt="홈페이지 아이콘" />
-          <img src="./source/icon/mapIcon.png" alt="지도 아이콘" />
-        </div>
-        <div class="texts">
-          <h4>제주대학교병원</h4>
-        </div>
-      </li>
-      <li class="col jejuHanla"></li>
-    </ul>
-    <ul class="total__row">
-      <li class="col jejuHanguk"></li>
-      <li class="col hanmaeum"></li>
-      <li class="col seoguipo"></li>
-    </ul>
-  </section> -->
 </body>
 </html>

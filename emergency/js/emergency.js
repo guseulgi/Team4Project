@@ -29,19 +29,22 @@ const emgSithationSwiper = new Swiper('.emgSituation .swiper-container', {
 
 // 병원 정보를 담은 클래스
 class hospitalObj {
-  constructor(call, addr, link) {
+  constructor(call, addr, link, lat, lng) {
     this.call = call;
     this.addr = addr;
     this.link = link;
+    //경도 위도
+    this.lat = lat;
+    this.lng = lng;
   }
 }
 
 let jejuHospital = {
-  '제주대학병원' : new hospitalObj('064-717-1900', '제주 제주시 아란13길 15', 'https://er.jejunuh.co.kr/index.do'),
-  '제주한라병원' : new hospitalObj('064-740-5158', '제주 제주시 도령로 65', 'https://www.hallahosp.co.kr/main/'),
-  '제주한국병원' : new hospitalObj('064-750-0119', '제주 제주시 서광로 193', 'http://www.hankookhospital.co.kr'),
-  '한마음병원' : new hospitalObj('064-750-9119', '제주 제주시 연신로 52 한마음병원', ''),
-  '서귀포 의료원' : new hospitalObj('064-730-3001', '제주 서귀포시 동홍동 1530', 'http://www.smed.or.kr'),
+  '제주대학병원' : new hospitalObj('064-717-1900', '제주 제주시 아란13길 15', 'https://er.jejunuh.co.kr/index.do', 33.4672038, 126.545580),
+  '제주한라병원' : new hospitalObj('064-740-5158', '제주 제주시 도령로 65', 'https://www.hallahosp.co.kr/main/', 33.4902082, 126.484783),
+  '제주한국병원' : new hospitalObj('064-750-0119', '제주 제주시 서광로 193', 'http://www.hankookhospital.co.kr', 33.5003996, 126.516878),
+  '한마음병원' : new hospitalObj('064-750-9119', '제주 제주시 연신로 52', '', 33.4966617, 126.546394),
+  '서귀포 의료원' : new hospitalObj('064-730-3001', '제주 서귀포시 동홍동 1530', 'http://www.smed.or.kr', 33.2552223, 126.564423),
 }
 // 지도 핀
 const mapPin = document.querySelector('.map__pin');
@@ -52,19 +55,19 @@ const pinHanguk = mapPin.querySelector('.pin__hanguk');
 const pinHanmaeum = mapPin.querySelector('.pin__hanmaeum');
 const pinSeoguipo = mapPin.querySelector('.pin__seoguipo');
 
-// 지도 이름 읽어오기 위함
-const mapName = pinJeju.querySelector('span');
-
-
-// 브라우저 창
+// 창
 const detailBrower = document.querySelector('.hospital-details');
 const navBar = detailBrower.querySelector('.nav-bar');
 const deleteBtn = navBar.querySelector('.nav-bar > li:first-child');
 
 const detailTitle = detailBrower.querySelector('.detail-bar > .title');
+const detailMap = detailBrower.querySelector('.datail-map');
 const detailCall = detailBrower.querySelector('.detail-bar .callNumber');
 const detailAddr = detailBrower.querySelector('.detail-bar .address');
 const detailLink = detailBrower.querySelector('.detail-bar .link');
+
+// 구글지도 API
+const mapBox = document.getElementById('map');
 
 // 맵에서 클릭한 내용을 클래스 객체에서 가져와서 동적으로 내용 변경
 let mapPinClick = function(e) {
@@ -92,15 +95,23 @@ let mapPinClick = function(e) {
   }
   targetObj = jejuHospital[targetName];
 
-  detailTitle.textContent = targetName;
+  detailTitle.textContent = `${targetName} 응급센터`;
   detailCall.textContent = targetObj['call'];
+  detailCall.setAttribute('href', `tel:${targetObj['call']}`);
   detailAddr.textContent = targetObj['addr'];
   detailLink.setAttribute('href', `${targetObj['link']}`);
+
+  // 구글지도 API
+  new google.maps.Map(mapBox, {
+    center: {
+      lat: targetObj['lat'],
+      lng: targetObj['lng'],
+    },
+    zoom: 16
+  });
 }
 
-window.addEventListener('click', mapPinClick);
-
-let pinClick = function() {
+let closeClick = function() {
   if(detailBrower.classList.contains('d-On') === true) {
     detailBrower.classList.remove('d-On');
     detailBrower.classList.add('d-Off');
@@ -110,32 +121,61 @@ let pinClick = function() {
   }
 }
 
+// 핀을 클릭하면 창을 띄우는 함수
+let pinClick = function(e) {
+  mapPinClick(e);
+  closeClick();
+}
+
 pinJeju.addEventListener('click', pinClick);
 pinHanla.addEventListener('click', pinClick);
 pinHanguk.addEventListener('click', pinClick);
 pinHanmaeum.addEventListener('click', pinClick);
 pinSeoguipo.addEventListener('click', pinClick);
-deleteBtn.addEventListener('click', pinClick);
+
+deleteBtn.addEventListener('click', closeClick);
+
 
 // modalBtn
 const modalBtn = navBar.querySelector('.modalBtn');
 const detail = detailBrower.querySelector('.detail-bar');
 
-//브라우저 창 모달 효과
+const detailLi = detail.querySelectorAll('li');
+
+// 창 모달 효과
 let modalClick = function(e) {
   if(detail.classList.contains('height-100') === true) {
     detail.classList.remove('height-100');
     detail.classList.add('height-0');
+
     modalBtn.querySelector('i').style.transform = 'rotate(180deg)';
+
+    console.log(detailLi);
+    detailLi.forEach(value => {
+      console.log(value);
+      if(value.classList.contains('opacity-Off') === false) {
+        value.classList.add('opacity-Off');
+      }
+      value.classList.remove('opacity-On');
+    });
   } else {
     detail.classList.add('height-100');
     detail.classList.remove('height-0');
+
     //없으면 로테이트
     modalBtn.querySelector('i').style.transform = 'rotate(0deg)';
+
+    detailLi.forEach(value => {
+      if(value.classList.contains('opacity-On') === false) {
+        value.classList.add('opacity-On');
+      }
+      value.classList.remove('opacity-Off');
+    });
   }
 }
 
 modalBtn.addEventListener('click', modalClick);
+
 
 // Weather API
 const weatherIconRef = {
@@ -194,3 +234,27 @@ fetch(weatherUrl).then(response => response.json())
   console.log('Weather API Error : ',error);
 });
 
+
+// Scroll
+const mapSection = document.querySelector('.map');
+console.log(mapSection.offsetTop);
+window.addEventListener('scroll', function() {
+  // if(window.scrollY >= 366 && window.scrollY <= 420) {
+  //   window.scroll({
+  //     behavior : 'smooth',
+  //     left : 0,
+  //     top : mapSection.offsetTop,
+  //   });
+  // }
+});
+
+
+// Return to Top
+const returnToTop = document.querySelector('.returnToTop');
+returnToTop.addEventListener('click', function() {
+  window.scroll({
+    behavior : 'smooth',
+    left : 0,
+    top : document.body.offsetTop,
+  });
+});

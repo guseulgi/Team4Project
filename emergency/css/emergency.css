@@ -193,7 +193,7 @@ header .other-menu ul li span {
   text-align: center;
 }
 header .other-menu ul li a {
-  color: white;
+  color: #5c3b16;
 }
 header .other-menu ul li a.changeColor {
   color: #5c3b16;
@@ -269,7 +269,7 @@ header .other-menu ul li:hover::after {
   display: block;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: #5c3b16;
   border-radius: 50%;
   text-align: center;
   font-size: 1.2rem;
@@ -288,7 +288,7 @@ header .other-menu ul li:hover::after {
   height: 1.8px;
   display: block;
   border-radius: 4px;
-  background-color: #626458;
+  background-color: white;
   position: absolute;
   top: 6px;
   left: 6px;
@@ -297,7 +297,7 @@ header .other-menu ul li:hover::after {
   position: absolute;
   top: 8px;
   left: 8px;
-  color: #626458;
+  color: white;
 }
 
 .emgSituation {
@@ -305,6 +305,7 @@ header .other-menu ul li:hover::after {
   height: 670px;
   padding: 22vh 0 30px 0;
   position: relative;
+  overflow: hidden;
 }
 .emgSituation .title {
   position: relative;
@@ -366,14 +367,14 @@ header .other-menu ul li:hover::after {
 }
 @keyframes ambulence {
   0% {
-    transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%) translateY(0px);
+    transform: rotateY(180deg) scale(1.01, 1.01) translateX(-600%) translateY(0px);
   }
   50% {
     transform: rotateY(180deg) scaleY(1.03) translateX(0) translateY(1px);
   }
   100% {
     z-index: 0;
-    transform: rotateY(180deg) scale(1, 1) translateX(1000%) translateY(3px);
+    transform: rotateY(180deg) scale(1, 1) translateX(1400%) translateY(3px);
   }
 }
 @keyframes siren {
@@ -449,7 +450,7 @@ header .other-menu ul li:hover::after {
 .emgSituation .swiper-container {
   position: relative;
   right: 0;
-  width: 90vw;
+  width: 100vw;
   height: 535px;
   margin: 0 auto;
   overflow: hidden;
@@ -486,7 +487,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide img {
   display: block;
-  width: 83%;
+  width: 66%;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -510,7 +511,7 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-pagination {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   right: 0;
 }
 .emgSituation .swiper-pagination-bullet {
@@ -572,9 +573,9 @@ header .other-menu ul li:hover::after {
 }
 .map .map__bg .bubble__bg-2 {
   width: 297px;
-  height: 301px;
-  top: 168px;
-  right: 200px;
+  height: 299px;
+  top: 308px;
+  right: 348px;
   border-radius: 43%;
   animation: move 5s infinite linear;
 }
@@ -586,10 +587,10 @@ header .other-menu ul li:hover::after {
   background: rgba(6, 135, 195, 0.8);
 }
 .map .map__bg .bubble__bg-4 {
-  width: 173px;
-  height: 179px;
-  top: 30px;
-  right: 215px;
+  width: 186px;
+  height: 192px;
+  top: 424px;
+  right: 579px;
   background: rgba(6, 135, 195, 0.8);
 }
 @keyframes move {
@@ -634,15 +635,15 @@ header .other-menu ul li:hover::after {
   color: #95cd41;
 }
 .map .map__image {
-  width: 750px;
+  width: 730px;
   position: relative;
-  top: 60px;
-  left: 77px;
+  top: 76px;
+  left: 76px;
 }
 .map .map__image img {
   width: 100%;
   display: block;
-  filter: grayscale(15%) drop-shadow(2px 2px 0px #626458);
+  filter: grayscale(15%) drop-shadow(2px 2px 4px #626458);
 }
 .map .map__image .map__pin {
   width: 100%;
@@ -657,6 +658,9 @@ header .other-menu ul li:hover::after {
 .map .map__image .map__pin li span {
   color: white;
   font-weight: 500;
+  display: block;
+  position: absolute;
+  width: 100px;
 }
 .map .map__image .map__pin li i {
   font-size: 32px;
@@ -669,30 +673,47 @@ header .other-menu ul li:hover::after {
   transition: 0.5s;
 }
 .map .map__image .map__pin li:first-child {
-  top: 33%;
-  left: 28%;
-  text-align: center;
+  top: 32%;
+  left: 43%;
+}
+.map .map__image .map__pin li:first-child span {
+  top: 18px;
+  left: 24px;
 }
 .map .map__image .map__pin li:nth-child(2) {
-  top: 28%;
-  left: 9%;
+  top: 27%;
+  left: 32%;
+}
+.map .map__image .map__pin li:nth-child(2) span {
+  top: 6px;
+  left: -95px;
 }
 .map .map__image .map__pin li:nth-child(3) {
-  top: 18%;
-  left: 27%;
-  text-align: center;
+  top: 22%;
+  left: 38%;
+}
+.map .map__image .map__pin li:nth-child(3) span {
+  top: -15px;
+  left: -3px;
 }
 .map .map__image .map__pin li:nth-child(3) i {
   margin-top: 10px;
 }
 .map .map__image .map__pin li:nth-child(4) {
-  top: 25%;
-  left: 45%;
+  top: 24%;
+  left: 44%;
+}
+.map .map__image .map__pin li:nth-child(4) span {
+  top: 12px;
+  left: 25px;
 }
 .map .map__image .map__pin li:last-child {
-  bottom: 20%;
-  left: 29%;
-  text-align: center;
+  bottom: 24%;
+  left: 43%;
+}
+.map .map__image .map__pin li:last-child span {
+  top: 4px;
+  left: -99px;
 }
 .map .map__image .map__pin li:hover i {
   color: #5c3b16;
@@ -704,8 +725,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons {
   position: relative;
-  bottom: 500px;
-  left: -150px;
+  bottom: 481px;
+  left: -259px;
   width: 100%;
 }
 .map .map__icons > div {
@@ -736,8 +757,8 @@ header .other-menu ul li:hover::after {
 }
 .map .map__icons .icon__boat {
   background-image: url("../source/icon/speed-boat.png");
-  top: 150px;
-  left: 11%;
+  top: 112px;
+  left: 24%;
   animation: slowly 3s infinite;
 }
 @keyframes slowly {
@@ -803,15 +824,29 @@ article.hospital-details .detail-bar {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: rgba(255, 255, 255, 0.852);
-  padding-bottom: 70px;
+  padding-bottom: 19px;
 }
 article.hospital-details .detail-bar li {
   margin: 0 0 0 25px;
-  padding: 25px 0 0 5%;
+  padding: 14px 0 0 5%;
   font-size: 1.2rem;
   width: 35vw;
   display: flex;
   cursor: pointer;
+}
+article.hospital-details .detail-bar li.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.3px;
+  box-shadow: 0 0.3px 0 #626458;
+  position: absolute;
+  top: 98px;
+}
+article.hospital-details .detail-bar li#map {
+  width: 60%;
+  height: 200px;
+  margin: 10px auto 0 auto;
 }
 article.hospital-details .detail-bar li .image-container {
   width: 40px;
@@ -834,20 +869,28 @@ article.hospital-details .detail-bar li p {
   line-height: 2.4rem;
   margin-left: 30px;
   width: 80%;
-  transform: translateX(-8%);
-  opacity: 0;
+  transform: translateX(0);
   transition: 0.7s;
 }
 article.hospital-details .detail-bar li p a {
   color: black;
   text-decoration: none;
 }
+article.hospital-details .detail-bar li:nth-child(3):hover {
+  text-decoration: underline;
+}
+article.hospital-details .detail-bar li:nth-child(3):hover .image-container {
+  background-color: #95cd41;
+}
 article.hospital-details .detail-bar li:nth-child(3) img {
   width: 33px;
   height: 33px;
   padding-top: 2px;
 }
-article.hospital-details .detail-bar li:nth-child(4) img {
+article.hospital-details .detail-bar li:nth-child(4):hover .image-container {
+  background-color: #ea5c2b;
+}
+article.hospital-details .detail-bar li:nth-child(4):hover .image-container img {
   padding-left: 2px;
 }
 article.hospital-details .detail-bar li:hover .image-container {
@@ -857,12 +900,10 @@ article.hospital-details .detail-bar li:hover .image-container img {
   right: 3px;
 }
 article.hospital-details .detail-bar li:hover p {
-  transform: translateX(0);
-  opacity: 1;
+  transform: translateX(-7%);
 }
 article.hospital-details .detail-bar li:hover p a {
   color: black;
-  text-decoration: none;
 }
 article.hospital-details .detail-bar li:first-child {
   font-size: 1.8rem;
