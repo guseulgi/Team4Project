@@ -1,0 +1,483 @@
+//font
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+//Kirang Haerang
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+//Do Hyeon
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+//font-family: 'Noto Sans KR', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
+//font-family: 'Rubik Mono One', sans-serif;
+
+//reset
+@import "../../css/reset";
+//font
+@import "../../css/font/font";
+
+//color
+$yellow: #f6d860;
+$orange: #ff7f3f;
+$darkOrange: #ea5c2b;
+$green: #95cd41;
+
+$lightGray: #ced8d6;
+$gray: #626458;
+$darkYellow: #cba55b;
+$darkBrawn: #5c3b16;
+
+$backgray: rgba(210, 227, 245, 0.188);
+$backgray2: rgba(20, 20, 20, 0.19);
+
+//font
+$doHyeon: "Do Hyeon";
+$kirangHaerang: "Kirang Haerang";
+$notoSans: "Noto Sans KR";
+
+body {
+  // background-color: $yellow;
+  font-family: $notoSans;
+  line-height: 1.4;
+
+  width: 100vw;
+}
+
+//header
+header {
+  position: fixed;
+  // opacity: 0.5;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  background-color: transparent;
+
+  .title {
+    color: $darkBrawn;
+    font-size: 36px;
+    font-family: "OKDDUNG";
+    text-shadow: 0px 3px 0 white;
+    padding-left: 40px;
+    height: 100px;
+    line-height: 18vh;
+
+    .title__logo {
+      & > i:first-child {
+        position: absolute;
+        top: 0px;
+        left: 147px;
+        line-height: 18vh;
+      }
+      & > i:last-child {
+        position: absolute;
+        top: 14px;
+        left: 148px;
+        transform: rotate(-90deg) scale(0.4);
+        line-height: 18vh;
+      }
+    }
+  }
+  .other-menu {
+    ul {
+      display: flex;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      right: 10%;
+      li {
+        margin: auto 15px;
+        font-size: 20px;
+        position: relative;
+        transition: 0.7s;
+        span {
+          display: none;
+          box-sizing: border-box;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 2px 7px;
+
+          width: 90px;
+          height: 25px;
+          background-color: $orange;
+          position: absolute;
+          top: -28px;
+          left: -24px;
+          border-radius: 4px;
+          text-align: center;
+        }
+
+        a {
+          color: $darkBrawn;
+        }
+        &:hover {
+          span {
+            display: block;
+            color: white;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+            top: -8px;
+            left: 6px;
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+//weather
+.weather {
+  position: fixed;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+
+  i {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 32px;
+    margin: auto 10px auto 5px;
+    color: white;
+    animation: weatherAnim 10s infinite;
+  }
+
+  @keyframes weatherAnim {
+    0% {
+      opacity: 0;
+      transform: rotate(90deg) translateY(-40%) scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+      line-height: 14px;
+      font-family: $notoSans;
+      margin: 5px 0;
+    }
+  }
+}
+
+// Return to Top Button
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    i {
+      color: $gray;
+    }
+  }
+}
+
+//section
+.intro {
+  display: flex;
+  .introDiv {
+    ul {
+      height: 100vh;
+      overflow: hidden;
+
+      li {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          scale: 1.05;
+          transition: 0.5s;
+          opacity: 0.6;
+          cursor: pointer;
+          & p {
+            color: $darkOrange;
+          }
+        }
+        img {
+          width: calc(100vw / 3);
+          height: 100vh;
+        }
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          color: white;
+          font-size: 5vh;
+          font-weight: 500;
+          font-family: "Rubik Mono One", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+.contents.hide {
+  display: none;
+}
+.contents {
+  .mountainContent {
+    ul {
+      li {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        img {
+          width: 100vw;
+          height: 100vh;
+        }
+        .mountainText {
+          // opacity: 0;
+          // transform: translateX(-1000px);
+          // transition: 0.5s;
+          position: absolute;
+          top: 18%;
+          left: 6%;
+
+          font-size: 18px;
+          background-color: $backgray2;
+          color: black;
+          line-height: 1.5;
+          font-weight: 600;
+          padding: 35px;
+        }
+        // .mountainText.animate {
+        //   opacity: 1;
+        //   transform: translateX(0);
+        // }
+        .mountainText2 {
+          position: absolute;
+          top: 10%;
+          right: 10%;
+
+          font-size: 18px;
+          background-color: $backgray2;
+          color: black;
+          line-height: 1.5;
+          font-weight: 600;
+          padding: 35px;
+        }
+        .mountainText3 {
+          position: absolute;
+          bottom: 8%;
+          right: 12%;
+
+          font-size: 18px;
+          background-color: $backgray;
+          color: white;
+          line-height: 1.5;
+          font-weight: 500;
+          padding: 35px;
+        }
+      }
+    }
+  }
+  .seaContent {
+    position: relative;
+    overflow: hidden;
+    .text.on {
+      display: block;
+      animation: appear 1s;
+      animation-fill-mode: forwards;
+    }
+    .text {
+      margin-top: 40px;
+      width: 90vw;
+      margin-left: 5vw;
+      height: 85vh;
+      background-color: rgba(20, 20, 20, 0.19);
+      transition: 0.5s;
+      border: 1px solid black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      .close {
+        margin: 10px;
+        float: right;
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+    .text.off {
+      display: none;
+    }
+
+    .swiper {
+      position: relative;
+      background-color: #ea5c2b;
+      width: 100vw;
+      // width: calc(690px * 3 + 60px);
+      left: 50%;
+      transform: translateX(-60%);
+      .swiper-wrapper {
+        .swiper-slide.swiper-slide-active {
+          transition: 0.5s;
+          opacity: 1;
+        }
+        .swiper-slide {
+          // width: 300px;
+          // width: calc(100vw / 3 - 60px);
+          opacity: 0.5;
+          position: relative;
+          border: 30px solid white;
+          border-bottom: 80px solid white;
+          box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
+          height: 80vh;
+          overflow: hidden;
+          img {
+            width: 50vw;
+            height: 80vh;
+            &:hover {
+              scale: 1.05;
+              opacity: 0.6;
+              transition: 0.5s;
+              cursor: pointer;
+            }
+          }
+          p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            color: black;
+            z-index: 4;
+          }
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      color: black;
+    }
+    .swiper-button-next {
+      right: 50px;
+    }
+    .swiper-button-prev {
+      left: 50px;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 6vh;
+    }
+  }
+  .museumContent {
+    position: relative;
+
+    .museumTitle {
+      text-align: center;
+      padding-top: 100px;
+      margin-left: 50vw;
+      width: 50vw;
+      height: 100vh;
+      background-color: #cba55b;
+      color: white;
+      font-size: 40px;
+      font-family: "Rubik Mono One", sans-serif;
+    }
+
+    .flip-box {
+      position: absolute;
+
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      perspective: 1000px;
+      background-color: orange;
+      &:hover {
+        .flip {
+          transform: rotateY(-180deg);
+        }
+      }
+
+      .flip {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: white;
+        text-align: center;
+        line-height: 400px;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: 0.5s;
+
+        .teddyImg,
+        .teddyBack {
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          position: absolute;
+        }
+        .teddyImg {
+          border-radius: 50%;
+          background-color: yellow;
+        }
+        .teddyBack {
+          border-radius: 50%;
+          background-color: skyblue;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+    & .flip-box:nth-child(2) {
+      position: absolute;
+      top: 23%;
+      right: 10%;
+    }
+    & .flip-box:nth-child(3) {
+      position: absolute;
+      top: 23%;
+      right: 50%;
+    }
+    & .flip-box:nth-child(4) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

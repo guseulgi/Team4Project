@@ -311,9 +311,6 @@ button:hover {
 .contact981 .sns {
   position: absolute;
   display: flex;
-  /* justify-content: center; */
-  /* margin-top: 10%; */
-  /* margin: 8% 8% 0% 8%; */
   margin-top: 24.2vh;
   margin-left: 2.4vw;
 }
@@ -580,11 +577,8 @@ button:hover {
 }
 
 .blueone1 {
-  position: absolute;
-  width: 100%;
   margin: auto;
   top: 210vh;
-  left: 0;
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -622,9 +616,9 @@ button:hover {
 .contactblue {
   position: absolute;
   top: 293vh;
-  justify-content: center;
+  left: -22vw;
+  z-index: 3;
   width: 100%;
-  left: 51vw;
 }
 
 .backgroundblue {
@@ -692,7 +686,7 @@ button:hover {
   max-width: 100%;
 }
 
-.banner {
+/* .banner {
   position: relative;
   display: inline-block;
 }
@@ -734,6 +728,19 @@ button:hover {
   border-right: 2px solid #fff;
   height: 0;
 }
+
+.banner:hover .ytitle,
+.banner:hover .content {
+  display: block;
+}
+
+.banner:hover::before {
+  width: 95%;
+}
+
+.banner:hover::after {
+  width: 95%;
+} */
 
 .bluecon2 {
   position: absolute;

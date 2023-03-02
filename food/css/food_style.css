@@ -260,9 +260,9 @@ header .other-menu ul li:hover::after {
   z-index: 2;
   left: 5vw;
 }
-.all_content .second_page .box2:hover .hoverbox span{
-  animation: box_an1 1s linear 1; height: 150px;
+.all_content .second_page .box2 :hover {
   cursor: pointer;
+  opacity: 1;
 }
 .all_content .second_page .box2:hover .hoverbox span p {
   animation: box_an2 1s linear 1;
@@ -302,8 +302,7 @@ header .other-menu ul li:hover::after {
   z-index: 2;
   left: 3vw;
 }
-.all_content .second_page .box3:hover .hoverbox span{
-  animation: box_an1 1s linear 1; height: 150px;
+.all_content .second_page .box3 :hover {
   cursor: pointer;
 }
 .all_content .second_page .box3:hover .hoverbox span p {

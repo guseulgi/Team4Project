@@ -497,7 +497,8 @@ header .other-menu ul li:hover::after {
 .emgSituation .swiper-button-prev::after {
   display: none;
 }
-.emgSituation .swiper-button-prev, .emgSituation .swiper-button-next {
+.emgSituation .swiper-button-prev,
+.emgSituation .swiper-button-next {
   top: calc(50% + 50px);
   font-size: 2.8rem;
   color: #ea5c2b;

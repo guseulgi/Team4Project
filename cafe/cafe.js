@@ -59,7 +59,9 @@ fetch(weatherUrl)
 let sea = document.querySelector(".cafe_theme_sea");
 let cafe_sea = document.querySelector(".cafe_sea");
 let mountain = document.querySelector(".cafe_theme_mountain");
+let cafe_mountain = document.querySelector(".cafe_mountain");
 let interesting = document.querySelector(".cafe_theme_interesting");
+let cafe_interesting = document.querySelector(".cafe_interesting");
 
 sea.addEventListener("click", function () {
   window.scrollBy({
@@ -68,6 +70,19 @@ sea.addEventListener("click", function () {
   });
 });
 
+mountain.addEventListener("click", function () {
+  window.scrollBy({
+    top: cafe_mountain.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
+interesting.addEventListener("click", function () {
+  window.scrollBy({
+    top: cafe_interesting.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
 // function seaZoomIn(e) {
 //   e.target.style.transform = "scale(1)";
 //   e.target.style.filter = "brightness(60%)";
@@ -97,29 +112,29 @@ window.addEventListener("scroll", () => {
     header.style.transition = "all .4s ease-in-out";
   }
 });
-window.addEventListener("load", function () {
-  let aElSection = document.querySelectorAll("section");
-  let curSIdx = 0;
+// window.addEventListener("load", function () {
+//   let aElSection = document.querySelectorAll("section");
+//   let curSIdx = 0;
 
-  let wheelTimer;
-  window.addEventListener("wheel", function (e) {
-    clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(function () {
-      if (e.deltaY < 0) doScroll(++curSIdx);
-      else doScroll(--curSIdx);
-    }, 50);
-  });
+//   let wheelTimer;
+//   window.addEventListener("wheel", function (e) {
+//     clearTimeout(wheelTimer);
+//     wheelTimer = setTimeout(function () {
+//       if (e.deltaY < 0) doScroll(++curSIdx);
+//       else doScroll(--curSIdx);
+//     }, 50);
+//   });
 
-  function doScroll(sidx) {
-    sidx = sidx < 0 ? 0 : sidx;
-    sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
+//   function doScroll(sidx) {
+//     sidx = sidx < 0 ? 0 : sidx;
+//     sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
 
-    curSIdx = sidx;
+//     curSIdx = sidx;
 
-    aElSection[curSIdx].scrollIntoView({
-      block: "start",
-      inline: "start",
-      behavior: "smooth",
-    });
-  }
-});
+//     aElSection[curSIdx].scrollIntoView({
+//       block: "start",
+//       inline: "start",
+//       behavior: "smooth",
+//     });
+//   }
+// });
