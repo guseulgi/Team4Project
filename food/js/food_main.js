@@ -50,6 +50,34 @@ fetch(weatherUrl).then(response => response.json())
 
   weather.prepend(newIcon);
   weatherUl.appendChild(newLi);
-}).cathch(error => {
+}).catch(error => {
   console.log('Weather API Error : ',error);
 });
+
+
+
+/*review */
+var mySwiper = new Swiper('.swiper-contaier', {
+  direction : 'vertical',
+  slidesPerView : 1,
+  autoplay: true,
+  loop : true,  //계속 반복 되게
+});
+
+/*menu*/
+const kt1 = document.querySelector('.korea_text1');
+const fl1 = kt1.querySelector('.food_list1');
+const korea_menu = document.querySelector('.korea_menu1');
+const km = korea_menu.querySelector('km');
+// console.log(kt1, fl1);
+
+kt1.addEventListener('click', changediv);
+function changediv(){
+  if(fl1.classList.contains('on') === true) {
+    fl1.classList.remove('on');
+    km.classList.add('on');
+  } else {
+    fl1.classList.remove('on');
+    km.classList.add('on');
+  }
+}

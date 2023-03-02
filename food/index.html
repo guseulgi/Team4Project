@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>맛집</title>
-  
+  <!-- swiper을 사용하기 위한 css와 js-->
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
   <!-- css 연결 -->
-  <link rel="stylesheet" href="../food/css/food_style.css"  />
+  <link rel="stylesheet" href="../food/css/food_style.css" />
   <!-- js 연결-->
   <script defer src="../food/js/food_main.js"></script>
-  <!-- swiper을 사용하기 위한 css와 js-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> 
+
   <!-- FONTAWESOME -->
- <script src="https://kit.fontawesome.com/15a6f73da8.js" crossorigin="anonymous"></script> 
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/15a6f73da8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
+
 <body>
   <header>
     <!-- Logo -->
     <div class="title">JEJU</div>
-      <div class="other-menu">
-        <ul>
-          <li>
-            <span>HOME</span>
-            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
-          </li>
-          <li>
-            <span>CAFE</span>
-            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
-          </li>
-          <li>
-            <span>ACTIVITY</span>
-            <a href="#" title="activity"
-              ><i class="fa-solid fa-person-running"></i
-            ></a>
-          </li>
-          <li>
-            <span>FOOD</span>
-            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
-          </li>
-          <li>
-            <span>TOURIST</span>
-            <a href="#" title="tourist">
-              <i class="fa-solid fa-star"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="other-menu">
+      <ul>
+        <li>
+          <span>HOME</span>
+          <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li>
+          <span>CAFE</span>
+          <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+        </li>
+        <li>
+          <span>ACTIVITY</span>
+          <a href="#" title="activity"><i class="fa-solid fa-person-running"></i></a>
+        </li>
+        <li>
+          <span>FOOD</span>
+          <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+        </li>
+        <li>
+          <span>TOURIST</span>
+          <a href="#" title="tourist">
+            <i class="fa-solid fa-star"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Fixed Weather -->
-      <div class="weather">
-        <ul>
-          <li>
-            현재 제주도는
-          </li>
-        </ul>
-      </div>
+    <!-- Fixed Weather -->
+    <div class="weather">
+      <ul>
+        <li>
+          현재 제주도는
+        </li>
+      </ul>
+    </div>
 
-      <!-- Return to Top -->
-      <div class="returnToTop">
-        <a href="#">
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
-      </div>
+    <!-- Return to Top -->
+    <div class="returnToTop">
+      <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
   </header>
 
   <div class="all_content">
@@ -79,41 +87,108 @@
     <div class="second_page">
       <div class="box1">
         <div class="imgBox">
-        <img src="./img/korea.jpg" alt="한식"> 
+          <img src="./img/korea.jpg" alt="한식">
         </div>
         <div class="hoverbox">
           <span>
-            <p class="p1">SEA</p>
+            <p class="p1">KOREA <br />FOOD</p>
           </span>
         </div>
       </div>
       <div class="box2">
         <div class="imgBox">
-        <img src="./img/japan.jpg" alt="일식"> 
+          <img src="./img/japan.jpg" alt="일식">
         </div>
         <div class="hoverbox">
           <span>
-            <p class="p1">MOUNTAIN</p>
+            <p class="p1">JAPANESE <br />FOOD</p>
           </span>
         </div>
       </div>
       <div class="box3">
         <div class="imgBox">
-        <img src="./img/usa.jpg" alt="양식"> 
+          <img src="./img/usa.jpg" alt="양식">
         </div>
         <div class="hoverbox">
           <span>
-            <p class="p1">POPULAR</p>
+            <p class="p1">WESTERN <br />FOOD</p>
           </span>
         </div>
       </div>
     </div>
 
     <div class="third_page">
-      <div class="sea_page"></div>
-      <div class="mountain_page"></div>
-      <div class="popular_page"></div>
+      <div class="korea_content">
+        <div class="korea_img1">
+          <img src="./img/jeju_korea1.jpg" alt="jeju_korea">
+        </div>
+        <div class="korea_text1">
+          <ul class="food_list1 on">
+            <li><span class="material-symbols-outlined">storefront</span>
+              <p>제주광해 애월</p>
+            </li>
+            <li><span class="material-symbols-outlined">schedule</span>
+              <p>연중무휴 10:00 - 20:00 <br />(19:00 라스트오더)</p>
+            </li>
+            <li><span class="material-symbols-outlined">near_me </span>
+              <p>찾아오는 길</p>
+            </li>
+          </ul>
+          <div class="swiper-contaier">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">밥 2그릇 뚝딱 했어요</div>
+              <div class="swiper-slide">해물 종류가 다양해서 가성비가 좋아요</div>
+              <div class="swiper-slide">구성이 알차고 갈치조림 양념이 미쳤어요</div>
+              <div class="swiper-slide">갈치조림 진짜 맛있어요</div>
+              <div class="swiper-slide">제주여행에서 먹은 가장 맛있는 메뉴</div>
+            </div>
+          </div>
+        </div>
+        <div class="korea_menu1">
+          <ul class="km">
+            <li><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;&nbsp; MUNU</li>
+            <li>갈치조림 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43,000 ~ 88,000</li>
+            <li>고등어조림 &nbsp;&nbsp;&nbsp;32,000 ~ 65,000</li>
+            <li>전복뚝배기 &nbsp;&nbsp;&nbsp;17,000</li>
+            <li>해물뚝배기 &nbsp;&nbsp;&nbsp;12,000</li>
+            <li>성게미역국 &nbsp;&nbsp;&nbsp;13,000</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="korea_content">
+        <div class="korea_img2">
+          <img src="./img/jeju_korea2.jpg" alt="jeju_korea">
+        </div>
+        <div class="korea_text2">
+          <ul class="food_list2">
+            <li><span class="material-symbols-outlined">storefront</span>
+              <p>이춘옥원조고등어쌈밥 <br />제주애월본점</p>
+            </li>
+            <li><span class="material-symbols-outlined">schedule</span>
+              <p>수요일 휴무 09:30 - 21:00<br />(16시 브레이크타임)</p>
+            </li>
+            <li><span class="material-symbols-outlined">near_me </span>
+              <p>찾아오는 길</p>
+            </li>
+          </ul>
+          <div class="swiper-contaier">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">고등어 요리로 제주에서 가장 유명한 맛집</div>
+              <div class="swiper-slide">김치찜이 입에서 녹아요</div>
+              <div class="swiper-slide">제주도민도 반한 맛집</div>
+              <div class="swiper-slide">제주공항이랑도 가까워서 좋아요</div>
+              <div class="swiper-slide">바다뷰라 보는 재미가 있어요</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
+
 </html>
