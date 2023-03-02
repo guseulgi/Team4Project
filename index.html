@@ -5,89 +5,98 @@
  -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>떠나요 제주도!</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>떠나요 제주도!</title>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/4f251c55cf.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/4f251c55cf.js" crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Main CSS/JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
 
-  <!-- Main CSS/JS -->
-  <link rel="stylesheet" href="./css/style.css">
-  <script defer src="./js/main.js"></script>
-</head>
-
-<body>
-</body>
-<!-- Mouse Cursor -->
-<div class="cursor"></div>
+  <body></body>
+  <!-- Mouse Cursor -->
+  <div class="cursor"></div>
   <!-- Header -->
   <header>
     <!-- Logo -->
-    <div class="title">Jeju
+    <div class="title">
+      Jeju
       <div class="title__logo">
         <i class="fa-solid fa-quote-left"></i>
         <i class="fa-solid fa-pause"></i>
       </div>
     </div>
-      <div class="other-menu">
-        <ul>
-          <li>
-            <span>HOME</span>
-            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
-          </li>
-          <li>
-            <span>CAFE</span>
-            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
-          </li>
-          <li>
-            <span>ACTIVITY</span>
-            <a href="#" title="activity"
-              ><i class="fa-solid fa-person-running"></i
-            ></a>
-          </li>
-          <li>
-            <span>FOOD</span>
-            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
-          </li>
-          <li>
-            <span>TOURIST</span>
-            <a href="#" title="tourist">
-              <i class="fa-solid fa-star"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="other-menu">
+      <ul>
+        <li>
+          <span>HOME</span>
+          <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li>
+          <span>CAFE</span>
+          <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+        </li>
+        <li>
+          <span>ACTIVITY</span>
+          <a href="#" title="activity"
+            ><i class="fa-solid fa-person-running"></i
+          ></a>
+        </li>
+        <li>
+          <span>FOOD</span>
+          <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+        </li>
+        <li>
+          <span>TOURIST</span>
+          <a href="#" title="tourist">
+            <i class="fa-solid fa-star"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Fixed Weather -->
-      <div class="weather">
-        <ul>
-          <li>
-            현재 제주도는
-          </li>
-        </ul>
-      </div>
+    <!-- Fixed Weather -->
+    <div class="weather">
+      <ul>
+        <li>현재 제주도는</li>
+      </ul>
+    </div>
 
-      <!-- Return to Top -->
-      <div class="returnToTop">
-        <a href="#">
-          <span></span>
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
-      </div>
+    <!-- Return to Top -->
+    <div class="returnToTop">
+      <a href="#">
+        <span></span>
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
   </header>
 
   <!-- Main Section -->
   <section class="main">
     <figure>
-      <video muted autoplay loop src="./source/image/waveBg.mp4" class="bg"></video>
+      <video
+        muted
+        autoplay
+        loop
+        src="./source/image/waveBg.mp4"
+        class="bg"
+      ></video>
     </figure>
 
     <div class="main__contents">
@@ -131,31 +140,31 @@
       <div class="nav__bg"></div>
       <ul class="parts">
         <li>
-          <a href="#">
+          <a href="./activity/index.html">
             <div class="parts__image"></div>
             <p>ACTIVITY</p>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./cafe/cafeIndex.html">
             <div class="parts__image"></div>
             <p>CAFE</p>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./food/index.html">
             <div class="parts__image"></div>
             <p>FOOD</p>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./touristAttraction/index.html">
             <div class="parts__image"></div>
             <p>TOURIST</p>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./emergency/emergencyIndex.html">
             <div class="parts__image"></div>
             <p>EMERGENCY</p>
           </a>

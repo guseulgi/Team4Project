@@ -60,49 +60,101 @@ fetch(weatherUrl)
   });
 
 //swiper
-const swiper = new Swiper(".contents .mountainContent .swiper", {
-  // Optional parameters
-  // direction: "vertical",
-  slidesPerView: 2,
-  centeredSlides: true,
-  spaceBetween: 10,
-  loop: true,
-  // touchRatio: 0,
+//const swiper = new Swiper(".contents .mountainContent .swiper", {
+// Optional parameters
+// direction: "vertical",
+// slidesPerView: 2,
+// centeredSlides: true,
+// spaceBetween: 10,
+// loop: true,
+// touchRatio: 0,
 
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+// autoplay: {
+//   delay: 2000,
+//   disableOnInteraction: false,
+// },
 
-  //If we need pagination
-  // pagination: {
-  //   el: ".contents .swiper-pagination",
-  // },
+//If we need pagination
+// pagination: {
+//   el: ".contents .swiper-pagination",
+// },
 
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: ".contents .swiper-button-next",
-  //   prevEl: ".contents .swiper-button-prev",
-  // },
+// Navigation arrows
+// navigation: {
+//   nextEl: ".contents .swiper-button-next",
+//   prevEl: ".contents .swiper-button-prev",
+// },
 
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: "contents .swiper-scrollbar",
-  // },
-});
+// And if we need scrollbar
+// scrollbar: {
+//   el: "contents .swiper-scrollbar",
+// },
+// });
 const swiper2 = new Swiper(".contents .seaContent .swiper", {
   // Optional parameters
   // direction: "vertical",
   slidesPerView: 2,
   centeredSlides: true,
-  spaceBetween: 10,
-  // loop: true,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
+//scroll
+// window.onload = function () {
+//   const visualMount = document.querySelector(".mountainContent");
+//   visualMount.classList.add("animate");
+// };
+
+// window.addEventListener("scroll", function () {
+//   console.log(window.scrollY);
+//   if (window.scrollY > 300) {
+//     const mountainAni = document.querySelector(".mountainText");
+//     mountainAni.classList.add("animate");
+//   }
+// });
+
+//contents toggle
+const imgBox = document.querySelectorAll(".introDiv");
+const testContent = document.querySelectorAll(".contents");
+
+for (let i = 0; i < imgBox.length; i += 1) {
+  imgBox[i].addEventListener("click", function () {
+    if (testContent[i].classList.contains("hide")) {
+      testContent[i].classList.remove("hide");
+      imgBox[i].classList.add("show");
+      //scroll smooth
+      const scrollMountain = document.querySelector(".mountainContent");
+      const firstTop = scrollMountain.offsetTop;
+      const scrollSea = document.querySelector(".seaContent");
+      const secondTop = scrollSea.offsetTop;
+      const scrollMuseum = document.querySelector(".museumContent");
+      const thirdTop = scrollMuseum.offsetTop;
+
+      if (i === 0) {
+        window.scroll({ top: firstTop, behavior: "smooth" });
+      } else if (i === 1) {
+        window.scroll({ top: secondTop, behavior: "smooth" });
+      } else if (i === 2) {
+        window.scroll({ top: thirdTop, behavior: "smooth" });
+      } else {
+        console.log("error");
+      }
+    } else {
+      imgBox[i].classList.remove("show");
+      testContent[i].classList.add("hide");
+    }
+  });
+}
+
+//swiper content show
 const swiperImg = document.querySelectorAll(".slide");
 const textDiv = document.querySelectorAll(".text");
 const closeDiv = document.querySelectorAll(".close");
-console.log(textDiv);
+
 for (let i = 0; i < swiperImg.length; i += 1) {
   swiperImg[i].addEventListener("click", function () {
     if (textDiv[i].classList.contains("off")) {
@@ -117,23 +169,7 @@ for (let i = 0; i < swiperImg.length; i += 1) {
       });
     } else {
       textDiv[i].classList.remove("on");
-      textDiv[i].classList.add("on");
+      textDiv[i].classList.add("off");
     }
-    console.log(swiperImg[0]);
-    console.log(textDiv);
   });
 }
-//toggle
-const imgBox = document.querySelector(".mountain");
-const testContent = document.querySelector(".contents");
-console.log(imgBox);
-console.log(testContent);
-imgBox.addEventListener("click", function () {
-  if (testContent.classList.contains("hide")) {
-    testContent.classList.remove("hide");
-    imgBox.classList.add("show");
-  } else {
-    imgBox.classList.remove("show");
-    testContent.classList.add("hide");
-  }
-});

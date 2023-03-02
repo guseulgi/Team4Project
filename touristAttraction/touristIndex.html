@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Attractions</title>
+    <!--SWIPER-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/touristStyle.css" />
+    <!--aos library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--JS-->
+    <script defer src="./js/touristMain.js"></script>
+    <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/15a6f73da8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <!--logo-->
+      <div class="title">
+        JEJU
+        <div class="title__logo">
+          <i class="fa-solid fa-quote-left"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+      </div>
+      <!--menu-->
+      <div class="other-menu">
+        <ul>
+          <li>
+            <span>HOME</span>
+            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <span>CAFE</span>
+            <a href="#" title="cafe"><i class="fa-solid fa-mug-saucer"></i></a>
+          </li>
+          <li>
+            <span>ACTIVITY</span>
+            <a href="#" title="activity"
+              ><i class="fa-solid fa-person-running"></i
+            ></a>
+          </li>
+          <li>
+            <span>FOOD</span>
+            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+          </li>
+          <li>
+            <span>EMERGENCY</span>
+            <a href="#" title="emergency"
+              ><i class="fa-regular fa-hospital"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!--Weather-->
+    <div class="weather">
+      <ul>
+        <li>현재 제주도는</li>
+      </ul>
+    </div>
+
+    <!-- Return to Top -->
+    <div class="returnToTop">
+      <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+
+    <!--section-->
+    <section class="intro">
+      <div class="introDiv">
+        <ul>
+          <li>
+            <img src="./image/mountain.jpg" alt="" />
+            <p>PARK</p>
+          </li>
+        </ul>
+      </div>
+      <div class="introDiv">
+        <ul>
+          <li>
+            <img src="./image/sea.jpg" alt="" />
+            <p>SEA</p>
+          </li>
+        </ul>
+      </div>
+      <div class="introDiv">
+        <ul>
+          <li>
+            <img src="./image/mountain.jpg" alt="" />
+            <p>MUSEUM</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contents hide">
+      <div class="mountainContent">
+        <ul>
+          <li>
+            <img src="./image/성산일출봉3.jpg" alt="" />
+            <p class="mountainText">
+              성산일출봉<br /><i class="fa-solid fa-location-dot"></i>
+              제주특별자치도 서귀포시 성산읍 일출로 284-12 <br /><i
+                class="fa-regular fa-clock"
+              ></i>
+              매월 첫째 월요일 휴관
+              <br />3~9월 07:00 - 20:00 (18:50분매표마감) (단, 등하산교차로,
+              우뭇개 전망대, 우뭇개 해안은 무료개방)<br />
+              10~2월 07:30 - 19:00 (17:50분매표마감)
+              <br /><i class="fa-regular fa-credit-card"></i> 유료<br />개인
+              (성인 5,000원 / 청소년, 군인 2,500원 / 어린이 2,500원)<br />
+              단체 (성인 4,000원 / 청소년, 군인 2,000원 / 어린이 2,000원) <br />
+              <i class="fa-solid fa-hourglass"></i> 평균 소요 시간 : 1시간 미만
+            </p>
+          </li>
+          <li>
+            <img src="./image/한라.jpg" alt="" />
+            <p class="mountainText2">
+              한라산 국립공원<br /><i class="fa-solid fa-location-dot"></i>
+              탐방로<br />
+              어리목탐방로 / 영실코스 / 관음사 탐방로 / 성판악 탐방로 / 돈내코
+              탐방로 / 석굴암 탐방로<br />
+              <i class="fa-regular fa-clock"></i>
+              <a href="https://visithalla.jeju.go.kr/reservation/status.do"
+                >한라산 탐방로 예약 바로가기 (성판악, 관음사)</a
+              >
+              <br />
+
+              <i class="fa-solid fa-hourglass"></i> 평균 소요 시간<br />
+            </p>
+          </li>
+          <li>
+            <img src="./image/제주곶자왈도립공원11.jpg" alt="" />
+            <p class="mountainText3">
+              성산<br /><i class="fa-solid fa-location-dot"></i> 제주특별자치도
+              서귀포시 성산읍 일출로 284-12 <br /><i
+                class="fa-regular fa-clock"
+              ></i>
+              매월 첫째 월요일 휴관
+              <br />3~9월 07:00 - 20:00 (18:50분매표마감) (단, 등하산교차로,
+              우뭇개 전망대, 우뭇개 해안은 무료개방)<br />
+              10~2월 07:30 - 19:00 (17:50분매표마감)
+              <br /><i class="fa-regular fa-credit-card"></i> 유료<br />개인
+              (성인 5,000원 / 청소년, 군인 2,500원 / 어린이 2,500원)<br />
+              단체 (성인 4,000원 / 청소년, 군인 2,000원 / 어린이 2,000원) <br />
+              <i class="fa-solid fa-hourglass"></i> 평균 소요 시간 : 1시간 미만
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contents hide">
+      <div class="seaContent">
+        <div class="text off">
+          설명1
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명2
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div cl.teass="text off">
+          설명3
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명4
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="text off">
+          설명5
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="slide" src="./image/색달해변3.jpg" alt="" />
+              <div class="slide-content"></div>
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/협재해수욕장.jpg" alt="" />
+              <div class="slide-content"></div>
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/곽지해수욕장.jpg" alt="" />
+              <div class="slide-content"></div>
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/쇠소깍3.jpg" alt="" />
+              <div class="slide-content"></div>
+            </div>
+            <div class="swiper-slide">
+              <img class="slide" src="./image/정방폭포.jpg" alt="" />
+              <div class="slide-content"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <section class="contents hide">
+      <div class="museumContent">
+        <div class="museumTitle">Teddybear Museum</div>
+        <div class="flip-box">
+          <div class="flip">
+            <div class="teddyImg">
+              <img src="./image/teddybear1.png" alt="" />
+            </div>
+            <div class="teddyBack">뒷면</div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip">
+            <div class="teddyImg">
+              <img src="./image/teddybear2.png" alt="" />
+            </div>
+            <div class="teddyBack">뒷면</div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip">
+            <div class="teddyImg">
+              <img src="./image/teddybear3.png" alt="" />
+            </div>
+            <div class="teddyBack">뒷면</div>
+          </div>
+        </div>
+
+        <div class="teddyMore"></div>
+      </div>
+    </section>
+  </body>
+</html>

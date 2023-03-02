@@ -1,37 +1,37 @@
-@import '../../css/reset';
-@import '../../css/font/font';
+@import "../../css/reset";
+@import "../../css/font/font";
 
 //font-family: 'Kirang Haerang';
 //font-family: 'Do Hyeon';
 //font-family: 'Noto Sans KR', sans-serif;
 
 // Variable
-  // Color
-$yellow : #f6d860;
-$orange : #ff7f3f;
-$darkOrange : #ea5c2b;
-$green : #95cd41;
+// Color
+$yellow: #f6d860;
+$orange: #ff7f3f;
+$darkOrange: #ea5c2b;
+$green: #95cd41;
 
-$lightGray : #ced8d6;
-$gray : #626458;
-$darkYellow : #cba55b;
-$darkBrawn : #5c3b16;
+$lightGray: #ced8d6;
+$gray: #626458;
+$darkYellow: #cba55b;
+$darkBrawn: #5c3b16;
 
-  // Font
-$logo-txt : 'Kirang Haerang';
-$title-txt : 'Do Hyeon';
-$content-txt : 'Noto Sans KR', sans-serif;
-  // Layout
-$primary-border : 1px solid #ddd;
+// Font
+$logo-txt: "Kirang Haerang";
+$title-txt: "Do Hyeon";
+$content-txt: "Noto Sans KR", sans-serif;
+// Layout
+$primary-border: 1px solid #ddd;
 
 // Common
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
 }
 
 .bar {
-  width : 15vw;
+  width: 15vw;
   height: 2px;
   background-color: $darkBrawn;
   margin: auto;
@@ -39,21 +39,21 @@ body {
 
 .point {
   position: absolute;
-  top : 60px;
-  left : 50%;
+  top: 60px;
+  left: 50%;
   z-index: 0;
   width: 20vw;
   height: 10px;
   background-color: #ffeda4;
 }
 .cursor {
-  background-image: url('../source/cursor.png');
+  background-image: url("../source/cursor.png");
   background-size: contain;
-  
-  width : 45px;
+
+  width: 45px;
   height: 45px;
   position: absolute;
-  top:0;
+  top: 0;
   left: 2px;
   z-index: 3;
 }
@@ -71,7 +71,7 @@ header {
   .title {
     color: $darkBrawn;
     font-size: 36px;
-    font-family: 'OKDDUNG';
+    font-family: "OKDDUNG";
     text-shadow: 0px 3px 0 white;
     padding-left: 40px;
     height: 100px;
@@ -80,15 +80,15 @@ header {
     .title__logo {
       & > i:first-child {
         position: absolute;
-        top : 0px;
-        left : 147px;
+        top: 0px;
+        left: 147px;
         line-height: 18vh;
       }
       & > i:last-child {
         position: absolute;
-        top : 14px;
-        left : 148px;
-        transform: rotate(-90deg) scale(.4);
+        top: 14px;
+        left: 148px;
+        transform: rotate(-90deg) scale(0.4);
         line-height: 18vh;
       }
     }
@@ -105,7 +105,7 @@ header {
         position: relative;
         margin: auto 15px;
         font-size: 20px;
-        transition: .7s;
+        transition: 0.7s;
 
         span {
           display: none;
@@ -118,31 +118,31 @@ header {
           height: 25px;
           background-color: $orange;
           position: absolute;
-          top : -28px;
+          top: -28px;
           left: -24px;
           border-radius: 4px;
           text-align: center;
         }
 
         a {
-          color : white;
+          color: white;
 
           //메뉴가 일정 이상 내려가면 색이 바뀌는 클래스 추가
           &.changeColor {
-            color : $darkBrawn;
+            color: $darkBrawn;
             &:hover {
-              color : $darkOrange;
+              color: $darkOrange;
             }
           }
           &:hover {
-            color : $yellow;
+            color: $yellow;
           }
         }
 
         &:hover {
           span {
             display: block;
-            color : white;
+            color: white;
           }
           &::after {
             content: "";
@@ -151,7 +151,7 @@ header {
             height: 10px;
             position: absolute;
             transform: rotate(45deg);
-            top : -8px;
+            top: -8px;
             left: 6px;
             background-color: $orange;
           }
@@ -161,99 +161,98 @@ header {
   }
 }
 
-  // Fixed Weather
-  .weather {
-    position: fixed;
-    display: flex;
-    width: 150px;
-    bottom: 10px;
-    right: 10px;
-    padding: 7px 10px;
-    background-color: #ff9a1f;
-    border-radius: 10px;
-    z-index: 3;
-    opacity: .7;
+// Fixed Weather
+.weather {
+  position: fixed;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+
+  i {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 32px;
+    margin: auto 12px auto 9px;
+    color: white;
+    animation: weatherAnim 10s infinite;
+  }
+
+  @keyframes weatherAnim {
+    0% {
+      opacity: 0;
+      transform: rotate(90deg) translateY(-40%) scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+      line-height: 14px;
+      font-family: $content-txt;
+      margin: 5px 0;
+    }
+  }
+}
+
+// Return to Top Button
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    &.changeColor {
+      background-color: $darkOrange;
+
+      i {
+        color: white;
+      }
+      span {
+        background-color: white;
+      }
+    }
+
+    span {
+      width: 18px;
+      height: 1.8px;
+      display: block;
+      border-radius: 4px;
+      background-color: $gray;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
 
     i {
-      font-size: 2rem;
-      text-align: center;
-      line-height: 32px;
-      margin: auto 12px auto 9px;
-      color :white;
-      animation: weatherAnim 10s infinite;
-    }
-
-    @keyframes weatherAnim {
-      0% {
-        opacity: 0;
-        transform: rotate(90deg) translateY(-40%) scale(.8);
-      }
-      50% {
-        opacity: 1;
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: translateY(0px) scale(1);
-      }
-    }
-
-    ul {
-      li {
-        font-size: 14px;
-        line-height: 14px;
-        font-family: $content-txt;
-        margin: 5px 0;
-      }
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      color: $gray;
     }
   }
-
-  // Return to Top Button 
-  .returnToTop {
-    position: fixed;
-    bottom: 10px;
-    right: 190px;
-
-    a {
-      display: block;
-      width: 30px;
-      height: 30px;
-      background-color: white;
-      border-radius: 50%;
-      text-align: center;
-      
-      font-size: 1.2rem;
-
-      &.changeColor {
-        background-color: $darkOrange;
-
-        i {
-          color :white;
-        }
-        span {
-          background-color: white;
-        }
-      }
-
-      span {
-        width: 18px;
-        height: 1.8px;
-        display: block;
-        border-radius: 4px;
-        background-color: $gray;
-        position: absolute;
-        top : 6px;
-        left: 6px;
-      }
-      
-      i {
-        position: absolute;
-        top:8px;
-        left: 8px;
-        color: $gray;
-      }
-    }
-  }
-
+}
 
 // Emergency Situation
 .emgSituation {
@@ -266,7 +265,7 @@ header {
 
   .title {
     position: relative;
-    width : 70vw;
+    width: 70vw;
     margin: 20px auto;
     padding: 5px;
 
@@ -275,31 +274,32 @@ header {
       z-index: 1;
       width: 110px;
       height: 95px;
-      
+
       top: 5px;
-      right : -13px;
+      right: -13px;
     }
     .icon__ambulance {
-      background-image: url('../source/icon/ambulance.png');
+      background-image: url("../source/icon/ambulance.png");
       background-size: cover;
       transform: rotateY(180deg);
       animation: ambulence 9s infinite;
     }
     .icon__siren {
-      background-image: url('../source/icon/siren.png');
+      background-image: url("../source/icon/siren.png");
       background-size: cover;
       width: 34px;
       height: 34px;
-      
-      top:-46px;
+
+      top: -46px;
       right: 41%;
       animation: h2Animation 5s;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "";
         display: block;
         position: relative;
-        top : -4px;
+        top: -4px;
         z-index: -1;
         width: 20px;
         height: 14px;
@@ -310,26 +310,27 @@ header {
       &::after {
         width: 14px;
         height: 9px;
-        top : -15px;
-        animation-delay: .3s;
+        top: -15px;
+        animation-delay: 0.3s;
       }
     }
 
     .icon__plus {
-      background-image: url('../source/icon/add.png');
+      background-image: url("../source/icon/add.png");
       background-size: cover;
       width: 220px;
       height: 220px;
       top: -45px;
-      left : -30px;
+      left: -30px;
       z-index: -1;
       transform: rotate(-10deg);
-      opacity: .4;
+      opacity: 0.4;
     }
 
     @keyframes ambulence {
       0% {
-        transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%) translateY(0px);
+        transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%)
+          translateY(0px);
       }
       50% {
         transform: rotateY(180deg) scaleY(1.03) translateX(0) translateY(1px);
@@ -349,9 +350,10 @@ header {
       }
       50% {
         border-radius: 50%;
-        transform: translate(-12px, -3px) rotate(0deg) scale(.6);
+        transform: translate(-12px, -3px) rotate(0deg) scale(0.6);
       }
-      100% {}
+      100% {
+      }
     }
 
     h2 {
@@ -365,18 +367,18 @@ header {
       background-color: #f6d860;
       box-shadow: 1px 1px 1px $gray;
       animation: h2Animation 2s;
-      transition: .4s;
+      transition: 0.4s;
 
       &:nth-child(3) {
-        top : -5px;
+        top: -5px;
         left: 23%;
         transform: rotate(5deg);
       }
       &:nth-child(5) {
-        top:6px;
-        right : 24%;
-        animation: h2Animation 2s; 
-        animation-delay: .1s;
+        top: 6px;
+        right: 24%;
+        animation: h2Animation 2s;
+        animation-delay: 0.1s;
         animation-duration: 4s;
       }
     }
@@ -391,7 +393,6 @@ header {
         transform: rotate(5deg) translateY(-2px);
       }
       100% {
-
         transform: rotate(1deg) translate(0);
       }
     }
@@ -402,11 +403,12 @@ header {
       position: relative;
       z-index: 0;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "";
         position: absolute;
         top: 9px;
-        left:31%;
+        left: 31%;
         z-index: -1;
         width: 31vw;
         height: 14px;
@@ -414,7 +416,7 @@ header {
       }
       &::after {
         top: 32px;
-        left:22%;
+        left: 22%;
       }
     }
   }
@@ -422,7 +424,7 @@ header {
   .swiper-container {
     position: relative;
     right: 0;
-    width : 90vw;
+    width: 90vw;
     height: 535px;
     margin: 0 auto;
     overflow: hidden;
@@ -437,7 +439,7 @@ header {
         background-color: white;
         border: 1px solid $yellow;
         margin: 15px auto;
-        transition: .6s;
+        transition: 0.6s;
         opacity: 0.6;
         left: 0;
         right: 0;
@@ -445,7 +447,7 @@ header {
         span {
           display: block;
           position: absolute;
-          top : 10px;
+          top: 10px;
           background-color: #1e95e9;
           color: white;
           width: 30px;
@@ -455,13 +457,13 @@ header {
           margin-left: 15px;
           font-weight: 700;
           font-size: 1.2rem;
-          font-family: 'Noto Sans KR', sans-serif;
+          font-family: "Noto Sans KR", sans-serif;
         }
         img {
           display: block;
-          width:  83%;
+          width: 83%;
           position: absolute;
-          top : 30px;
+          top: 30px;
           left: 50%;
           transform: translateX(-50%);
         }
@@ -469,7 +471,7 @@ header {
           position: absolute;
           left: 0;
           right: 0;
-          bottom : 30px;
+          bottom: 30px;
           height: 60px;
           background-color: #ffeda4;
           font-size: 16px;
@@ -483,7 +485,7 @@ header {
           z-index: 1;
         }
       }
-    } 
+    }
   }
   .swiper-pagination {
     position: absolute;
@@ -494,7 +496,7 @@ header {
   .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    background-image: url('../source/icon/add.png');
+    background-image: url("../source/icon/add.png");
     background-color: transparent;
     background-size: contain;
   }
@@ -502,7 +504,7 @@ header {
   .swiper-pagination-bullet-active {
     width: 16px;
     height: 16px;
-    background-image: url('../source/icon/add.png');
+    background-image: url("../source/icon/add.png");
     background-color: transparent;
     background-size: contain;
     transform: translateY(2px);
@@ -513,11 +515,12 @@ header {
     display: none;
   }
 
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     top: calc(50% + 50px);
     font-size: 2.8rem;
-    color : $darkOrange;
-    opacity: .8;
+    color: $darkOrange;
+    opacity: 0.8;
     z-index: 2;
   }
 
@@ -545,18 +548,18 @@ header {
       background: rgba(45, 188, 255, 0.8);
       animation: move 3s infinite linear;
     }
-    
+
     .bubble__bg-1 {
       width: 78px;
       height: 82px;
-      top : 125px;
-      left: 90px;  
+      top: 125px;
+      left: 90px;
     }
 
     .bubble__bg-2 {
       width: 297px;
       height: 301px;
-      top : 168px;
+      top: 168px;
       right: 200px;
       border-radius: 43%;
       animation: move 5s infinite linear;
@@ -565,7 +568,7 @@ header {
     .bubble__bg-3 {
       width: 160px;
       height: 168px;
-      top : 126px;
+      top: 126px;
       left: 108px;
       background: rgba(6, 135, 195, 0.8);
     }
@@ -573,12 +576,12 @@ header {
     .bubble__bg-4 {
       width: 173px;
       height: 179px;
-      top : 30px;
+      top: 30px;
       right: 215px;
       background: rgba(6, 135, 195, 0.8);
     }
   }
-  
+
   @keyframes move {
     100% {
       transform: rotate(360deg);
@@ -592,18 +595,18 @@ header {
     img {
       width: 100%;
       display: block;
-      filter :grayscale(15%) drop-shadow(2px 2px 0px $gray);
+      filter: grayscale(15%) drop-shadow(2px 2px 0px $gray);
     }
     .map__pin {
       width: 100%;
       height: 100%;
       position: absolute;
-      top:0;
+      top: 0;
 
       li {
         position: absolute;
-        transition: .7s ease-in-out;
-        
+        transition: 0.7s ease-in-out;
+
         span {
           color: white;
           font-weight: 500;
@@ -613,19 +616,19 @@ header {
           color: $darkOrange;
         }
 
-        a{
+        a {
           text-decoration: none;
           color: black;
-          transition: .5s;
+          transition: 0.5s;
         }
 
         &:first-child {
-          top : 33%;
+          top: 33%;
           left: 28%;
           text-align: center;
         }
         &:nth-child(2) {
-          top:28%;
+          top: 28%;
           left: 9%;
         }
         &:nth-child(3) {
@@ -634,11 +637,11 @@ header {
           text-align: center;
         }
         &:nth-child(4) {
-          top:25%;
+          top: 25%;
           left: 45%;
         }
         &:last-child {
-          bottom:20%;
+          bottom: 20%;
           left: 29%;
           text-align: center;
         }
@@ -673,12 +676,12 @@ header {
     }
 
     .icon__mountain {
-      background-image: url('../source/icon/mountain.png');
+      background-image: url("../source/icon/mountain.png");
       right: 50%;
       transform: translate(30%, 200px);
     }
     .icon__surf {
-      background-image: url('../source/icon/surfing.png');
+      background-image: url("../source/icon/surfing.png");
       width: 40px;
       height: 40px;
       top: 50px;
@@ -686,13 +689,13 @@ header {
       animation: slowly 4s infinite;
     }
     .icon__shark {
-      background-image: url('../source/icon/shark.png');
+      background-image: url("../source/icon/shark.png");
       top: 400px;
       right: 25%;
       animation: slowly 3s infinite;
     }
     .icon__boat {
-      background-image: url('../source/icon/speed-boat.png');
+      background-image: url("../source/icon/speed-boat.png");
       top: 150px;
       left: 11%;
       animation: slowly 3s infinite;
@@ -718,7 +721,6 @@ header {
   }
 }
 
-
 // Hospital First Content
 .hospital-1 {
   display: flex;
@@ -731,28 +733,28 @@ header {
     width: 100vw;
     height: 720px;
     position: absolute;
-    top : -70px;
+    top: -70px;
     z-index: -1;
-    background-image: url('../source/image/shotBg1.jpg');
+    background-image: url("../source/image/shotBg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
     background-attachment: fixed;
-    opacity: .7;
+    opacity: 0.7;
   }
 
   img {
     border: 9px solid white;
     border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, .2);
+    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
   }
 
   .hospital__image {
     position: relative;
     display: block;
-    transform: scale(.9);
-    filter: blur(.5px) grayscale(100%) contrast(105%);
-    transition: .6s;
+    transform: scale(0.9);
+    filter: blur(0.5px) grayscale(100%) contrast(105%);
+    transition: 0.6s;
   }
 
   .hospital__image:hover {
@@ -761,12 +763,12 @@ header {
   }
 
   .title {
-    margin-right:15px;
+    margin-right: 15px;
     .title__bg {
       position: absolute;
       width: 58vw;
       height: 20px;
-      top : 125px;
+      top: 125px;
       right: 0;
       background-color: $gray;
 
@@ -774,11 +776,11 @@ header {
         position: absolute;
         color: white;
         left: 0;
-        top:-30px;
+        top: -30px;
         font-size: 2rem;
         line-height: 1;
         font-weight: 700;
-  
+
         padding: 7px 17px 7px 7px;
         text-shadow: -2px 0 $gray, 0 2px $gray, 2px 0 $gray, 0 -2px $gray;
       }
@@ -813,7 +815,7 @@ header {
 
         & > span {
           display: inline-block;
-          transition: .6s;
+          transition: 0.6s;
           transform: translateX(-10px);
           opacity: 0;
           margin-left: 5px;
@@ -829,11 +831,11 @@ header {
         }
 
         .item__location {
-          transition: .6s;
-          width : 86%;
+          transition: 0.6s;
+          width: 86%;
           height: 0px;
           margin: 0 auto;
-          
+
           .location {
             width: 100%;
             height: 0;
@@ -865,16 +867,13 @@ header {
         i.fa-chevron-down {
           color: $darkBrawn;
           position: absolute;
-          top : 8px;
+          top: 8px;
           right: 8px;
         }
       }
     }
   }
-
-  
 }
-
 
 // Hospital Second Content
 .hospital-2 {
@@ -883,63 +882,67 @@ header {
   position: relative;
   padding: 70px 0;
   height: 460px;
-  top : 10px;
+  top: 10px;
 
   .hospital__bg {
     width: 100vw;
     height: 600px;
     position: absolute;
-    top : 0px;
+    top: 0px;
     z-index: -1;
-    background-image: url('../source/image/ambulanceBg.jpg');
+    background-image: url("../source/image/ambulanceBg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
     // background-attachment: fixed;
     transform: rotateY(180deg);
     background-color: $gray;
-    opacity: .9;
+    opacity: 0.9;
   }
 
   .hospital__image {
-    background-image: url('../source/image/hanlaEmg3.jpeg');
+    background-image: url("../source/image/hanlaEmg3.jpeg");
     background-size: cover;
     width: 450px;
     border: 9px solid white;
     border-bottom: 40px solid white;
-    box-shadow: 9px 10px 12px rgba(0, 0, 0, .2);
-    border-top-left-radius : 8%;
+    box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 8%;
     border-bottom-right-radius: 18%;
 
-    filter: blur(.5px) grayscale(100%) contrast(100%);
+    filter: blur(0.5px) grayscale(100%) contrast(100%);
     overflow: hidden;
 
-   .shine {
-      position : absolute;
-      top : 0;
-      left : -100%;
-      z-index : 2;
-      display : block;
-  
-      width : 50%;
-      height : 100%;
-      background : linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255, 0.3) 100%);
-      transform : skewX(-25deg);
+    .shine {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 2;
+      display: block;
+
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      transform: skewX(-25deg);
     }
 
     &:hover {
       transform: scale(1);
       filter: grayscale(10%);
-  
+
       .shine {
-        animation : shine 3s;
-    
+        animation: shine 3s;
+
         @keyframes shine {
           50% {
-            left : 125%;
+            left: 125%;
           }
           100% {
-            left : -125%;
+            left: -125%;
           }
         }
       }
@@ -947,13 +950,13 @@ header {
   }
 
   .title {
-    margin-right:15px;
+    margin-right: 15px;
     .title__bg {
       position: absolute;
       z-index: 1;
       width: 58vw;
       height: 20px;
-      top : 125px;
+      top: 125px;
       left: 0;
       background-color: $darkBrawn;
 
@@ -961,13 +964,14 @@ header {
         position: absolute;
         color: white;
         right: 0;
-        top:-30px;
+        top: -30px;
         font-size: 2rem;
         line-height: 1;
         font-weight: 700;
-  
+
         padding: 7px 17px 7px 7px;
-        text-shadow: -2px 0 $darkBrawn, 0 2px $darkBrawn, 2px 0 $darkBrawn, 0 -2px $darkBrawn;
+        text-shadow: -2px 0 $darkBrawn, 0 2px $darkBrawn, 2px 0 $darkBrawn,
+          0 -2px $darkBrawn;
       }
     }
 
@@ -1001,7 +1005,7 @@ header {
 
         & > span {
           display: inline-block;
-          transition: .6s;
+          transition: 0.6s;
           transform: translateX(-10px);
           opacity: 0;
           margin-left: 5px;
@@ -1017,11 +1021,11 @@ header {
         }
 
         .item__location {
-          transition: .6s;
-          width : 86%;
+          transition: 0.6s;
+          width: 86%;
           height: 0px;
           margin: 0 auto;
-          
+
           .location {
             width: 100%;
             height: 0;
@@ -1053,13 +1057,10 @@ header {
         i.fa-chevron-down {
           color: $darkBrawn;
           position: absolute;
-          top : 8px;
+          top: 8px;
           right: 8px;
         }
       }
     }
   }
-
-  
 }
-
