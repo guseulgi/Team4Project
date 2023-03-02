@@ -272,6 +272,7 @@ header {
     .contents__title {
       width: 25.5rem;
       margin: 0 auto;
+      padding-left: 5px;
       h2 {
         display: none;
         width : 4rem;
@@ -304,19 +305,21 @@ header {
         }
 
         &:nth-child(3) {
-          transform: scale(1.05) rotate(-5deg) translateY(1px);
+          transform: scale(1.05) rotate(-5deg) translate(1px, 2px);
         }
 
-        &:nth-child(4) {}
+        &:nth-child(4) {
+          transform: translateX(3px);
+        }
 
         &:nth-child(5) {
-          transform:scale(1) rotate(-16deg);
+          transform:scale(1) rotate(-16deg) translateX(5px);
         }
         &:nth-child(6) {
           color: $darkOrange;
           animation-name: titleAnim_exclamation;
           animation-delay: 2.2s;
-          transform: scale(1.4) rotate(15deg) translateX(5px);
+          transform: scale(1.4) rotate(15deg) translateX(13px);
         }
   
         @keyframes titleAnim {
@@ -406,6 +409,8 @@ header {
       right: 0;
       margin: 0 auto;
       z-index: 3;
+
+
       a {
         color: #6264587b;
         font-size: 2rem;
@@ -413,10 +418,23 @@ header {
       }
       i {
         display: block;
-        transform: scaleX(1.6);
+        // transform: scaleX(1.6);
         position: absolute;
+        animation: arrowDown 3s infinite;
         &:first-child {
           top : 13px;
+          animation: arrowDown 3s .5s infinite;
+        }
+      }
+
+      @keyframes arrowDown {
+        0% {
+          // opacity: .3;
+          transform: translateY(2px);
+        }
+        100% {
+          transform: translateY(7px);
+          // opacity: .9;
         }
       }
     }
@@ -427,9 +445,9 @@ header {
 // Nav Section
 .nav {
   width: 100vw;
-  height: 700px;
+  height: 900px;
   position: relative;
-  top : -100px;
+  top : -5px;
   left: 0;
 
   .nav__container {
@@ -445,8 +463,10 @@ header {
 
       h3 {
         font-size: 4rem;
-        font-weight: 100;
-        font-family: 'Josefin Slab', serif;
+        // font-weight: 100;
+        // font-family: 'Josefin Slab', serif;
+        font-family: 'Rubik Mono One', sans-serif;
+        letter-spacing: -8px;
         font-style: italic;
       }
 
@@ -469,7 +489,7 @@ header {
 
     .nav__bg {
       background-image: url('../source/image/jejuMain.png');
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       
       width: 70vw;
@@ -485,7 +505,7 @@ header {
       display: flex;
       justify-content: space-evenly;
       position: absolute;
-      top : 550px;
+      bottom : 0;
       li {
         position: relative;
         background-color: white;
@@ -500,15 +520,13 @@ header {
         }
 
         .parts__image {
-          // background-image: url('../source/');s
           background-size: cover;
           background-repeat: no-repeat;
           height: 170px;
           opacity: .8;
           transition: .5s;
-
-          
         }
+
         $mainImgName : 'activity' 'cafe' 'food' 'tourist' 'emergency';
           @each $el in $mainImgName {
             $idx : index($mainImgName, $el);
@@ -529,7 +547,9 @@ header {
           height: 35px;
           border-radius: 20px;
           background-color: #f6d86099;
-          font-family: 'Josefin Slab', serif;
+          // font-family: 'Josefin Slab', serif;
+          font-family: 'Rubik Mono One', sans-serif;
+          letter-spacing: -2px;
           font-size: 1.5rem;
           text-align: center;
           color: rgb(34, 34, 34);
@@ -562,16 +582,32 @@ header {
 
 footer {
   width: 100vw;
-  height: 40px;
-  background-color: #363730;
 
-  p {
-    text-align: center;
-    color: white;
-    padding-top: 10px;
-    font-weight: 100;
-    font-style: italic;
-    font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 1px;
+  background-color: #363730;
+  margin-top: 50px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+
+    height: 40px;
+    background-size: cover;
+    background-color: white;
+    margin-right: 30px;
   }
+
+  ul {
+    li {
+      color: white;
+      // padding-top: 10px;
+      font-weight: 100;
+      font-size: 12px;
+      font-style: italic;
+      font-family: 'Noto Sans', sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+
 }
