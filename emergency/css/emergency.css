@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,6 +53,18 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "LOTTERIACHAB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OKDDUNG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
@@ -73,6 +87,17 @@ body {
   background-color: #ffeda4;
 }
 
+.cursor {
+  background-image: url("../source/cursor.png");
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 3;
+}
+
 header {
   position: fixed;
   height: 100px;
@@ -83,18 +108,32 @@ header {
   background-color: transparent;
 }
 header .title {
-  color: #ea5c2b;
-  font: 8vh "Kirang Haerang";
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
   text-shadow: 0px 3px 0 white;
   padding-left: 40px;
   height: 100px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
   line-height: 18vh;
 }
 header .other-menu ul {
   display: flex;
   position: absolute;
   top: 0;
-  right: 10%;
+  right: 40px;
   height: 100%;
 }
 header .other-menu ul li {
@@ -119,7 +158,16 @@ header .other-menu ul li span {
   text-align: center;
 }
 header .other-menu ul li a {
+  color: white;
+}
+header .other-menu ul li a.changeColor {
   color: #5c3b16;
+}
+header .other-menu ul li a.changeColor:hover {
+  color: #ea5c2b;
+}
+header .other-menu ul li a:hover {
+  color: #f6d860;
 }
 header .other-menu ul li:hover span {
   display: block;
@@ -153,7 +201,7 @@ header .other-menu ul li:hover::after {
   font-size: 2rem;
   text-align: center;
   line-height: 32px;
-  margin: auto 10px auto 5px;
+  margin: auto 12px auto 9px;
   color: white;
   animation: weatherAnim 10s infinite;
 }
@@ -191,7 +239,29 @@ header .other-menu ul li:hover::after {
   text-align: center;
   font-size: 1.2rem;
 }
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
+}
+.returnToTop a.changeColor i {
+  color: white;
+}
+.returnToTop a.changeColor span {
+  background-color: white;
+}
+.returnToTop a span {
+  width: 18px;
+  height: 1.8px;
+  display: block;
+  border-radius: 4px;
+  background-color: #626458;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
 .returnToTop a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
   color: #626458;
 }
 
@@ -199,8 +269,6 @@ header .other-menu ul li:hover::after {
   width: 100vw;
   height: 670px;
   padding: 22vh 0 30px 0;
-  background-image: url("../source/image/pill.jpg");
-  background-size: cover;
   position: relative;
 }
 .emgSituation .title {
@@ -221,7 +289,7 @@ header .other-menu ul li:hover::after {
   background-image: url("../source/icon/ambulance.png");
   background-size: cover;
   transform: rotateY(180deg);
-  animation: ambulence 3s infinite;
+  animation: ambulence 9s infinite;
 }
 .emgSituation .title .icon__siren {
   background-image: url("../source/icon/siren.png");
@@ -251,25 +319,26 @@ header .other-menu ul li:hover::after {
   animation-delay: 0.3s;
 }
 .emgSituation .title .icon__plus {
-  background-image: url("../source/icon/plus.png");
+  background-image: url("../source/icon/add.png");
   background-size: cover;
   width: 220px;
   height: 220px;
-  top: -20px;
+  top: -45px;
   left: -30px;
-  z-index: 0;
+  z-index: -1;
   transform: rotate(-10deg);
   opacity: 0.4;
 }
 @keyframes ambulence {
   0% {
-    transform: rotateY(180deg) scale(1.01, 1.01) translateY(0px);
+    transform: rotateY(180deg) scale(1.01, 1.01) translateX(-300%) translateY(0px);
   }
   50% {
-    transform: rotateY(180deg) scaleY(1.03) translateY(1px);
+    transform: rotateY(180deg) scaleY(1.03) translateX(0) translateY(1px);
   }
   100% {
-    transform: rotateY(180deg) scale(1, 1) translateY(3px);
+    z-index: 0;
+    transform: rotateY(180deg) scale(1, 1) translateX(1000%) translateY(3px);
   }
 }
 @keyframes siren {
@@ -292,7 +361,8 @@ header .other-menu ul li:hover::after {
   box-sizing: content-box;
   margin: -20px auto 3px auto;
   width: 17vw;
-  background-color: white;
+  background-color: #f6d860;
+  box-shadow: 1px 1px 1px #626458;
   animation: h2Animation 2s;
   transition: 0.4s;
 }
@@ -345,7 +415,7 @@ header .other-menu ul li:hover::after {
   position: relative;
   right: 0;
   width: 90vw;
-  height: 500px;
+  height: 535px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -357,6 +427,7 @@ header .other-menu ul li:hover::after {
   width: 350px;
   height: 500px;
   background-color: white;
+  border: 1px solid #f6d860;
   margin: 15px auto;
   transition: 0.6s;
   opacity: 0.6;
@@ -367,6 +438,12 @@ header .other-menu ul li:hover::after {
   display: block;
   position: absolute;
   top: 10px;
+  background-color: #1e95e9;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
   margin-left: 15px;
   font-weight: 700;
   font-size: 1.2rem;
@@ -382,15 +459,56 @@ header .other-menu ul li:hover::after {
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide p {
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 30px;
+  height: 60px;
+  background-color: #ffeda4;
   font-size: 16px;
-  margin: 0 16px 20px 25px;
+  padding: 15px 16px 20px 25px;
   line-height: 1.3;
 }
 .emgSituation .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
   transform: scale(1.05);
   opacity: 1;
   z-index: 1;
+}
+.emgSituation .swiper-pagination {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+.emgSituation .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-image: url("../source/icon/add.png");
+  background-color: transparent;
+  background-size: contain;
+}
+.emgSituation .swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background-image: url("../source/icon/add.png");
+  background-color: transparent;
+  background-size: contain;
+  transform: translateY(2px);
+}
+.emgSituation .swiper-button-next::after,
+.emgSituation .swiper-button-prev::after {
+  display: none;
+}
+.emgSituation .swiper-button-prev, .emgSituation .swiper-button-next {
+  top: calc(50% + 50px);
+  font-size: 2.8rem;
+  color: #ea5c2b;
+  opacity: 0.8;
+  z-index: 2;
+}
+.emgSituation .swiper-button-prev {
+  left: 20%;
+}
+.emgSituation .swiper-button-next {
+  right: 20%;
 }
 
 .map {
@@ -582,30 +700,15 @@ header .other-menu ul li:hover::after {
 }
 .hospital-1 .hospital__image {
   position: relative;
+  display: block;
   transform: scale(0.9);
   filter: blur(0.5px) grayscale(100%) contrast(105%);
   transition: 0.6s;
-}
-.hospital-1 .hospital__image::before {
-  position: absolute;
-  top: 0;
-  left: -75%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  transform: skewX(-25deg);
 }
 .hospital-1 .hospital__image:hover {
   transform: scale(1);
   filter: grayscale(10%);
 }
-.hospital-1 .hospital__image:hover::before {
-  animation: shine 0.75s;
-}
-@keyframes shine {}
 .hospital-1 .title {
   margin-right: 15px;
 }
@@ -723,13 +826,43 @@ header .other-menu ul li:hover::after {
   background-color: #626458;
   opacity: 0.9;
 }
-.hospital-2 img {
+.hospital-2 .hospital__image {
+  background-image: url("../source/image/hanlaEmg3.jpeg");
+  background-size: cover;
+  width: 450px;
   border: 9px solid white;
   border-bottom: 40px solid white;
   box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 8%;
+  border-bottom-right-radius: 18%;
+  filter: blur(0.5px) grayscale(100%) contrast(100%);
+  overflow: hidden;
 }
-.hospital-2 .hospital__image {
-  filter: blur(0.5px) grayscale(10%) contrast(105%);
+.hospital-2 .hospital__image .shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+}
+.hospital-2 .hospital__image:hover {
+  transform: scale(1);
+  filter: grayscale(10%);
+}
+.hospital-2 .hospital__image:hover .shine {
+  animation: shine 3s;
+}
+@keyframes shine {
+  50% {
+    left: 125%;
+  }
+  100% {
+    left: -125%;
+  }
 }
 .hospital-2 .title {
   margin-right: 15px;

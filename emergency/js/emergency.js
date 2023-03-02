@@ -9,8 +9,17 @@ const emgSithationSwiper = new Swiper('.emgSituation .swiper-container', {
     delay: 9000,
     disableOnInteraction : false,
   },
+  pagination : {
+    el : '.emgSituation .swiper-pagination',
+    clickable : true,
+  },
+  navigation : {
+    prevEl : '.emgSituation .swiper-button-prev',
+    nextEl : '.emgSituation .swiper-button-next',
+  },
   observer: true,
   observeParents: true,
+  parallax:true,
 });
 
 
@@ -81,7 +90,7 @@ fetch(weatherUrl).then(response => response.json())
 
   weather.prepend(newIcon);
   weatherUl.appendChild(newLi);
-}).cathch(error => {
+}).catch(error => {
   console.log('Weather API Error : ',error);
 });
 

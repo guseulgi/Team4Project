@@ -1,0 +1,766 @@
+/* 개선 필요 점 */
+/* 링크 동그란 버튼에 hover 주면 시각적인 효과 주기 */
+/* DETAILS, 제목에만 글자 굵기 변경하기 */
+
+
+/* font-family: 'Kirang Haerang' */
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang:400');
+/* font-family: 'Do Hyeon'; */
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon:400');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+/* font-family: 'Lobster', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* COMMON */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgb(220, 194, 145); */
+}
+
+header {
+  padding: 20px;
+}
+
+.logo {
+  font-family: 'Kirang Haerang';
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  /* filter: grayscale(100%); */
+  mix-blend-mode: normal;
+}
+
+.swiper-slide img:hover {
+  mix-blend-mode: luminosity;
+  filter: none;
+}
+
+/* BUTTON */
+button {
+  position: absolute;
+  width: 10vw;
+  height: 4vh;
+  background-color: rgba(247, 198, 92, 0.12);
+  font-family: 'Noto Sans KR', sans-serif;
+  border: 1px solid white;
+  color: #fff;
+  /* box-shadow: 0 4px 16px rgba(247, 208, 67, 0.4); */
+  font-size: 2vh;
+  font-weight: bold;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+  transition: .2s;
+  text-shadow: 3px 3px 8px black;
+  display: block;
+  margin: auto;
+  right: 35vw;
+  bottom: 10vh;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background-color: rgba(223, 173, 81, 0.9);
+  cursor: pointer;
+  /* box-shadow: 0 2px 4px rgba(223, 173, 81, 2.0); */
+  border: none;
+}
+
+/* SWIPER */
+
+.swiper {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 90vw;
+  /* padding-top: 20px; */
+}
+
+.swiper-slide {
+  width: 100%;
+  /* height: 800px; */
+  background-color: #eee;
+}
+
+.text-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 80vw;
+  opacity: 0;
+  margin: auto;
+  text-align: center;
+  transition: .5s;
+  z-index: 1;
+}
+
+.swiper-slide-active .text-wrap {
+  position: fixed;
+  opacity: 1;
+  top: 40%;
+  transition: .5s;
+  width: fit-content;
+}
+
+.text-wrap h2 {
+  font-family: 'Do Hyeon';
+  color: #fff;
+  font-size: 5.5vh;
+  line-height: 1.25;
+  margin: 0;
+  text-shadow: 3px 3px 8px black;
+  text-align: center;
+}
+
+.text-wrap p {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  font-size: 2.2vh;
+  font-weight: 20px;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 3px 3px 8px black;
+
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 3px;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(240, 163, 20, 0.249);
+  width: 80px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  /* width: 70px;
+  height: 70px; */
+  /* background-color: rgb(240, 238, 234); */
+  opacity: 20px;
+  /* backdrop-filter: blur(3px); */
+  /* background-size: 25px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  /* border-radius: 50%; */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  /* top: 80px */
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: flex;
+  text-align: center;
+  font-size: 50px;
+  color: orange;
+  left: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  font-weight: bold;
+  text-shadow: 0px 2px 2px 5px;
+}
+
+.swiper-button-prev {
+  background-image: url(#);
+  left: 20px;
+}
+
+.swiper-button-prev:hover {
+  background-image: url(#);
+}
+
+.swiper-button-next {
+  background-image: url(#);
+  right: 20px;
+}
+
+.swiper-button-next:hover {
+  background-image: url(#);
+  right: 20px;
+}
+
+/* CONTENTS */
+/* 981파크 */
+
+.park981 {
+  position: relative;
+  margin-top: 6%;
+  justify-content: center;
+  display: flex;
+  width: auto;
+  height: 80vw;
+  max-width: 90vw;
+}
+
+.park981 img {
+  position: absolute;
+  margin: 0;
+}
+
+.park981 .cloud1 {
+  position: absolute;
+  top: -5vh;
+  left: 30vw;
+  width: 31vw;
+}
+
+.park981 .cloud2 {
+  position: absolute;
+  left: 0;
+  width: 22vw;
+  opacity: 60%;
+  top: 11vh;
+}
+
+.park981 .building {
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 50vw;
+}
+
+.park981 .screengame {
+  width: auto;
+  height: 60vh;
+  top: 40vh;
+  right: -4vw;
+}
+
+.park981 .cart {
+  width: 40vw;
+  left: 9vw;
+  top: 60vh;
+  z-index: -1;
+}
+
+.park981 .phone {
+  /* display: none; */
+  top: 60.5vh;
+  width: 39.9vw;
+}
+
+.parkdes1 {
+  position: absolute;
+  left: 4vw;
+  top: 5.5vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+.parkdes2 {
+  position: absolute;
+  right: -2vw;
+  top: 104vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+/* 981파크 CONTACT*/
+
+.contact981 {
+  position: relative;
+}
+
+.background981 {
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.188);
+  width: 20vw;
+  height: 33vh;
+  right: -49vw;
+}
+
+.contact981 p {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  margin: 8% 8% 0% 8%;
+  font-size: 1.1vw;
+  color: black;
+  font-weight: 500;
+}
+
+.contact981 .sns {
+  position: absolute;
+  display: flex;
+  /* justify-content: center; */
+  /* margin-top: 10%; */
+  /* margin: 8% 8% 0% 8%; */
+  margin-top: 24.2vh;
+  margin-left: 2.4vw;
+}
+
+.contact981 .sns>li>a {
+  display: block;
+  background-color: black;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0px 20px 0px 0px;
+}
+
+.contact981 .sns>li>a>i {
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  /* margin: 0px 3px; */
+  padding: 10px;
+}
+
+
+/* 렛츠런팜 */
+
+.letsrunfarm .runfarm1 {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  top: -20vh;
+}
+
+.letsrunfarm .runfarm2 {
+  position: absolute;
+  right: 0;
+  top: 320vh;
+  width: 52vw;
+}
+
+.letsrunfarm .runfarm3 {
+  position: absolute;
+  right: 0;
+  top: 295vh;
+  width: auto;
+  height: 55vh;
+  /* 말+사람 이미지에 쉐도우 주기 */
+}
+
+.letsrunfarm .runfarm4 {
+  position: absolute;
+  left: -1vw;
+  top: 340vh;
+  width: auto;
+  height: 50vh;
+}
+
+.runtext {
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.188);
+  padding: 30px 30px;
+  right: 3vw;
+  top: 235vh;
+}
+
+.runfarmdes {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.1vw;
+  font-weight: 450;
+  color: white;
+}
+
+/* 렛츠런팜 CONTACT*/
+
+
+.contactrun {
+  position: relative;
+}
+
+.backgroundrun {
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.188);
+  width: 20vw;
+  height: 33vh;
+  right: 54vw;
+  bottom: -9vw;
+}
+
+.contactrun p {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  margin: 8% 8% 0% 8%;
+  font-size: 1.1vw;
+  color: black;
+  font-weight: 500;
+}
+
+.contactrun .sns {
+  position: absolute;
+  display: flex;
+  /* justify-content: center; */
+  /* margin-top: 10%; */
+  /* margin: 8% 8% 0% 8%; */
+  margin-top: 24.2vh;
+  margin-left: 2.4vw;
+}
+
+.contactrun .sns>li>a {
+  display: block;
+  background-color: black;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0px 20px 0px 0px;
+}
+
+.contactrun .sns>li>a>i {
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  /* margin: 0px 3px; */
+  padding: 10px;
+}
+
+
+/* 카이트 서핑 */
+
+.kitesurfing {
+  /* margin: auto; */
+  position: relative;
+  width: 100%;
+}
+
+.kitetitle {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgba(244, 247, 250, 0.964);
+  font-size: 2.5vw;
+  /* margin: 8% 8% 0% 8%; */
+  font-weight: bold;
+  z-index: 4;
+  top: 64vh;
+  left: 15vw;
+  text-shadow: 1px 2px 5px black;
+}
+
+.kite1 {
+  position: absolute;
+  width: 100%;
+  top: 55vh;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.kite2 {
+  position: absolute;
+  width: 100%;
+  top: 135vh;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  margin: 0;
+}
+
+.wing1 {
+  position: absolute;
+  top: 40vh;
+  width: 35%;
+  right: 0vw;
+  margin: 0;
+  z-index: 3;
+}
+
+.wing2 {
+  position: absolute;
+  top: 62vh;
+  width: 35%;
+  left: 0vw;
+  margin: 0;
+  z-index: 4;
+}
+
+.wing3 {
+  position: absolute;
+  top: 105vh;
+  width: 48%;
+  right: 0vw;
+  margin: 0;
+  z-index: 3;
+}
+
+.kitedes {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  /* top: 500vh; */
+  font-weight: 500;
+  font-size: 1.3vw;
+  left: 5%;
+  top: 220vh;
+}
+
+/* 카이트서핑 CONTACT*/
+
+
+.contactkite {
+  position: relative;
+}
+
+.backgroundkite {
+  position: absolute;
+  background-color: rgba(210, 227, 245, 0.188);
+  width: 20vw;
+  height: 33vh;
+  left: 2.5vw;
+  top: 63vh;
+  z-index: 4;
+}
+
+.contactkite p {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  margin: 8% 8% 0% 8%;
+  font-size: 1.1vw;
+  color: white;
+  font-weight: 500;
+}
+
+.contactkite .sns {
+  position: absolute;
+  display: flex;
+  /* justify-content: center; */
+  /* margin-top: 10%; */
+  /* margin: 8% 8% 0% 8%; */
+  margin-top: 24.2vh;
+  margin-left: 2.4vw;
+}
+
+.contactkite .sns>li>a {
+  display: block;
+  background-color: black;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0px 20px 0px 0px;
+}
+
+.contactkite .sns>li>a>i {
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  /* margin: 0px 3px; */
+  padding: 10px;
+}
+
+
+
+/* 블루원 요트투어 */
+
+.blueone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.blueone1 {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  top: 210vh;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.blueonetitle {
+  position: absolute;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 4.3vw;
+  font-style: italic;
+  font-weight: lighter;
+  text-shadow: 1px 2px 5px black;
+  z-index: 5;
+  top: 215vh;
+  left: 3vw;
+}
+
+.bluedes {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  font-size: 2.5vw;
+  font-weight: bold;
+  z-index: 4;
+  top: 320vh;
+  left: 16vw;
+  padding-bottom: 5vh;
+  justify-content: center;
+}
+
+/* 블루원 요트투어 CONTACT*/
+/* 어디갔니! */
+
+.contactblue {
+  position: absolute;
+  top: 293vh;
+  justify-content: center;
+  width: 100%;
+  left: 51vw;
+}
+
+.backgroundblue {
+  position: absolute;
+  background-color: rgba(222, 230, 238, 0.188);
+  width: 20vw;
+  height: 33vh;
+  right: 54vw;
+  bottom: -9vw;
+  z-index: 1;
+}
+
+.contactblue p {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+  margin: 8% 8% 0% 8%;
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+.contactblue .sns {
+  position: absolute;
+  display: flex;
+  margin-top: 24.2vh;
+  margin-left: 2.4vw;
+}
+
+.contactblue .sns>li>a {
+  display: block;
+  background-color: black;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0px 20px 0px 0px;
+}
+
+.contactblue .sns>li>a>i {
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  /* margin: 0px 3px; */
+  padding: 10px;
+}
+
+.bluecontainer {
+  position: relative;
+  top: 241.5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bluecon1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bluecon1>img {
+  width: 30vw;
+  height: auto;
+  margin: 10px 10px;
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+  display: inline-block;
+}
+
+.banner .ytitle,
+.banner .content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%);
+  display: none;
+  width: 100%;
+  font-size: 70px;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: (-50%, -50%);
+  transition: all .8s;
+}
+
+.banner::before {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 0;
+}
+
+.banner::after {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 0;
+}
+
+.bluecon2 {
+  position: absolute;
+  top: 16.5vh;
+  width: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bluecon2>img {
+  width: 30vw;
+  height: auto;
+  margin: 10px 10px;
+}
+
+/* 바운스슈퍼파크 */
+
+.bounce {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  width: 20px;
+  height: auto;
+  max-width: 90vw;
+  border: 1px solid black;
+
+}

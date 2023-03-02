@@ -6,6 +6,30 @@
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon:400');
 //font-family: 'Do Hyeon';
 
-// Font 3 Noto Sans
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+// Font 3 Noto Sans KR
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 //font-family: 'Noto Sans KR', sans-serif;
+
+// Font 4 Noto Sans
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap');
+//font-family: 'Noto Sans', sans-serif;
+
+// 롯데리아
+@font-face {
+  font-family: 'LOTTERIACHAB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 읏맨 엉뚱체
+@font-face {
+  font-family: 'OKDDUNG';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Josefin Slab
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap');
+// font-family: 'Josefin Slab', serif;
