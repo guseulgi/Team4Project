@@ -19,12 +19,210 @@
 /* font-family: 'Gloock', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
+/* 읏맨 엉뚱체 */
+@font-face {
+  font-family: 'OKDDUNG';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* MAIN HAEDER */
 
 header {
   height: 100px;
   width: 1920px;
+}
+
+header {
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
+}
+
+header .title {
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
+  text-shadow: 0px 3px 0 white;
+  padding-left: 40px;
+  height: 100px;
+  line-height: 18vh;
+}
+
+header .title .title__logo>i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 18vh;
+}
+
+header .title .title__logo>i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
+  line-height: 18vh;
+}
+
+header .other-menu ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  height: 100%;
+}
+
+header .other-menu ul li {
+  position: relative;
+  margin: auto 15px;
+  font-size: 20px;
+  transition: 0.7s;
+}
+
+header .other-menu ul li span {
+  display: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 7px;
+  width: 70px;
+  height: 25px;
+  background-color: #ff7f3f;
+  position: absolute;
+  top: -28px;
+  left: -24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+header .other-menu ul li a {
+  color: #5c3b16;
+}
+
+header .other-menu ul li a.changeColor {
+  color: #5c3b16;
+}
+
+header .other-menu ul li a.changeColor:hover {
+  color: #ea5c2b;
+}
+
+header .other-menu ul li a:hover {
+  color: #f6d860;
+}
+
+header .other-menu ul li:hover span {
+  display: block;
+  color: white;
+}
+
+header .other-menu ul li:hover::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 6px;
+  background-color: #ff7f3f;
+}
+
+.weather {
+  position: fixed;
+  display: flex;
+  width: 150px;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 10px;
+  background-color: #ff9a1f;
+  border-radius: 10px;
+  z-index: 3;
+  opacity: 0.7;
+}
+
+.weather i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 32px;
+  margin: auto 12px auto 9px;
+  color: white;
+  animation: weatherAnim 10s infinite;
+}
+
+@keyframes weatherAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40%) scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.weather ul li {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 5px 0;
+}
+
+.returnToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 190px;
+}
+
+.returnToTop a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #5c3b16;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
+}
+
+.returnToTop a.changeColor i {
+  color: white;
+}
+
+.returnToTop a.changeColor span {
+  background-color: white;
+}
+
+.returnToTop a span {
+  width: 18px;
+  height: 1.8px;
+  display: block;
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.returnToTop a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: white;
 }
 
 /* COMMON */
@@ -65,11 +263,9 @@ figure video {
 .inner {
   position: relative;
   width: 1920px;
-  height: px;
   margin: auto;
   /* border: 1px solid black; */
 }
-
 
 .swiper-slide a {
   justify-content: center;
@@ -125,6 +321,7 @@ button:hover {
 .swiper {
   position: relative;
   margin-bottom: 21%;
+  margin-top: 8%;
   width: 100%;
   /* max-width: 90vw; */
 }
@@ -142,7 +339,7 @@ button:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: rgba(240, 163, 20, 0.249);
+  background-color: rgba(168, 166, 164, 0.249);
   width: 80px;
 }
 
@@ -158,7 +355,7 @@ button:hover {
   background-repeat: no-repeat;
   /* z-index: 2; */
   -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 1s;
   position: absolute;
 }
 
@@ -169,7 +366,7 @@ button:hover {
   display: flex;
   text-align: center;
   font-size: 50px;
-  color: orange;
+  color: rgba(62, 59, 59, 0.212);
   left: 20px;
 }
 
@@ -945,7 +1142,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  /* display: none; */
 }
 
 .bluecon1>img {
@@ -1080,7 +1276,7 @@ figure.snip1384 h3 {
   text-transform: uppercase;
   opacity: 0;
   padding-bottom: 3px;
-  color: rgba(245, 248, 249, 0.93);
+  color: rgba(255, 255, 255, 0.96);
   text-shadow: 3px 3px 8px black;
 }
 
@@ -1095,8 +1291,7 @@ figure.snip1384 p {
   text-shadow: 3px 3px 3px black;
 }
 
-figure.snip1384:hover img,
-figure.snip1384.hover img {
+figure.snip1384:hover img {
   zoom: 1;
   filter: alpha(opacity=30);
   -webkit-opacity: 0.5;
