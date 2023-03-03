@@ -8,6 +8,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -202,6 +208,7 @@ header .other-menu ul li:hover::after {
 }
 
 .returnToTop {
+  z-index: 4;
   position: fixed;
   bottom: 10px;
   right: 190px;
@@ -215,7 +222,29 @@ header .other-menu ul li:hover::after {
   text-align: center;
   font-size: 1.2rem;
 }
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
+}
+.returnToTop a.changeColor i {
+  color: white;
+}
+.returnToTop a.changeColor span {
+  background-color: white;
+}
+.returnToTop a span {
+  width: 18px;
+  height: 1.8px;
+  display: block;
+  border-radius: 4px;
+  background-color: gray;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
 .returnToTop a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
   color: #626458;
 }
 
@@ -311,47 +340,68 @@ header .other-menu ul li:hover::after {
   animation-fill-mode: forwards;
 }
 .contents .seaContent .text {
-  margin-top: 80px;
+  margin-top: 20vh;
   width: 90vw;
   margin-left: 5vw;
-  height: 70vh;
+  height: 68vh;
   background-color: white;
   transition: 0.5s;
-  border: 1px solid black;
-  border-radius: 30px;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 2;
 }
-.contents .seaContent .text h1 {
-  text-align: center;
-  margin-top: 6vh;
-  font-size: 3vh;
-  font-weight: 700;
+.contents .seaContent .text .text-map {
+  margin-top: 60px;
+  position: absolute;
+  right: 20px;
+  width: 52vh;
+  height: 60vh;
+  background-color: #ced8d6;
+}
+.contents .seaContent .text .text-map p {
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.contents .seaContent .text .text-map .sea-map {
+  width: 10vw;
+  height: 10vh;
+  background-color: #95cd41;
 }
 .contents .seaContent .text ul {
+  margin-left: 20px;
+  width: 60vw;
   display: flex;
-  justify-content: space-evenly;
+}
+.contents .seaContent .text ul li {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-left: 5px;
 }
 .contents .seaContent .text ul li img {
-  margin-top: 20px;
-  width: 25vw;
-  height: 30vh;
+  width: 30vw;
+  height: 40vh;
 }
 .contents .seaContent .text p {
   text-align: center;
 }
-.contents .seaContent .text::after {
-  position: absolute;
-  top: 2.5vh;
-  left: 2vw;
-  content: "";
-  border: 2px solid black;
-  border-radius: 20px;
-  border-style: dashed;
-  width: 86vw;
-  height: 65vh;
+.contents .seaContent .text .type-title {
+  font-family: "RIDIBatang";
+  text-align: left;
+  margin-left: 25px;
+  font-size: 3vh;
+  font-weight: 700;
+  width: calc(60vw + 5px);
+  display: inline;
+  vertical-align: middle;
+  border-right: 0.05em solid black;
+  animation: cursor 0.2s ease infinite;
+}
+.contents .seaContent .text .sea-text {
+  margin-top: 5px;
+  margin-left: 25px;
 }
 .contents .seaContent .text .close {
   margin: 10px;
@@ -381,12 +431,12 @@ header .other-menu ul li:hover::after {
   border: 30px solid white;
   border-bottom: 80px solid white;
   box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide:hover {
   scale: 1.03;
-  filter: grayscale(70%);
+  opacity: 0.6;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -396,7 +446,7 @@ header .other-menu ul li:hover::after {
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide img {
   width: 50vw;
-  height: 80vh;
+  height: 100vh;
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide p {
   opacity: 0;
@@ -564,13 +614,26 @@ header .other-menu ul li:hover::after {
   width: 33.3333333333vw;
   background-image: url("../image/arte2.png");
 }
-.contents .museumContent2 .detailFlow {
-  text-align: center;
-  font-size: 1vw;
-  background-color: #f6d860;
-  width: 100vw;
+.contents .museumContent2 .detail-flow {
   height: 10vh;
   line-height: 10vh;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.contents .museumContent2 .detail-flow .track {
+  width: 100%;
+  white-space: nowrap;
+  will-change: transform;
+  animation: flow 10s linear infinite;
+}
+.contents .museumContent2 .detail-flow .track .flow-content {
+  width: 100%;
 }
 
 @keyframes appear {
@@ -579,5 +642,13 @@ header .other-menu ul li:hover::after {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-50%);
   }
 }/*# sourceMappingURL=touristStyle.css.map */

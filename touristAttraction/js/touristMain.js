@@ -1,5 +1,4 @@
 //import AOS
-
 AOS.init();
 
 // Weather API
@@ -76,38 +75,40 @@ const swiper = new Swiper(".contents .seaContent .swiper", {
   },
 });
 
+//type animation
+
 //contents toggle
-const imgBox = document.querySelectorAll(".introDiv");
-const testContent = document.querySelectorAll(".contents");
+// const imgBox = document.querySelectorAll(".introDiv");
+// const testContent = document.querySelectorAll(".contents");
 
-for (let i = 0; i < imgBox.length; i += 1) {
-  imgBox[i].addEventListener("click", function () {
-    if (testContent[i].classList.contains("hide")) {
-      testContent[i].classList.remove("hide");
-      imgBox[i].classList.add("show");
-      //scroll smooth
-      const scrollMountain = document.querySelector(".mountainContent");
-      const firstTop = scrollMountain.offsetTop;
-      const scrollSea = document.querySelector(".seaContent");
-      const secondTop = scrollSea.offsetTop;
-      const scrollMuseum = document.querySelector(".museumContent");
-      const thirdTop = scrollMuseum.offsetTop;
+// for (let i = 0; i < imgBox.length; i += 1) {
+//   imgBox[i].addEventListener("click", function () {
+//     if (testContent[i].classList.contains("hide")) {
+//       testContent[i].classList.remove("hide");
+//       imgBox[i].classList.add("show");
+//       //scroll smooth
+//       const scrollMountain = document.querySelector(".mountainContent");
+//       const firstTop = scrollMountain.offsetTop;
+//       const scrollSea = document.querySelector(".seaContent");
+//       const secondTop = scrollSea.offsetTop;
+//       const scrollMuseum = document.querySelector(".museumContent");
+//       const thirdTop = scrollMuseum.offsetTop;
 
-      if (i === 0) {
-        window.scroll({ top: firstTop, behavior: "smooth" });
-      } else if (i === 1) {
-        window.scroll({ top: secondTop, behavior: "smooth" });
-      } else if (i === 2) {
-        window.scroll({ top: thirdTop, behavior: "smooth" });
-      } else {
-        console.log("error");
-      }
-    } else {
-      imgBox[i].classList.remove("show");
-      testContent[i].classList.add("hide");
-    }
-  });
-}
+//       if (i === 0) {
+//         window.scroll({ top: firstTop, behavior: "smooth" });
+//       } else if (i === 1) {
+//         window.scroll({ top: secondTop, behavior: "smooth" });
+//       } else if (i === 2) {
+//         window.scroll({ top: thirdTop, behavior: "smooth" });
+//       } else {
+//         console.log("error");
+//       }
+//     } else {
+//       imgBox[i].classList.remove("show");
+//       testContent[i].classList.add("hide");
+//     }
+//   });
+// }
 
 //swiper content show
 const swiperImg = document.querySelectorAll(".slide");
@@ -119,7 +120,10 @@ for (let i = 0; i < swiperImg.length; i += 1) {
     if (textDiv[i].classList.contains("off")) {
       textDiv[i].classList.remove("off");
       textDiv[i].classList.add("on");
-
+      new TypeIt(".type-title", {
+        speed: 50,
+        startDelay: 500,
+      }).go();
       closeDiv[i].addEventListener("click", function () {
         if (textDiv[i].classList.contains("on")) {
           textDiv[i].classList.remove("on");
@@ -132,3 +136,13 @@ for (let i = 0; i < swiperImg.length; i += 1) {
     }
   });
 }
+
+// Return to Top
+const returnToTop = document.querySelector(".returnToTop");
+returnToTop.addEventListener("click", function () {
+  window.scroll({
+    behavior: "smooth",
+    left: 0,
+    top: document.body.offsetTop,
+  });
+});

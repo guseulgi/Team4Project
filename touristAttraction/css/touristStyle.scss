@@ -7,6 +7,13 @@
 //font-family: 'Noto Sans KR', sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Mynerve&family=Rubik+Mono+One&display=swap");
 //font-family: 'Rubik Mono One', sans-serif;
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 //reset
 @import "../../css/reset";
@@ -178,6 +185,7 @@ header {
 
 // Return to Top Button
 .returnToTop {
+  z-index: 4;
   position: fixed;
   bottom: 10px;
   right: 190px;
@@ -192,7 +200,32 @@ header {
 
     font-size: 1.2rem;
 
+    &.changeColor {
+      background-color: $darkOrange;
+
+      i {
+        color: white;
+      }
+      span {
+        background-color: white;
+      }
+    }
+
+    span {
+      width: 18px;
+      height: 1.8px;
+      display: block;
+      border-radius: 4px;
+      background-color: gray;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+
     i {
+      position: absolute;
+      top: 8px;
+      left: 8px;
       color: $gray;
     }
   }
@@ -300,47 +333,72 @@ header {
       animation-fill-mode: forwards;
     }
     .text {
-      h1 {
-        text-align: center;
-        margin-top: 6vh;
-        font-size: 3vh;
-        font-weight: 700;
+      .text-map {
+        margin-top: 60px;
+        position: absolute;
+        right: 20px;
+        width: 52vh;
+        height: 60vh;
+        background-color: $lightGray;
+
+        p {
+          text-align: left;
+          margin-top: 40px;
+          margin-left: 25px;
+          font-size: 20px;
+        }
+        .sea-map {
+          width: 10vw;
+          height: 10vh;
+          background-color: #95cd41;
+        }
       }
+
       ul {
+        margin-left: 20px;
+        width: 60vw;
         display: flex;
-        justify-content: space-evenly;
+
         li {
+          margin-top: 60px;
+          margin-bottom: 20px;
+          margin-left: 5px;
           img {
-            margin-top: 20px;
-            width: calc(75vw / 3);
-            height: 30vh;
+            width: 30vw;
+            height: 40vh;
           }
         }
       }
       p {
         text-align: center;
       }
+      .type-title {
+        font-family: "RIDIBatang";
+        text-align: left;
+        margin-left: 25px;
+        font-size: 3vh;
+        font-weight: 700;
 
-      &::after {
-        position: absolute;
-        top: 2.5vh;
-        left: 2vw;
-        content: "";
-        border: 2px solid black;
-        border-radius: 20px;
-        border-style: dashed;
-        width: 86vw;
-        height: 65vh;
+        width: calc(60vw + 5px);
+        display: inline;
+        vertical-align: middle;
+        border-right: 0.05em solid black;
+        animation: cursor 0.2s ease infinite;
       }
-      margin-top: 80px;
+      .sea-text {
+        margin-top: 5px;
+        margin-left: 25px;
+      }
+
+      margin-top: 20vh;
       width: 90vw;
       margin-left: 5vw;
-      height: 70vh;
+      height: 68vh;
       background-color: white;
 
       transition: 0.5s;
-      border: 1px solid black;
-      border-radius: 30px;
+
+      // border-radius: 30px;
       position: absolute;
       left: 0;
       top: 0;
@@ -377,12 +435,12 @@ header {
           border: 30px solid white;
           border-bottom: 80px solid white;
           box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-          height: 80vh;
+          height: 100vh;
           overflow: hidden;
           &:hover {
             scale: 1.03;
-            // opacity: 0.6;
-            filter: grayscale(70%);
+            opacity: 0.6;
+
             transition: 0.5s;
             cursor: pointer;
             & p {
@@ -392,7 +450,7 @@ header {
           }
           img {
             width: 50vw;
-            height: 80vh;
+            height: 100vh;
           }
           p {
             opacity: 0;
@@ -551,7 +609,6 @@ header {
   }
   //museum2
   .museumContent2 {
-    // height: 100vh;
     .museumTitle2 {
       margin-top: 200px;
       margin-bottom: 20px;
@@ -580,16 +637,33 @@ header {
         background-image: url("../image/arte2.png");
       }
     }
-    .detailFlow {
-      text-align: center;
-      font-size: 1vw;
-      background-color: $yellow;
-      width: 100vw;
+    .detail-flow {
       height: 10vh;
       line-height: 10vh;
+      font-size: 20px;
+      font-weight: 400;
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+
+      padding: 5px 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      .track {
+        width: 100%;
+
+        white-space: nowrap;
+        will-change: transform;
+        animation: flow 10s linear infinite;
+        .flow-content {
+          width: 100%;
+        }
+      }
     }
   }
 }
+
+//animation
 
 @keyframes appear {
   from {
@@ -601,5 +675,14 @@ header {
     // height: 70vh;
     // width: 90vw;
     opacity: 1;
+  }
+}
+
+@keyframes flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-50%);
   }
 }

@@ -22,8 +22,13 @@
     <!--aos library-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <!--typeit library-->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!--fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <script
       src="https://kit.fontawesome.com/15a6f73da8.js"
       crossorigin="anonymous"
@@ -80,7 +85,8 @@
 
     <!-- Return to Top -->
     <div class="returnToTop">
-      <a href="#">
+      <a href="javascript:void(0);">
+        <span></span>
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </div>
@@ -112,12 +118,16 @@
         </ul>
       </div>
     </section>
-    <section class="contents hide">
+    <section class="contents">
       <div class="mountainContent">
         <ul>
           <li>
             <img src="./image/성산일출봉3.jpg" alt="" />
-            <div class="mountainText" data-aos="zoom-in-right">
+            <div
+              class="mountainText"
+              data-aos="fade-down-right"
+              data-aos-easing="ease-in-sine"
+            >
               성산일출봉<br /><i class="fa-solid fa-location-dot"></i>
               제주특별자치도 서귀포시 성산읍 일출로 284-12 <br /><i
                 class="fa-regular fa-clock"
@@ -134,7 +144,11 @@
           </li>
           <li>
             <img src="./image/한라.jpg" alt="" />
-            <p class="mountainText2">
+            <p
+              class="mountainText2"
+              data-aos="fade-down-left"
+              data-aos-easing="ease-in-sine"
+            >
               한라산 국립공원<br /><i class="fa-solid fa-location-dot"></i>
               탐방로<br />
               어리목탐방로 / 영실코스 / 관음사 탐방로 / 성판악 탐방로 / 돈내코
@@ -150,7 +164,11 @@
           </li>
           <li>
             <img src="./image/제주곶자왈도립공원11.jpg" alt="" />
-            <p class="mountainText3">
+            <p
+              class="mountainText3"
+              data-aos="fade-up-left"
+              data-aos-easing="ease-in-sine"
+            >
               성산<br /><i class="fa-solid fa-location-dot"></i> 제주특별자치도
               서귀포시 성산읍 일출로 284-12 <br /><i
                 class="fa-regular fa-clock"
@@ -168,44 +186,103 @@
         </ul>
       </div>
     </section>
-    <section class="contents hide">
+    <section class="contents">
       <div class="seaContent">
         <div class="text off">
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-          <h1>중문 색달 해수욕장</h1>
+          <div class="text-map">
+            <p>
+              <i class="fa-regular fa-clock"></i> 10:00 - 19:00 <br />
+              <i class="fa-regular fa-calendar-days"></i> 매년 6월말 ~ 8월
+            </p>
+            <div class="sea-map"></div>
+          </div>
           <ul>
             <li><img src="./image/색달해변1.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
             <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
           </ul>
-          <p>위치<br />운영시간</p>
+          <h1 class="type-title">중문 색달 해수욕장</h1>
+          <div class="sea-text">
+            중문색달해수욕장은 아름다운 해안 풍경과 야자수의 이국적인 모습으로
+            중문관광단지에서 시작해 천제연폭포와 대포주상절리와 이어지는 곳에
+            위치하고 있다.<br />본래는 진모살이라고 불렸는데 긴 모래 해변이라는
+            뜻이다. 이곳의 모래는 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가
+            비추는 방향에 따라 모래 해변의 색깔이 달라 보인다. <br />다른
+            해수욕장보다 파도가 잦고, 높은 편이라 서퍼들에게 인기가 많고, 국내의
+            가장 큰 규모의 국제 서핑 대회가 개최가 매년 6월에 개최된다.
+          </div>
         </div>
         <div class="text off">
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-          <h1>협재 해수욕장</h1>
+          <div class="text-map">
+            <p>
+              <i class="fa-regular fa-clock"></i> 10:00 - 19:00 <br />
+              <i class="fa-regular fa-calendar-days"></i> 매년 6월말 ~ 8월
+            </p>
+            <div class="sea-map"></div>
+          </div>
           <ul>
             <li><img src="./image/색달해변1.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
-          </ul>
-        </div>
-        <div class="text off">
-          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-          <h1>곽지 해수욕장</h1>
-          <ul>
-            <li><img src="./image/색달해변1.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
-          </ul>
-        </div>
-        <div class="text off">
-          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
-          <h1>쇠소깍</h1>
-          <ul>
-            <li><img src="./image/색달해변1.jpg" alt="" /></li>
-            <li><img src="./image/색달해변4.jpg" alt="" /></li>
             <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
           </ul>
+          <h1 class="type-title">중문 색달 해수욕장</h1>
+          <div class="sea-text">
+            중문색달해수욕장은 아름다운 해안 풍경과 야자수의 이국적인 모습으로
+            중문관광단지에서 시작해 천제연폭포와 대포주상절리와 이어지는 곳에
+            위치하고 있다.<br />본래는 진모살이라고 불렸는데 긴 모래 해변이라는
+            뜻이다. 이곳의 모래는 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가
+            비추는 방향에 따라 모래 해변의 색깔이 달라 보인다. <br />다른
+            해수욕장보다 파도가 잦고, 높은 편이라 서퍼들에게 인기가 많고, 국내의
+            가장 큰 규모의 국제 서핑 대회가 개최가 매년 6월에 개최된다.
+          </div>
+        </div>
+        <div class="text off">
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <div class="text-map">
+            <p>
+              <i class="fa-regular fa-clock"></i> 10:00 - 19:00 <br />
+              <i class="fa-regular fa-calendar-days"></i> 매년 6월말 ~ 8월
+            </p>
+            <div class="sea-map"></div>
+          </div>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
+          </ul>
+          <h1 class="type-title">중문 색달 해수욕장</h1>
+          <div class="sea-text">
+            중문색달해수욕장은 아름다운 해안 풍경과 야자수의 이국적인 모습으로
+            중문관광단지에서 시작해 천제연폭포와 대포주상절리와 이어지는 곳에
+            위치하고 있다.<br />본래는 진모살이라고 불렸는데 긴 모래 해변이라는
+            뜻이다. 이곳의 모래는 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가
+            비추는 방향에 따라 모래 해변의 색깔이 달라 보인다. <br />다른
+            해수욕장보다 파도가 잦고, 높은 편이라 서퍼들에게 인기가 많고, 국내의
+            가장 큰 규모의 국제 서핑 대회가 개최가 매년 6월에 개최된다.
+          </div>
+        </div>
+        <div class="text off">
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <div class="text-map">
+            <p>
+              <i class="fa-regular fa-clock"></i> 10:00 - 19:00 <br />
+              <i class="fa-regular fa-calendar-days"></i> 매년 6월말 ~ 8월
+            </p>
+            <div class="sea-map"></div>
+          </div>
+          <ul>
+            <li><img src="./image/색달해변1.jpg" alt="" /></li>
+            <li><img src="./image/색달해변-서핑.jpg" alt="" /></li>
+          </ul>
+          <h1 class="type-title">중문 색달 해수욕장</h1>
+          <div class="sea-text">
+            중문색달해수욕장은 아름다운 해안 풍경과 야자수의 이국적인 모습으로
+            중문관광단지에서 시작해 천제연폭포와 대포주상절리와 이어지는 곳에
+            위치하고 있다.<br />본래는 진모살이라고 불렸는데 긴 모래 해변이라는
+            뜻이다. 이곳의 모래는 흑색, 회색, 적색, 백색 4가지가 섞여 있어 해가
+            비추는 방향에 따라 모래 해변의 색깔이 달라 보인다. <br />다른
+            해수욕장보다 파도가 잦고, 높은 편이라 서퍼들에게 인기가 많고, 국내의
+            가장 큰 규모의 국제 서핑 대회가 개최가 매년 6월에 개최된다.
+          </div>
         </div>
         <div class="text off">
           <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
@@ -244,7 +321,7 @@
         </div>
       </div>
     </section>
-    <section class="contents hide">
+    <section class="contents">
       <div class="museumContent">
         <div class="museumTitle">Teddybear Museum</div>
         <div class="flip-box">
@@ -307,7 +384,11 @@
         <div class="museumContent2">
           <div class="museumTitle2">Arte Museum Jeju</div>
           <div class="arte">
-            <div class="arteImg1" data-aos="fade-right">></div>
+            <div
+              class="arteImg1"
+              data-aos="fade-right"
+              data-aos-offset="100"
+            ></div>
             <div class="arteImg2"></div>
             <div
               class="arteImg3"
@@ -316,7 +397,32 @@
               data-aos-easing="ease-in-sine"
             ></div>
           </div>
-          <div class="detailFlow">정보가 흘러가유</div>
+          <div class="detail-flow">
+            <div class="track">
+              <div class="flow-content">
+                &nbsp;<i class="fa-solid fa-location-dot"></i> 제주특별자치도
+                제주시 애월읍 어림비로 478 (어음리 1503) &nbsp;instagram :
+                @artemuseum_jeju &nbsp;
+                <i class="fa-solid fa-phone"></i>
+                064-799-9009&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-location-dot"></i>
+                제주특별자치도 제주시 애월읍 어림비로 478 (어음리 1503)
+                &nbsp;instagram : @artemuseum_jeju&nbsp;
+                <i class="fa-solid fa-phone"></i> 064-799-9009
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-location-dot"></i>
+                제주특별자치도 제주시 애월읍 어림비로 478 (어음리 1503)
+                &nbsp;instagram : @artemuseum_jeju&nbsp;
+                <i class="fa-solid fa-phone"></i>
+                064-799-9009&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-location-dot"></i>
+                제주특별자치도 제주시 애월읍 어림비로 478 (어음리 1503)
+                &nbsp;instagram : @artemuseum_jeju&nbsp;
+                <i class="fa-solid fa-phone"></i>
+                064-799-9009&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
