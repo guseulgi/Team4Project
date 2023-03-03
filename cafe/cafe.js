@@ -1,4 +1,8 @@
 // Weather API
+
+AOS.init({
+  delay: 200,
+});
 const weatherIconRef = {
   "01": "fas fa-sun",
   "02": "fas fa-cloud-sun",
@@ -109,7 +113,7 @@ const cafe_sea_1_text_2_ = document.querySelector(".cafe_sea_1_text_2");
 cafe_sea_1_text_2_.addEventListener("click", () => {
   cafe_sea_1_text_2_modal_.classList.toggle("show");
   if (cafe_sea_1_text_2_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -117,7 +121,7 @@ cafe_sea_1_text_2_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_1_text_2_modal_) {
     cafe_sea_1_text_2_modal_.classList.toggle("show");
     if (!cafe_sea_1_text_2_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
@@ -130,7 +134,7 @@ const cafe_sea_1_text_3_ = document.querySelector(".cafe_sea_1_text_3");
 cafe_sea_1_text_3_.addEventListener("click", () => {
   cafe_sea_1_text_3_modal_.classList.toggle("show");
   if (cafe_sea_1_text_3_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -138,7 +142,7 @@ cafe_sea_1_text_3_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_1_text_3_modal_) {
     cafe_sea_1_text_3_modal_.classList.toggle("show");
     if (!cafe_sea_1_text_3_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
@@ -151,7 +155,7 @@ const cafe_sea_1_text_4_ = document.querySelector(".cafe_sea_1_text_4");
 cafe_sea_1_text_4_.addEventListener("click", () => {
   cafe_sea_1_text_4_modal_.classList.toggle("show");
   if (cafe_sea_1_text_4_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -159,7 +163,7 @@ cafe_sea_1_text_4_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_1_text_4_modal_) {
     cafe_sea_1_text_4_modal_.classList.toggle("show");
     if (!cafe_sea_1_text_4_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
@@ -172,7 +176,7 @@ const cafe_sea_2_text_2_ = document.querySelector(".cafe_sea_2_text_2");
 cafe_sea_2_text_2_.addEventListener("click", () => {
   cafe_sea_2_text_2_modal_.classList.toggle("show");
   if (cafe_sea_2_text_2_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -180,7 +184,7 @@ cafe_sea_2_text_2_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_2_text_2_modal_) {
     cafe_sea_2_text_2_modal_.classList.toggle("show");
     if (!cafe_sea_2_text_2_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
@@ -193,7 +197,7 @@ const cafe_sea_2_text_3_ = document.querySelector(".cafe_sea_2_text_3");
 cafe_sea_2_text_3_.addEventListener("click", () => {
   cafe_sea_2_text_3_modal_.classList.toggle("show");
   if (cafe_sea_2_text_3_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -201,7 +205,7 @@ cafe_sea_2_text_3_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_2_text_3_modal_) {
     cafe_sea_2_text_3_modal_.classList.toggle("show");
     if (!cafe_sea_2_text_3_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
@@ -214,7 +218,7 @@ const cafe_sea_2_text_4_ = document.querySelector(".cafe_sea_2_text_4");
 cafe_sea_2_text_4_.addEventListener("click", () => {
   cafe_sea_2_text_4_modal_.classList.toggle("show");
   if (cafe_sea_2_text_4_modal_.classList.contains("show")) {
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
   }
 });
 
@@ -222,16 +226,32 @@ cafe_sea_2_text_4_modal_.addEventListener("click", (event) => {
   if (event.target === cafe_sea_2_text_4_modal_) {
     cafe_sea_2_text_4_modal_.classList.toggle("show");
     if (!cafe_sea_2_text_4_modal_.classList.contains("show")) {
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
     }
   }
 });
+
+// var mHtml = $("html");
+// var page = 1;
+
+// mHtml.animate({ scrollTop: 0 }, 10);
+
+// $(window).on("wheel", function (e) {
+//   if (mHtml.is(":animated")) return;
+//   if (e.originalEvent.deltaY > 0) {
+//     if (page == 8) return;
+//     page++;
+//   } else if (e.originalEvent.deltaY < 0) {
+//     if (page == 1) return;
+//     page--;
+//   }
+//   var posTop = (page - 2) * $(window).height();
+//   mHtml.animate({ scrollTop: posTop });
+// });
+
 // if (modal.style.display === "block") {
 //   modal.style.display = "none";
 // }
-
-let seaText2 = document.querySelector(".cafe_sea_1_text_2");
-seaText2.addEventListener("click", function () {});
 
 // function seaZoomIn(e) {
 //   e.target.style.transform = "scale(1)";
@@ -260,6 +280,21 @@ window.addEventListener("scroll", () => {
   } else {
     header.setAttribute("style", "background: transparent;");
     header.style.transition = "all .4s ease-in-out";
+  }
+});
+const a = new TypeIt(".cafe_mountain_1_text", {
+  speed: 30,
+  waitUntilVisible: false,
+  // loop: false,
+});
+
+const mountain_1_type1 = document.querySelector("#mountain_1_type");
+const mountainHeight = mountain_1_type1.offsetTop;
+window.addEventListener("scroll", function () {
+  // console.log(window.scrollY);
+  console.log(mountainHeight);
+  if (window.scrollY > mountainHeight) {
+    a.go();
   }
 });
 // window.addEventListener("load", function () {
