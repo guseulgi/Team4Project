@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 
 
   <!-- css 연결 -->
@@ -79,9 +81,8 @@
 
   <div class="all_content">
     <div class="first_page">
-      <div class="left_text">Jeju<br />Hottest<br />Restaurang</div>
-      <div class="right_text">제주도에서의 맛집을 <br />테마별로 만나보세요</div>
-      <video src="./img/jeju_movie.mp4" autoplay muted loop></video>
+      <div class="juju_title" div data-aos="zoom-out-up" data-aos-delay="500">Delicous<br />Food</div>
+      <video src="./img/jeju_video.mp4" autoplay muted loop></video>
     </div>
 
     <div class="second_page">
@@ -118,12 +119,12 @@
     </div>
 
     <div class="third_page">
-      <div class="korea_content">
+      <div class="korea_content" data-aos="fade-down">
         <div class="korea_img1">
           <img src="./img/jeju_korea1.jpg" alt="jeju_korea">
         </div>
         <div class="korea_text1">
-          <ul class="food_list1 on">
+          <ul class="food_list1">
             <li><span class="material-symbols-outlined">storefront</span>
               <p>제주광해 애월</p>
             </li>
@@ -145,20 +146,20 @@
               <div class="swiper-slide">제주여행에서 먹은 가장 맛있는 메뉴</div>
             </div>
           </div>
-        </div>
-        <div class="korea_menu1">
-          <ul class="km">
-            <li><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;&nbsp; MUNU</li>
-            <li>갈치조림 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43,000 ~ 88,000</li>
-            <li>고등어조림 &nbsp;&nbsp;&nbsp;32,000 ~ 65,000</li>
-            <li>전복뚝배기 &nbsp;&nbsp;&nbsp;17,000</li>
-            <li>해물뚝배기 &nbsp;&nbsp;&nbsp;12,000</li>
-            <li>성게미역국 &nbsp;&nbsp;&nbsp;13,000</li>
-          </ul>
+          <div class="korea_menu1 off">
+            <ul class="km">
+              <li><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;&nbsp; MUNU</li>
+              <li>갈치조림 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43,000</li>
+              <li>고등어조림 &nbsp;&nbsp;&nbsp;&nbsp;32,000</li>
+              <li>전복뚝배기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17,000</li>
+              <li>해물뚝배기 &nbsp;&nbsp;&nbsp;&nbsp;12,000</li>
+              <li>성게미역국 &nbsp;&nbsp;&nbsp;&nbsp;13,000</li>
+            </ul>
+          </div>
         </div>
       </div>
       
-      <div class="korea_content">
+      <div class="korea_content" data-aos="slide-up">
         <div class="korea_img2">
           <img src="./img/jeju_korea2.jpg" alt="jeju_korea">
         </div>
@@ -175,15 +176,124 @@
             </li>
           </ul>
           <div class="swiper-contaier">
-            <!-- Additional required wrapper -->
+             <!--Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
+              <!--Slides-->
               <div class="swiper-slide">고등어 요리로 제주에서 가장 유명한 맛집</div>
               <div class="swiper-slide">김치찜이 입에서 녹아요</div>
               <div class="swiper-slide">제주도민도 반한 맛집</div>
               <div class="swiper-slide">제주공항이랑도 가까워서 좋아요</div>
               <div class="swiper-slide">바다뷰라 보는 재미가 있어요</div>
             </div>
+          </div>   
+          <div class="korea_menu2 off">
+            <ul class="km">
+              <li><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;&nbsp; MUNU</li>
+              <li>고등어 묵은지찜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36,000</li>
+              <li>통갈치구이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54,000</li>
+              <li>전복뚝배기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15,000</li>
+              <li>옥돔구이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34,000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fourth_page">
+      <div class="japan_content" data-aos="fade-right">
+        <div class="japan_img1">
+          <img src="./img/jeju_japan1.jpg" alt="jeju_japan">
+        </div>
+        <div class="japan_text1">
+          <ul class="food_list1" >
+            <li><span class="material-symbols-outlined">storefront</span>
+              <p>부온</p>
+            </li>
+            <li><span class="material-symbols-outlined">schedule</span>
+              <p>연중무휴 11:00 - 21:00 <br />(15:00 - 17:00 브레이크타임)</p>
+            </li>
+            <li><span class="material-symbols-outlined">near_me </span>
+              <p>찾아오는 길</p>
+            </li>
+          </ul>
+          <div class="swiper-contaier">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">텐동 구성이 다양해요</div>
+              <div class="swiper-slide">양이 생각보다 많아요</div>
+              <div class="swiper-slide">텐동 맛집이에요</div>
+              <div class="swiper-slide">연어 소바는 여기만의 음식인 거 같아요</div>
+            </div>
+          </div>
+          <div class="menu off">
+            <i class="fa-solid fa-bars"> MENU</i>
+            <ul class="menu_li">
+              <ul class="menu_name">
+                <li>아나고텐동</li>
+                <li>오뎅 소바</li>
+                <li>유부 소바</li>
+                <li>연어소바</li>
+                <li>냉소바</li>
+              </ul>
+              <ul class="menu_price">
+                <li>15,900</li>
+                <li>12,900</li>
+                <li>10,900</li>
+                <li>14,900</li>
+                <li>9,000</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="japan_content" data-aos="fade-left">
+        <div class="japan_img2">
+          <img src="./img/jeju_japan2.jpg" alt="jeju_japan">
+        </div>
+        <div class="japan_text2">
+          <ul class="food_list2" >
+            <li><span class="material-symbols-outlined">storefront</span>
+              <p>스스럼</p>
+            </li>
+            <li><span class="material-symbols-outlined">schedule</span>
+              <p>목요일 휴무 11:30 - 21:00 <br />(15:00 - 17:00 브레이크타임)</p>
+            </li>
+            <li><span class="material-symbols-outlined">near_me </span>
+              <p>찾아오는 길</p>
+            </li>
+          </ul>
+          <div class="swiper-contaier">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">최근에 먹은 돈가스중에 제일 맛있게 먹었어요</div>
+              <div class="swiper-slide">가격대비 고퀄리티로 가성비가 좋아요</div>
+              <div class="swiper-slide">음식들 다 맛있고 매장도 너무 깔끔했어요</div>
+              <div class="swiper-slide">돈카츠카레 소스가 엄청 진하고 중독성 있어요</div>
+            </div>
+          </div>
+          <div class="menu off">
+            <i class="fa-solid fa-bars"> MENU</i>
+            <ul class="menu_li">
+              <ul class="menu_name">
+                <li>치즈돈카츠</li>
+                <li>에비 카츠동</li>
+                <li>규야끼동</li>
+                <li>연어장덮밥</li>
+              </ul>
+              <ul class="menu_price">
+                <li>15,900</li>
+                <li>12,900</li>
+                <li>10,900</li>
+                <li>14,900</li>
+                <li>9,000</li>
+              </ul>
+            </ul>
           </div>
         </div>
       </div>

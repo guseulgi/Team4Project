@@ -1,0 +1,271 @@
+[33mcommit 18386c1ec5d8df9b11252647574bbb4ded04866e[m[33m ([m[1;36mHEAD -> [m[1;32mciy[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: a5e5001 95fd9b0
+Author: 김정혁 <jack1150@naver.com>
+Date:   Fri Mar 3 01:30:29 2023 +0900
+
+    Merge pull request #43 from guseulgi/lyl
+    
+    230303 컨텐츠 입력 중
+
+[33mcommit 95fd9b00794e23beefaf6c16e0645fb6e44edbc0[m[33m ([m[1;31morigin/lyl[m[33m)[m
+Author: yulimle <yulim516@naver.com>
+Date:   Fri Mar 3 01:27:49 2023 +0900
+
+    230303 전체 틀 완성, 컨텐츠 작성  및 애니메이션 구현 중
+
+[33mcommit a5e5001d431ac52724f4be838c4b132f657d04f0[m
+Merge: 7c7c47e cf0b64a
+Author: Yulim Lee <81607335+yulimle@users.noreply.github.com>
+Date:   Fri Mar 3 00:06:31 2023 +0900
+
+    Merge pull request #42 from guseulgi/gsg
+    
+    메인, 응급실 페이지 90% 완
+
+[33mcommit cf0b64a3f053fc636214cc5f40b80451685dabf9[m[33m ([m[1;31morigin/gsg[m[33m)[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Fri Mar 3 00:02:53 2023 +0900
+
+    메인, 응급실 페이지 90% 완
+
+[33mcommit 7c7c47e5c5cc907cd82f17e60eadfb8e357c2a06[m
+Merge: 76dae83 333710d
+Author: 김정혁 <jack1150@naver.com>
+Date:   Thu Mar 2 23:07:33 2023 +0900
+
+    Merge pull request #41 from guseulgi/ssa
+    
+    230302 액티비티 수정
+
+[33mcommit 333710df5df36bfd9581f5f531f338f19c6761fc[m[33m ([m[1;31morigin/ssa[m[33m)[m
+Author: sang ah <kr.sangah@gmail.com>
+Date:   Thu Mar 2 22:44:28 2023 +0900
+
+    230302 액티비티 수정
+
+[33mcommit d98f7854c401ad9f5737b616a74048614fcbd1bd[m
+Author: yulimle <yulim516@naver.com>
+Date:   Thu Mar 2 22:12:46 2023 +0900
+
+    230302 museum content1 완료, content2 작업 중
+
+[33mcommit 76dae831fb7fc64559aa0185475193fae50e639f[m
+Merge: b39d69a abcae90
+Author: Yulim Lee <81607335+yulimle@users.noreply.github.com>
+Date:   Thu Mar 2 19:03:57 2023 +0900
+
+    Merge pull request #39 from guseulgi/kjh
+    
+    index파일 수정
+
+[33mcommit b5faf83ac0d2618d9b85e3b02ada0ee5f872a71b[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Thu Mar 2 18:59:18 2023 +0900
+
+    맵의 핀을 누르면 병원에 해당하는 정보 출력하는 js 코드 작성
+
+[33mcommit d8fa4d7f489795d1b220bf167af44a5f1ca0cc8d[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Thu Mar 2 18:22:39 2023 +0900
+
+    커밋 꼬인거 정리 중입니다
+
+[33mcommit 945f676c13d9e2d14c128ee468271ef5f10562c5[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Thu Mar 2 18:21:06 2023 +0900
+
+    Revert "응급실 페이지 레이아웃 수정 중"
+    
+    깃 꼬여서 정리 했습니다
+
+[33mcommit b39d69a56661b795ccc9b64dab59e04788ea127f[m
+Merge: 3db2b00 95621f6
+Author: SangAh <123533259+shinsangah@users.noreply.github.com>
+Date:   Thu Mar 2 17:32:55 2023 +0900
+
+    Merge pull request #40 from guseulgi/gsg
+    
+    응급실 페이지 레이아웃 재수정 중
+
+[33mcommit 95621f615278e77edc3fdf0770cdf84d3342afa2[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Thu Mar 2 17:03:53 2023 +0900
+
+    응급실 페이지 레이아웃 수정 중
+
+[33mcommit 28d261c704574b6c9fea861e75aa94ca77272e81[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Wed Mar 1 15:51:41 2023 +0900
+
+    커밋 누락
+
+[33mcommit 5838410f0baab659871d3a5d1b93ae58c7645386[m
+Author: seulgi <guseul9405@gmail.com>
+Date:   Wed Mar 1 15:29:34 2023 +0900
+
+    커밋 누락
+
+[33mcommit abcae9023b31ecd0cc8018c16198ca4fc523034e[m[33m ([m[1;31morigin/kjh[m[33m)[m
+Author: 김정혁 <jack1150@naver.com>
+Date:   Thu Mar 2 16:32:49 2023 +0900
+
+    index파일 수정
+
+[33mcommit 3db2b00c501859b689457c7b1d8400be3e89e0ac[m
+Merge: 5431ce6 2bb572a
+Author: 김정혁 <jack1150@naver.com>
+Date:   Thu Mar 2 16:25:50 2023 +0900
+
+    Merge pull request #38 from guseulgi/ciy
+    
+    세번쨰 컨텐츠 토글
+
+[33mcommit 2bb572a2f3acc4cc2293a443fa36e9f37696a69c[m[33m ([m[1;31morigin/ciy[m[33m)[m
+Merge: ad28e96 5431ce6
+Author: 최인영 <122201121+choiinyoung@users.noreply.github.com>
+Date:   Thu Mar 2 16:01:45 2023 +0900
+
+    Merge branch 'main' into ciy
+
+[33mcommit ad28e9636dd6989211eac0dc568efbbecfca5880[m
+Merge: 3f17fa8 cc7f7c8
+Author: choiinyoung <choi121100@naver.com>
+Date:   Thu Mar 2 15:56:14 2023 +0900
+
+    Merge branch 'ciy' of https://github.com/guseulgi/Team4Project into ciy
+
+[33mcommit 3f17fa80c31eec9f3da5822bf6babfea17a87b0b[m
+Author: choiinyoung <choi121100@naver.com>
+Date:   Thu Mar 2 15:53:43 2023 +0900
+
+    세번째 컨텐츠 토글
+
+[33mcommit 5431ce660dd35760742a3c2682665827464f6bb0[m
+Merge: f69fb74 b93098f
+Author: 김정혁 <jack1150@naver.com>
+Date:   Thu Mar 2 15:53:00 2023 +0900
+
+    Merge pull request #37 from guseulgi/lyl
+    
+    230302 museum part 진행 중
+
+[33mcommit b93098f5e42c8c043f55fcb7114533bf1950106f[m
+Author: yulimle <yulim516@naver.com>
+Date:   Thu Mar 2 15:51:47 2023 +0900
+
+    230302 museum part 진행 중
+
+[33mcommit f69fb747101b1107c22efac5cd4fd932f3d8fa13[m
+Merge: 1213dbc c3cdbeb
+Author: Yulim Lee <81607335+yulimle@users.noreply.github.com>
+Date:   Thu Mar 2 15:48:51 2023 +0900
+
+    Merge pull request #36 from guseulgi/kjh
+    
+    레이아웃 끝
+
+[33mcommit c3cdbebaa5dffeb0b4884beac9c56a339f992af3[m
+Author: 김정혁 <jack1150@naver.com>
+Date:   Thu Mar 2 15:44:46 2023 +0900
+
+    레이아웃 끝
+
+[33mcommit 29ea72b3a7ef09bb2b24df8e2bc93207bf250e3e[m
+Author: choiinyoung <choi121100@naver.com>
+Date:   Wed Mar 1 18:03:42 2023 +0900
+
+    두번째  컨텐츠 텍스트 위치 변경
+
+[33mcommit 1213dbc4f787f8c72081af1e354e27ffff74b28f[m
+Merge: 728f626 bfec266
+Author: SeulgiGu <103307233+guseulgi@users.noreply.github.com>
+Date:   Wed Mar 1 15:51:03 2023 +0900
+
+    Merge pull request #35 from guseulgi/ssa
+    
+    1차 액티비티
+
+[33mcommit bfec266c47032e68591ce16b3dcc164ded9dd9ee[m
+Author: sang ah <kr.sangah@gmail.com>
+Date:   Wed Mar 1 15:49:46 2023 +0900
+
+    1차 액티비티
+
+[33mcommit 728f62696cf443e9f68028a85df62fb0e0dfdf9a[m
+Merge: c082359 0446a35
+Author: 김정혁 <jack1150@naver.com>
+Date:   Wed Mar 1 15:43:04 2023 +0900
+
+    Merge pull request #34 from guseulgi/lyl
+    
+    페이지 전체적으로 수정
+
+[33mcommit c082359af3211a1c54271aab5b83ec3fb8ffbbfe[m
+Merge: c344627 cc7f7c8
+Author: 김정혁 <jack1150@naver.com>
+Date:   Wed Mar 1 15:42:29 2023 +0900
+
+    Merge pull request #33 from guseulgi/ciy
+    
+    두번째 컨텐츠 수정_sea
+
+[33mcommit cc7f7c820a10bdeaa834a7cd23b62b63a62e8450[m
+Merge: 393938b c344627
+Author: 김정혁 <jack1150@naver.com>
+Date:   Wed Mar 1 15:41:57 2023 +0900
+
+    Merge branch 'main' into ciy
+
+[33mcommit 0446a35ed1e64ec76dae47b0deb7b2db00029fd7[m
+Author: yulimle <yulim516@naver.com>
+Date:   Wed Mar 1 15:39:39 2023 +0900
+
+    230301 tourist 페이지 전체적으로 수정 및 진행 중
+
+[33mcommit c3446273fead5a6208ec44579ca37b4cf1608b92[m
+Merge: b9dd058 b964d5a
+Author: 최인영 <122201121+choiinyoung@users.noreply.github.com>
+Date:   Wed Mar 1 15:38:00 2023 +0900
+
+    Merge pull request #32 from guseulgi/kjh
+    
+    합치기 전 마지막 코드 작성
+
+[33mcommit 393938bb825766ff5217eddfa9122ce5c7fbb8a6[m
+Author: choiinyoung <choi121100@naver.com>
+Date:   Wed Mar 1 15:37:23 2023 +0900
+
+    세번째 컨텐츠_sea 수정
+
+[33mcommit b964d5a4b8062ef920f4f70c4084f098c2e66c73[m
+Author: 김정혁 <jack1150@naver.com>
+Date:   Wed Mar 1 15:34:19 2023 +0900
+
+    합치기 전 마지막 코드 작성
+
+[33mcommit b9dd058e09d63e1a5f9de539e0ab6563ba1411bf[m
+Merge: 2072b05 3cb1792
+Author: SangAh <123533259+shinsangah@users.noreply.github.com>
+Date:   Wed Mar 1 15:28:23 2023 +0900
+
+    Merge pull request #30 from guseulgi/gsg
+    
+    메인과 응급실 수정 중입니다
+
+[33mcommit 2072b05b321f50d968bd2a0c8bb31a46f3e4c9ce[m
+Merge: e5b5856 4f9410c
+Author: SeulgiGu <103307233+guseulgi@users.noreply.github.com>
+Date:   Wed Mar 1 15:27:55 2023 +0900
+
+    Merge pull request #31 from guseulgi/ssa
+    
+    액티비티 1차
+
+[33mcommit 4f9410c98fd9aacf9e1d3ee1408cdc98425256fb[m
+Author: sang ah <kr.sangah@gmail.com>
+Date:   Wed Mar 1 15:26:47 2023 +0900
+
+    액티비티 1차
+
+[33mcommit f551b59234c003013d2f5557d83b002e5fc97b85[m
+Author: sang ah <kr.sangah@gm
