@@ -23,6 +23,7 @@ font-family: 'Rubik Mono One', sans-serif; */
 }
 body {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -31,7 +32,7 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   background-color: transparent;
 }
 header .title {
@@ -189,8 +190,10 @@ section {
 }
 
 .border_first {
+  z-index: 2;
   margin-top: -5px;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -230,17 +233,19 @@ section {
 
 .theme .cafe_theme .cafe_theme_sea p {
   position: absolute;
-  font-size: 60px;
-  margin: 70% 30%;
+  font-size: 30px;
+  margin: 70% 33%;
   color: white;
   opacity: 0;
   transition: all 1s;
   z-index: 6;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .theme .cafe_theme .cafe_theme_sea:hover p {
   opacity: 1;
   color: white;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .theme .cafe_theme .cafe_theme_mountain {
@@ -262,17 +267,19 @@ section {
 
 .theme .cafe_theme .cafe_theme_mountain p {
   position: absolute;
-  font-size: 60px;
-  margin: 70% 26%;
+  font-size: 30px;
+  margin: 70% 28%;
   color: white;
   opacity: 0;
   transition: all 1s;
   z-index: 6;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .theme .cafe_theme .cafe_theme_mountain:hover p {
   opacity: 1;
   color: white;
+  font-family: "Rubik Mono One", sans-serif;
 }
 .theme .cafe_theme .cafe_theme_interesting {
   grid-column-start: 5;
@@ -293,16 +300,19 @@ section {
 
 .theme .cafe_theme .cafe_theme_interesting p {
   position: absolute;
-  font-size: 60px;
+
+  font-size: 30px;
   margin: 70% 22%;
   color: white;
   opacity: 0;
   transition: all 1s;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .theme .cafe_theme .cafe_theme_interesting:hover p {
   opacity: 1;
   color: white;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .cafe_sea {
@@ -406,15 +416,17 @@ section {
 .cafe_sea_1_text_2_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  /* font-family: "Mynerve"; */
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
   transform: translateX(-50%) translateY(-50%);
@@ -453,10 +465,10 @@ section {
 .cafe_sea_1_text_3_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
@@ -501,10 +513,10 @@ section {
 .cafe_sea_1_text_4_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
@@ -540,9 +552,11 @@ section {
 }
 .cafe_sea .cafe_sea_2 {
   display: flex;
+  position: relative;
 }
 
 .cafe_sea .cafe_sea_2_img {
+  z-index: 2;
   height: 100vh;
   width: 50vw;
   background-image: url("../cafe/images/scatch.jpeg");
@@ -558,21 +572,50 @@ section {
   background-color: rgb(134, 144, 196);
 }
 
-/* .box {
-  z-index: -1;
+.box {
   position: absolute;
-  width: 300px;
+  width: 530px;
   height: 300px;
+  bottom: -150px;
+  left: 600px;
   border-radius: 5px;
   box-shadow: 0 2px 30px rgba(black, 0.2);
   background: lighten(#f0f4c3, 10%);
-  position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  transform: rotate(180deg);
+}
+
+.box1 {
+  position: absolute;
+  width: 530px;
+  height: 300px;
+  bottom: -165px;
+  left: 800px;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, 0.2);
+  background: lighten(#f0f4c3, 10%);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transform: rotate(180deg);
+}
+
+.box2 {
+  position: absolute;
+  width: 530px;
+  height: 300px;
+  bottom: -150px;
+  left: 1000px;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, 0.2);
+  background: lighten(#f0f4c3, 10%);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transform: rotate(180deg);
 }
 
 .wave {
-  opacity: 0.4;
+  opacity: 0.7;
   position: absolute;
   top: 3%;
   left: 50%;
@@ -583,7 +626,38 @@ section {
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 3000ms infinite linear;
+  overflow: hidden;
+  animation: drift 3400ms infinite linear;
+}
+.wave1 {
+  opacity: 0.7;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  overflow: hidden;
+  animation: drift 2500ms infinite linear;
+}
+.wave2 {
+  opacity: 0.7;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  overflow: hidden;
+  animation: drift 2000ms infinite linear;
 }
 
 .wave.-three {
@@ -593,23 +667,89 @@ section {
 .wave.-two {
   animation: drift 7000ms infinite linear;
   opacity: 0.1;
-  background: yellow;
+  background: #0af;
+}
+.wave1.-three1 {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave1.-two1 {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  background: #0af;
+}
+.wave2.-three2 {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave2.-two2 {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  background: #0af;
 }
 
 .box:after {
   content: "";
-  display: block;
+  display: inline;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(
     to bottom,
     rgba(#e8a, 1),
     rgba(#def, 0) 80%,
     rgba(white, 0.5)
   );
-  z-index: 11;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+.box1:after {
+  content: "";
+  display: inline;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(#e8a, 1),
+    rgba(#def, 0) 80%,
+    rgba(white, 0.5)
+  );
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+.box2:after {
+  content: "";
+  display: inline;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(#e8a, 1),
+    rgba(#def, 0) 80%,
+    rgba(white, 0.5)
+  );
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+.box3:after {
+  content: "";
+  display: inline;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(#e8a, 1),
+    rgba(#def, 0) 80%,
+    rgba(white, 0.5)
+  );
+  z-index: 1;
   transform: translate3d(0, 0, 0);
 }
 
@@ -620,7 +760,7 @@ section {
   from {
     transform: rotate(360deg);
   }
-} */
+}
 
 .cafe_sea .cafe_sea_2_text .fa-solid.fa-clock {
   font-size: 30px;
@@ -658,10 +798,10 @@ section {
 .cafe_sea_2_text_2_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
@@ -708,10 +848,10 @@ section {
 .cafe_sea_2_text_3_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
@@ -758,10 +898,10 @@ section {
 .cafe_sea_2_text_4_modal_body {
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
@@ -786,6 +926,12 @@ section {
   display: flex;
 }
 
+.black {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
 .cafe_mountain .cafe_mountain_1_img {
   height: 100vh;
   width: 100vw;
@@ -799,6 +945,7 @@ section {
     ),
     url("../cafe/images/oneandonly.jpeg");
   background-size: cover;
+  background-color: black;
   background-position-y: -550px;
 }
 .cafe_mountain .cafe_mountain_1_text {
@@ -815,6 +962,7 @@ section {
   margin-bottom: 40px;
   font-family: "Rubik Mono One", sans-serif;
   color: white;
+  /* animation: fadeIn 1; */
 }
 .cafe_mountain .cafe_mountain_2 {
   display: flex;
