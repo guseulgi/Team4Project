@@ -10,8 +10,6 @@
 
 /* font-family: 'Kirang Haerang' */
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang:400');
-/* font-family: 'Do Hyeon'; */
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon:400');
 /* font-family: 'Noto Sans KR', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
 /* font-family: 'Lobster', cursive; */
@@ -51,6 +49,10 @@ figure {
 
 p {
   line-height: normal;
+}
+
+.strong {
+  font-weight: 600;
 }
 
 figure video {
@@ -132,61 +134,6 @@ button:hover {
   background-color: #eee;
 }
 
-.text-wrap {
-  position: absolute;
-  top: 30vh;
-  left: 0;
-  right: 0;
-  width: 80vw;
-  opacity: 0;
-  margin: auto;
-  text-align: center;
-  transition: .5s;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.545);
-  border-radius: 20px;
-}
-
-.text-wrap:hover {
-  background-color: rgba(223, 173, 81, 0.537);
-  cursor: pointer;
-  /* box-shadow: 0 2px 4px rgba(223, 173, 81, 2.0); */
-  border: none;
-}
-
-.text-wrap:active {
-  outline: none;
-}
-
-.swiper-slide-active .text-wrap {
-  position: fixed;
-  opacity: 1;
-  top: 36%;
-  transition: .5s;
-  width: fit-content;
-  padding: 40px 40px;
-}
-
-.text-wrap h2 {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #fff;
-  font-size: 58px;
-  line-height: 1.5;
-  text-shadow: 3px 3px 8px black;
-  text-align: center;
-}
-
-.text-wrap p {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 20px;
-  margin-top: 10px;
-  text-align: center;
-  text-shadow: 3px 3px 8px black;
-
-}
-
 .swiper-pagination-bullet {
   width: 40px;
   height: 3px;
@@ -251,6 +198,134 @@ button:hover {
   right: 20px;
 }
 
+/* TEXT-WRAP BUTTON */
+
+/* .text-wrap {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  right: 0;
+  width: 80vw;
+  opacity: 0;
+  margin: auto;
+  text-align: center;
+  transition: .5s;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.545);
+  border-radius: 20px;
+} */
+
+.text-wrap {
+  position: absolute;
+  /* background-color: rgba(0, 0, 0, 0.545); */
+  top: 290.5px;
+  left: 573px;
+  width: 774px;
+  height: 200px;
+  text-align: center;
+  padding: 1em 2em;
+  justify-content: center;
+  border: none;
+  /* border-radius: .6rem; */
+  cursor: pointer;
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+.text-wrap h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  font-size: 58px;
+  line-height: 1.5;
+  text-shadow: 3px 3px 8px black;
+  text-align: center;
+}
+
+.text-wrap p {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 20px;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 3px 3px 8px black;
+}
+
+.text-wrap span {
+  opacity: 0;
+}
+
+/* .text-wrap:hover {
+  background-color: rgba(223, 173, 81, 0.537);
+  cursor: pointer;
+  border: none;
+}
+
+.text-wrap:active {
+  outline: none;
+}
+
+.swiper-slide-active .text-wrap {
+  position: fixed;
+  opacity: 1;
+  top: 36%;
+  transition: .5s;
+  width: fit-content;
+  padding: 40px 40px;
+} */
+
+.text-wrap span:not(:nth-child(6)) {
+  position: absolute;
+  left: 390px;
+  top: 95px;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  background-color: #d79c2ddd;
+  opacity: 40%;
+  border-radius: 50%;
+  transition: .6s ease;
+  z-index: -1;
+}
+
+.text-wrap span:nth-child(1) {
+  transform: translate(-3.1em, -4em);
+  opacity: 0;
+}
+
+.text-wrap span:nth-child(2) {
+  transform: translate(-10em, 1.3em);
+  opacity: 0;
+
+
+}
+
+.text-wrap span:nth-child(3) {
+  transform: translate(-.2em, 5em);
+  opacity: 0;
+
+}
+
+.text-wrap span:nth-child(4) {
+  transform: translate(3em, 1.4em);
+  opacity: 0;
+
+}
+
+.text-wrap span:nth-child(5) {
+  transform: translate(3.5em, -3.8em);
+  opacity: 0;
+
+}
+
+.text-wrap:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+  opacity: 20%;
+
+}
+
+
 /* CONTENTS */
 
 /* ARROW 981파크 */
@@ -264,12 +339,13 @@ button:hover {
   margin-top: 150px;
   margin-bottom: 200px;
   top: -43.5%;
-  left: 42%;
+  left: 805px;
   z-index: 1;
 }
 
 .parkarrow>span {
   font-size: 70px;
+  cursor: pointer;
 }
 
 /* 981파크 */
@@ -289,11 +365,6 @@ button:hover {
   z-index: 1;
 }
 
-/* .inner .park981 .bigcloud:hover {
-  transform: translateY(200px);
-  transition: 2s;
-} */
-
 .inner .park981 .smallcloud {
   position: absolute;
   top: -5%;
@@ -303,11 +374,6 @@ button:hover {
   opacity: 50%;
   z-index: 1;
 }
-
-/* .inner .park981 .smallcloud:hover {
-  transform: translateY(200px);
-  transition: 2s;
-} */
 
 .inner .park981 img .building {
   position: absolute;
@@ -320,7 +386,6 @@ button:hover {
   position: absolute;
   opacity: 86%;
   left: 5%;
-  /* right: 0; */
   width: 40%;
   top: -50px;
   animation: movecar 2.3s infinite alternate;
@@ -342,11 +407,6 @@ button:hover {
     left: 60px;
   }
 }
-
-/* .inner .park981 .movecart:hover {
-  transform: translateX(-1000px);
-  transition: 1s;
-} */
 
 .inner .park981 .parktext1 {
   position: absolute;
@@ -372,7 +432,6 @@ button:hover {
   position: absolute;
   left: 2%;
   top: 93%;
-  /* margin-top: 30px; */
 }
 
 .inner .park981 .contact981 .background981 {
@@ -383,7 +442,6 @@ button:hover {
 }
 
 .inner .park981 .contact981 .background981>p {
-  /* position: absolute; */
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
   margin: 8% 8% 2% 8%;
@@ -399,7 +457,6 @@ button:hover {
 }
 
 .inner .park981 .contact981 .background981 .sns>li>a {
-  /* position: absolute; */
   display: block;
   background-color: black;
   text-align: center;
@@ -409,7 +466,6 @@ button:hover {
 }
 
 .inner .park981 .contact981 .background981 .sns>li>a>i {
-  /* position: absolute; */
   color: white;
   border-radius: 100%;
   text-align: center;
@@ -433,6 +489,7 @@ button:hover {
 
 .runarrow span {
   font-size: 70px;
+  cursor: pointer;
 }
 
 
@@ -631,6 +688,7 @@ button:hover {
 
 .kitearrow span {
   font-size: 70px;
+  cursor: pointer;
 }
 
 
@@ -828,6 +886,7 @@ button:hover {
 
 .bluearrow span {
   font-size: 70px;
+  cursor: pointer;
 }
 
 
@@ -864,7 +923,7 @@ button:hover {
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
-  top: 1150px;
+  top: 1170px;
   justify-content: center;
   font-weight: 600;
   font-size: 50px;
@@ -873,7 +932,7 @@ button:hover {
 
 .bluecontainer {
   position: relative;
-  top: 1450px;
+  top: 1500px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -904,7 +963,7 @@ button:hover {
 }
 
 .bluecon2>img {
-  width: 610px;
+  width: 100%;
   height: auto;
   margin: 20px 20px;
 }
@@ -957,6 +1016,114 @@ button:hover {
   padding: 10px;
 }
 
+/* 블루원 요트투어 요트 설명 */
+
+figure.snip1384 {
+  font-family: 'Noto Sans KR', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  background-color: #000000;
+}
+
+figure.snip1384 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+figure.snip1384 img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+figure.snip1384:after,
+figure.snip1384 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+figure.snip1384:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.437);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+figure.snip1384 figcaption {
+  z-index: 1;
+  padding: 30px;
+  cursor: pointer;
+}
+
+figure.snip1384 h3,
+figure.snip1384 .links {
+  width: 100%;
+  margin: 1px 0;
+  padding: 0;
+}
+
+figure.snip1384 h3 {
+  line-height: 3em;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  opacity: 0;
+  padding-bottom: 3px;
+  color: rgba(245, 248, 249, 0.93);
+  text-shadow: 3px 3px 8px black;
+}
+
+figure.snip1384 p {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  text-shadow: 3px 3px 3px black;
+}
+
+figure.snip1384:hover img,
+figure.snip1384.hover img {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+
+figure.snip1384:hover:after,
+figure.snip1384.hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+figure.snip1384:hover h3,
+figure.snip1384.hover h3,
+figure.snip1384:hover p,
+figure.snip1384.hover p,
+figure.snip1384:hover i,
+figure.snip1384.hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 /* ARROW 바운스 슈퍼파크 */
 
 .bouncearrow {
@@ -967,13 +1134,15 @@ button:hover {
   font-weight: 600;
   font-family: 'Noto Sans KR', sans-serif;
   margin: 20px 0;
-  top: 2050px;
+  top: 2105px;
   left: 40%;
 }
 
 .bouncearrow span {
   font-size: 70px;
+  cursor: pointer;
 }
+
 
 /* 바운스 슈퍼파크 */
 
@@ -981,8 +1150,8 @@ button:hover {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 800%;
-  margin-bottom:
+  top: 70px;
+  /* margin-bottom: */
 }
 
 .inner .bouncesuper .bouncetitle {
@@ -1091,12 +1260,6 @@ button:hover {
   }
 }
 
-/* @keyframes bumper1 {
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-
 .inner .bouncesuper .bumpercar2 {
   position: absolute;
   top: 3800px;
@@ -1114,16 +1277,6 @@ button:hover {
     transform: rotate(360deg);
   }
 }
-
-/* @-webkit-keyframes bumper2 {
-  0% {
-    left: 800px;
-  }
-
-  100% {
-    left: 1300px;
-  }
-} */
 
 .inner .bouncesuper .playground1 {
   position: absolute;
