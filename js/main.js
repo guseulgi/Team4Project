@@ -30,17 +30,6 @@ let cursorMove = function(e) {
 }
 window.addEventListener('mousemove', cursorMove);
 
-// 마우스가 a태그에 올라가면 지정해준 커서를 안보이게 하고 싶음(아직 작동 안함)
-// window.addEventListener('mouseenter', function(e) {
-//   console.log(e.target.tagName);
-//   if( e.target.getElementTagName('A') !== '')
-//   {
-//     cursor.style.display = none;
-//   } else {
-//     cursor.style.display = block;
-//     }
-// });
-
 // Scroll Event
 // Menu 가 일정 크기 이상 이동하면 메뉴바의 아이콘의 색이 변하는 함수
 const changeColorYpx = 574;
@@ -96,43 +85,33 @@ const mainHash = document.querySelector('.main__hash');
 const hashP = mainHash.querySelectorAll('.sticker');
 
 let isPress = false;
-let prevX = 0;
-let prexY = 0;
+let curTarget = null;
 
 for(let i = 0; i < hashP.length; i++) {
   hashP[i].addEventListener('mousedown', function(e){
+    curTarget = e.target;
     isPress = true;
-
-    hashP[i].setAttribute('dragable', 'true');
+    
     hashP[i].ondragstart = () => false;
-
     hashP[i].style.position = 'absolute';
-    hashP[i].style.zIndex = 4;
 
-    mainHash.append(hashP[i]);
-
-      function moveAt(pageX, pageY) {
-        if(isPress === false) return;
-
-        hashP[i].style.left = pageX - hashP[i].offsetWidth / 4 - 40 + 'px';
-        hashP[i].style.top = pageY - hashP[i].offsetHeight / 4 - 163+ 'px';
-      }
-
-      function customMouseMove (evt) {
-        moveAt(evt.pageX, evt.pageY);
-      }
-      document.addEventListener('mousemove', customMouseMove);
-
-      document.addEventListener('click', function(e) {
-        hashP[i].style.left = e.target.left;
-        hashP[i].style.top = e.target.top;
-        document.removeEventListener('mousemove', customMouseMove);
-        console.log('!');
-        hashP[i].onmouseup = null;
-      })
+    // 난수로 스티커마다 각도 다르게
+    hashP[i].style.transform = `rotate(${Math.floor((Math.random() - 0.5) * 20)}deg)`;
   });
+  
+  function customMouseMove (evt) {
+    if(isPress === false) return;
+
+    curTarget.style.left = evt.pageX - curTarget.offsetWidth/ 2 - 50 + 'px';
+    curTarget.style.top = evt.pageY - curTarget.offsetHeight/ 2 - 130 + 'px';
+  }
 }
 
+document.addEventListener('mousemove', customMouseMove);
+
+document.addEventListener('mouseup', function() {
+  isPress = false;
+});
 
 
 // Weather API
