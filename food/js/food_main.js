@@ -56,7 +56,7 @@ fetch(weatherUrl).then(response => response.json())
 
 
 AOS.init({
-  duration: 1500,
+  duration: 2000,
 }
 );
 
@@ -112,5 +112,21 @@ function changediv3() {
   } else {
     japan_km1.classList.add('off');
     japan_fl1.classList.remove('off');
+  }
+}
+
+const japan_fl2 = document.querySelector('.japan_content .japan_text2 .food_list2');
+const japan_km2 = document.querySelector('.japan_content .japan_text2 .menu');
+
+japan_fl2.addEventListener('click', changediv4);
+japan_km2.addEventListener('click',changediv4);
+
+function changediv4(){
+  if(japan_km2.classList.contains('off') === true) {
+    japan_km2.classList.remove('off');
+    japan_fl2.classList.add('off');
+  } else {
+    japan_km2.classList.add('off');
+    japan_fl2.classList.remove('off');
   }
 }

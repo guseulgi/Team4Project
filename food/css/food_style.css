@@ -8,6 +8,14 @@
 }
  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
  /* font-family: 'Kaushan Script', cursive; */
+
+ @font-face {
+  font-family: 'OKDDUNG';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +35,7 @@ body {
   font-family: 'Dovemayo_wild';
 }
 
+/*header*/
 header {
   position: fixed;
   height: 100px;
@@ -37,18 +46,32 @@ header {
   background-color: transparent;
 }
 header .title {
-  color: #ea5c2b;
-  font: 8vh "Kirang Haerang";
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
   text-shadow: 0px 3px 0 white;
   padding-left: 40px;
   height: 100px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 18vh;
+}
+header .title .title__logo > i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
   line-height: 18vh;
 }
 header .other-menu ul {
   display: flex;
   position: absolute;
   top: 0;
-  right: 10%;
+  right: 40px;
   height: 100%;
 }
 header .other-menu ul li {
@@ -74,6 +97,15 @@ header .other-menu ul li span {
 }
 header .other-menu ul li a {
   color: #5c3b16;
+}
+header .other-menu ul li a.changeColor {
+  color: #5c3b16;
+}
+header .other-menu ul li a.changeColor:hover {
+  color: #ea5c2b;
+}
+header .other-menu ul li a:hover {
+  color: #f6d860;
 }
 header .other-menu ul li:hover span {
   display: block;
@@ -107,7 +139,7 @@ header .other-menu ul li:hover::after {
   font-size: 2rem;
   text-align: center;
   line-height: 32px;
-  margin: auto 10px auto 5px;
+  margin: auto 12px auto 9px;
   color: white;
   animation: weatherAnim 10s infinite;
 }
@@ -140,14 +172,37 @@ header .other-menu ul li:hover::after {
   display: block;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: #5c3b16;
   border-radius: 50%;
   text-align: center;
   font-size: 1.2rem;
 }
-.returnToTop a i {
-  color: #626458;
+.returnToTop a.changeColor {
+  background-color: #ea5c2b;
 }
+.returnToTop a.changeColor i {
+  color: white;
+}
+.returnToTop a.changeColor span {
+  background-color: white;
+}
+.returnToTop a span {
+  width: 18px;
+  height: 1.8px;
+  display: block;
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.returnToTop a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: white;
+}
+
 
 /*FOOD CSS 시작*/
 .off {
@@ -329,12 +384,14 @@ header .other-menu ul li:hover::after {
   position: absolute;
   font-size: 3vh;
   color: #ea5c2b;
-  line-height: bold;
   top: 7vh;
   left: 6.5vw;
 }
 .all_content .third_page .korea_content .korea_text1 ul.food_list1 li {
   margin-bottom: 5vh;
+}
+.all_content .third_page .korea_content .korea_text1 ul.food_list1 li:nth-child(1){
+  font-weight: bold;
 }
 .all_content .third_page .korea_content .korea_text1 ul.food_list1 span {
   position: absolute;
@@ -388,6 +445,9 @@ header .other-menu ul li:hover::after {
 .all_content .third_page .korea_content .korea_text2 ul.food_list2 li {
   margin-bottom: 5vh;
 }
+.all_content .third_page .korea_content .korea_text2 ul.food_list2 li:nth-child(1){
+  font-weight: bold;
+}
 .all_content .third_page .korea_content .korea_text2 ul.food_list2 span {
   position: absolute;
   font-size: 5vh;
@@ -439,6 +499,7 @@ header .other-menu ul li:hover::after {
 .all_content .fourth_page .japan_content {
   height: 25vh;
   margin-bottom: 20vh;
+  cursor: pointer;
 }
 .all_content .fourth_page .japan_content .japan_img1 img{
   position: absolute;
@@ -447,13 +508,13 @@ header .other-menu ul li:hover::after {
   width: 20vw;
   height: 40vh;
   border-radius: 50%;
+  box-shadow: -4px -4px 10px ;
 }
 .all_content .fourth_page .japan_content .japan_text1{
   position: absolute;
   top: 20vh;
   width: 100vw;
   height: 40vh;
-  cursor: pointer;
   z-index: -1;
   background: linear-gradient(90deg, white,gray);
 }
@@ -464,11 +525,14 @@ header .other-menu ul li:hover::after {
   color: black;
   line-height: bold;
   top: 5vh;
-  left: 55vw;
+  left: 52vw;
 }
 .all_content .fourth_page .japan_content .japan_text1 ul.food_list1 li {
   display: flex;
   margin-bottom: 5vh;
+}
+.all_content .fourth_page .japan_content .japan_text1 ul.food_list1 li:nth-child(1){
+  font-weight: bold;
 }
 .all_content .fourth_page .japan_content .japan_text1 ul.food_list1 span {
   position: absolute;
@@ -478,7 +542,7 @@ header .other-menu ul li:hover::after {
 .all_content .fourth_page .japan_content .japan_text1 .menu{
   position: absolute;
   top: -2vh;
-  left: 4vw;
+  left: 3vw;
 }
 .all_content .fourth_page .japan_content .japan_text1 i {
   position: absolute;
@@ -506,41 +570,23 @@ header .other-menu ul li:hover::after {
   position: absolute;
   left: 7vw;
 }
-.all_content .fourth_page .japan_content .swiper-contaier {
-  position: absolute;
-  font-size: 2.3vh;
-  width: 100vw;
-  height: 4vh;
-  color: rgb(49, 47, 47);
-  top:35vh;
-  left: 50vw;
-  overflow: hidden;
-}
-.all_content .fourth_page .japan_content .swiper-contaier .swiper-slide:hover {
-  text-decoration: underline;
-}
-.all_content .third_page .japan_content .swiper-contaier .swiper-slide {
-  line-height: 4vh;
-  height: 100vh;
-}
 
 /**/
 
 .all_content .fourth_page .japan_content .japan_img2 img{
   position: absolute;
   top: 20vh;
-  left: 15vw;
+  left: 60vw;
   width: 20vw;
   height: 40vh;
   border-radius: 50%;
-  box-shadow: 4px 4px 10px orange;
+  box-shadow: 4px 4px 10px ;
 }
 .all_content .fourth_page .japan_content .japan_text2{
   position: absolute;
   top: 20vh;
   width: 100vw;
   height: 40vh;
-  cursor: pointer;
   z-index: -1;
   background: linear-gradient(90deg, white,gray);
 }
@@ -551,7 +597,10 @@ header .other-menu ul li:hover::after {
   color: black;
   line-height: bold;
   top: 5vh;
-  left: 55vw;
+  left: 34vw;
+}
+.all_content .fourth_page .japan_content .japan_text2 ul.food_list2 li:nth-child(1){
+  font-weight: bold;
 }
 .all_content .fourth_page .japan_content .japan_text2 ul.food_list2 li {
   display: flex;
@@ -565,7 +614,7 @@ header .other-menu ul li:hover::after {
 .all_content .fourth_page .japan_content .japan_text2 .menu{
   position: absolute;
   top: -2vh;
-  left: 4vw;
+  left: -15vw;
 }
 .all_content .fourth_page .japan_content .japan_text2 i {
   position: absolute;
@@ -600,13 +649,14 @@ header .other-menu ul li:hover::after {
   height: 4vh;
   color: rgb(49, 47, 47);
   top:35vh;
-  left: 50vw;
+  left:48vw;
   overflow: hidden;
-}
-.all_content .fourth_page .japan_content .swiper-contaier .swiper-slide:hover {
-  text-decoration: underline;
 }
 .all_content .third_page .japan_content .swiper-contaier .swiper-slide {
   line-height: 4vh;
   height: 100vh;
 }
+.all_content .fourth_page .japan_content .japan_text2 .swiper-contaier {
+  position: absolute;
+  left : 30vw;
+} 
