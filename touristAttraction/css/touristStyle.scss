@@ -14,6 +14,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KCCPakKyongni";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCPakKyongni.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF_HambakSnow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 //reset
 @import "../../css/reset";
@@ -32,7 +53,8 @@ $darkYellow: #cba55b;
 $darkBrawn: #5c3b16;
 
 $backgray: rgba(210, 227, 245, 0.188);
-$backgray2: rgba(20, 20, 20, 0.19);
+$backgray2: rgba(20, 20, 20, 0.831);
+$backgray3: rgba(20, 20, 20, 0.481);
 
 //font
 $doHyeon: "Do Hyeon";
@@ -285,6 +307,25 @@ header {
           width: 100vw;
           height: 100vh;
         }
+        .type-h2-1,
+        .type-h2-2,
+        .type-h2-3 {
+          // font-family: "SF_HambakSnow";
+          font-size: 4rem;
+          position: absolute;
+          top: 13%;
+          left: 30%;
+          color: white;
+          z-index: 3;
+          font-weight: 700;
+          text-shadow: 5px 5px 0 $backgray2;
+        }
+        .type-h2-2 {
+          top: 15%;
+          right: 10%;
+          text-align: right;
+        }
+
         .mountainText {
           position: absolute;
           top: 18%;
@@ -292,33 +333,35 @@ header {
 
           font-size: 18px;
           background-color: $backgray2;
-          color: black;
+          color: white;
           line-height: 1.5;
-          font-weight: 600;
+          border-radius: 10px;
           padding: 35px;
         }
         .mountainText2 {
           position: absolute;
-          top: 10%;
+          top: 20%;
           right: 10%;
-
+          border-radius: 10px;
           font-size: 18px;
           background-color: $backgray2;
-          color: black;
+          color: white;
+          a {
+            color: white;
+            text-decoration: none;
+          }
           line-height: 1.5;
-          font-weight: 600;
           padding: 35px;
         }
         .mountainText3 {
           position: absolute;
           bottom: 8%;
           right: 12%;
-
+          border-radius: 10px;
           font-size: 18px;
-          background-color: $backgray;
+          background-color: $backgray2;
           color: white;
           line-height: 1.5;
-          font-weight: 500;
           padding: 35px;
         }
       }
@@ -372,18 +415,13 @@ header {
       p {
         text-align: center;
       }
-      .type-title {
+      h1 {
         font-family: "RIDIBatang";
         text-align: left;
         margin-left: 25px;
         font-size: 3vh;
         font-weight: 700;
-
         width: calc(60vw + 5px);
-        display: inline;
-        vertical-align: middle;
-        border-right: 0.05em solid black;
-        animation: cursor 0.2s ease infinite;
       }
       .sea-text {
         margin-top: 5px;
