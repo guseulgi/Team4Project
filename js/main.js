@@ -92,6 +92,48 @@ let moveToNextSection = function() {
 }
 // arrowButton.addEventListener('click', moveToNextSection); a태그에 직접 넣어줌
 
+const mainHash = document.querySelector('.main__hash');
+const hashP = mainHash.querySelectorAll('.sticker');
+
+let isPress = false;
+let prevX = 0;
+let prexY = 0;
+
+for(let i = 0; i < hashP.length; i++) {
+  hashP[i].addEventListener('mousedown', function(e){
+    isPress = true;
+
+    hashP[i].setAttribute('dragable', 'true');
+    hashP[i].ondragstart = () => false;
+
+    hashP[i].style.position = 'absolute';
+    hashP[i].style.zIndex = 4;
+
+    mainHash.append(hashP[i]);
+
+      function moveAt(pageX, pageY) {
+        if(isPress === false) return;
+
+        hashP[i].style.left = pageX - hashP[i].offsetWidth / 4 - 40 + 'px';
+        hashP[i].style.top = pageY - hashP[i].offsetHeight / 4 - 163+ 'px';
+      }
+
+      function customMouseMove (evt) {
+        moveAt(evt.pageX, evt.pageY);
+      }
+      document.addEventListener('mousemove', customMouseMove);
+
+      document.addEventListener('click', function(e) {
+        hashP[i].style.left = e.target.left;
+        hashP[i].style.top = e.target.top;
+        document.removeEventListener('mousemove', customMouseMove);
+        console.log('!');
+        hashP[i].onmouseup = null;
+      })
+  });
+}
+
+
 
 // Weather API
 const weatherIconRef = {
