@@ -106,7 +106,7 @@ header {
         transition: .7s;
 
         span {
-          display: none;
+          opacity: 0;
           box-sizing: border-box;
           font-size: 13px;
           font-weight: 700;
@@ -139,7 +139,7 @@ header {
 
         &:hover {
           span {
-            display: block;
+            opacity: 1;
             color : white;
           }
           &::after {
@@ -412,6 +412,10 @@ header {
         border-radius: 16px;
         border: 2px solid #95cd41;
       }
+
+      .sticker {
+        
+      }
     }
 
     .bottomButton {
@@ -426,13 +430,12 @@ header {
 
 
       a {
-        color: #6264587b;
+        color: #373a29d3;
         font-size: 2rem;
         text-decoration: none;
       }
       i {
         display: block;
-        // transform: scaleX(1.6);
         position: absolute;
         animation: arrowDown 3s infinite;
         &:first-child {

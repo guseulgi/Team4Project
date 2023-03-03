@@ -145,7 +145,7 @@ header .other-menu ul li {
   transition: 0.7s;
 }
 header .other-menu ul li span {
-  display: none;
+  opacity: 0;
   box-sizing: border-box;
   font-size: 13px;
   font-weight: 700;
@@ -172,7 +172,7 @@ header .other-menu ul li a:hover {
   color: #f6d860;
 }
 header .other-menu ul li:hover span {
-  display: block;
+  opacity: 1;
   color: white;
 }
 header .other-menu ul li:hover::after {
@@ -436,7 +436,7 @@ header .other-menu ul li:last-child span {
   z-index: 3;
 }
 .main .main__contents .bottomButton a {
-  color: rgba(98, 100, 88, 0.4823529412);
+  color: rgba(55, 58, 41, 0.8274509804);
   font-size: 2rem;
   text-decoration: none;
 }
