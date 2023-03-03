@@ -120,10 +120,7 @@ for (let i = 0; i < swiperImg.length; i += 1) {
     if (textDiv[i].classList.contains("off")) {
       textDiv[i].classList.remove("off");
       textDiv[i].classList.add("on");
-      new TypeIt(".type-title", {
-        speed: 50,
-        startDelay: 500,
-      }).go();
+
       closeDiv[i].addEventListener("click", function () {
         if (textDiv[i].classList.contains("on")) {
           textDiv[i].classList.remove("on");
@@ -136,6 +133,59 @@ for (let i = 0; i < swiperImg.length; i += 1) {
     }
   });
 }
+//typeit
+const typingText1 = document.querySelector(".type-h2-1");
+const typingText1height = typingText1.getBoundingClientRect().height;
+
+const typingText2 = document.querySelector(".type-h2-2");
+const typeLi2 = document.querySelector(".type-li2");
+const typeLi2height = typeLi2.getBoundingClientRect().height;
+
+// const typingText3 = document.querySelector(".type-h2-3");
+const typeLi3 = document.querySelector(".type-li3");
+const typeLi3height = typeLi3.offsetTop;
+
+const typing1 = new TypeIt(".type-h2-1", {
+  speed: 100,
+  startDelay: 700,
+  afterComplete: function (instance) {
+    instance.destroy();
+  },
+});
+const typing2 = new TypeIt(".type-h2-2", {
+  speed: 100,
+  startDelay: 700,
+});
+const typing3 = new TypeIt(".type-h2-3", {
+  speed: 100,
+  startDelay: 700,
+});
+
+let interval = 400;
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  if (window.scrollY > typingText1height) {
+    typing1.go();
+  }
+  if (window.scrollY > typeLi2height) {
+    typing2.go();
+  }
+  console.log(typeLi3height);
+  if (window.scrollY > typeLi3height - interval) {
+    typing3.go();
+  }
+});
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY > typeLi2height) {
+//     typing2.go();
+//   }
+// });
+
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY > typeLi3height) {
+//     typing3.go();
+//   }
+// });
 
 // Return to Top
 const returnToTop = document.querySelector(".returnToTop");

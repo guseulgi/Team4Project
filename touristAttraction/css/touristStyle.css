@@ -14,6 +14,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KCCPakKyongni";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCPakKyongni.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF_HambakSnow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -297,37 +315,58 @@ header .other-menu ul li:hover::after {
   width: 100vw;
   height: 100vh;
 }
+.contents .mountainContent ul li .type-h2-1,
+.contents .mountainContent ul li .type-h2-2,
+.contents .mountainContent ul li .type-h2-3 {
+  font-size: 4rem;
+  position: absolute;
+  top: 13%;
+  left: 30%;
+  color: white;
+  z-index: 3;
+  font-weight: 700;
+  text-shadow: 5px 5px 0 rgba(20, 20, 20, 0.831);
+}
+.contents .mountainContent ul li .type-h2-2 {
+  top: 15%;
+  right: 10%;
+  text-align: right;
+}
 .contents .mountainContent ul li .mountainText {
   position: absolute;
   top: 18%;
   left: 6%;
   font-size: 18px;
-  background-color: rgba(20, 20, 20, 0.19);
-  color: black;
+  background-color: rgba(20, 20, 20, 0.831);
+  color: white;
   line-height: 1.5;
-  font-weight: 600;
+  border-radius: 10px;
   padding: 35px;
 }
 .contents .mountainContent ul li .mountainText2 {
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 10%;
+  border-radius: 10px;
   font-size: 18px;
-  background-color: rgba(20, 20, 20, 0.19);
-  color: black;
+  background-color: rgba(20, 20, 20, 0.831);
+  color: white;
   line-height: 1.5;
-  font-weight: 600;
   padding: 35px;
+}
+.contents .mountainContent ul li .mountainText2 a {
+  color: white;
+  text-decoration: none;
 }
 .contents .mountainContent ul li .mountainText3 {
   position: absolute;
   bottom: 8%;
   right: 12%;
+  border-radius: 10px;
   font-size: 18px;
-  background-color: rgba(210, 227, 245, 0.188);
+  background-color: rgba(20, 20, 20, 0.831);
   color: white;
   line-height: 1.5;
-  font-weight: 500;
   padding: 35px;
 }
 .contents .seaContent {
@@ -387,17 +426,13 @@ header .other-menu ul li:hover::after {
 .contents .seaContent .text p {
   text-align: center;
 }
-.contents .seaContent .text .type-title {
+.contents .seaContent .text h1 {
   font-family: "RIDIBatang";
   text-align: left;
   margin-left: 25px;
   font-size: 3vh;
   font-weight: 700;
   width: calc(60vw + 5px);
-  display: inline;
-  vertical-align: middle;
-  border-right: 0.05em solid black;
-  animation: cursor 0.2s ease infinite;
 }
 .contents .seaContent .text .sea-text {
   margin-top: 5px;
