@@ -55,6 +55,10 @@ fetch(weatherUrl).then(response => response.json())
 });
 
 
+AOS.init({
+  duration: 1500,
+}
+);
 
 /*review */
 var mySwiper = new Swiper('.swiper-contaier', {
@@ -65,19 +69,48 @@ var mySwiper = new Swiper('.swiper-contaier', {
 });
 
 /*menu*/
-const kt1 = document.querySelector('.korea_text1');
-const fl1 = kt1.querySelector('.food_list1');
-const korea_menu = document.querySelector('.korea_menu1');
-const km = korea_menu.querySelector('km');
+const korea_fl1 = document.querySelector('.food_list1');
+const korea_km1 = document.querySelector('.korea_menu1');
+const korea_fl2 = document.querySelector('.food_list2');
+const korea_km2 = document.querySelector('.korea_menu2');
+
 // console.log(kt1, fl1);
 
-kt1.addEventListener('click', changediv);
-function changediv(){
-  if(fl1.classList.contains('on') === true) {
-    fl1.classList.remove('on');
-    km.classList.add('on');
+korea_fl1.addEventListener('click', changediv1);
+korea_km1.addEventListener('click',changediv1);
+function changediv1(){
+  if(korea_km1.classList.contains('off') === true) {
+    korea_km1.classList.remove('off');
+    korea_fl1.classList.add('off');
   } else {
-    fl1.classList.remove('on');
-    km.classList.add('on');
+    korea_km1.classList.add('off');
+    korea_fl1.classList.remove('off');
+  }
+}
+korea_fl2.addEventListener('click', changediv2);
+korea_km2.addEventListener('click',changediv2);
+function changediv2(){
+  if(korea_km2.classList.contains('off') === true) {
+    korea_km2.classList.remove('off');
+    korea_fl2.classList.add('off');
+  } else {
+    korea_km2.classList.add('off');
+    korea_fl2.classList.remove('off');
+  }
+}
+/*japan */
+const japan_fl1 = document.querySelector('.japan_content .japan_text1 .food_list1');
+const japan_km1 = document.querySelector('.japan_content .japan_text1 .menu');
+
+japan_fl1.addEventListener('click', changediv3);
+japan_km1.addEventListener('click',changediv3);
+
+function changediv3(){
+  if(japan_km1.classList.contains('off') === true) {
+    japan_km1.classList.remove('off');
+    japan_fl1.classList.add('off');
+  } else {
+    japan_km1.classList.add('off');
+    japan_fl1.classList.remove('off');
   }
 }
