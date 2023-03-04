@@ -14,27 +14,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "KOTRA_BOLD-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "KCCPakKyongni";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCPakKyongni.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "SF_HambakSnow";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 //reset
 @import "../../css/reset";
@@ -88,7 +67,7 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   width: 100vw;
   background-color: transparent;
 
@@ -99,21 +78,21 @@ header {
     text-shadow: 0px 3px 0 white;
     padding-left: 40px;
     height: 100px;
-    line-height: 18vh;
+    line-height: 14vh;
 
     .title__logo {
       & > i:first-child {
         position: absolute;
         top: 0px;
         left: 147px;
-        line-height: 18vh;
+        line-height: 14vh;
       }
       & > i:last-child {
         position: absolute;
         top: 14px;
         left: 148px;
         transform: rotate(-90deg) scale(0.4);
-        line-height: 18vh;
+        line-height: 14vh;
       }
     }
   }
@@ -184,7 +163,7 @@ header {
   padding: 7px 10px;
   background-color: #ff9a1f;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 4;
   opacity: 0.7;
 
   i {
@@ -313,12 +292,11 @@ header {
         .type-h2-1,
         .type-h2-2,
         .type-h2-3 {
-          // font-family: "SF_HambakSnow";
           font-size: 4rem;
           position: absolute;
 
           color: white;
-          z-index: 3;
+          z-index: 2;
           font-weight: 700;
           text-shadow: 5px 5px 0 $backgray2;
         }
@@ -628,6 +606,7 @@ header {
       font-size: 6vh;
     }
   }
+
   .museumContent {
     position: relative;
 
@@ -719,6 +698,18 @@ header {
       left: 20%;
     }
     .teddyMore {
+      .teddy-arrow {
+        i {
+          position: absolute;
+          bottom: 60vh;
+          left: 17vw;
+          font-size: 60px;
+          color: black;
+          transform: rotate(40deg);
+          animation: blinkColor 0.5s ease-in-out infinite alternate;
+        }
+      }
+      position: relative;
       text-align: center;
       font-size: 1vw;
 
@@ -827,7 +818,6 @@ footer {
   ul {
     li {
       color: white;
-      // padding-top: 10px;
       font-weight: 100;
       font-size: 12px;
       font-style: italic;
@@ -864,5 +854,15 @@ footer {
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+//색 바뀌는 애니메이션
+@keyframes blinkColor {
+  0% {
+    color: $gray;
+  }
+  100% {
+    color: $green;
   }
 }

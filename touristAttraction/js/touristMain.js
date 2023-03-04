@@ -1,3 +1,10 @@
+//새로고침 했을 때 스크롤 맨위로
+window.onload = function () {
+  setTimeout(function () {
+    scrollTo(0, 0);
+  }, 100);
+};
+
 //import AOS
 AOS.init();
 
@@ -72,6 +79,19 @@ fetch(weatherUrl)
   .catch((error) => {
     console.log("Weather API Error : ", error);
   });
+
+const header = document.querySelector("header");
+const headerHeight = header.getBoundingClientRect().height;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > headerHeight) {
+    header.setAttribute("style", "background: white;");
+    header.style.transition = "all .4s ease-in-out";
+  } else {
+    header.setAttribute("style", "background: transparent;");
+    header.style.transition = "all .4s ease-in-out";
+  }
+});
 
 //swiper
 const swiper = new Swiper(".contents .seaContent .swiper", {
