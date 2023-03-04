@@ -105,6 +105,18 @@ body {
   line-height: 1.4;
   width: 100vw;
   overflow-x: hidden;
+  cursor: none;
+}
+
+.cursor {
+  background-image: url("../../source/cursor.png");
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 3;
 }
 
 header {
@@ -143,7 +155,7 @@ header .other-menu ul {
   position: absolute;
   top: 0;
   height: 100%;
-  right: 10%;
+  right: 40px;
 }
 header .other-menu ul li {
   margin: auto 15px;
@@ -168,6 +180,9 @@ header .other-menu ul li span {
 }
 header .other-menu ul li a {
   color: #5c3b16;
+}
+header .other-menu ul li a:hover {
+  color: #f6d860;
 }
 header .other-menu ul li:hover span {
   display: block;
@@ -235,26 +250,17 @@ header .other-menu ul li:hover::after {
   display: block;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: #5c3b16;
   border-radius: 50%;
   text-align: center;
   font-size: 1.2rem;
-}
-.returnToTop a.changeColor {
-  background-color: #ea5c2b;
-}
-.returnToTop a.changeColor i {
-  color: white;
-}
-.returnToTop a.changeColor span {
-  background-color: white;
 }
 .returnToTop a span {
   width: 18px;
   height: 1.8px;
   display: block;
   border-radius: 4px;
-  background-color: gray;
+  background-color: white;
   position: absolute;
   top: 6px;
   left: 6px;
@@ -263,7 +269,7 @@ header .other-menu ul li:hover::after {
   position: absolute;
   top: 8px;
   left: 8px;
-  color: #626458;
+  color: white;
 }
 
 .intro {
@@ -320,17 +326,23 @@ header .other-menu ul li:hover::after {
 .contents .mountainContent ul li .type-h2-3 {
   font-size: 4rem;
   position: absolute;
-  top: 13%;
-  left: 30%;
   color: white;
   z-index: 3;
   font-weight: 700;
   text-shadow: 5px 5px 0 rgba(20, 20, 20, 0.831);
 }
+.contents .mountainContent ul li .type-h2-1 {
+  top: 13%;
+  left: 33%;
+}
 .contents .mountainContent ul li .type-h2-2 {
   top: 15%;
   right: 10%;
   text-align: right;
+}
+.contents .mountainContent ul li .type-h2-3 {
+  top: 50%;
+  left: 15%;
 }
 .contents .mountainContent ul li .mountainText {
   position: absolute;
@@ -341,7 +353,14 @@ header .other-menu ul li:hover::after {
   color: white;
   line-height: 1.5;
   border-radius: 10px;
-  padding: 35px;
+  padding: 50px 40px 40px;
+}
+.contents .mountainContent ul li .mountainText p {
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 200;
+  color: #95cd41;
+  margin-right: 5px;
 }
 .contents .mountainContent ul li .mountainText2 {
   position: absolute;
@@ -352,22 +371,102 @@ header .other-menu ul li:hover::after {
   background-color: rgba(20, 20, 20, 0.831);
   color: white;
   line-height: 1.5;
-  padding: 35px;
+  padding: 50px 40px 40px;
 }
 .contents .mountainContent ul li .mountainText2 a {
   color: white;
   text-decoration: none;
+  margin-left: 30px;
+  padding: 5px 30px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+.contents .mountainContent ul li .mountainText2 a:hover {
+  background-color: white;
+  color: #626458;
+  transition: 0.5s;
+}
+.contents .mountainContent ul li .mountainText2 .course-map {
+  animation: blink 0.5s ease-in-out infinite alternate;
+  padding: 5px 15px;
+  color: black;
+  border-radius: 10px;
+  background-color: #f6d860;
+  font-size: 20px;
+  float: left;
+  margin-top: 20px;
+}
+.contents .mountainContent ul li .mountainText2 .course-map i {
+  margin-right: 5px;
+}
+.contents .mountainContent ul li .mountainText2 .course-map:hover {
+  cursor: pointer;
+  color: #95cd41;
+  background-color: white;
+  animation: none;
+}
+.contents .mountainContent ul li .mountainText2 .course-map:hover .park-map {
+  display: block;
+  transition: 0.7s;
+}
+.contents .mountainContent ul li .mountainText2 .course-map .park-map {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 800px;
+}
+.contents .mountainContent ul li .mountainText2 .course-map .park-map img {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
 }
 .contents .mountainContent ul li .mountainText3 {
   position: absolute;
-  bottom: 8%;
-  right: 12%;
+  top: 55%;
+  left: 10%;
   border-radius: 10px;
   font-size: 18px;
   background-color: rgba(20, 20, 20, 0.831);
   color: white;
   line-height: 1.5;
-  padding: 35px;
+  padding: 50px 40px 40px;
+}
+.contents .mountainContent ul li .mountainText3 .course-map {
+  animation: blink 0.5s ease-in-out infinite alternate;
+  padding: 5px 15px;
+  color: black;
+  border-radius: 10px;
+  background-color: #f6d860;
+  font-size: 20px;
+  float: right;
+}
+.contents .mountainContent ul li .mountainText3 .course-map i {
+  margin-left: 10px;
+}
+.contents .mountainContent ul li .mountainText3 .course-map:hover {
+  cursor: pointer;
+  color: #95cd41;
+  background-color: white;
+  animation: none;
+}
+.contents .mountainContent ul li .mountainText3 .course-map:hover .park-map {
+  display: block;
+  transition: 0.7s;
+}
+.contents .mountainContent ul li .mountainText3 .course-map .park-map {
+  display: none;
+  position: absolute;
+  bottom: -40px;
+  right: -750px;
+}
+.contents .mountainContent ul li .mountainText3 .course-map .park-map img {
+  width: 700px;
+  height: 550px;
+  border-radius: 20px;
+}
+.contents .mountainContent ul li .mountainText3 .course-map .park-map p {
+  text-align: right;
+  color: white;
 }
 .contents .seaContent {
   position: relative;
@@ -384,6 +483,7 @@ header .other-menu ul li:hover::after {
   margin-left: 5vw;
   height: 68vh;
   background-color: white;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.485);
   transition: 0.5s;
   position: absolute;
   left: 0;
@@ -393,21 +493,23 @@ header .other-menu ul li:hover::after {
 .contents .seaContent .text .text-map {
   margin-top: 60px;
   position: absolute;
-  right: 20px;
-  width: 52vh;
-  height: 60vh;
+  right: 35px;
+  width: 50vh;
+  height: 50vh;
   background-color: #ced8d6;
+  box-shadow: 7px 10px 11px rgba(0, 0, 0, 0.262);
 }
 .contents .seaContent .text .text-map p {
   text-align: left;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-left: 25px;
-  font-size: 20px;
+  font-size: 18px;
 }
-.contents .seaContent .text .text-map .sea-map {
-  width: 10vw;
-  height: 10vh;
-  background-color: #95cd41;
+.contents .seaContent .text .text-map .sea-map iframe {
+  width: 400px;
+  height: 32vh;
+  margin-top: 30px;
+  margin-left: calc((50vh - 400px) / 2);
 }
 .contents .seaContent .text ul {
   margin-left: 20px;
@@ -615,12 +717,14 @@ header .other-menu ul li:hover::after {
   margin-left: 30px;
   padding: 5px 30px;
   border: 3px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
+  animation: blink 0.5s ease-in-out infinite alternate;
 }
 .contents .museumContent .teddyMore ul li a:hover {
   background-color: white;
   color: #626458;
   transition: 0.5s;
+  animation: none;
 }
 .contents .museumContent2 .museumTitle2 {
   margin-top: 200px;
@@ -685,5 +789,13 @@ header .other-menu ul li:hover::after {
   }
   to {
     transform: translate(-50%);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }/*# sourceMappingURL=touristStyle.css.map */
