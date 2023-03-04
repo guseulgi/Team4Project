@@ -1,10 +1,6 @@
-/* 개선 필요 점 (23.03.02) */
+/* 개선 필요 점 (23.03.04) */
 
-/* 메인 헤더, 날씨 API 넣어야 함 */
-/* 위치 뜨게 하는 지도 넣어야 함 */
 /* 링크 동그란 버튼에 hover 주면 시각적인 효과 주기 */
-/* DETAILS, 제목에만 글자 굵기 변경하기 */
-/* 책모양 느낌 같은 것 가능하다면 오른쪽에 fixed 해놓기 */
 /* 슈퍼바운스 마지막 사진 2장에 슬기 CSS .shine 효과 끌고 오기 */
 
 
@@ -30,18 +26,18 @@
 
 /* MAIN HAEDER */
 
-header {
+/* header {
   height: 100px;
   width: 1920px;
-}
+} */
 
 header {
   position: fixed;
   height: 100px;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100vw;
   background-color: transparent;
 }
 
@@ -179,52 +175,6 @@ header .other-menu ul li:hover::after {
   margin: 5px 0;
 }
 
-.returnToTop {
-  position: fixed;
-  bottom: 10px;
-  right: 190px;
-}
-
-.returnToTop a {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: #5c3b16;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.returnToTop a.changeColor {
-  background-color: #ea5c2b;
-}
-
-.returnToTop a.changeColor i {
-  color: white;
-}
-
-.returnToTop a.changeColor span {
-  background-color: white;
-}
-
-.returnToTop a span {
-  width: 18px;
-  height: 1.8px;
-  display: block;
-  border-radius: 4px;
-  background-color: white;
-  position: absolute;
-  top: 6px;
-  left: 6px;
-}
-
-.returnToTop a i {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  color: white;
-}
-
 /* COMMON */
 
 * {
@@ -264,8 +214,9 @@ figure video {
   position: relative;
   width: 1920px;
   margin: auto;
-  /* border: 1px solid black; */
 }
+
+/* SWIPER */
 
 .swiper-slide a {
   justify-content: center;
@@ -284,39 +235,6 @@ figure video {
   mix-blend-mode: luminosity;
   filter: none;
 }
-
-/* BUTTON */
-/* button {
-  position: absolute;
-  width: 10%;
-  height: 7%;
-  background-color: rgba(247, 198, 92, 0.12);
-  font-family: 'Noto Sans KR', sans-serif;
-  border: 1px solid white;
-  color: #fff;
-  font-size: 2vh;
-  font-weight: bold;
-  border-radius: 30px;
-  transform: translate(-50%, -50%);
-  transition: .2s;
-  text-shadow: 3px 3px 8px black;
-  display: block;
-  bottom: 20%;
-  left: 50%;
-} */
-
-/* button:focus {
-  outline: 0;
-}
-
-button:hover {
-  background-color: rgba(223, 173, 81, 0.9);
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(223, 173, 81, 2.0);
-  border: none;
-} */
-
-/* SWIPER */
 
 .swiper {
   position: relative;
@@ -339,7 +257,7 @@ button:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: rgba(168, 166, 164, 0.249);
+  background-color: rgba(237, 124, 10, 0.249);
   width: 80px;
 }
 
@@ -353,7 +271,6 @@ button:hover {
   opacity: 20px;
   background-position: center;
   background-repeat: no-repeat;
-  /* z-index: 2; */
   -webkit-transition: 0.4s;
   transition: 1s;
   position: absolute;
@@ -366,7 +283,7 @@ button:hover {
   display: flex;
   text-align: center;
   font-size: 50px;
-  color: rgba(62, 59, 59, 0.212);
+  color: rgba(59, 62, 60, 0.212);
   left: 20px;
 }
 
@@ -396,21 +313,6 @@ button:hover {
 }
 
 /* TEXT-WRAP BUTTON */
-
-/* .text-wrap {
-  position: absolute;
-  top: 30vh;
-  left: 0;
-  right: 0;
-  width: 80vw;
-  opacity: 0;
-  margin: auto;
-  text-align: center;
-  transition: .5s;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.545);
-  border-radius: 20px;
-} */
 
 .text-wrap {
   position: absolute;
@@ -669,6 +571,60 @@ button:hover {
   padding: 10px;
 }
 
+/* 팝업 버튼 누르 나오는 상자 */
+
+/* 뒤에 꺼멓게 칠해지는 부분임 */
+/* 뒤에가 클릭이 되지 않게 하려고, 팝업만 클릭이 되려고 하는 것임 */
+/* .dim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.5s;
+} */
+
+.popup1 {
+  position: absolute;
+  left: 760px;
+  top: -800px;
+  z-index: 5;
+  transform: translate(-50%, 50%);
+  width: 900px;
+  height: 490px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.668);
+  border-radius: 10px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup1>.map1 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: 800px;
+  height: 449px;
+}
+
+.popup1>a {
+  position: absolute;
+  right: 25px;
+  color: rgb(182, 178, 178);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup1:target {
+  opacity: 1;
+}
+
 
 /* ARROW 렛츠런팜 */
 .runarrow {
@@ -869,6 +825,46 @@ button:hover {
   padding: 10px;
 }
 
+.popup2 {
+  position: absolute;
+  left: 780px;
+  top: -800px;
+  z-index: 5;
+  transform: translate(-50%, 50%);
+  width: 900px;
+  height: 490px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.668);
+  border-radius: 10px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup2>.map2 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: 800px;
+  height: 449px;
+}
+
+.popup2>a {
+  position: absolute;
+  right: 25px;
+  color: rgb(182, 178, 178);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup2:target {
+  opacity: 1;
+}
+
+
 /* ARROW 카이트서핑 */
 
 .kitearrow {
@@ -1067,6 +1063,45 @@ button:hover {
   padding: 10px;
 }
 
+.popup3 {
+  position: absolute;
+  left: 740px;
+  top: -800px;
+  z-index: 5;
+  transform: translate(-50%, 50%);
+  width: 900px;
+  height: 490px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.668);
+  border-radius: 10px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup3>.map3 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: 800px;
+  height: 449px;
+}
+
+.popup3>a {
+  position: absolute;
+  right: 25px;
+  color: rgb(182, 178, 178);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup3:target {
+  opacity: 1;
+}
+
 /* ARROW 블루원요트클럽 */
 
 .bluearrow {
@@ -1210,6 +1245,46 @@ button:hover {
   border-radius: 100%;
   text-align: center;
   padding: 10px;
+}
+
+
+.popup4 {
+  position: absolute;
+  left: 740px;
+  top: -380px;
+  z-index: 10;
+  transform: translate(-50%, 50%);
+  width: 900px;
+  height: 490px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.668);
+  border-radius: 10px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup4>.map4 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: 800px;
+  height: 449px;
+}
+
+.popup4>a {
+  position: absolute;
+  right: 25px;
+  color: rgb(182, 178, 178);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup4:target {
+  opacity: 1;
 }
 
 /* 블루원 요트투어 요트 설명 */
@@ -1583,6 +1658,45 @@ figure.snip1384.hover i {
   border-radius: 100%;
   text-align: center;
   padding: 10px;
+}
+
+.popup5 {
+  position: absolute;
+  left: 760px;
+  top: -770px;
+  z-index: 10;
+  transform: translate(-50%, 50%);
+  width: 900px;
+  height: 490px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.668);
+  border-radius: 10px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup5>.map5 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  width: 800px;
+  height: 449px;
+}
+
+.popup5>a {
+  position: absolute;
+  right: 25px;
+  color: rgb(182, 178, 178);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup5:target {
+  opacity: 1;
 }
 
 /* 상단 이동하기 버튼 */

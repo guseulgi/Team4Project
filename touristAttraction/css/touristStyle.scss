@@ -68,6 +68,18 @@ body {
   width: 100vw;
   //좌우 스크롤 방지
   overflow-x: hidden;
+  cursor: none;
+}
+.cursor {
+  background-image: url("../../source/cursor.png");
+  background-size: contain;
+
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 3;
 }
 
 //header
@@ -111,7 +123,7 @@ header {
       position: absolute;
       top: 0;
       height: 100%;
-      right: 10%;
+      right: 40px;
       li {
         margin: auto 15px;
         font-size: 20px;
@@ -136,6 +148,9 @@ header {
 
         a {
           color: $darkBrawn;
+          &:hover {
+            color: $yellow;
+          }
         }
         &:hover {
           span {
@@ -216,29 +231,17 @@ header {
     display: block;
     width: 30px;
     height: 30px;
-    background-color: white;
+    background-color: $darkBrawn;
     border-radius: 50%;
     text-align: center;
-
     font-size: 1.2rem;
-
-    &.changeColor {
-      background-color: $darkOrange;
-
-      i {
-        color: white;
-      }
-      span {
-        background-color: white;
-      }
-    }
 
     span {
       width: 18px;
       height: 1.8px;
       display: block;
       border-radius: 4px;
-      background-color: gray;
+      background-color: white;
       position: absolute;
       top: 6px;
       left: 6px;
@@ -248,7 +251,7 @@ header {
       position: absolute;
       top: 8px;
       left: 8px;
-      color: $gray;
+      color: white;
     }
   }
 }
@@ -313,17 +316,24 @@ header {
           // font-family: "SF_HambakSnow";
           font-size: 4rem;
           position: absolute;
-          top: 13%;
-          left: 30%;
+
           color: white;
           z-index: 3;
           font-weight: 700;
           text-shadow: 5px 5px 0 $backgray2;
         }
+        .type-h2-1 {
+          top: 13%;
+          left: 33%;
+        }
         .type-h2-2 {
           top: 15%;
           right: 10%;
           text-align: right;
+        }
+        .type-h2-3 {
+          top: 50%;
+          left: 15%;
         }
 
         .mountainText {
@@ -336,8 +346,16 @@ header {
           color: white;
           line-height: 1.5;
           border-radius: 10px;
-          padding: 35px;
+          padding: 50px 40px 40px;
+          p {
+            font-size: 1rem;
+            text-align: right;
+            font-weight: 200;
+            color: $green;
+            margin-right: 5px;
+          }
         }
+
         .mountainText2 {
           position: absolute;
           top: 20%;
@@ -346,23 +364,109 @@ header {
           font-size: 18px;
           background-color: $backgray2;
           color: white;
+          line-height: 1.5;
+          padding: 50px 40px 40px;
+
           a {
             color: white;
             text-decoration: none;
+            margin-left: 30px;
+            padding: 5px 30px;
+            border: 3px solid white;
+            border-radius: 10px;
+            &:hover {
+              background-color: white;
+              color: $gray;
+              transition: 0.5s;
+            }
           }
-          line-height: 1.5;
-          padding: 35px;
+
+          .course-map {
+            animation: blink 0.5s ease-in-out infinite alternate;
+            padding: 5px 15px;
+            color: black;
+            border-radius: 10px;
+            background-color: $yellow;
+            font-size: 20px;
+            float: left;
+            margin-top: 20px;
+            i {
+              margin-right: 5px;
+            }
+            &:hover {
+              cursor: pointer;
+              color: $green;
+              background-color: white;
+              .park-map {
+                display: block;
+                transition: 0.7s;
+              }
+              animation: none;
+            }
+            .park-map {
+              display: none;
+
+              position: absolute;
+              top: 0;
+              right: 800px;
+
+              img {
+                width: 800px;
+                height: 500px;
+                border-radius: 20px;
+              }
+            }
+          }
         }
         .mountainText3 {
           position: absolute;
-          bottom: 8%;
-          right: 12%;
+          top: 55%;
+          left: 10%;
           border-radius: 10px;
           font-size: 18px;
           background-color: $backgray2;
           color: white;
           line-height: 1.5;
-          padding: 35px;
+          padding: 50px 40px 40px;
+          .course-map {
+            animation: blink 0.5s ease-in-out infinite alternate;
+            padding: 5px 15px;
+            color: black;
+            border-radius: 10px;
+            background-color: $yellow;
+            font-size: 20px;
+            float: right;
+            i {
+              margin-left: 10px;
+            }
+            &:hover {
+              cursor: pointer;
+              color: $green;
+              background-color: white;
+              .park-map {
+                display: block;
+                transition: 0.7s;
+              }
+              animation: none;
+            }
+            .park-map {
+              display: none;
+
+              position: absolute;
+              bottom: -40px;
+              right: -750px;
+
+              img {
+                width: 700px;
+                height: 550px;
+                border-radius: 20px;
+              }
+              p {
+                text-align: right;
+                color: white;
+              }
+            }
+          }
         }
       }
     }
@@ -379,21 +483,25 @@ header {
       .text-map {
         margin-top: 60px;
         position: absolute;
-        right: 20px;
-        width: 52vh;
-        height: 60vh;
+        right: 35px;
+        width: 50vh;
+        height: 50vh;
         background-color: $lightGray;
+        box-shadow: 7px 10px 11px rgba(0, 0, 0, 0.262);
 
         p {
           text-align: left;
-          margin-top: 40px;
+          margin-top: 35px;
           margin-left: 25px;
-          font-size: 20px;
+          font-size: 18px;
         }
         .sea-map {
-          width: 10vw;
-          height: 10vh;
-          background-color: #95cd41;
+          iframe {
+            width: 400px;
+            height: 32vh;
+            margin-top: 30px;
+            margin-left: calc((50vh - 400px) / 2);
+          }
         }
       }
 
@@ -433,7 +541,7 @@ header {
       margin-left: 5vw;
       height: 68vh;
       background-color: white;
-
+      box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.485);
       transition: 0.5s;
 
       // border-radius: 30px;
@@ -521,7 +629,6 @@ header {
     }
   }
   .museumContent {
-    height: 80vh;
     position: relative;
 
     .museumTitle {
@@ -556,7 +663,6 @@ header {
         position: relative;
         color: white;
         text-align: center;
-        // line-height: 400px;/
         transform-style: preserve-3d;
         transform: rotateY(0deg);
         transition: 0.5s;
@@ -599,17 +705,17 @@ header {
     }
     & .flip-box:nth-child(4) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       right: 20%;
     }
     & .flip-box:nth-child(3) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       right: calc(50vw - 110px);
     }
     & .flip-box:nth-child(2) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       left: 20%;
     }
     .teddyMore {
@@ -634,11 +740,13 @@ header {
             margin-left: 30px;
             padding: 5px 30px;
             border: 3px solid white;
-            border-radius: 5px;
+            border-radius: 10px;
+            animation: blink 0.5s ease-in-out infinite alternate;
             &:hover {
               background-color: white;
               color: $gray;
               transition: 0.5s;
+              animation: none;
             }
           }
         }
@@ -683,7 +791,6 @@ header {
       position: relative;
       width: 100%;
       max-width: 100%;
-
       padding: 5px 0;
       overflow-x: hidden;
       overflow-y: hidden;
@@ -700,27 +807,62 @@ header {
     }
   }
 }
+footer {
+  width: 100vw;
+
+  background-color: #363730;
+
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 40px;
+    background-size: cover;
+    background-color: white;
+    margin-right: 30px;
+  }
+
+  ul {
+    li {
+      color: white;
+      // padding-top: 10px;
+      font-weight: 100;
+      font-size: 12px;
+      font-style: italic;
+      font-family: "Noto Sans", sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+}
 
 //animation
-
 @keyframes appear {
   from {
-    // height: 0;
-    // width: 0;
     opacity: 0;
   }
   to {
-    // height: 70vh;
-    // width: 90vw;
     opacity: 1;
   }
 }
 
+//글자가 흐르도록 하는 애니메이션
 @keyframes flow {
   from {
     transform: translateX(0);
   }
   to {
     transform: translate(-50%);
+  }
+}
+
+//깜빡이는 애니메이션
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
