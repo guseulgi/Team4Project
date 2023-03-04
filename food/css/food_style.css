@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-/*font-family: 'Noto Sans KR', sans-serif;*/
-@font-face {
-    font-family: 'Dovemayo_wild';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/Dovemayo_wild.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon:400");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kirang+Haerang:400");
+@supports ((-webkit-mask-image: url(#mask)) or (mask-image: url(#mask))) {
+  /* code that requires mask-image here. */
 }
  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
  /* font-family: 'Kaushan Script', cursive; */
@@ -32,7 +30,7 @@ a {
 
 body {
   background-color: #fff;
-  font-family: 'Dovemayo_wild';
+  font-family: "Do Hyeon";
 }
 
 /*header*/
@@ -204,136 +202,64 @@ header .other-menu ul li:hover::after {
 }
 
 
-/*FOOD CSS 시작*/
-.off {
-  display: none;
-}
-@keyframes an1{
-  0%{height: 30px;}
-  80%{height: 150px;}
-  100%{height: 150px;;}
-}
-@keyframes an2{
-  0%{opacity: 0;}
-  80%{opacity: 0;}
-  100%{opacity: 1;}
-}
 .all_content {
   position: relative;
-  overflow: hidden;
 }
 .all_content .first_page {
   height: 100vh;
   overflow: hidden;
 }
-.all_content .first_page .juju_title {
+.all_content .first_page .left_text {
   position: absolute;
-  font-size: 8vw;
+  font-size: 5vw;
   line-height: 20vh;
-  font-family: 'Kaushan Script', cursive;
   top: 20vh;
-  right: 10vw;
-  color: black;
-  z-index: 2;
+  left: 10vw;
+  color: rgb(201, 112, 30);
 }
-.all_content .first_page video {
+.all_content .first_page .right_text {
   position: absolute;
-  height: 110vh;
-  width: 110vw;
-  object-fit: cover;
-
+  font-size: 2vw;
+  line-height: 10vh;
+  top: 55vh;
+  right: 15vw;
+  color: rgba(201, 113, 30, 0.753);
 }
 .all_content .second_page {
-  height: 110vh;
+  height: 100vh;
   position: relative;
   display: flex;
   background-color: #fff;
-  overflow: hidden;
 }
 .all_content .second_page img {
-  height: 110vh;
+  height: 100vh;
   position: absolute;
 }
 .all_content .second_page .box1 {
   width: 33.333%;
-  filter: grayscale(70%);
-  font-size: 5vh;
-  color: #fff;
-  cursor: pointer;
+  background-color: #626458;
 }
-.all_content .second_page .box1 .hoverbox {
-  height: 200vh;
-}
-.all_content .second_page .box1 .hoverbox span {
-  opacity: 0; border: 2px solid #ccc; position: absolute; top: 80%; 
-  transform: translateY(-50%); height: 30px; width: 50%; left: 10%;transition: 0.5s;
-}
-.all_content .second_page .box1 .hoverbox span p {
-  opacity: 0;
-}
-.all_content .second_page .box1:hover .imgBox {
-  filter : grayscale(0);
-  transform: translateX(-200px);
-  transition: 3s;
-}
-.all_content .second_page .box1:hover .hoverbox span{
-  animation: an1 0.8s linear 1; height: 150px;
-  opacity: 1;
-}
-.all_content .second_page .box1:hover .hoverbox span p {
-  animation: an2 0.8s linear 1; opacity: 1;
-}
-/**/
 .all_content .second_page .box2 {
   width: 33.333%;
-  filter: grayscale(70%);
-  font-size: 5vh;
-  color: #fff;
+}
+.all_content .second_page .box2 :hover {
   cursor: pointer;
-}
-.all_content .second_page .box2 .hoverbox {
-  height: 200vh;
-}
-.all_content .second_page .box2 .hoverbox span {
-  opacity: 0; border: 2px solid #ccc; position: absolute; top: 80%; 
-  transform: translateY(-50%); height: 30px; width: 50%; left: 10%;transition: 0.5s;
-}
-.all_content .second_page .box2 .hoverbox span p {
-  opacity: 0;
-}
-.all_content .second_page .box2:hover .imgBox {
-  filter : grayscale(0);
-  transform: translateX(-200px);
-  transition: 3s;
-}
-.all_content .second_page .box2:hover .hoverbox span{
-  animation: an1 0.8s linear 1; height: 150px;
   opacity: 1;
 }
-.all_content .second_page .box2:hover .hoverbox span p {
-  animation: an2 0.8s linear 1; opacity: 1;
+.all_content .second_page .box2 .hoverbox .p1 {
+  position: absolute;
+  width: 50vh;
+  opacity: 0;
 }
 .all_content .second_page .box3 {
   width: 33.333%;
-  filter: grayscale(70%);
+}
+.all_content .second_page .box3 :hover {
   cursor: pointer;
 }
-/**/
-.all_content .second_page .box3 {
-  width: 33.333%;
-  filter: grayscale(70%);
-  font-size: 5vh;
-  color: #fff;
-  cursor: pointer;
-}
-.all_content .second_page .box3 .hoverbox {
-  height: 200vh;
-}
-.all_content .second_page .box3 .hoverbox span {
-  opacity: 0; border: 2px solid #ccc; position: absolute; top: 80%; 
-  transform: translateY(-50%); height: 30px; width: 50%; left: 10%;transition: 0.5s;
-}
-.all_content .second_page .box3 .hoverbox span p {
+.all_content .second_page .box3 .hoverbox .p1 {
+  position: absolute;
+  width: 50vh;
   opacity: 0;
 }
 .all_content .second_page .box3:hover .imgBox {
