@@ -70,9 +70,9 @@ var mySwiper = new Swiper('.swiper-contaier', {
 
 /*menu*/
 const korea_fl1 = document.querySelector('.food_list1');
-const korea_km1 = document.querySelector('.korea_menu1');
+const korea_km1 = document.querySelector('.menu1');
 const korea_fl2 = document.querySelector('.food_list2');
-const korea_km2 = document.querySelector('.korea_menu2');
+const korea_km2 = document.querySelector('.menu2');
 
 // console.log(kt1, fl1);
 
@@ -128,5 +128,38 @@ function changediv4(){
   } else {
     japan_km2.classList.add('off');
     japan_fl2.classList.remove('off');
+  }
+}
+
+/*westren*/
+const westren_fl1 = document.querySelector('.westren_content .westren_text1 .food_list1');
+const westren_km1 = document.querySelector('.westren_content .westren_text1 .menu');
+
+westren_fl1.addEventListener('click', changediv5);
+westren_km1.addEventListener('click', changediv5);
+
+function changediv5() {
+  if (westren_km1.classList.contains('off') === true) {
+    westren_km1.classList.remove('off');
+    westren_fl1.classList.add('off');
+  } else {
+    westren_km1.classList.add('off');
+    westren_fl1.classList.remove('off');
+  }
+}
+
+const westren_fl2 = document.querySelector('.westren_content1 .westren_text2 .food_list2');
+const westren_km2 = document.querySelector('.westren_content1 .westren_text2 .menu');
+
+westren_fl2.addEventListener('click', changediv6);
+westren_km2.addEventListener('click', changediv6);
+
+function changediv6() {
+  if (westren_km2.classList.contains('off') === true) {
+    westren_km2.classList.remove('off');
+    westren_fl2.classList.add('off');
+  } else {
+    westren_km2.classList.add('off');
+    westren_fl2.classList.remove('off');
   }
 }
