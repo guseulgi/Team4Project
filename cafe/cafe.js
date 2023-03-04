@@ -1,7 +1,7 @@
 // Weather API
 
 AOS.init({
-  delay: 200,
+  delay: 500,
 });
 const weatherIconRef = {
   "01": "fas fa-sun",
@@ -231,6 +231,74 @@ cafe_sea_2_text_4_modal_.addEventListener("click", (event) => {
   }
 });
 
+const cafe_mountain_1_text_2_modal_ = document.querySelector(
+  ".cafe_mountain_1_text_2_modal"
+);
+const cafe_mountain_1_text_2_ = document.querySelector(
+  ".cafe_mountain_1_text_2"
+);
+
+cafe_mountain_1_text_2_.addEventListener("click", () => {
+  cafe_mountain_1_text_2_modal_.classList.toggle("show");
+  if (cafe_mountain_1_text_2_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_1_text_2_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_1_text_2_modal_) {
+    cafe_mountain_1_text_2_modal_.classList.toggle("show");
+    if (!cafe_mountain_1_text_2_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+
+const cafe_mountain_1_text_3_modal_ = document.querySelector(
+  ".cafe_mountain_1_text_3_modal"
+);
+const cafe_mountain_1_text_3_ = document.querySelector(
+  ".cafe_mountain_1_text_3"
+);
+
+cafe_mountain_1_text_3_.addEventListener("click", () => {
+  cafe_mountain_1_text_3_modal_.classList.toggle("show");
+  if (cafe_mountain_1_text_3_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_1_text_3_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_1_text_3_modal_) {
+    cafe_mountain_1_text_3_modal_.classList.toggle("show");
+    if (!cafe_mountain_1_text_3_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+const cafe_mountain_1_text_4_modal_ = document.querySelector(
+  ".cafe_mountain_1_text_4_modal"
+);
+const cafe_mountain_1_text_4_ = document.querySelector(
+  ".cafe_mountain_1_text_4"
+);
+
+cafe_mountain_1_text_4_.addEventListener("click", () => {
+  cafe_mountain_1_text_4_modal_.classList.toggle("show");
+  if (cafe_mountain_1_text_4_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_1_text_4_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_1_text_4_modal_) {
+    cafe_mountain_1_text_4_modal_.classList.toggle("show");
+    if (!cafe_mountain_1_text_4_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+
 // var mHtml = $("html");
 // var page = 1;
 
@@ -282,21 +350,21 @@ window.addEventListener("scroll", () => {
     header.style.transition = "all .4s ease-in-out";
   }
 });
-const a = new TypeIt(".cafe_mountain_1_text", {
-  speed: 30,
-  waitUntilVisible: false,
-  // loop: false,
-});
+// const a = new TypeIt(".cafe_mountain_1_text", {
+//   speed: 30,
+//   waitUntilVisible: false,
+//   // loop: false,
+// });
 
-const mountain_1_type1 = document.querySelector("#mountain_1_type");
-const mountainHeight = mountain_1_type1.offsetTop;
-window.addEventListener("scroll", function () {
-  // console.log(window.scrollY);
-  console.log(mountainHeight);
-  if (window.scrollY > mountainHeight) {
-    a.go();
-  }
-});
+// const mountain_1_type1 = document.querySelector("#mountain_1_type");
+// const mountainHeight = mountain_1_type1.offsetTop;
+// window.addEventListener("scroll", function () {
+//   // console.log(window.scrollY);
+//   console.log(mountainHeight);
+//   if (window.scrollY > mountainHeight) {
+//     a.go();
+//   }
+// });
 // window.addEventListener("load", function () {
 //   let aElSection = document.querySelectorAll("section");
 //   let curSIdx = 0;
@@ -323,3 +391,13 @@ window.addEventListener("scroll", function () {
 //     });
 //   }
 // });
+
+// Return to Top
+const returnToTop = document.querySelector(".returnToTop");
+returnToTop.addEventListener("click", function () {
+  window.scroll({
+    behavior: "smooth",
+    left: 0,
+    top: document.body.offsetTop,
+  });
+});
