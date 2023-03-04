@@ -1,6 +1,17 @@
 //import AOS
 AOS.init();
 
+// Mouse Cursor
+document.body.requestPointerLock();
+const cursor = document.querySelector(".cursor");
+// 커서를 지정한 아이콘으로 변경하는 함수
+let cursorMove = function (e) {
+  const cursorX = e.pageX;
+  const cursorY = e.pageY;
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+};
+window.addEventListener("mousemove", cursorMove);
+
 // Weather API
 const weatherIconRef = {
   "01": "fas fa-sun",
@@ -67,7 +78,7 @@ const swiper = new Swiper(".contents .seaContent .swiper", {
   slidesPerView: 2,
   centeredSlides: true,
   spaceBetween: 30,
-  touchRatio: 0,
+  // touchRatio: 0,
   // loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -75,40 +86,28 @@ const swiper = new Swiper(".contents .seaContent .swiper", {
   },
 });
 
-//type animation
+//contents scroll smooth
+const imgBox = document.querySelectorAll(".introDiv ul li img");
+const smoothContent1 = document.querySelector(".mountainContent");
+const firstTop = smoothContent1.offsetTop;
+const smoothContent2 = document.querySelector(".seaContent");
+const secondTop = smoothContent2.offsetTop;
+const smoothContent3 = document.querySelector(".museumContent");
+const thirdTop = smoothContent3.offsetTop;
 
-//contents toggle
-// const imgBox = document.querySelectorAll(".introDiv");
-// const testContent = document.querySelectorAll(".contents");
-
-// for (let i = 0; i < imgBox.length; i += 1) {
-//   imgBox[i].addEventListener("click", function () {
-//     if (testContent[i].classList.contains("hide")) {
-//       testContent[i].classList.remove("hide");
-//       imgBox[i].classList.add("show");
-//       //scroll smooth
-//       const scrollMountain = document.querySelector(".mountainContent");
-//       const firstTop = scrollMountain.offsetTop;
-//       const scrollSea = document.querySelector(".seaContent");
-//       const secondTop = scrollSea.offsetTop;
-//       const scrollMuseum = document.querySelector(".museumContent");
-//       const thirdTop = scrollMuseum.offsetTop;
-
-//       if (i === 0) {
-//         window.scroll({ top: firstTop, behavior: "smooth" });
-//       } else if (i === 1) {
-//         window.scroll({ top: secondTop, behavior: "smooth" });
-//       } else if (i === 2) {
-//         window.scroll({ top: thirdTop, behavior: "smooth" });
-//       } else {
-//         console.log("error");
-//       }
-//     } else {
-//       imgBox[i].classList.remove("show");
-//       testContent[i].classList.add("hide");
-//     }
-//   });
-// }
+for (let i = 0; i < imgBox.length; i += 1) {
+  imgBox[i].addEventListener("click", function () {
+    if (i === 0) {
+      window.scroll({ top: firstTop, behavior: "smooth" });
+    }
+    if (i === 1) {
+      window.scroll({ top: secondTop, behavior: "smooth" });
+    }
+    if (i === 2) {
+      window.scroll({ top: thirdTop, behavior: "smooth" });
+    }
+  });
+}
 
 //swiper content show
 const swiperImg = document.querySelectorAll(".slide");
@@ -133,15 +132,14 @@ for (let i = 0; i < swiperImg.length; i += 1) {
     }
   });
 }
-//typeit
+
+//typeit scroll animation
 const typingText1 = document.querySelector(".type-h2-1");
 const typingText1height = typingText1.getBoundingClientRect().height;
 
-const typingText2 = document.querySelector(".type-h2-2");
 const typeLi2 = document.querySelector(".type-li2");
 const typeLi2height = typeLi2.getBoundingClientRect().height;
 
-// const typingText3 = document.querySelector(".type-h2-3");
 const typeLi3 = document.querySelector(".type-li3");
 const typeLi3height = typeLi3.offsetTop;
 
@@ -155,10 +153,16 @@ const typing1 = new TypeIt(".type-h2-1", {
 const typing2 = new TypeIt(".type-h2-2", {
   speed: 100,
   startDelay: 700,
+  afterComplete: function (instance) {
+    instance.destroy();
+  },
 });
 const typing3 = new TypeIt(".type-h2-3", {
   speed: 100,
   startDelay: 700,
+  afterComplete: function (instance) {
+    instance.destroy();
+  },
 });
 
 let interval = 400;
@@ -175,17 +179,6 @@ window.addEventListener("scroll", function () {
     typing3.go();
   }
 });
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > typeLi2height) {
-//     typing2.go();
-//   }
-// });
-
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > typeLi3height) {
-//     typing3.go();
-//   }
-// });
 
 // Return to Top
 const returnToTop = document.querySelector(".returnToTop");
