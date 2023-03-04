@@ -590,12 +590,10 @@ header .other-menu ul li:hover::after {
   z-index: -1;
   background: linear-gradient(90deg, white,gray);
 }
-
 .all_content .fourth_page .japan_content .japan_text2 ul.food_list2{
   position: absolute;
   font-size: 2.5vh;
   color: black;
-  line-height: bold;
   top: 5vh;
   left: 34vw;
 }
@@ -652,11 +650,189 @@ header .other-menu ul li:hover::after {
   left:48vw;
   overflow: hidden;
 }
-.all_content .third_page .japan_content .swiper-contaier .swiper-slide {
-  line-height: 4vh;
-  height: 100vh;
-}
 .all_content .fourth_page .japan_content .japan_text2 .swiper-contaier {
   position: absolute;
   left : 30vw;
 } 
+
+/*fifth_page*/
+.all_content .fifth_page {
+  height: 110vh;
+  position: relative;
+}
+.all_content .fifth_page .westren_content{
+  position: absolute;
+  width: 30vw;
+  height: 85vh;
+  top: 20vh;
+  left: 15vw;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.all_content .fifth_page .westren_content .westren_img1 img {
+  position: absolute;
+  width: 25vw;
+  height: 40vh;
+  top: 5vh;
+  left: 2.5vw;
+}
+.all_content .fifth_page .westren_content .westren_text1{
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
+  width: 25vw;
+  height: 40vh;
+}
+
+.all_content .fifth_page .westren_content .westren_text1 ul.food_list1{
+  position: absolute;
+  font-size: 2.5vh;
+  color: black;
+
+}
+.all_content .fifth_page .westren_content .westren_text1 ul.food_list1 li {
+  display: flex;
+  margin-bottom: 5vh;
+}
+.all_content .fifth_page .westren_content .westren_text1 ul.food_list1 li:nth-child(1){
+  font-weight: bold;
+}
+.all_content .fifth_page .westren_content .westren_text1 ul.food_list1 span {
+  position: absolute;
+  font-size: 4vh;
+  left: -4vw;
+}
+.all_content .fifth_page .westren_content .swiper-contaier {
+  position: absolute;
+  font-size: 2.3vh;
+  width: 100vw;
+  height: 4vh;
+  color: rgb(49, 47, 47);
+  bottom: 6vh;
+  left : -5vw;
+  overflow: hidden;
+}
+.all_content .fifth_page .westren_content .westren_text1 .swiper-contaier {
+  position: absolute;
+} 
+.all_content .fifth_page .westren_content .westren_text1 .menu{
+  position: absolute;
+  top: -5vh;
+  left: -48.5vw;
+}
+.all_content .fifth_page .westren_content .westren_text1 i {
+  position: absolute;
+  font-size: 3vh;
+  left: 50vw;
+  width: 100vw;
+  top: 5vh;
+  color: black;
+}
+.all_content .fifth_page .westren_content .westren_text1 .menu_li {
+  display: flex;
+  position: absolute;
+  font-size: 3vh;
+  line-height: 5vh;
+  left: 50vw;
+  top: 10vh;
+  width: 100vw;
+  color: black;
+}
+.all_content .fifth_page .westren_content .westren_text1 .menu_li .menu_name {
+  position: absolute;
+  left: -5vw;
+}
+.all_content .fifth_page .westren_content .westren_text1 .menu_li .menu_price {
+  position: absolute;
+  left: 7vw;
+}
+
+/**/
+.all_content .fifth_page .westren_content1 {
+  position: absolute;
+  width: 30vw;
+  height: 85vh;
+  top: 20vh;
+  left: 55vw;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.all_content .fifth_page .westren_content1 .westren_img2 img {
+  position: absolute;
+  width: 25vw;
+  height: 40vh;
+  top: 5vh;
+  left: 2.5vw;
+}
+.all_content .fifth_page .westren_content1 .westren_text2{
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
+  width: 25vw;
+  height: 40vh;
+}
+
+.all_content .fifth_page .westren_content1 .westren_text2 ul.food_list2{
+  position: absolute;
+  font-size: 2.5vh;
+  color: black;
+
+}
+.all_content .fifth_page .westren_content1 .westren_text2 ul.food_list2 li {
+  display: flex;
+  margin-bottom: 5vh;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 ul.food_list2 li:nth-child(1){
+  font-weight: bold;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 ul.food_list2 span {
+  position: absolute;
+  font-size: 4vh;
+  left: -4vw;
+}
+.all_content .fifth_page .westren_content1 .swiper-contaier {
+  position: absolute;
+  font-size: 2.3vh;
+  width: 100vw;
+  height: 4vh;
+  color: rgb(49, 47, 47);
+  bottom: 6vh;
+  left : -7vw;
+  overflow: hidden;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .swiper-contaier {
+  position: absolute;
+} 
+.all_content .fifth_page .westren_content1 .westren_text2 .menu{
+  position: absolute;
+  top: -5vh;
+  left: -48.5vw;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 i {
+  position: absolute;
+  font-size: 3vh;
+  left: 50vw;
+  width: 100vw;
+  top: 5vh;
+  color: black;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .menu_li {
+  display: flex;
+  position: absolute;
+  font-size: 3vh;
+  line-height: 5vh;
+  left: 50vw;
+  top: 10vh;
+  width: 100vw;
+  color: black;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .menu_li .menu_name {
+  position: absolute;
+  left: -7vw;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .menu_li .menu_price {
+  position: absolute;
+  left: 9vw;
+}
