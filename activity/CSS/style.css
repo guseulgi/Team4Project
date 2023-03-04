@@ -133,7 +133,7 @@ header .other-menu ul li:hover::after {
 .weather {
   position: fixed;
   display: flex;
-  width: 150px;
+  width: 180px;
   bottom: 10px;
   right: 10px;
   padding: 7px 10px;
@@ -144,10 +144,10 @@ header .other-menu ul li:hover::after {
 }
 
 .weather i {
-  font-size: 2rem;
+  font-size: 32px;
   text-align: center;
   line-height: 32px;
-  margin: auto 12px auto 9px;
+  margin: auto 13px auto 10px;
   color: white;
   animation: weatherAnim 10s infinite;
 }
@@ -213,6 +213,7 @@ figure video {
 .inner {
   position: relative;
   width: 1920px;
+  height: auto;
   margin: auto;
 }
 
@@ -353,25 +354,6 @@ figure video {
 .text-wrap span {
   opacity: 0;
 }
-
-/* .text-wrap:hover {
-  background-color: rgba(223, 173, 81, 0.537);
-  cursor: pointer;
-  border: none;
-}
-
-.text-wrap:active {
-  outline: none;
-}
-
-.swiper-slide-active .text-wrap {
-  position: fixed;
-  opacity: 1;
-  top: 36%;
-  transition: .5s;
-  width: fit-content;
-  padding: 40px 40px;
-} */
 
 .text-wrap span:not(:nth-child(6)) {
   position: absolute;
@@ -571,25 +553,10 @@ figure video {
   padding: 10px;
 }
 
-/* 팝업 버튼 누르 나오는 상자 */
-
-/* 뒤에 꺼멓게 칠해지는 부분임 */
-/* 뒤에가 클릭이 되지 않게 하려고, 팝업만 클릭이 되려고 하는 것임 */
-/* .dim {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: 0.5s;
-} */
-
 .popup1 {
   position: absolute;
-  left: 760px;
-  top: -800px;
+  left: 550px;
+  top: -740px;
   z-index: 5;
   transform: translate(-50%, 50%);
   width: 900px;
@@ -827,8 +794,8 @@ figure video {
 
 .popup2 {
   position: absolute;
-  left: 780px;
-  top: -800px;
+  left: 550px;
+  top: -740px;
   z-index: 5;
   transform: translate(-50%, 50%);
   width: 900px;
@@ -1065,8 +1032,8 @@ figure video {
 
 .popup3 {
   position: absolute;
-  left: 740px;
-  top: -800px;
+  left: 550px;
+  top: -740px;
   z-index: 5;
   transform: translate(-50%, 50%);
   width: 900px;
@@ -1250,8 +1217,8 @@ figure video {
 
 .popup4 {
   position: absolute;
-  left: 740px;
-  top: -380px;
+  left: 555px;
+  top: -740px;
   z-index: 10;
   transform: translate(-50%, 50%);
   width: 900px;
@@ -1281,6 +1248,7 @@ figure video {
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
+  z-index: 5;
 }
 
 .popup4:target {
@@ -1662,8 +1630,8 @@ figure.snip1384.hover i {
 
 .popup5 {
   position: absolute;
-  left: 760px;
-  top: -770px;
+  left: 553px;
+  top: -745px;
   z-index: 10;
   transform: translate(-50%, 50%);
   width: 900px;
@@ -1703,8 +1671,8 @@ figure.snip1384.hover i {
 .btn_gotop {
   display: block;
   position: fixed;
-  bottom: 35px;
-  left: 30px;
+  bottom: 90px;
+  left: 18px;
   z-index: 999;
   cursor: pointer;
   border-radius: 50%;
@@ -1713,4 +1681,33 @@ figure.snip1384.hover i {
 .btn_gotop img {
   width: 20%;
   opacity: 40%;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #E0E0E0;
+  margin-top: 11500px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  height: 40px;
+  background-size: cover;
+  background-color: white;
+  margin-right: 30px;
+}
+
+footer ul li {
+  color: black;
+  font-weight: 100;
+  font-size: 12px;
+  /* font-style: italic; */
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 1px;
 }
