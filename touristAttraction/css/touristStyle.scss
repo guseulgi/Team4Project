@@ -629,7 +629,6 @@ header {
     }
   }
   .museumContent {
-    height: 80vh;
     position: relative;
 
     .museumTitle {
@@ -706,17 +705,17 @@ header {
     }
     & .flip-box:nth-child(4) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       right: 20%;
     }
     & .flip-box:nth-child(3) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       right: calc(50vw - 110px);
     }
     & .flip-box:nth-child(2) {
       position: absolute;
-      top: 40%;
+      top: 15%;
       left: 20%;
     }
     .teddyMore {
@@ -805,6 +804,35 @@ header {
           width: 100%;
         }
       }
+    }
+  }
+}
+footer {
+  width: 100vw;
+
+  background-color: #363730;
+
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 40px;
+    background-size: cover;
+    background-color: white;
+    margin-right: 30px;
+  }
+
+  ul {
+    li {
+      color: white;
+      // padding-top: 10px;
+      font-weight: 100;
+      font-size: 12px;
+      font-style: italic;
+      font-family: "Noto Sans", sans-serif;
+      letter-spacing: 1px;
     }
   }
 }

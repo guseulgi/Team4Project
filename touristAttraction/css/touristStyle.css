@@ -612,7 +612,6 @@ header .other-menu ul li:hover::after {
   font-size: 6vh;
 }
 .contents .museumContent {
-  height: 80vh;
   position: relative;
 }
 .contents .museumContent .museumTitle {
@@ -683,17 +682,17 @@ header .other-menu ul li:hover::after {
 }
 .contents .museumContent .flip-box:nth-child(4) {
   position: absolute;
-  top: 40%;
+  top: 15%;
   right: 20%;
 }
 .contents .museumContent .flip-box:nth-child(3) {
   position: absolute;
-  top: 40%;
+  top: 15%;
   right: calc(50vw - 110px);
 }
 .contents .museumContent .flip-box:nth-child(2) {
   position: absolute;
-  top: 40%;
+  top: 15%;
   left: 20%;
 }
 .contents .museumContent .teddyMore {
@@ -773,6 +772,29 @@ header .other-menu ul li:hover::after {
 }
 .contents .museumContent2 .detail-flow .track .flow-content {
   width: 100%;
+}
+
+footer {
+  width: 100vw;
+  background-color: #363730;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  height: 40px;
+  background-size: cover;
+  background-color: white;
+  margin-right: 30px;
+}
+footer ul li {
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  font-style: italic;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 1px;
 }
 
 @keyframes appear {
