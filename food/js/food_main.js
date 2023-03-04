@@ -70,9 +70,9 @@ var mySwiper = new Swiper('.swiper-contaier', {
 
 /*menu*/
 const korea_fl1 = document.querySelector('.food_list1');
-const korea_km1 = document.querySelector('.korea_menu1');
+const korea_km1 = document.querySelector('.menu1');
 const korea_fl2 = document.querySelector('.food_list2');
-const korea_km2 = document.querySelector('.korea_menu2');
+const korea_km2 = document.querySelector('.menu2');
 
 // console.log(kt1, fl1);
 
