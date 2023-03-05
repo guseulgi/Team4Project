@@ -96,6 +96,13 @@ interesting.addEventListener("click", function () {
 //   },
 // });
 
+// type it
+new TypeIt("#type", {
+  strings: "",
+  speed: 100,
+  delay: 2000,
+  waitUntilVisible: true,
+}).go();
 var swiper = new Swiper(".mySwiper", {
   // spaceBetween: 30,
   centeredSlides: true,
@@ -378,23 +385,23 @@ cafe_mountain_2_text_4_modal_.addEventListener("click", (event) => {
   }
 });
 
-// var mHtml = $("html");
-// var page = 1;
+var mHtml = $("html");
+var page = 1;
 
-// mHtml.animate({ scrollTop: 0 }, 10);
+mHtml.animate({ scrollTop: 0 }, 10);
 
-// $(window).on("wheel", function (e) {
-//   if (mHtml.is(":animated")) return;
-//   if (e.originalEvent.deltaY > 0) {
-//     if (page == 8) return;
-//     page++;
-//   } else if (e.originalEvent.deltaY < 0) {
-//     if (page == 1) return;
-//     page--;
-//   }
-//   var posTop = (page - 2) * $(window).height();
-//   mHtml.animate({ scrollTop: posTop });
-// });
+$(window).on("wheel", function (e) {
+  if (mHtml.is(":animated")) return;
+  if (e.originalEvent.deltaY > 0) {
+    if (page == 8) return;
+    page++;
+  } else if (e.originalEvent.deltaY < 0) {
+    if (page == 1) return;
+    page--;
+  }
+  var posTop = (page - 2) * $(window).height();
+  mHtml.animate({ scrollTop: posTop });
+});
 
 // if (modal.style.display === "block") {
 //   modal.style.display = "none";
