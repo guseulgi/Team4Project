@@ -60,6 +60,30 @@ AOS.init({
 }
 );
 
+$(document).ready(function(){
+  $('.box1').click(function(){
+    var offset = $('#korea').offset(); //선택한 태그의 위치를 반환
+              //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+        $('html').animate({scrollTop : offset.top}, 400);
+  });
+
+});
+$(document).ready(function(){
+  $('.box2').click(function(){
+    var offset = $('#japan').offset(); //선택한 태그의 위치를 반환
+              //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+        $('html').animate({scrollTop : offset.top}, 400);
+  });
+
+});
+$(document).ready(function(){
+  $('.box3').click(function(){
+    var offset = $('#western').offset(); //선택한 태그의 위치를 반환
+              //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+        $('html').animate({scrollTop : offset.top}, 400);
+  });
+
+});
 /*review */
 var mySwiper = new Swiper('.swiper-contaier', {
   direction: 'vertical',
@@ -69,10 +93,16 @@ var mySwiper = new Swiper('.swiper-contaier', {
 });
 
 /*menu*/
-const korea_fl1 = document.querySelector('.food_list1');
-const korea_km1 = document.querySelector('.menu1');
+const korea_fl1 = document.querySelector('.food_list1 ');
+const korea_km1 = document.querySelector('.menu1 ');
 const korea_fl2 = document.querySelector('.food_list2');
 const korea_km2 = document.querySelector('.menu2');
+
+const korea_button1 = document.querySelector('.korea_text1 .korea_map');
+const korea_map1 = document.querySelector('.third_page .korea_content .korea_text1 .frame');
+const korea_button2 = document.querySelector('.korea_text2 .korea_map');
+const korea_map2 = document.querySelector('.third_page .korea_content .korea_text2 .frame');
+
 
 // console.log(kt1, fl1);
 
@@ -82,9 +112,11 @@ function changediv1() {
   if (korea_km1.classList.contains('off') === true) {
     korea_km1.classList.remove('off');
     korea_fl1.classList.add('off');
+    korea_button1.classList.add('off')
   } else {
     korea_km1.classList.add('off');
     korea_fl1.classList.remove('off');
+    korea_button1.classList.remove('off')
   }
 }
 korea_fl2.addEventListener('click', changediv2);
@@ -93,33 +125,58 @@ function changediv2() {
   if (korea_km2.classList.contains('off') === true) {
     korea_km2.classList.remove('off');
     korea_fl2.classList.add('off');
+    korea_button2.classList.add('off')
   } else {
     korea_km2.classList.add('off');
     korea_fl2.classList.remove('off');
+    korea_button2.classList.remove('off')
   }
 }
+/*korea map */
+
+function btn1() {
+  if(korea_map1.classList.contains('off')===true){
+  korea_map1.classList.remove('off');
+} else {
+  korea_map1.classList.add('off');
+  }
+}
+
+function btn2() {
+  if(korea_map2.classList.contains('off')===true){
+  korea_map2.classList.remove('off');
+} else {
+  korea_map2.classList.add('off');
+  }
+}
+
 /*japan */
 const japan_fl1 = document.querySelector('.japan_content .japan_text1 .food_list1');
 const japan_km1 = document.querySelector('.japan_content .japan_text1 .menu');
+const japan_fl2 = document.querySelector('.japan_content .japan_text2 .food_list2');
+const japan_km2 = document.querySelector('.japan_content .japan_text2 .menu');
+
+const japan_button1 = document.querySelector('.japan_btn');
+const japan_map1 = document.querySelector('.japan_btn .frame');
+
 
 japan_fl1.addEventListener('click', changediv3);
 japan_km1.addEventListener('click', changediv3);
+
+japan_fl2.addEventListener('click', changediv4);
+japan_km2.addEventListener('click', changediv4);
 
 function changediv3() {
   if (japan_km1.classList.contains('off') === true) {
     japan_km1.classList.remove('off');
     japan_fl1.classList.add('off');
+    japan_button1.classList.add('off');
   } else {
     japan_km1.classList.add('off');
     japan_fl1.classList.remove('off');
+    japan_button1.classList.remove('off');
   }
 }
-
-const japan_fl2 = document.querySelector('.japan_content .japan_text2 .food_list2');
-const japan_km2 = document.querySelector('.japan_content .japan_text2 .menu');
-
-japan_fl2.addEventListener('click', changediv4);
-japan_km2.addEventListener('click',changediv4);
 
 function changediv4(){
   if(japan_km2.classList.contains('off') === true) {
@@ -131,15 +188,24 @@ function changediv4(){
   }
 }
 
+function btn3(){
+  if(japan_map1.classList.contains('off') === true){
+    japan_map1.classList.remove('off');
+  } else {
+    japan_map1.classList.add('off');
+  }
+}
+
 /*westren*/
-const westren_fl1 = document.querySelector('.westren_content .westren_text1 .food_list1');
-const westren_km1 = document.querySelector('.westren_content .westren_text1 .menu');
+const westren_fl1 = document.querySelector('.fifth_page .westren_content .westren_text1 .food_list1');
+const westren_km1 = document.querySelector('.fifth_page .westren_content .westren_text1 .menu');
+console.log(westren_fl1);
 
 westren_fl1.addEventListener('click', changediv5);
-westren_km1.addEventListener('click', changediv5);
+westren_km1.addEventListener('click',changediv5);
 
-function changediv5() {
-  if (westren_km1.classList.contains('off') === true) {
+function changediv5(){
+  if(westren_km1.classList.contains('off') === true) {
     westren_km1.classList.remove('off');
     westren_fl1.classList.add('off');
   } else {
