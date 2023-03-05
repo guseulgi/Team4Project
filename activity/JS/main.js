@@ -98,12 +98,6 @@ const kitesurfHeight = 5172;
 const blueHeight = 7418;
 const bounceHeight = 9739;
 
-const firstarrow = document.querySelector('.firstarrow')
-const secondarrow = document.querySelector('.secondarrow')
-const thirdarrow = document.querySelector('.thirdarrow')
-const fourtharrow = document.querySelector('.fourtharrow')
-const fiftharrow = document.querySelector('.fiftharrow')
-
 
 // 제목 클릭해서 스크롤 이동
 
@@ -162,6 +156,12 @@ fifthmainbtn.addEventListener("click", fifthmainClick)
 
 
 // ARROW 클릭해서 스크롤 페이지 이동
+
+const firstarrow = document.querySelector('.firstarrow')
+const secondarrow = document.querySelector('.secondarrow')
+const thirdarrow = document.querySelector('.thirdarrow')
+const fourtharrow = document.querySelector('.fourtharrow')
+const fiftharrow = document.querySelector('.fiftharrow')
 
 let firstarrowClick = function () {
   window.scroll({
