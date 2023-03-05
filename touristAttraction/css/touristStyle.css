@@ -14,24 +14,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "KOTRA_BOLD-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "KCCPakKyongni";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCPakKyongni.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "SF_HambakSnow";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -124,7 +106,7 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   width: 100vw;
   background-color: transparent;
 }
@@ -135,20 +117,20 @@ header .title {
   text-shadow: 0px 3px 0 white;
   padding-left: 40px;
   height: 100px;
-  line-height: 18vh;
+  line-height: 14vh;
 }
 header .title .title__logo > i:first-child {
   position: absolute;
   top: 0px;
   left: 147px;
-  line-height: 18vh;
+  line-height: 14vh;
 }
 header .title .title__logo > i:last-child {
   position: absolute;
   top: 14px;
   left: 148px;
   transform: rotate(-90deg) scale(0.4);
-  line-height: 18vh;
+  line-height: 14vh;
 }
 header .other-menu ul {
   display: flex;
@@ -209,7 +191,7 @@ header .other-menu ul li:hover::after {
   padding: 7px 10px;
   background-color: #ff9a1f;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 4;
   opacity: 0.7;
 }
 .weather i {
@@ -327,7 +309,7 @@ header .other-menu ul li:hover::after {
   font-size: 4rem;
   position: absolute;
   color: white;
-  z-index: 3;
+  z-index: 2;
   font-weight: 700;
   text-shadow: 5px 5px 0 rgba(20, 20, 20, 0.831);
 }
@@ -696,11 +678,21 @@ header .other-menu ul li:hover::after {
   left: 20%;
 }
 .contents .museumContent .teddyMore {
+  position: relative;
   text-align: center;
   font-size: 1vw;
   width: 100vw;
   height: 10vh;
   background-color: #626458;
+}
+.contents .museumContent .teddyMore .teddy-arrow i {
+  position: absolute;
+  bottom: 60vh;
+  left: 17vw;
+  font-size: 60px;
+  color: black;
+  transform: rotate(40deg);
+  animation: blinkColor 0.5s ease-in-out infinite alternate;
 }
 .contents .museumContent .teddyMore ul {
   display: flex;
@@ -819,5 +811,13 @@ footer ul li {
   }
   100% {
     opacity: 0.5;
+  }
+}
+@keyframes blinkColor {
+  0% {
+    color: #626458;
+  }
+  100% {
+    color: #95cd41;
   }
 }/*# sourceMappingURL=touristStyle.css.map */
