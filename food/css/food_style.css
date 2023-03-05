@@ -315,7 +315,7 @@ header .other-menu ul li:hover::after {
 .all_content .second_page .box2 .hoverbox span p {
   position: absolute;
   opacity: 0;
-  top: 30%;
+  top: 10%;
   right: 5%;
 }
 .all_content .second_page .box2:hover .imgBox {
@@ -353,7 +353,7 @@ header .other-menu ul li:hover::after {
 .all_content .second_page .box3 .hoverbox span p {
   position: absolute;
   opacity: 0;
-  top: 30%;
+  top: 10%;
   right: 5%;
 }
 .all_content .second_page .box3:hover .imgBox {
