@@ -208,6 +208,15 @@ header .other-menu ul li:hover::after {
 .off {
   display: none;
 }
+.off1 {
+  display: none;
+}
+.on {
+  display: block;
+}
+.strong {
+  font-weight: 700;
+}
 @keyframes an1{
   0%{height: 30px;}
   80%{height: 150px;}
@@ -276,7 +285,7 @@ header .other-menu ul li:hover::after {
   right: 5%;
 }
 .all_content .second_page .box1:hover .imgBox {
-  filter : grayscale(0);
+  filter: grayscale(0%);
   transform: translateX(-200px);
   transition: 3s;
 }
@@ -364,18 +373,19 @@ header .other-menu ul li:hover::after {
   position: relative;
   height: 110vh;
   overflow: hidden;
+  background-color: white;
+  z-index: 10;
 }
 .all_content .third_page .korea_content {
   position: absolute;
+  top: -10vh;
   left: 5vw;
 }
 .all_content .third_page .korea_content .korea_img1 {
   position: absolute;
-  z-index: 2;
   top: 62vh;
-  left: 18vw;
+  left: 16vw;
   margin-left: 60px;
-  z-index: -1;
 }
 .all_content .third_page .korea_content .korea_img1 img {
   display: block;
@@ -410,6 +420,19 @@ header .other-menu ul li:hover::after {
   position: absolute;
   font-size: 5vh;
   left: -4vw;
+}
+.all_content .third_page .korea_content .korea_text1 .korea_map {
+  position: absolute;
+  font-size: 3vh;
+  color: #ea5c2b;
+  top: 29vh;
+  left: 6.5vw;
+  width: 100vw;
+} 
+.all_content .third_page .korea_content .korea_text1 .korea_map span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4.5vw;
 }
 .all_content .third_page .korea_content .korea_text1 .swiper-contaier {
   position: absolute;
@@ -456,11 +479,10 @@ header .other-menu ul li:hover::after {
   position: absolute;
   left: 7vw;
 }
-
 .all_content .third_page .korea_content .korea_img2 {
   position: absolute;
   top: 60vh;
-  left: 57vw;
+  left: 65vw;
   margin-left: 60px;
 }
 .all_content .third_page .korea_content .korea_img2 img {
@@ -474,7 +496,7 @@ header .other-menu ul li:hover::after {
   top: 20vh;
   border-radius: 10%;
   background-color: #ff7f3f32;
-  left: 50vw;
+  left: 55vw;
   width: 23vw;
   height: 45vh;
   cursor: pointer;
@@ -491,6 +513,19 @@ header .other-menu ul li:hover::after {
 }
 .all_content .third_page .korea_content .korea_text2 ul.food_list2 li:nth-child(1){
   font-weight: bold;
+}
+.all_content .third_page .korea_content .korea_text2 .korea_map {
+  position: absolute;
+  font-size: 3vh;
+  color: #ea5c2b;
+  top: 32vh;
+  left: 6.5vw;
+  width: 100vw;
+} 
+.all_content .third_page .korea_content .korea_text2 .korea_map span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4.5vw;
 }
 .all_content .third_page .korea_content .korea_text2 ul.food_list2 span {
   position: absolute;
@@ -623,13 +658,26 @@ header .other-menu ul li:hover::after {
   font-family: 'Kaushan Script', cursive;
   font-size: 3vh;
 }
-/**/
+.all_content .third_page iframe{
+  position: absolute;
+  top: 13vh;
+  left: -20vw;
+  border-radius: 10%;
+  z-index: -2;
+}
+.all_content .third_page .korea_content .korea_text2 .korea_map .frame {
+  position: absolute;
+  top: -3.5vh;
+  left: 3.5vw;
+}
+/*fouth_page*/
 .all_content .fourth_page {
   position: relative;
   background-image: url(../img/jeju_back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 110vh;
+  top: -10vh;
 }
 .all_content .fourth_page .japan_content {
   height: 25vh;
@@ -644,13 +692,13 @@ header .other-menu ul li:hover::after {
   height: 40vh;
   border-radius: 50%;
   box-shadow: -4px -4px 10px ;
+  z-index: 10;
 }
 .all_content .fourth_page .japan_content .japan_text1{
   position: absolute;
   top: 20vh;
   width: 100vw;
   height: 40vh;
-  z-index: -1;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0),gray);
 }
 
@@ -673,6 +721,25 @@ header .other-menu ul li:hover::after {
   position: absolute;
   font-size: 4vh;
   left: -4vw;
+}
+
+.all_content .fourth_page .japan_content .japan_text1 .japan_btn{
+  position: absolute;
+  font-size: 3vh;
+  color: black;
+  top: 25vh;
+  left: 52vw;
+  width: 100vw;
+} 
+.all_content .fourth_page .japan_content .japan_text1 .japan_btn span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4.5vw;
+}
+.all_content .fourth_page .japan_content .japan_text1 .japan_btn .frame {
+  position: absolute;
+  left: 15vw;
+  top: -25vh;
 }
 .all_content .fourth_page .japan_content .japan_text1 .menu{
   position: absolute;
@@ -713,13 +780,13 @@ header .other-menu ul li:hover::after {
   height: 40vh;
   border-radius: 50%;
   box-shadow: 4px 4px 10px ;
+  z-index: 10;
 }
 .all_content .fourth_page .japan_content .japan_text2{
   position: absolute;
   top: 20vh;
   width: 100vw;
   height: 40vh;
-  z-index: -1;
   background: linear-gradient(90deg, gray,rgba(255, 255, 255, 0));
 }
 .all_content .fourth_page .japan_content .japan_text2 ul.food_list2{
@@ -796,7 +863,7 @@ header .other-menu ul li:hover::after {
 }
 .all_content .fourth_page .mark {
   position: absolute;
-  top: 0;
+  top: 10vh;
   right: 0;
 }
 .all_content .fourth_page .mark span{
@@ -818,11 +885,10 @@ header .other-menu ul li:hover::after {
   position: absolute;
   width: 25vw;
   height: 80vh;
-  top: 20vh;
+  top: 10vh;
   left: 20vw;
   background-color: white;
   border: 1px solid black;
-  cursor: pointer;
 }
 .all_content .fifth_page .westren_content .westren_img1 img {
   position: absolute;
@@ -905,7 +971,7 @@ header .other-menu ul li:hover::after {
   position: absolute;
   width: 25vw;
   height: 80vh;
-  top: 20vh;
+  top: 10vh;
   left: 55vw;
   background-color: white;
   border: 1px solid black;
@@ -991,25 +1057,22 @@ header .other-menu ul li:hover::after {
 .all_content .fifth_page .tape img {
   width: 13vw;
   height: 18vh;
-  animation: tapee_action 0.5s /* 속도 */
-               linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
-               infinite alternate; /* 무한 반복 */
 }
 .all_content .fifth_page .tape .tape1_control {
   position: absolute;
-  top: 15vh;
+  top: 5vh;
   left: 15vw;
   transform: rotate(-70deg);
 }
 .all_content .fifth_page .tape .tape2_control {
   position: absolute;
-  top: 87vh;
+  top: 78vh;
   left: 37vw;
   transform: rotate(-90deg);
 }
 .all_content .fifth_page .tape .tape3_control {
   position: absolute;
-  top: 10vh;
+  top: vh;
   left: 61.5vw;
   transform: rotate(-35deg);
 }
@@ -1067,4 +1130,50 @@ header .other-menu ul li:hover::after {
   right: 4vw;
   font-family: 'Kaushan Script', cursive;
   font-size: 3vh;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .westren_map {
+  position: absolute;
+  font-size: 2.5vh;
+  color: black;
+  top: 20vh;
+  width: 100vw;
+} 
+.all_content .fifth_page .westren_content1 .westren_text2 .westren_map span {
+  position: absolute;
+  font-size: 5vh;
+  left: -4.5vw;
+}
+.all_content .fifth_page iframe{
+  position: absolute;
+  top: -57vh;
+  left: -10vw;
+  z-index: 2;
+}
+.all_content .fifth_page .westren_content1 .westren_text2 .westren_map .frame {
+  position: absolute;
+  top: -3.5vh;
+  left: 3.5vw;
+}
+
+/*footer*/
+footer {
+  background-color: #363730;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  height: 40px;
+  background-size: cover;
+  background-color: white;
+  margin-right: 30px;
+}
+footer ul li {
+  color: white;
+  font-weight: 100;
+  font-size: 12px;
+  font-style: italic;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 1px;
 }

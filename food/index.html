@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  
   <!-- css 연결 -->
   <link rel="stylesheet" href="../food/css/food_style.css" />
   <!-- js 연결-->
@@ -103,6 +104,7 @@
         </div>
       </div>
       <div class="box2">
+        <a href="#japan"></a>
         <div class="imgBox">
           <img src="./img/japan.jpg" alt="일식">
         </div>
@@ -113,6 +115,7 @@
         </div>
       </div>
       <div class="box3">
+        <a href="#western"></a>
         <div class="imgBox">
           <img src="./img/usa.jpg" alt="양식">
         </div>
@@ -124,7 +127,7 @@
       </div>
     </div>
 
-    <div class="third_page">
+    <div class="third_page" id="korea">
       <div class="korea_content" data-aos="fade-down">
         <div class="korea_img1">
           <img src="./img/jeju_korea1.jpg" alt="jeju_korea">
@@ -137,10 +140,16 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>연중무휴 10:00 - 20:00 <br />(19:00 라스트오더)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
           </ul>
+          <div class="korea_map">
+              <span class="material-symbols-outlined">near_me </span>
+              <p class="map1" onclick="btn1()">찾아오는 길</p>
+            <div class="frame off">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13310.116032564229!2d126.3904662!3d33.4876112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cf127cd754b07%3A0x6b4d95e26e14819d!2z7KCc7KO86rSR7ZW0IOyVoOyblOuzuOygkA!5e0!3m2!1sko!2skr!4v1677951024015!5m2!1sko!2skr"
+              width="370" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+            
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -186,10 +195,17 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>수요일 휴무 09:30 - 21:00<br />(16시 브레이크타임)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
           </ul>
+          <div class="korea_map">
+            <span class="material-symbols-outlined">near_me </span>
+            <p class="map1" onclick="btn2()">찾아오는 길</p>
+          <div class="frame off">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.8192922573758!2d126.78936911480027!3d33.55807115105761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d17bf7878fb3d%3A0xac3ae13e595651ee!2z7JuU7KCV66as7J207LaY7Jil7JuQ7KGw6rOg65Ox7Ja07IyI67Cl!5e0!3m2!1sko!2skr!4v1677957630219!5m2!1sko!2skr"
+            width="380" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+          
           <div class="swiper-contaier">
              <!--Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -234,7 +250,7 @@
       </div>
     </div>
 
-    <div class="fourth_page">
+    <div class="fourth_page" id="japan">
       <div class="japan_content" data-aos="fade-right">
         <div class="japan_img1">
           <img src="./img/jeju_japan1.jpg" alt="jeju_japan">
@@ -247,10 +263,17 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>연중무휴 11:00 - 21:00 <br />(15:00 - 17:00 브레이크타임)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
-          </ul>
+          </ul>          
+
+            <div class="japan_btn">
+              <span class="material-symbols-outlined">near_me </span>
+              <p class="map" onclick="btn3()">찾아오는 길</p>
+            <div class="frame off">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.459593868714!2d126.53084962451126!3d33.489417793113276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfd2dbe58117b%3A0xfc1df972f14e1eea!2z67aA7Jio!5e0!3m2!1sko!2skr!4v1677988287402!5m2!1sko!2skr" 
+              width="375" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -313,30 +336,31 @@
             <i class="fa-solid fa-bars"> MENU</i>
             <ul class="menu_li">
               <ul class="menu_name">
+                <li>히레카츠</li>
                 <li>치즈돈카츠</li>
-                <li>에비 카츠동</li>
+                <li>에비카츠동</li>
                 <li>규야끼동</li>
                 <li>연어장덮밥</li>
               </ul>
               <ul class="menu_price">
-                <li>15,900</li>
-                <li>12,900</li>
-                <li>10,900</li>
-                <li>14,900</li>
-                <li>9,000</li>
+                <li>10,500</li>
+                <li>12,000</li>
+                <li>10,500</li>
+                <li>12,000</li>
+                <li>12,000</li>
               </ul>
             </ul>
           </div>
         </div>
       </div>
-      
+
       <div class="mark" data-aos="slide-down">
         <img src="./img/mark.png" alt="mark">
         <span>JAPAN <br  />FOOD</span>
       </div>
     </div>
-
-    <div class="fifth_page">
+    
+    <div class="fifth_page" id="western">
       <div class="westren_content" data-aos="flip-right">
         <div class="westren_img1">
           <img src="./img/jeju_western1.jpg" alt="jeju_westren">
@@ -395,10 +419,16 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>연중무휴 12:00 - 21:30 <br />(15:00 - 17:00 브레이크타임)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
           </ul>
+          <div class="westren_map">
+            <span class="material-symbols-outlined">near_me </span>
+            <p class="map" onclick="btn3()">찾아오는 길</p>
+            <div class="frame off">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.8192922573758!2d126.78936911480027!3d33.55807115105761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d17bf7878fb3d%3A0xac3ae13e595651ee!2z7JuU7KCV66as7J207LaY7Jil7JuQ7KGw6rOg65Ox7Ja07IyI67Cl!5e0!3m2!1sko!2skr!4v1677957630219!5m2!1sko!2skr"
+              width="370" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -449,6 +479,15 @@
       </div>
     </div>
   </div>
+  <footer>
+    <img src="../source/jejulogo.png" alt="제주도" />
+    <img src="../source/jejuTour.png" alt="제주관광공사" />
+    <ul>
+      <li>[포스코 x 코딩온] KDT 5th / Production by Team4</li>
+      <li>This page made by <span class="strong">ChoiInYoung</span></li>
+      <li>Contact ✧ <span class="strong"> guseul9405@gmail.com</span></li>
+    </ul>
+  </footer>
 </body>
 
 </html>
