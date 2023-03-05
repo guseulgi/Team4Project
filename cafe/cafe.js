@@ -87,6 +87,15 @@ interesting.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+// var swiper2 = new Swiper2(".mySwiper2", {
+//   slidesPerView: 1,
+//   spaceBetween: 30,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
+
 var swiper = new Swiper(".mySwiper", {
   // spaceBetween: 30,
   centeredSlides: true,
@@ -299,6 +308,76 @@ cafe_mountain_1_text_4_modal_.addEventListener("click", (event) => {
   }
 });
 
+// mountain 2 2 모달
+
+const cafe_mountain_2_text_2_modal_ = document.querySelector(
+  ".cafe_mountain_2_text_2_modal"
+);
+const cafe_mountain_2_text_2_ = document.querySelector(
+  ".cafe_mountain_2_text_2"
+);
+
+cafe_mountain_2_text_2_.addEventListener("click", () => {
+  cafe_mountain_2_text_2_modal_.classList.toggle("show");
+  if (cafe_mountain_2_text_2_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_2_text_2_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_2_text_2_modal_) {
+    cafe_mountain_2_text_2_modal_.classList.toggle("show");
+    if (!cafe_mountain_2_text_2_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+
+const cafe_mountain_2_text_3_modal_ = document.querySelector(
+  ".cafe_mountain_2_text_3_modal"
+);
+const cafe_mountain_2_text_3_ = document.querySelector(
+  ".cafe_mountain_2_text_3"
+);
+
+cafe_mountain_2_text_3_.addEventListener("click", () => {
+  cafe_mountain_2_text_3_modal_.classList.toggle("show");
+  if (cafe_mountain_2_text_3_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_2_text_3_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_2_text_3_modal_) {
+    cafe_mountain_2_text_3_modal_.classList.toggle("show");
+    if (!cafe_mountain_2_text_3_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+const cafe_mountain_2_text_4_modal_ = document.querySelector(
+  ".cafe_mountain_2_text_4_modal"
+);
+const cafe_mountain_2_text_4_ = document.querySelector(
+  ".cafe_mountain_2_text_4"
+);
+
+cafe_mountain_2_text_4_.addEventListener("click", () => {
+  cafe_mountain_2_text_4_modal_.classList.toggle("show");
+  if (cafe_mountain_2_text_4_modal_.classList.contains("show")) {
+    body.style.overflowX = "hidden";
+  }
+});
+
+cafe_mountain_2_text_4_modal_.addEventListener("click", (event) => {
+  if (event.target === cafe_mountain_2_text_4_modal_) {
+    cafe_mountain_2_text_4_modal_.classList.toggle("show");
+    if (!cafe_mountain_2_text_4_modal_.classList.contains("show")) {
+      body.style.overflowY = "auto";
+    }
+  }
+});
+
 // var mHtml = $("html");
 // var page = 1;
 
@@ -392,6 +471,49 @@ window.addEventListener("scroll", () => {
 //   }
 // });
 
+const interestingImg1 = document.querySelector(".cafe_interesting_1_img");
+const cafe_interesting_1_img_1 = document.querySelector(
+  ".cafe_interesting_1_img_1"
+);
+const interestingText1 = document.querySelector(".cafe_interesting_1_text");
+
+interestingImg1.addEventListener("click", changeInteresting);
+interestingText1.addEventListener("click", changeInteresting);
+
+function changeInteresting() {
+  if (interestingText1.classList.contains("off1") == true) {
+    interestingText1.classList.remove("off1");
+    cafe_interesting_1_img_1.style.filter = "brightness(40%)";
+    interestingImg1.classList.add("off1");
+    // cafe_interesting_1_img_1.style.filter = "brightness(40%)";
+  } else {
+    interestingText1.classList.add("off1");
+    cafe_interesting_1_img_1.style.filter = "brightness(100%)";
+    interestingImg1.classList.remove("off1");
+  }
+}
+
+const interestingImg2 = document.querySelector(".cafe_interesting_2_img");
+const cafe_interesting_2_img_1 = document.querySelector(
+  ".cafe_interesting_2_img_1"
+);
+const interestingText2 = document.querySelector(".cafe_interesting_2_text");
+
+interestingImg2.addEventListener("click", changeInteresting2);
+interestingText2.addEventListener("click", changeInteresting2);
+
+function changeInteresting2() {
+  if (interestingText2.classList.contains("off2") == true) {
+    interestingText2.classList.remove("off2");
+    cafe_interesting_2_img_1.style.filter = "brightness(40%)";
+    interestingImg2classList.add("off2");
+    // cafe_interesting_1_img_1.style.filter = "brightness(40%)";
+  } else {
+    interestingText2.classList.add("off2");
+    cafe_interesting_2_img_1.style.filter = "brightness(100%)";
+    interestingImg2.classList.remove("off2");
+  }
+}
 // Return to Top
 const returnToTop = document.querySelector(".returnToTop");
 returnToTop.addEventListener("click", function () {
