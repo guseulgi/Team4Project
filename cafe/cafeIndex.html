@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- jquery -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <!-- type it -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- aos -->
@@ -59,32 +59,42 @@
 
     <!-- Logo -->
     <header id="header">
-      <div class="title">Jeju cafe</div>
+      <div class="title">
+        Jeju
+        <div class="title__logo">
+          <i class="fa-solid fa-quote-left"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+      </div>
       <div class="other-menu">
         <ul>
           <li>
             <span>HOME</span>
-            <a href="#" title="home"><i class="fa-solid fa-house"></i></a>
+            <a href="../index.html" title="home"
+              ><i class="fa-solid fa-house"></i
+            ></a>
           </li>
           <li>
             <span>emergency</span>
-            <a href="#" title="emergency"
+            <a href="../emergency/emergencyIndex.html" title="emergency"
               ><i class="fa-regular fa-hospital"></i
             ></a>
           </li>
           <li>
             <span>ACTIVITY</span>
-            <a href="#" title="activity"
+            <a href="../activity/index.html" title="activity"
               ><i class="fa-solid fa-person-running"></i
             ></a>
           </li>
           <li>
             <span>FOOD</span>
-            <a href="#" title="food"><i class="fa-solid fa-bowl-food"></i></a>
+            <a href="../food/index.html" title="food"
+              ><i class="fa-solid fa-bowl-food"></i
+            ></a>
           </li>
           <li>
             <span>TOURIST</span>
-            <a href="#" title="tourist">
+            <a href="../touristAttraction/touristIndex.html" title="tourist">
               <i class="fa-solid fa-star"></i>
             </a>
           </li>
@@ -106,7 +116,7 @@
             <img src="./images/scatch.jpeg" alt="bg_img" />
           </div>
         </div>
-        <h1>Jeju cafe tour</h1>
+        <h1 id="type">Jeju cafe tour</h1>
       </div>
     </section>
     <section class="theme">
@@ -145,17 +155,33 @@
           <h1 class="cafe_sea_1_text_2">time</h1>
           <i id="clock" class="fa-solid fa-clock"></i>
           <div class="cafe_sea_1_text_2_modal">
-            <div class="cafe_sea_1_text_2_modal_body">09:00 ~ 18:00</div>
+            <div class="cafe_sea_1_text_2_modal_body">
+              09:00 ~ 19:00<br /><br />
+              last order : 18:30
+            </div>
           </div>
           <h1 class="cafe_sea_1_text_3">how to go</h1>
           <i id="map" class="fa-solid fa-map"></i>
           <div class="cafe_sea_1_text_3_modal">
-            <div class="cafe_sea_1_text_3_modal_body">dafasdfasf</div>
+            <div class="cafe_sea_1_text_3_modal_body">
+              <iframe
+                width="400"
+                height="150"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-0OiqVL0DDUR-0WT9GdmxIk&key=AIzaSyDNRt7Tx53DmZ7a5EXSaDVNJjU6w-K4sHc"
+              ></iframe>
+            </div>
           </div>
           <h1 class="cafe_sea_1_text_4">best menu</h1>
           <i id="mug" class="fa-solid fa-mug-saucer"></i>
           <div class="cafe_sea_1_text_4_modal">
-            <div class="cafe_sea_1_text_4_modal_body">aaaaaaaaaaaa</div>
+            <div class="cafe_sea_1_text_4_modal_body">
+              glazed<br /><br />
+              butter crum<br /><br />nutella<br /><br />
+              kanashu caramel cocconut
+            </div>
           </div>
         </div>
         <div class="cafe_sea_1_img"></div>
@@ -187,20 +213,31 @@
           <h1 class="cafe_sea_2_text_2">time</h1>
           <i id="clock2" class="fa-solid fa-clock"></i>
           <div class="cafe_sea_2_text_2_modal">
-            <div class="cafe_sea_2_text_2_modal_body">09:00 ~ 18scsadsc:00</div>
+            <div class="cafe_sea_2_text_2_modal_body">
+              10:00 ~ 18:30<br /><br />
+              tue : day off
+            </div>
           </div>
           <h1 class="cafe_sea_2_text_3">how to go</h1>
           <i id="map2" class="fa-solid fa-map"></i>
           <div class="cafe_sea_2_text_3_modal">
             <div class="cafe_sea_2_text_3_modal_body">
-              fefefefefefefefefefefefefefefefefef
+              <iframe
+                width="400"
+                height="150"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCZJ5_QZDDDURfyDGmy0GWAc&key=AIzaSyDNRt7Tx53DmZ7a5EXSaDVNJjU6w-K4sHc"
+              ></iframe>
             </div>
           </div>
           <h1 class="cafe_sea_2_text_4">best menu</h1>
           <i id="mug2" class="fa-solid fa-mug-saucer"></i>
           <div class="cafe_sea_2_text_4_modal">
             <div class="cafe_sea_2_text_4_modal_body">
-              mmmmmmmmmmmmmmmmmmmmmmmmm
+              sketch brown(signature)<br /><br />
+              pot affogato(signature)
             </div>
           </div>
         </div>
@@ -220,33 +257,68 @@
           <h1 class="cafe_mountain_1_text_2">time</h1>
           <i id="clock3" class="fa-solid fa-clock"></i>
           <div class="cafe_mountain_1_text_2_modal">
-            <div class="cafe_mountain_1_text_2_modal_body">09:00 ~</div>
+            <div class="cafe_mountain_1_text_2_modal_body">
+              09:00 ~ 20:00<br /><br />
+              last order : 19:30
+            </div>
           </div>
           <h1 class="cafe_mountain_1_text_3">how to go</h1>
           <i id="map3" class="fa-solid fa-map"></i>
           <div class="cafe_mountain_1_text_3_modal">
-            <div class="cafe_mountain_1_text_3_modal_body">pppppppppp</div>
+            <div class="cafe_mountain_1_text_3_modal_body">
+              <iframe
+                width="600"
+                height="350"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJSZUNOhBDDDURl_KJ04U5Fa0&key=AIzaSyDNRt7Tx53DmZ7a5EXSaDVNJjU6w-K4sHc"
+              ></iframe>
+            </div>
           </div>
           <h1 class="cafe_mountain_1_text_4">best menu</h1>
           <i id="mug3" class="fa-solid fa-mug-saucer"></i>
           <div class="cafe_mountain_1_text_4_modal">
-            <div class="cafe_mountain_1_text_4_modal_body">ggggggggg</div>
+            <div class="cafe_mountain_1_text_4_modal_body">
+              one and only signature brunch
+            </div>
           </div>
         </div>
       </div>
       <div class="cafe_mountain_2">
         <div class="cafe_mountain_2_img"></div>
         <div class="cafe_mountain_2_text">
-          <h1 data-aos="fade-right" class="cafe_mountain_2_text_1">
+          <h1 data-aos="fade-down" class="cafe_mountain_2_text_1">
             cafe blossom
           </h1>
-          <h1 data-aos="fade-right" class="cafe_mountain_2_text_2">time</h1>
-          <h1 data-aos="fade-right" class="cafe_mountain_2_text_3">
-            how to go
-          </h1>
-          <h1 data-aos="fade-right" class="cafe_mountain_2_text_4">
-            best menu
-          </h1>
+          <h1 class="cafe_mountain_2_text_2">time</h1>
+          <i id="clock4" class="fa-solid fa-clock"></i>
+          <div class="cafe_mountain_2_text_2_modal">
+            <div class="cafe_mountain_2_text_2_modal_body">
+              08:00 ~ 18:00<br /><br />last order : 17:50
+            </div>
+          </div>
+          <h1 class="cafe_mountain_2_text_3">how to go</h1>
+          <i id="map4" class="fa-solid fa-map"></i>
+          <div class="cafe_mountain_2_text_3_modal">
+            <div class="cafe_mountain_2_text_3_modal_body">
+              <iframe
+                width="600"
+                height="350"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EB%82%A8%EC%84%B1%EB%A1%9C%20136&key=AIzaSyDNRt7Tx53DmZ7a5EXSaDVNJjU6w-K4sHc"
+              ></iframe>
+            </div>
+          </div>
+          <h1 class="cafe_mountain_2_text_4">best menu</h1>
+          <i id="mug4" class="fa-solid fa-mug-saucer"></i>
+          <div class="cafe_mountain_2_text_4_modal">
+            <div class="cafe_mountain_2_text_4_modal_body">
+              jeju basket<br /><br />halla mountain ade
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -258,17 +330,26 @@
             src="./images/jejubird1.jpeg"
             alt="jejubird1"
           />
-          <img
+          <!-- <img
             class="cafe_interesting_1_img_2"
             src="./images/jejubird2.jpeg"
             alt="jejubird2"
-          />
+          /> -->
         </div>
-        <div class="cafe_interesting_1_text">
+        <div class="cafe_interesting_1_text off1">
           <h1>bird Island</h1>
-          <h1>time</h1>
-          <h1>how to go</h1>
-          <h1>best menu</h1>
+          <h1>
+            time: 10:00 ~ 19:00
+            <br />
+            <br />
+
+            wed : day off
+            <br />
+          </h1>
+          <h1>
+            best menu : <br /><br />
+            hanrabong ade
+          </h1>
         </div>
       </div>
       <div class="cafe_interesting_2">
@@ -278,17 +359,16 @@
             src="./images/sungsu1.jpeg"
             alt="sungsu1"
           />
-          <img
+          <!-- <img
             class="cafe_interesting_2_img_2"
             src="./images/sungsu2.jpeg"
             alt="sungsu2"
-          />
+          /> -->
         </div>
-        <div class="cafe_interesting_2_text">
-          <h1></h1>
-          <h1>time</h1>
-          <h1>how to go</h1>
-          <h1>best menu</h1>
+        <div class="cafe_interesting_2_text off2">
+          <h1>sungsu</h1>
+          <h1>time : 11:00 ~ 20:00</h1>
+          <h1>best menu : <br /><br />Hawaiian ade</h1>
         </div>
       </div>
     </section>

@@ -15,6 +15,22 @@ font-family: 'Mynerve', cursive; */
 font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mynerve', cursive;
 font-family: 'Rubik Mono One', sans-serif; */
+@import url("../css/font/_font.scss");
+@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2");
+@font-face {
+  font-family: "OKDDUNG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmonMonsori";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   /* transition-duration: 0.2s; */
@@ -36,15 +52,27 @@ header {
   background-color: transparent;
 }
 header .title {
-  display: flex;
-  align-items: center;
-  color: #ea5c2b;
-  font: 8vh "Kirang Haerang";
+  color: #5c3b16;
+  font-size: 36px;
+  font-family: "OKDDUNG";
   text-shadow: 0px 3px 0 white;
   padding-left: 40px;
-
   height: 100px;
-  line-height: 18vh;
+  line-height: 12vh;
+}
+
+header .title .title__logo > i:first-child {
+  position: absolute;
+  top: 0px;
+  left: 147px;
+  line-height: 12vh;
+}
+header .title .title__logo > i:last-child {
+  position: absolute;
+  top: 14px;
+  left: 148px;
+  transform: rotate(-90deg) scale(0.4);
+  line-height: 12vh;
 }
 header .other-menu ul {
   display: flex;
@@ -459,18 +487,23 @@ section {
   position: absolute;
   bottom: 0;
   left: 50%;
-
   width: 400px;
   height: 150px;
   /* padding: 40px; */
   text-align: center;
   justify-content: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
   align-items: center;
   /* font-family: "Mynerve"; */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
   transform: translateX(-50%) translateY(-50%);
+}
+
+.cafe_sea_1_text_2_modal_body iframe {
+  border-radius: 10%;
 }
 
 .cafe_sea .cafe_sea_1_text .fa-solid.fa-map {
@@ -562,6 +595,9 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
+
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -847,6 +883,8 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -947,6 +985,8 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -1050,6 +1090,8 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -1154,6 +1196,8 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
@@ -1195,86 +1239,283 @@ section {
   color: white;
 }
 
+.cafe_mountain_2 .cafe_mountain_2_text .fa-solid.fa-clock {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  margin-left: -220px;
+  margin-top: 85px;
+  opacity: 0;
+}
+.cafe_mountain_2 .cafe_mountain_2_text .cafe_mountain_2_text_2:hover + #clock4 {
+  opacity: 1;
+}
+.cafe_mountain_2 .cafe_mountain_2_text .cafe_mountain_2_text_2:hover {
+  font-size: 45px;
+}
+.cafe_mountain_2_text_2_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  left: -30px;
+  bottom: -195px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cafe_mountain_2_text_2_modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cafe_mountain_2_text_2_modal_body {
+  display: flex;
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  width: 400px;
+  height: 150px;
+  /* padding: 40px; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+}
+.cafe_mountain .cafe_mountain_2_text .fa-solid.fa-map {
+  font-size: 30px;
+  position: absolute;
+  margin-left: -410px;
+  margin-top: 165px;
+  opacity: 0;
+  color: white;
+}
+
+.cafe_mountain .cafe_mountain_2_text .cafe_mountain_2_text_3:hover + #map4 {
+  opacity: 1;
+}
+
+.cafe_mountain .cafe_mountain_2_text .cafe_mountain_2_text_3:hover {
+  font-size: 45px;
+}
+.cafe_mountain_2_text_3_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  left: -30px;
+  bottom: -195px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cafe_mountain_2_text_3_modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cafe_mountain_2_text_3_modal_body {
+  display: flex;
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  width: 400px;
+  height: 150px;
+  /* padding: 40px; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+}
+.cafe_mountain .cafe_mountain_2_text .fa-solid.fa-mug-saucer {
+  font-size: 30px;
+  position: absolute;
+  margin-left: -400px;
+  margin-top: 245px;
+  opacity: 0;
+  color: white;
+}
+
+.cafe_mountain .cafe_mountain_2_text .cafe_mountain_2_text_4:hover + #mug4 {
+  opacity: 1;
+}
+
+.cafe_mountain .cafe_mountain_2_text .cafe_mountain_2_text_4:hover {
+  font-size: 45px;
+}
+.cafe_mountain_2_text_4_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  left: -30px;
+  bottom: -195px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cafe_mountain_2_text_4_modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cafe_mountain_2_text_4_modal_body {
+  display: flex;
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  width: 400px;
+  height: 150px;
+  /* padding: 40px; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+}
+
 .cafe_interesting {
+  display: flex;
   position: relative;
   top: -5px;
 }
 .cafe_interesting .cafe_interesting_1 {
   display: flex;
+  width: 50vw;
+  position: relative;
+}
+.cafe_interesting .cafe_interesting_1 > h1 {
+  display: flex;
+  font-size: 25px;
+  bottom: 40px;
+  left: 250px;
+
+  transform: translate(-50% -50%);
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+  position: absolute;
 }
 .cafe_interesting .cafe_interesting_1_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   height: 100vh;
   width: 100vw;
   background-color: rgb(138, 141, 92);
 }
+
 .cafe_interesting .cafe_interesting_1_img .cafe_interesting_1_img_1 {
   position: absolute;
-  right: 80px;
-  top: 60px;
-  width: 30vw;
+  /* right: 80px;
+  top: 60px; */
+  width: 35vw;
+  height: 37vw;
   border-radius: 5%;
 }
-.cafe_interesting .cafe_interesting_1_img .cafe_interesting_1_img_2 {
+
+/* .cafe_interesting .cafe_interesting_1_img .cafe_interesting_1_img_2 {
   position: absolute;
   left: 600px;
   top: 350px;
   width: 20vw;
-}
+} */
 .cafe_interesting .cafe_interesting_1_text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 30px;
+  left: 180px;
   top: 250px;
 }
+
+.cafe_interesting_1_text.off1 {
+  display: none;
+}
+
 .cafe_interesting .cafe_interesting_1_text h1 {
-  font-size: 40px;
+  font-size: 25px;
   margin-bottom: 40px;
   font-family: "Rubik Mono One", sans-serif;
   color: white;
 }
 .cafe_interesting .cafe_interesting_2 {
   display: flex;
+  width: 50vw;
   position: relative;
 }
 .cafe_interesting .cafe_interesting_2_text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 30px;
+  left: 150px;
   top: 250px;
 }
+.cafe_interesting_2_text.off2 {
+  display: none;
+}
 .cafe_interesting .cafe_interesting_2_text h1 {
-  font-size: 40px;
+  font-size: 25px;
   margin-bottom: 40px;
   font-family: "Rubik Mono One", sans-serif;
   color: white;
 }
 .cafe_interesting .cafe_interesting_2_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   height: 100vh;
   width: 100vw;
   background-color: sandybrown;
 }
 .cafe_interesting .cafe_interesting_2_img .cafe_interesting_2_img_1 {
   position: absolute;
-  right: 80px;
-  top: 60px;
-  width: 30vw;
+  /* right: 80px;
+  top: 60px; */
+  width: 35vw;
+  height: 37vw;
   border-radius: 5%;
 }
-.cafe_interesting .cafe_interesting_2_img .cafe_interesting_2_img_2 {
+/* .cafe_interesting .cafe_interesting_2_img .cafe_interesting_2_img_2 {
   position: absolute;
   left: 600px;
   top: 350px;
   width: 20vw;
-}
+} */
 
 /* footer */
 footer {
   width: 100vw;
   background-color: #363730;
+  margin-top: -5px;
   padding: 15px 0;
   display: flex;
   justify-content: center;

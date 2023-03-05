@@ -41,7 +41,7 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 20;
   width: 100vw;
   background-color: transparent;
 }
@@ -230,6 +230,7 @@ header .other-menu ul li:hover::after {
 .all_content {
   position: relative;
   overflow: hidden;
+  margin-bottom: -10vh;
 }
 .all_content .first_page {
   height: 100vh;
@@ -281,7 +282,7 @@ header .other-menu ul li:hover::after {
 .all_content .second_page .box1 .hoverbox span p {
   position: absolute;
   opacity: 0;
-  top: 30%;
+  top: 10%;
   right: 5%;
 }
 .all_content .second_page .box1:hover .imgBox {
@@ -314,7 +315,7 @@ header .other-menu ul li:hover::after {
 .all_content .second_page .box2 .hoverbox span p {
   position: absolute;
   opacity: 0;
-  top: 30%;
+  top: 10%;
   right: 5%;
 }
 .all_content .second_page .box2:hover .imgBox {
@@ -352,7 +353,7 @@ header .other-menu ul li:hover::after {
 .all_content .second_page .box3 .hoverbox span p {
   position: absolute;
   opacity: 0;
-  top: 30%;
+  top: 10%;
   right: 5%;
 }
 .all_content .second_page .box3:hover .imgBox {
@@ -678,6 +679,7 @@ header .other-menu ul li:hover::after {
   background-size: cover;
   height: 110vh;
   top: -10vh;
+  z-index: 3;
 }
 .all_content .fourth_page .japan_content {
   height: 25vh;
@@ -712,7 +714,7 @@ header .other-menu ul li:hover::after {
 }
 .all_content .fourth_page .japan_content .japan_text1 ul.food_list1 li {
   display: flex;
-  margin-bottom: 5vh;
+  margin-bottom: 3.5vh;
 }
 .all_content .fourth_page .japan_content .japan_text1 ul.food_list1 li:nth-child(1){
   font-weight: bold;
@@ -725,9 +727,9 @@ header .other-menu ul li:hover::after {
 
 .all_content .fourth_page .japan_content .japan_text1 .japan_btn{
   position: absolute;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: black;
-  top: 25vh;
+  top: 20vh;
   left: 52vw;
   width: 100vw;
 } 
@@ -739,7 +741,7 @@ header .other-menu ul li:hover::after {
 .all_content .fourth_page .japan_content .japan_text1 .japan_btn .frame {
   position: absolute;
   left: 15vw;
-  top: -25vh;
+  top: -20vh;
 }
 .all_content .fourth_page .japan_content .japan_text1 .menu{
   position: absolute;
@@ -808,6 +810,25 @@ header .other-menu ul li:hover::after {
   font-size: 4vh;
   left: -4vw;
 }
+.all_content .fourth_page .japan_content .japan_text2 .japan_map {
+  position: absolute;
+  font-size: 2.5vh;
+  color: black;
+  top: 25vh;
+  left: 34vw;
+  width: 100vw;
+} 
+.all_content .fourth_page .japan_content .japan_text2 .japan_map span {
+  position: absolute;
+  font-size: 4vh;
+  left: -4vw;
+}
+.all_content .fourth_page .japan_content .japan_text2 .japan_map .frame {
+  position: absolute;
+  top: -25vh;
+  left: -30vw;
+}
+
 .all_content .fourth_page .japan_content .japan_text2 .menu{
   position: absolute;
   top: -2vh;
@@ -877,9 +898,10 @@ header .other-menu ul li:hover::after {
 /*fifth_page*/
 .all_content .fifth_page {
   height: 110vh;
+  top: -10vh;
   position: relative;
   background-image: url("../img/fifth_page_bg.png");
-  z-index: -2;
+  z-index: 1;
 }
 .all_content .fifth_page .westren_content{
   position: absolute;
@@ -889,6 +911,7 @@ header .other-menu ul li:hover::after {
   left: 20vw;
   background-color: white;
   border: 1px solid black;
+  cursor: pointer;
 }
 .all_content .fifth_page .westren_content .westren_img1 img {
   position: absolute;
@@ -967,6 +990,24 @@ header .other-menu ul li:hover::after {
   position: absolute;
   left: 7vw;
 }
+.all_content .fifth_page .westren_content .westren_text1 .westren_map {
+  position: absolute;
+  font-size: 2.5vh;
+  color: black;
+  top: 20vh;
+  width: 100vw;
+} 
+.all_content .fifth_page .westren_content .westren_text1 .westren_map span {
+  position: absolute;
+  font-size: 4vh;
+  left: -4vw;
+}
+.all_content .fifth_page .westren_content .westren_text1 .westren_map .frame {
+  position: absolute;
+  top: -3.5vh;
+  left: 4vw;
+}
+
 .all_content .fifth_page .westren_content1 {
   position: absolute;
   width: 25vw;
@@ -1123,6 +1164,7 @@ header .other-menu ul li:hover::after {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 .all_content .fifth_page .mark span{
   position: absolute;
@@ -1149,16 +1191,17 @@ header .other-menu ul li:hover::after {
   left: -10vw;
   z-index: 2;
 }
-.all_content .fifth_page .westren_content1 .westren_text2 .westren_map .frame {
+.all_content .fifth_page .westren_content1 .westren_text2 .westren_map .frame1 {
   position: absolute;
-  top: -3.5vh;
-  left: 3.5vw;
+  top: -5vh;
+  left: 4vw;
 }
 
 /*footer*/
 footer {
+  position: relative;
   background-color: #363730;
-  padding: 15px 0;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;

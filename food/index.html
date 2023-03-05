@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>맛집</title>
   <!-- swiper을 사용하기 위한 css와 js-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -13,7 +14,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
   
   <!-- css 연결 -->
   <link rel="stylesheet" href="../food/css/food_style.css" />
@@ -28,6 +29,7 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
 </head>
 
 <body>
@@ -146,7 +148,7 @@
               <p class="map1" onclick="btn1()">찾아오는 길</p>
             <div class="frame off">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13310.116032564229!2d126.3904662!3d33.4876112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cf127cd754b07%3A0x6b4d95e26e14819d!2z7KCc7KO86rSR7ZW0IOyVoOyblOuzuOygkA!5e0!3m2!1sko!2skr!4v1677951024015!5m2!1sko!2skr"
-              width="370" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              width="400" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
             
@@ -201,7 +203,7 @@
             <p class="map1" onclick="btn2()">찾아오는 길</p>
           <div class="frame off">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.8192922573758!2d126.78936911480027!3d33.55807115105761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d17bf7878fb3d%3A0xac3ae13e595651ee!2z7JuU7KCV66as7J207LaY7Jil7JuQ7KGw6rOg65Ox7Ja07IyI67Cl!5e0!3m2!1sko!2skr!4v1677957630219!5m2!1sko!2skr"
-            width="380" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            width="400" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>
@@ -272,8 +274,9 @@
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.459593868714!2d126.53084962451126!3d33.489417793113276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfd2dbe58117b%3A0xfc1df972f14e1eea!2z67aA7Jio!5e0!3m2!1sko!2skr!4v1677988287402!5m2!1sko!2skr" 
               width="375" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+  
           </div>
-
+          
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -318,10 +321,16 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>목요일 휴무 11:30 - 21:00 <br />(15:00 - 17:00 브레이크타임)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
           </ul>
+          <div class="japan_map">
+              <span class="material-symbols-outlined">near_me </span>
+              <p class="map1" onclick="btn4()">찾아오는 길</p>
+            <div class="frame off">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0981221749844!2d126.52881631479883!3d33.49882415413833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfd661ce45a6b%3A0x281bfb37460a608e!2z7Iqk7Iqk65-8!5e0!3m2!1sko!2skr!4v1678001488632!5m2!1sko!2skr" 
+              width="375" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -373,10 +382,16 @@
             <li><span class="material-symbols-outlined">schedule</span>
               <p>일, 월 휴무 11:00 - 20:00 <br />(15:00 - 17:00 브레이크타임)</p>
             </li>
-            <li><span class="material-symbols-outlined">near_me </span>
-              <p>찾아오는 길</p>
-            </li>
           </ul>
+          
+          <div class="westren_map ">
+            <span class="material-symbols-outlined">near_me </span>
+            <p class="map1" onclick="btn5()">찾아오는 길</p>
+          <div class="frame off">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.1892308461556!2d126.36529692444908!3d33.235345606502676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350c44bf3121b87d%3A0x6646439ff839db7a!2z7LCw66as7Iqk!5e0!3m2!1sko!2skr!4v1678001704342!5m2!1sko!2skr"
+            width="400" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
           <div class="swiper-contaier">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -422,11 +437,11 @@
           </ul>
           <div class="westren_map">
             <span class="material-symbols-outlined">near_me </span>
-            <p class="map" onclick="btn3()">찾아오는 길</p>
-            <div class="frame off">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.8192922573758!2d126.78936911480027!3d33.55807115105761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d17bf7878fb3d%3A0xac3ae13e595651ee!2z7JuU7KCV66as7J207LaY7Jil7JuQ7KGw6rOg65Ox7Ja07IyI67Cl!5e0!3m2!1sko!2skr!4v1677957630219!5m2!1sko!2skr"
-              width="370" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+            <p class="map" >
+              <p onclick="btn6()">찾아오는 길</p>
+            <div class="frame1 off">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.4218591425!2d126.3084635147979!3d33.46436595592798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cf57940b2e0bf%3A0xcf6cb2b5b991377e!2z7ZuE7ZSE67CU67Kg7YGQIChob29mIGJicSk!5e0!3m2!1sko!2skr!4v1678002428861!5m2!1sko!2skr" 
+              width="400" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="swiper-contaier">

@@ -156,8 +156,11 @@ const japan_km1 = document.querySelector('.japan_content .japan_text1 .menu');
 const japan_fl2 = document.querySelector('.japan_content .japan_text2 .food_list2');
 const japan_km2 = document.querySelector('.japan_content .japan_text2 .menu');
 
-const japan_button1 = document.querySelector('.japan_btn');
-const japan_map1 = document.querySelector('.japan_btn .frame');
+const japan_button1 = document.querySelector('.japan_text1 .japan_btn');
+const japan_map1 = document.querySelector('.japan_text1 .japan_btn .frame');
+const japan_button2 = document.querySelector('.japan_text2 .japan_map');
+const japan_map2 = document.querySelector('.japan_text2 .japan_map .frame');
+
 
 
 japan_fl1.addEventListener('click', changediv3);
@@ -182,9 +185,11 @@ function changediv4(){
   if(japan_km2.classList.contains('off') === true) {
     japan_km2.classList.remove('off');
     japan_fl2.classList.add('off');
+    japan_button2.classList.add('off');
   } else {
     japan_km2.classList.add('off');
     japan_fl2.classList.remove('off');
+    japan_button2.classList.remove('off');
   }
 }
 
@@ -195,11 +200,24 @@ function btn3(){
     japan_map1.classList.add('off');
   }
 }
+function btn4(){
+  if(japan_map2.classList.contains('off') === true){
+    japan_map2.classList.remove('off');
+  } else {
+    japan_map2.classList.add('off');
+  }
+}
 
 /*westren*/
 const westren_fl1 = document.querySelector('.fifth_page .westren_content .westren_text1 .food_list1');
 const westren_km1 = document.querySelector('.fifth_page .westren_content .westren_text1 .menu');
-console.log(westren_fl1);
+const westren_fl2 = document.querySelector('.westren_content1 .westren_text2 .food_list2');
+const westren_km2 = document.querySelector('.westren_content1 .westren_text2 .menu');
+
+const westren_button1 = document.querySelector('.westren_text1 .westren_map');
+const westren_map1 = document.querySelector('.westren_text1 .westren_map .frame');
+const westren_button2 = document.querySelector('.westren_text2 .westren_map');
+const westren_map2 = document.querySelector('.westren_text2 .westren_map .frame1');
 
 westren_fl1.addEventListener('click', changediv5);
 westren_km1.addEventListener('click',changediv5);
@@ -208,14 +226,13 @@ function changediv5(){
   if(westren_km1.classList.contains('off') === true) {
     westren_km1.classList.remove('off');
     westren_fl1.classList.add('off');
+    westren_button1.classList.add('off');
   } else {
     westren_km1.classList.add('off');
     westren_fl1.classList.remove('off');
+    westren_button1.classList.remove('off');
   }
 }
-
-const westren_fl2 = document.querySelector('.westren_content1 .westren_text2 .food_list2');
-const westren_km2 = document.querySelector('.westren_content1 .westren_text2 .menu');
 
 westren_fl2.addEventListener('click', changediv6);
 westren_km2.addEventListener('click', changediv6);
@@ -224,8 +241,27 @@ function changediv6() {
   if (westren_km2.classList.contains('off') === true) {
     westren_km2.classList.remove('off');
     westren_fl2.classList.add('off');
+    westren_button2.classList.add('off');
   } else {
     westren_km2.classList.add('off');
     westren_fl2.classList.remove('off');
+    westren_button2.classList.remove('off');
+  }
+}
+
+function btn5(){
+  console.log('d');
+  if(westren_map1.classList.contains('off') === true){
+    westren_map1.classList.remove('off');
+  } else {
+    westren_map1.classList.add('off');
+  }
+}
+function btn6(){
+  console.log('d');
+  if(westren_map2.classList.contains('off') === true){
+    westren_map2.classList.remove('off');
+  } else {
+    westren_map2.classList.add('off');
   }
 }
