@@ -241,7 +241,7 @@
                       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                    <a href="#">닫기</a>
+                    <a href="javascript:void(0)" onclick="closePopup(this);">닫기</a>
                   </div>
                 </li>
                 <li><a href="#"><i class="material-symbols-outlined">
@@ -313,7 +313,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.2397315970975!2d126.6792802152053!3d33.41699375838504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d0318aab8a777%3A0x5453823e9b267d74!2z66Cb7Lig65-w7Yyc7KCc7KO866qp7J6l!5e0!3m2!1sko!2skr!4v1677918922615!5m2!1sko!2skr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  <a href="#">닫기</a>
+                  <a href="javascript:void(0)" onclick="closePopup(this);">닫기</a>
                 </div>
               </li>
               <li><a href="#"><i class="material-symbols-outlined">
@@ -377,7 +377,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d213177.61002776626!2d126.47361718218599!3d33.39976894145539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350d15043874066b%3A0x330b39f999abf26f!2z7Iqk7YWM7J207KeA7ZWY7Jqw7IqkICYg7Lm07J207Yq47ISc7ZWRIOyKpOy_qCBraXRlc3VyZmluZyBzaGNvb2w!5e0!3m2!1sko!2skr!4v1677919494004!5m2!1sko!2skr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  <a href="#">닫기</a>
+                  <a href="javascript:void(0)" onclick="closePopup(this);">닫기</a>
                 </div>
               </li>
               <li><a href="#"><i class="material-symbols-outlined">
@@ -424,7 +424,7 @@
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.781784574938!2d126.46164196520718!3d33.50705410370993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfb1f47e995b7%3A0xd2d7dce4e61eee0f!2z64-E65GQ66eI66as64KYKOyjvCk!5e0!3m2!1sko!2skr!4v1677919790593!5m2!1sko!2skr"
                       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a href="#">닫기</a>
+                    <a href="javascript:void(0)" onclick="closePopup(this);">닫기</a>
                   </div>
                 </li>
                 <li><a href="#"><i class="material-symbols-outlined">
@@ -548,7 +548,7 @@
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.733933663649!2d126.50741521520673!3d33.48227725499718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfbe535126fcb%3A0x608267e04ceb0d0f!2z67CU7Jq07IqkIOyKiO2NvO2MjO2BrCDsoJzso7wg7IS87YSw!5e0!3m2!1sko!2skr!4v1677920367876!5m2!1sko!2skr"
                       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a href="#">닫기</a>
+                    <a href="javascript:void(0)" onclick="closePopup(this);">닫기</a>
                   </div>
                 </li>
                 <li><a href="#"><i class="material-symbols-outlined">
@@ -580,6 +580,12 @@
     <span class="glyphicon glyphicon-chevron-up">
     </span>
   </a>
+
+  <script>
+    function closePopup(t) {
+      t.parentNode.style.opacity = "0";
+    }
+  </script>
 
 </body>
 
