@@ -80,6 +80,7 @@ fetch(weatherUrl)
     console.log("Weather API Error : ", error);
   });
 
+//header change color
 const header = document.querySelector("header");
 const headerHeight = header.getBoundingClientRect().height;
 
@@ -112,6 +113,7 @@ const smoothContent1 = document.querySelector(".mountainContent");
 const firstTop = smoothContent1.offsetTop;
 const smoothContent2 = document.querySelector(".seaContent");
 const secondTop = smoothContent2.offsetTop;
+let headerGap = 100;
 const smoothContent3 = document.querySelector(".museumContent");
 const thirdTop = smoothContent3.offsetTop;
 
@@ -121,7 +123,7 @@ for (let i = 0; i < imgBox.length; i += 1) {
       window.scroll({ top: firstTop, behavior: "smooth" });
     }
     if (i === 1) {
-      window.scroll({ top: secondTop, behavior: "smooth" });
+      window.scroll({ top: secondTop - headerGap, behavior: "smooth" });
     }
     if (i === 2) {
       window.scroll({ top: thirdTop, behavior: "smooth" });

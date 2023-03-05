@@ -460,7 +460,7 @@ header .other-menu ul li:hover::after {
   animation-fill-mode: forwards;
 }
 .contents .seaContent .text {
-  margin-top: 20vh;
+  margin-top: 12vh;
   width: 90vw;
   margin-left: 5vw;
   height: 68vh;
@@ -550,7 +550,7 @@ header .other-menu ul li:hover::after {
   border: 30px solid white;
   border-bottom: 80px solid white;
   box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
 }
 .contents .seaContent .swiper .swiper-wrapper .swiper-slide:hover {

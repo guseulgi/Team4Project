@@ -514,7 +514,7 @@ header {
         margin-left: 25px;
       }
 
-      margin-top: 20vh;
+      margin-top: 12vh;
       width: 90vw;
       margin-left: 5vw;
       height: 68vh;
@@ -559,7 +559,7 @@ header {
           border: 30px solid white;
           border-bottom: 80px solid white;
           box-shadow: 9px 10px 12px rgba(0, 0, 0, 0.2);
-          height: 100vh;
+          height: calc(100vh - 100px);
           overflow: hidden;
           &:hover {
             scale: 1.03;
